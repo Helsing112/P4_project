@@ -14,6 +14,7 @@ namespace ConsoleApplication5
 {
     public partial class Admin_visual : Form
     {
+        //lol
         private string Starting_lib_path;
         private string path;
         //Control.ControlCollection Controls_basics = new Control.ControlCollection()
