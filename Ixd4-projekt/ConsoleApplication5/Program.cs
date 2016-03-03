@@ -17,8 +17,8 @@ namespace ConsoleApplication5
         static void Main(string[] args)
         {
             
-            Admin_Menu menu = new Admin_Menu();
-            menu.Start();
+            //Admin_Menu menu = new Admin_Menu();
+            //menu.Start();
 
             Console.WriteLine("Hejsa bøsser");
 
@@ -26,7 +26,7 @@ namespace ConsoleApplication5
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_visual(@"C:\Users\User\OneDrive\I-D\project\ixd\Library"));
+            Application.Run(new Admin_visual(@"..\..\..\..\Library"));
         }
     }
 }
