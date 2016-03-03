@@ -31,3 +31,10 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe.config
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.exe
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.pdb
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Admin_visual.resources
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.XmlFileAdder.resources
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.csproj.GenerateResource.Cache
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Frontpage.resources

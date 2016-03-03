@@ -22,9 +22,28 @@ namespace ConsoleApplication5
             Starting_lib_path = library_path;
             path = library_path;
             InitializeComponent();
-            start();
+            Admin_login();
        }
 
+        private void Admin_login()
+        {
+            Button Admin_login_button = new Button();
+
+            Admin_login_button.Location = new System.Drawing.Point(12, 12);
+            Admin_login_button.Name = "Admin_login_button";
+            Admin_login_button.Size = new System.Drawing.Size(139, 79);
+            Admin_login_button.TabIndex = 0;
+            Admin_login_button.Text = "Admin Log in";
+            Admin_login_button.UseVisualStyleBackColor = true;
+            Admin_login_button.Click += new System.EventHandler(Admin_login_click);
+
+            Controls.Add(Admin_login_button);
+
+        }
+        private void Admin_login_click(object sender, EventArgs e)
+        {
+            start();
+        }
         private void start()
         {
             int i = 0;
@@ -53,7 +72,30 @@ namespace ConsoleApplication5
             Create_home_button();
             // Create_back_button();
             Create_edit_button();
-        
+            Create_Closer_Button();
+        }
+
+        private void Create_Closer_Button()
+        {
+          Button Quit_button = new Button();
+
+            // Set Button properties
+            Quit_button.Height = 40;
+            Quit_button.Width = 100;
+            Quit_button.Location = new Point(500, 300);
+            Quit_button.Text = "Quit";
+            Quit_button.Name = "Quit button";
+            // Add a Button Click Event handler
+            Quit_button.Click += new EventHandler(Quit_button_click);
+
+            // Add Button to the Form. Placement of the Button
+            // will be based on the Location and Size of button
+            Controls.Add(Quit_button);   
+        }
+
+        private void Quit_button_click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Create_edit_button()
