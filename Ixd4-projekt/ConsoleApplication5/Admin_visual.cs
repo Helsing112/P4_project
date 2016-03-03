@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
-namespace ConsoleApplication5
+namespace ConsoleApplication5 
 {
     public partial class Admin_visual : Form
     {
