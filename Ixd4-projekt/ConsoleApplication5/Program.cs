@@ -27,6 +27,30 @@ namespace ConsoleApplication5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Admin_visual(@"..\..\..\..\Library"));
+
+            CreateLibrary creator = new CreateLibrary();
+
+            Product lille_cola = new Product();
+            lille_cola.Name = "Lille Cola";
+
+            Product stor_cola = new Product();
+            stor_cola.Name = "stor cola";
+
+            
+
+            Product Cola = new Product();
+            Cola.Name = "Over_cola";
+            Cola.Add_to_list("Lille cola", 10);
+            Cola.Add_to_list("stor Cola", 20);
+
+            creator.Create_File<Product>(@"C:\Users\User\OneDrive\I-D\project\ixd\Library", Cola);
+
+
+
+
+
+
+
         }
     }
 }
