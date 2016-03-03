@@ -21,7 +21,7 @@ namespace ConsoleApplication5
 
             Console.WriteLine("Hejsa bøsser");
 
-            Console.WriteLine("bh");
+            Console.WriteLine("");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

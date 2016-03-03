@@ -8,6 +8,6 @@ namespace ConsoleApplication5
 {
     public class Cola : Product
     {
-
+        public int hej { get; set; }
     }
 }
