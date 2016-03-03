@@ -40,8 +40,8 @@ namespace ConsoleApplication5
 
             Product Cola = new Product();
             Cola.Name = "Over_cola";
-            Cola.Add_to_list("Lille cola", 10);
-            Cola.Add_to_list("stor Cola", 20);
+            Cola.Add_to_Varrianter_list("Lille cola", 10);
+            Cola.Add_to_Varrianter_list("stor Cola", 20);
 
             creator.Create_File<Product>(@"C:\Users\User\OneDrive\I-D\project\ixd\Library", Cola);
 

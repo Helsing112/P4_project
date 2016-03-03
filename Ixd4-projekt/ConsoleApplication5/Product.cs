@@ -9,11 +9,13 @@ namespace ConsoleApplication5
     public class Product
     {
         private bool _Is_set = false;
+        private decimal _price;
         /// <summary>
         /// Boolean that determines wether price has been set
         /// </summary>
         public bool Is_set { get { return _Is_set; } }
-        public decimal Price { get { return Price; } set { _Is_set = true; } }
+        public decimal Price { get { return _price; }
+                        set { _price = value; _Is_set = true; } }
 
         public string Name { get; set; }
 
