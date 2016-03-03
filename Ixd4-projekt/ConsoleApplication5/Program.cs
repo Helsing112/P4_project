@@ -21,6 +21,8 @@ namespace ConsoleApplication5
 
             Console.WriteLine("Hejsa bøsser");
 
+            Console.WriteLine("bh");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Admin_visual(@"C:\Users\User\OneDrive\I-D\project\ixd\Library"));
