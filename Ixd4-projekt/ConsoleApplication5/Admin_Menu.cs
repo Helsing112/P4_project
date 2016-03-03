@@ -22,7 +22,7 @@ namespace ConsoleApplication5
         public void Start()
         {
             run = true;
-            string path = @"..\..\..\..\Library";
+            string path = @"..\..\Library";
             do
             {
                 Console.Clear();
