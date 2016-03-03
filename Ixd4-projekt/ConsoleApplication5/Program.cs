@@ -19,6 +19,8 @@ namespace ConsoleApplication5
             //Admin_Menu menu = new Admin_Menu();
             //menu.Start();
 
+            Console.WriteLine("Hejsa bøsser");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Admin_visual(@"C:\Users\User\OneDrive\I-D\project\ixd\Library"));
