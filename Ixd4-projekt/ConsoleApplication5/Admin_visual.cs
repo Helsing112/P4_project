@@ -27,6 +27,7 @@ namespace ConsoleApplication5
 
         private void Admin_login()
         {
+            Controls.Clear();
             Button Admin_login_button = new Button();
 
             Admin_login_button.Location = new System.Drawing.Point(12, 12);
@@ -95,7 +96,8 @@ namespace ConsoleApplication5
 
         private void Quit_button_click(object sender, EventArgs e)
         {
-            this.Close();
+            Admin_login();
+
         }
 
         private void Create_edit_button()

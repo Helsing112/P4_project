@@ -54,12 +54,6 @@
       <DependentUpon>Admin_visual.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateLibrary.cs" />
-    <Compile Include="Frontpage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frontpage.Designer.cs">
-      <DependentUpon>Frontpage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,9 +70,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin_visual.resx">
       <DependentUpon>Admin_visual.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frontpage.resx">
-      <DependentUpon>Frontpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XmlFileAdder.resx">
       <DependentUpon>XmlFileAdder.cs</DependentUpon>
