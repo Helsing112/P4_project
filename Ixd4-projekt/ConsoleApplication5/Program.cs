@@ -16,6 +16,7 @@ namespace ConsoleApplication5
         [STAThread]
         static void Main(string[] args)
         {
+            
             Admin_Menu menu = new Admin_Menu();
             menu.Start();
 

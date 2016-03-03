@@ -7,12 +7,16 @@ using System.IO;
 
 namespace ConsoleApplication5
 {
+    /// <summary>
+    /// Console menu class.
+    /// </summary>
     class Admin_Menu
     {
+        
         private const ConsoleColor HeadlineColor = ConsoleColor.Cyan;
         private const ConsoleColor ItemColor = ConsoleColor.Black;
         private const ConsoleColor SelectedItemColor = ConsoleColor.Magenta;
-
+        
         Boolean run = false;
         private int selected_item = 0;
         public void Start()
