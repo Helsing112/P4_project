@@ -63,6 +63,7 @@
     <Compile Include="XmlFileAdder.Designer.cs">
       <DependentUpon>XmlFileAdder.cs</DependentUpon>
     </Compile>
+    <Compile Include="XmlProductReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
