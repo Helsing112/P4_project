@@ -24,29 +24,32 @@ namespace ConsoleApplication5
 
             Console.WriteLine("");
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_visual(@"..\..\..\..\Library"));
+            XmlProductReader reader = new XmlProductReader();
 
-            CreateLibrary creator = new CreateLibrary();
+            reader.Read_product<Product>(@"C:\Users\User\OneDrive\I-D\project\ixd\Library\Burger\Big_burger");
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Admin_visual(@"..\..\..\..\Library"));
 
-            Product lille_cola = new Product();
-            lille_cola.Name = "Lille Cola";
+            //CreateLibrary creator = new CreateLibrary();
 
-            Product stor_cola = new Product();
-            stor_cola.Name = "stor cola";
+            //Product lille_cola = new Product();
+            //lille_cola.Name = "Lille Cola";
 
-            
-
-            Product Cola = new Product();
-            Cola.Name = "Over_cola";
-            Cola.Add_to_Varrianter_list("Lille cola", 10);
-            Cola.Add_to_Varrianter_list("stor Cola", 20);
-
-            creator.Create_File<Product>(@"C:\Users\User\OneDrive\I-D\project\ixd\Library", Cola);
+            //Product stor_cola = new Product();
+            //stor_cola.Name = "stor cola";
 
 
 
+            //Product Cola = new Product();
+            //Cola.Name = "Over_cola";
+            //Cola.Add_to_Varrianter_list("Lille cola", 10);
+            //Cola.Add_to_Varrianter_list("stor Cola", 20);
+
+            //creator.Create_File<Product>(@"C:\Users\User\OneDrive\I-D\project\ixd\Library", Cola);
+
+
+            Console.ReadKey();
 
 
 
