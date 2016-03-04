@@ -22,7 +22,7 @@ namespace ConsoleApplication5
 
             Console.WriteLine("Hejsa bøsser");
 
-            Console.WriteLine("");
+            Console.WriteLine("jhlfgcxdhsfdfghl");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
