@@ -16,17 +16,20 @@ namespace ConsoleApplication5
         [STAThread]
         static void Main(string[] args)
         {
-            
+
             //Admin_Menu menu = new Admin_Menu();
             //menu.Start();
 
-            Console.WriteLine("Hejsa bøsser");
+            //Console.WriteLine("Hejsa bøsser");
 
-            Console.WriteLine("jhlfgcxdhsfdfghl");
+            //Console.WriteLine("jhlfgcxdhsfdfghl");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_visual(@"..\..\Library"));
-        }
+            Application.Run(new CompleteLibraryReader(@"..\..\..\..\Library"));
+            
+            Console.ReadKey();
+        
+    }
     }
 }
