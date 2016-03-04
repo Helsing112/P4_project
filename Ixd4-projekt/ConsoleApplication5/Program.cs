@@ -26,7 +26,7 @@ namespace ConsoleApplication5
 
             XmlProductReader reader = new XmlProductReader();
 
-            reader.Read_product<Product>(@"C:\Users\User\OneDrive\I-D\project\ixd\Library\Burger\Big_burger");
+            reader.Read_product<Product>(@"..\..\..\..\Library\Burger\Big_burger");
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Admin_visual(@"..\..\..\..\Library"));
