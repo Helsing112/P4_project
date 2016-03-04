@@ -7,11 +7,11 @@ using System.IO;
 
 namespace ConsoleApplication5
 {
-    class CategorySubItemReader : XmlProductReader
+    class CategorySubItems : XmlProductReader
     {
         public string PathOfLibrary { get; }
         public Category MasterCategory { get; private set; }
-        public CategorySubItemReader(string path_of_library)
+        public CategorySubItems(string path_of_library)
         {
             PathOfLibrary = path_of_library;
         }
@@ -19,7 +19,7 @@ namespace ConsoleApplication5
         {
             Category master_category = new Category("MasterCategory", PathOfLibrary);
             MasterCategory = master_category;
-            Create_category(PathOfLibrary, master_category);
+            Create_category(PathOfLibrary,  master_category);
 
         }
 
@@ -34,6 +34,8 @@ namespace ConsoleApplication5
                 category_input.Category_list.Add(temp_category);
 
                 CreateProducts(temp_category, item.FullName);
+
+                Create_category(item.FullName, temp_category);
             }
 
 
@@ -49,5 +51,9 @@ namespace ConsoleApplication5
             }
         }
 
+        public void print_lortet()
+        {
+            
+        }
     }
 }

@@ -10,7 +10,9 @@ namespace ConsoleApplication5
     class CategorySubItemsReader : XmlProductReader
     {
         public string PathOfLibrary { get; }
+
         public Category MasterCategory { get; private set; }
+
         public CategorySubItemsReader(string path_of_library)
         {
             PathOfLibrary = path_of_library;
@@ -19,8 +21,8 @@ namespace ConsoleApplication5
         {
             Category master_category = new Category("MasterCategory", PathOfLibrary);
             MasterCategory = master_category;
-            Create_category(PathOfLibrary,  master_category);
-
+            Create_category(PathOfLibrary, MasterCategory);
+            CreateProducts(MasterCategory, PathOfLibrary);
         }
 
         private void Create_category(string path, Category category_input)
@@ -33,9 +35,6 @@ namespace ConsoleApplication5
 
                 category_input.Category_list.Add(temp_category);
 
-                CreateProducts(temp_category, item.FullName);
-
-                Create_category(item.FullName, temp_category);
             }
 
 
@@ -43,17 +42,15 @@ namespace ConsoleApplication5
         private void CreateProducts(Category input_category, string path)
         {
             DirectoryInfo directories = new DirectoryInfo(path);
-
+            Console.WriteLine("CreateProduck");
             foreach (FileInfo item in directories.GetFiles())
             {
-                input_category.Product_list.Add(Read_product<Product>(item.FullName));
-                Console.WriteLine();
+                Product temp_product = Read_product<Product>(item.FullName);
+                input_category.Product_list.Add(temp_product);
+                Console.WriteLine(temp_product.Name + "hejsa");
             }
         }
 
-        public void print_lortet()
-        {
-            
-        }
+
     }
 }

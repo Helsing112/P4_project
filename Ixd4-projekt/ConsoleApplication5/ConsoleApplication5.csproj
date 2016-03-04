@@ -47,7 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin_Menu.cs" />
-    <Compile Include="Xml_Handlers\CategorySubItemsReader.cs" />
+    <Compile Include="Custom_Controls\TreeViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\TreeViewerControl.Designer.cs">
+      <DependentUpon>TreeViewerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIle_readers\CategorySubItemsReader.cs" />
+    <Compile Include="Custom_Controls\ProductButtonCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\ProductButtonCtrl.Designer.cs">
+      <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\ProductEventArgs.cs" />
     <Compile Include="Windows_Forms\Admin_visual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +74,8 @@
     <Compile Include="Windows_Forms\CompleteLibraryReader.Designer.cs">
       <DependentUpon>CompleteLibraryReader.cs</DependentUpon>
     </Compile>
-    <Compile Include="Xml_Handlers\CategoryTreeReader.cs" />
-    <Compile Include="Xml_Handlers\CreateLibrary.cs" />
+    <Compile Include="FIle_readers\CategoryTreeReader.cs" />
+    <Compile Include="FIle_readers\CreateLibrary.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,12 +85,18 @@
     <Compile Include="Windows_Forms\XmlFileAdder.Designer.cs">
       <DependentUpon>XmlFileAdder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Xml_Handlers\XmlProductReader.cs" />
+    <Compile Include="FIle_readers\XmlProductReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Custom_Controls\TreeViewerControl.resx">
+      <DependentUpon>TreeViewerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_Controls\ProductButtonCtrl.resx">
+      <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_visual.resx">
       <DependentUpon>Admin_visual.cs</DependentUpon>
     </EmbeddedResource>
