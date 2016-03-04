@@ -22,11 +22,11 @@ namespace ConsoleApplication5
 
             Console.WriteLine("Hejsa bøsser");
 
-            Console.WriteLine("");
+            Console.WriteLine("jhlfgcxdhsfdfghl");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_visual(@"..\..\..\..\Library"));
+            Application.Run(new Admin_visual(@"..\..\Library"));
         }
     }
 }

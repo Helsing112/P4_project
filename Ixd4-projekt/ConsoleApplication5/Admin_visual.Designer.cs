@@ -38,6 +38,8 @@
             this.Name = "Admin_visual";
             this.Text = "Admin Menu";
             this.ResumeLayout(false);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
         }
 
