@@ -14,7 +14,12 @@ namespace ConsoleApplication5
         public XmlProductReader()
         {
         }
-
+        /// <summary>
+        /// Reads a product file from XML. And returns a product instance
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public T Read_product<T>(string path) where T : Product
         {
             T TT;
