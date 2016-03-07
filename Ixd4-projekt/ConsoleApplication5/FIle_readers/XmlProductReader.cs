@@ -28,7 +28,6 @@ namespace ConsoleApplication5
 
             TT = (T)serializer.Deserialize(reader);
             reader.Close();
-
             return TT;
         }
     }

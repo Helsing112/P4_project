@@ -16,7 +16,6 @@ namespace ConsoleApplication5
     {
         private string Starting_lib_path;
         private string path;
-        //Control.ControlCollection Controls_basics = new Control.ControlCollection()
         public Admin_visual(string library_path)
         {
             Starting_lib_path = library_path;
@@ -34,10 +33,18 @@ namespace ConsoleApplication5
             Admin_login_button.Name = "Admin_login_button";
             Admin_login_button.Size = new System.Drawing.Size(139, 79);
             Admin_login_button.TabIndex = 0;
-            Admin_login_button.Text = "Admin Log in";
+            Admin_login_button.Text = "Lols";
             Admin_login_button.UseVisualStyleBackColor = true;
             Admin_login_button.Click += new System.EventHandler(Admin_login_click);
 
+            TreeViewerControl tree = new TreeViewerControl(500, 500, path);
+            tree.Location = new Point(300,300);
+            tree.BorderStyle = BorderStyle.Fixed3D;
+            tree.Name = "tree";
+
+
+
+            Controls.Add(tree); 
             Controls.Add(Admin_login_button);
 
         }
