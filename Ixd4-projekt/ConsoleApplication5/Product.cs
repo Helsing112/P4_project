@@ -15,7 +15,7 @@ namespace ConsoleApplication5
         /// </summary>
         public bool Is_set { get { return _Is_set; } }
         public decimal Price
-        {
+        {            
             get { return _price; }
             set { _price = value; _Is_set = true; }
         }

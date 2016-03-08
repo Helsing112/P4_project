@@ -46,7 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom_Controls\Admin_Edit_ctrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Admin_Edit_ctrl.Designer.cs">
+      <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Forms\Admin_function_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Admin_function_window.Designer.cs">
+      <DependentUpon>Admin_function_window.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Menu.cs" />
+    <Compile Include="Custom_Controls\TempReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\TempReceipt.Designer.cs">
+      <DependentUpon>TempReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom_Controls\TreeViewerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,11 +79,11 @@
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom_Controls\ProductEventArgs.cs" />
-    <Compile Include="Windows_Forms\Admin_visual.cs">
+    <Compile Include="Windows_Forms\Main_page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows_Forms\Admin_visual.Designer.cs">
-      <DependentUpon>Admin_visual.cs</DependentUpon>
+    <Compile Include="Windows_Forms\Main_page.Designer.cs">
+      <DependentUpon>Main_page.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Windows_Forms\CompleteLibraryReader.cs">
@@ -91,14 +109,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Custom_Controls\Admin_Edit_ctrl.resx">
+      <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
+      <DependentUpon>Admin_function_window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_Controls\TempReceipt.resx">
+      <DependentUpon>TempReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TreeViewerControl.resx">
       <DependentUpon>TreeViewerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\ProductButtonCtrl.resx">
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows_Forms\Admin_visual.resx">
-      <DependentUpon>Admin_visual.cs</DependentUpon>
+    <EmbeddedResource Include="Windows_Forms\Main_page.resx">
+      <DependentUpon>Main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\XmlFileAdder.resx">
       <DependentUpon>XmlFileAdder.cs</DependentUpon>

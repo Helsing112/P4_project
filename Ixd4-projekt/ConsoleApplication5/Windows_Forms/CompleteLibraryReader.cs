@@ -44,21 +44,16 @@ namespace ConsoleApplication5
 
         private void CreateCategoryButton(string name, string text, int x, int y)
         {
-            // Create a Button object 
             Button dynamicButton = new Button();
 
-            // Set Button properties
             dynamicButton.Height = 40;
             dynamicButton.Width = 100;
             dynamicButton.Location = new Point(x, y);
             dynamicButton.Text = text;
             dynamicButton.Name = name;
 
-            // Add a Button Click Event handler
             dynamicButton.Click += new EventHandler(CategoryButtonClick);
 
-            // Add Button to the Form. Placement of the Button
-            // will be based on the Location and Size of button
             Controls.Add(dynamicButton);
         }
 

@@ -24,17 +24,11 @@ namespace ConsoleApplication5
             temp_path = path;
             InitializeComponent();
         }
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
+
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            
-            // 
-            // TreeViewerControl
-            // 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "TreeViewerControl";
@@ -43,7 +37,6 @@ namespace ConsoleApplication5
             BackColor = Color.Azure;
             this.Load += new System.EventHandler(this.TreeViewerControl_Load);
             this.ResumeLayout(false);
-
         }
 
         private void TreeViewerControl_Load(object sender, EventArgs e)
@@ -63,9 +56,12 @@ namespace ConsoleApplication5
             }
             foreach (Product item in Category.MasterCategory.Product_list)
             {
-                //CreateProductButton(item.Name, item.Name + item.Price, 40, 50 * i);
                 createproductbutton(item, 40, 50 * i);
                 i++;
+            }
+            if (!string.Equals(temp_path, @"..\..\..\..\Library"))
+            {
+                BackButton();
             }
         }
 
@@ -73,7 +69,10 @@ namespace ConsoleApplication5
         {
             ProductButtonCtrl<Product> temp_product_but = new ProductButtonCtrl<Product>(product);
             temp_product_but.Location = new Point(x, y);
+
+            //All subscribers!!----------------------------------------------------------------------
             temp_product_but.MouseClicked += new EventHandler<ProductEventArgs>(ProductButtonClick);
+            
             Controls.Add(temp_product_but);
         }
 
@@ -81,17 +80,14 @@ namespace ConsoleApplication5
         {
             // Create a Button object 
             Button dynamicButton = new Button();
-
             // Set Button properties
             dynamicButton.Height = 40;
             dynamicButton.Width = 100;
             dynamicButton.Location = new Point(x, y);
             dynamicButton.Text = text;
             dynamicButton.Name = name;
-
             // Add a Button Click Event handler
             dynamicButton.Click += new EventHandler(CategoryButtonClick);
-
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             Controls.Add(dynamicButton);
@@ -102,13 +98,38 @@ namespace ConsoleApplication5
             Button tmp_button = (Button)sender;
             temp_path = temp_path + "\\" + tmp_button.Name;
             Start(temp_path);
-
-        }
-
-       
+        }       
         private void ProductButtonClick(object sender, ProductEventArgs e)
         {
-            MessageBox.Show(e.product.Name + "Koster" + e.product.Price);            
+            OnMouseClicked(e.product);
+        }
+        //Event for mouse click
+        public EventHandler<ProductEventArgs> MouseClicked;
+
+        protected virtual void OnMouseClicked(Product product)
+        {
+            if (MouseClicked != null)
+            {
+                MouseClicked(this, new ProductEventArgs() { product = product });
+            }
+        }
+        // Knap i valg af varer til at gå tilbage i menuen. 
+        private void BackButton()
+        {
+            Button BackButton = new Button();
+            BackButton.Height = 40;
+            BackButton.Width = 100;
+            BackButton.Dock = DockStyle.Bottom;
+            BackButton.Text = "Back";
+            BackButton.Name = "Back";
+            BackButton.Click += new EventHandler(BackButtonClick);
+            Controls.Add(BackButton);
+        }
+        private void BackButtonClick(object sender, EventArgs e)
+        {
+            string lastPath = temp_path.Substring(0, temp_path.LastIndexOf('\\'));
+            temp_path = lastPath;
+            Start(temp_path);
         }
     }
 }
