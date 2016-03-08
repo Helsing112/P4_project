@@ -50,7 +50,7 @@ namespace ConsoleApplication5
         private void Create_static_controls()
         {
             Create_home_button();
-            // Create_back_button();
+            //Create_back_button();
             Create_edit_button();
             Create_Closer_Button();
         }
@@ -62,7 +62,10 @@ namespace ConsoleApplication5
             // Set Button properties
             Quit_button.Height = 40;
             Quit_button.Width = 100;
-            Quit_button.Location = new Point(500, 300);
+            Quit_button.Location = new Point(100, 500);
+            Quit_button.Anchor = AnchorStyles.Top;
+
+           // Quit_button.Dock = DockStyle.Bottom;
             Quit_button.Text = "Quit";
             Quit_button.Name = "Quit button";
             // Add a Button Click Event handler
@@ -75,6 +78,7 @@ namespace ConsoleApplication5
 
         private void Quit_button_click(object sender, EventArgs e)
         {
+          //  this.Close();
         }
 
         private void Create_edit_button()
