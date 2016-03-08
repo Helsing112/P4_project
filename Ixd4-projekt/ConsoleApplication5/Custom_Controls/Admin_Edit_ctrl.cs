@@ -1,55 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-
 namespace ConsoleApplication5
 {
-    public partial class Admin_visual : Form
+    public partial class Admin_Edit_ctrl : UserControl
     {
-        private string Starting_lib_path;
+
         private string path;
-        public Admin_visual(string library_path)
+        private string Starting_lib_path;
+        public Admin_Edit_ctrl(string path)
         {
-            Starting_lib_path = library_path;
-            path = library_path;
+            this.path = path;
+            Starting_lib_path = path;
+            
             InitializeComponent();
-            Admin_login();
-       }
-
-        private void Admin_login()
-        {
-            Controls.Clear();
-            Button Admin_login_button = new Button();
-
-            Admin_login_button.Location = new System.Drawing.Point(12, 12);
-            Admin_login_button.Name = "Admin_login_button";
-            Admin_login_button.Size = new System.Drawing.Size(139, 79);
-            Admin_login_button.TabIndex = 0;
-            Admin_login_button.Text = "Lols";
-            Admin_login_button.UseVisualStyleBackColor = true;
-            Admin_login_button.Click += new System.EventHandler(Admin_login_click);
-
-            TreeViewerControl tree = new TreeViewerControl(500, 500, path);
-            tree.Location = new Point(300,300);
-            tree.BorderStyle = BorderStyle.Fixed3D;
-            tree.Name = "tree";
-
-
-
-            Controls.Add(tree); 
-            Controls.Add(Admin_login_button);
-
-        }
-        private void Admin_login_click(object sender, EventArgs e)
-        {
             start();
         }
         private void start()
@@ -61,7 +33,7 @@ namespace ConsoleApplication5
             DirectoryInfo mapper = new DirectoryInfo(path);
             foreach (var item in mapper.GetDirectories())
             {
-                CreateDynamicButton(i.ToString(), item.Name,80, 80*i);
+                CreateDynamicButton(i.ToString(), item.Name, 80, 80 * i);
                 i++;
             }
             foreach (var item in mapper.GetFiles())
@@ -69,7 +41,7 @@ namespace ConsoleApplication5
                 CreateDynamicLabel(i.ToString(), item.Name, 80, 80 * i);
                 i++;
             }
-            if(i == 0)
+            if (i == 0)
             {
                 CreateDynamicLabel(i.ToString(), "N/A", 80, 80 * i);
             }
@@ -85,7 +57,7 @@ namespace ConsoleApplication5
 
         private void Create_Closer_Button()
         {
-          Button Quit_button = new Button();
+            Button Quit_button = new Button();
 
             // Set Button properties
             Quit_button.Height = 40;
@@ -98,13 +70,11 @@ namespace ConsoleApplication5
 
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
-            Controls.Add(Quit_button);   
+            Controls.Add(Quit_button);
         }
 
         private void Quit_button_click(object sender, EventArgs e)
         {
-            Admin_login();
-
         }
 
         private void Create_edit_button()
@@ -143,7 +113,7 @@ namespace ConsoleApplication5
             // Set Button properties
             Home_button.Height = 40;
             Home_button.Width = 100;
-            Home_button.Location = new Point(300,300);
+            Home_button.Location = new Point(300, 300);
             Home_button.Text = "Home";
             Home_button.Name = "Home button";
             // Add a Button Click Event handler
@@ -192,13 +162,13 @@ namespace ConsoleApplication5
 
         }
 
- 
+
         private void DynamicButton_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             path = path + "\\" + button.Text;
             this.start();
-            
+
         }
     }
 }
