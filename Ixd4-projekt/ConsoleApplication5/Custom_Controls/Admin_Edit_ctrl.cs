@@ -53,6 +53,8 @@ namespace ConsoleApplication5
             // Create_back_button();
             Create_edit_button();
             Create_Closer_Button();
+            Create_Employee_Button();
+
         }
 
         private void Create_Closer_Button()
@@ -71,6 +73,29 @@ namespace ConsoleApplication5
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             Controls.Add(Quit_button);
+        }
+
+        private void Create_Employee_Button()
+        {
+            Button EditEmployee_button = new Button();
+
+            // Set Button properties
+            EditEmployee_button.Height = 40;
+            EditEmployee_button.Width = 100;
+            EditEmployee_button.Location = new Point(240, 390);
+            EditEmployee_button.Text = "Edit Employee";
+            EditEmployee_button.Name = "Edit Employee";
+            // Add a Button Click Event handler
+            EditEmployee_button.Click += new EventHandler(EditEmployee_button_click);
+
+            // Add Button to the Form. Placement of the Button
+            // will be based on the Location and Size of button
+            Controls.Add(EditEmployee_button);
+        }
+        private void EditEmployee_button_click(object sender, EventArgs e)
+        {
+            AddEmployees Editor = new AddEmployees(Starting_lib_path + "Employee Library");
+            Editor.Show();
         }
 
         private void Quit_button_click(object sender, EventArgs e)

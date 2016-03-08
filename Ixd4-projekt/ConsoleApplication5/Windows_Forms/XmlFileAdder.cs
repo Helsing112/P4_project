@@ -12,7 +12,7 @@ namespace ConsoleApplication5
 {
     public partial class XmlFileAdder : Form
     {
-        public string _path { get; }
+        private string _path { get; }
         public XmlFileAdder(string Current_path)
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace ConsoleApplication5
             Product _product = new Product();
             _product.Name = Text_input.Text;
             _product.Price = decimal.Parse(textBox1.Text);
-            
+
             creator.Create_File<Product>(_path, _product);
         }
 

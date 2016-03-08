@@ -13,6 +13,7 @@ namespace ConsoleApplication5
     public partial class TreeViewerControl : UserControl
     {
         private string temp_path;
+        private string INPUT_PATH;
         public int SizeTotal_x { get; private set; }
         public int SizeTotal_y { get; private set; }
         public string Path { get; private set; }
@@ -22,6 +23,7 @@ namespace ConsoleApplication5
             SizeTotal_y = SizeOfControl_y;
             Path = path;
             temp_path = path;
+            INPUT_PATH = path;
             InitializeComponent();
         }
 
@@ -59,7 +61,7 @@ namespace ConsoleApplication5
                 createproductbutton(item, 40, 50 * i);
                 i++;
             }
-            if (!string.Equals(temp_path, @"..\..\..\..\Library"))
+            if (!string.Equals(temp_path,INPUT_PATH))
             {
                 BackButton();
             }
