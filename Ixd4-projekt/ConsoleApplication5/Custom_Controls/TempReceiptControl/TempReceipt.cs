@@ -20,35 +20,25 @@ namespace ConsoleApplication5
 
         public void Clicked(object sender, ProductEventArgs e)
         {
-            listBox1.Items.Add(e.product.Name);
-            
+            ListOfProducts.Add_product(e.product);
         }
 
         private void InitializeComponent(int size_x, int size_y)
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(size_x, size_y);
-            this.listBox1.TabIndex = 0;
-            this.Controls.Add(this.listBox1);
-            listBox1.Items.Add("Hejsa");
-
-            // 
-            // TempReceipt
-            // 
+            ListOfProducts = new ListOfProductInTempReceipt(size_x, size_y, 40);
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "TempReceipt";
             this.Size = new System.Drawing.Size(size_x, size_y);
+            this.BackColor = Color.Wheat;
             this.ResumeLayout(false);
 
+            Controls.Add(ListOfProducts);
+            
         }
+        ListOfProductInTempReceipt ListOfProducts;
 
         private void Start(int size_x, int size_y)
         {

@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class TempReceipt
+    partial class ListOfProductInTempReceipt
     {
         /// <summary> 
         /// Required designer variable.
@@ -26,10 +26,8 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-       
+
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
