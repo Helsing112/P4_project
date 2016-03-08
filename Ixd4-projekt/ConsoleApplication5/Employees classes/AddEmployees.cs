@@ -32,6 +32,9 @@ namespace ConsoleApplication5
             _Employee.EmployeeID = int.Parse (EmployeeIDtextBox.Text);
             _Employee.EmployeePassword = EmployeePasswordtextBox.Text;
             creator.Create_File_And_directory<Employee>(_path, _Employee);
+            EmployeeNametextBox.Clear();
+            EmployeePasswordtextBox.Clear();
+            EmployeeIDtextBox.Clear();
         }
 
         private void EmployeeNametextBox_TextChanged(object sender, EventArgs e)

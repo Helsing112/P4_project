@@ -35,9 +35,12 @@ namespace ConsoleApplication5
             CreateLibrary creator = new CreateLibrary();
             Product _product = new Product();
             _product.Name = Text_input.Text;
-            _product.Price = decimal.Parse(textBox1.Text);
+            _product.Price = decimal.Parse(PriceInputTextBox.Text);
 
             creator.Create_File<Product>(_path, _product);
+
+            Text_input.Clear();
+            PriceInputTextBox.Clear();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -48,12 +51,14 @@ namespace ConsoleApplication5
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             Create_cat_but.Enabled = true;
+            
         }
 
         private void Create_cat_but_Click(object sender, EventArgs e)
         {
             CreateLibrary creator = new CreateLibrary();
-            creator.Create_Category(_path + "\\" + textBox2.Text);
+            creator.Create_Category(_path + "\\" + CategoryTextBox.Text);
+            CategoryTextBox.Clear();
         }
     }
 }

@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PriceInputTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.Create_cat_but = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,11 +80,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.PriceInputTextBox.Location = new System.Drawing.Point(210, 163);
+            this.PriceInputTextBox.Name = "textBox1";
+            this.PriceInputTextBox.Size = new System.Drawing.Size(328, 22);
+            this.PriceInputTextBox.TabIndex = 4;
+            this.PriceInputTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label3
             // 
@@ -117,11 +117,11 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(210, 362);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(328, 22);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.CategoryTextBox.Location = new System.Drawing.Point(210, 362);
+            this.CategoryTextBox.Name = "textBox2";
+            this.CategoryTextBox.Size = new System.Drawing.Size(328, 22);
+            this.CategoryTextBox.TabIndex = 7;
+            this.CategoryTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Create_cat_but
             // 
@@ -141,10 +141,10 @@
             this.ClientSize = new System.Drawing.Size(565, 554);
             this.Controls.Add(this.Create_cat_but);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.CategoryTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PriceInputTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -162,11 +162,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PriceInputTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.Button Create_cat_but;
     }
 }
