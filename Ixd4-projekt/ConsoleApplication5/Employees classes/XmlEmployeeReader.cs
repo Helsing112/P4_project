@@ -12,7 +12,7 @@ namespace ConsoleApplication5
     public class XmlEmployeeReader
     {
         public XmlEmployeeReader()
-        {
+        {  
         }
         /// <summary>
         /// Reads a product file from XML. And returns a product instance
