@@ -16,7 +16,8 @@ namespace ConsoleApplication5
         public ProductButtonCtrl(T product)
         {
             _product = product;
-            InitializeComponent();
+            InitializeComponent(product);
+            
         }
         public EventHandler<ProductEventArgs> MouseClicked;
 
@@ -31,6 +32,11 @@ namespace ConsoleApplication5
             {
                 MouseClicked(this, new ProductEventArgs() { product = product });
             }
+        }
+
+        private void MAD_Click(object sender, EventArgs e)
+        {
+            OnMouseClicked(_product);
         }
     }
 }
