@@ -39,20 +39,26 @@ namespace ConsoleApplication5
             Admin_login_button.Click += new System.EventHandler(Admin_login_click);
 
             TreeViewerControl tree = new TreeViewerControl(500, 500, path);
-            tree.Location = new Point(300,300);
+            tree.Location = new Point(300, 300);
             tree.BorderStyle = BorderStyle.Fixed3D;
             tree.Name = "tree";
             tree.MouseClicked += new EventHandler<ProductEventArgs>(ClickReciever);
+
+          
+
+
+
 
             TempReceipt temp_receipt = new TempReceipt(500, 500);
             tree.MouseClicked += new EventHandler<ProductEventArgs>(temp_receipt.Clicked); //subscribe to mouse click
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
+
             
             
             Controls.Add(temp_receipt);
-            Controls.Add(tree); 
+            Controls.Add(tree);
             Controls.Add(Admin_login_button);
 
         }

@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ConsoleApplication5
 {
     public partial class XmlFileAdder : Form
     {
         public string _path { get; }
+        public string sourceFilePath { get; private set; }
+        public string pictureLibraryPath { get; private set; }
+        public string productPicturePath { get; set; }
+
         public XmlFileAdder(string Current_path)
         {
             InitializeComponent();
@@ -36,7 +41,10 @@ namespace ConsoleApplication5
             Product _product = new Product();
             _product.Name = Text_input.Text;
             _product.Price = decimal.Parse(textBox1.Text);
-            
+            _product.PicturePath = productPicturePath;
+
+
+
             creator.Create_File<Product>(_path, _product);
         }
 
@@ -55,5 +63,33 @@ namespace ConsoleApplication5
             CreateLibrary creator = new CreateLibrary();
             creator.Create_Category(_path + "\\" + textBox2.Text);
         }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Select picture for item";
+            openFileDialog1.Filter = "Png Image|*.png|Jpeg Image|*.jpg|Gif Image|*.gif";
+            pictureLibraryPath = @"C:\Users\kranzekage\Source\Repos\P4_project\PictureLibrary";
+            productPicturePath = pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                sourceFilePath = (openFileDialog1.FileName);
+                File.Copy(sourceFilePath, productPicturePath, true);
+                Console.WriteLine(pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png");
+                pictureBox1.Image = Image.FromFile(sourceFilePath);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        
+       
     }
 }
