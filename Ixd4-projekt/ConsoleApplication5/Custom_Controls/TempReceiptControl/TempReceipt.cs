@@ -16,6 +16,7 @@ namespace ConsoleApplication5
         {
             InitializeComponent(size_x, size_y);
             Start(size_x, size_y);
+            //constructor
         }
         public void Clicked(object sender, ProductEventArgs e)
         {
