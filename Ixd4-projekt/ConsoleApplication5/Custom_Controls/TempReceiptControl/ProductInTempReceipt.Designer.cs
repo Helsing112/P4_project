@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class TempReceipt
+    partial class ProductInTempReceipt<T> where T :Product
     {
         /// <summary> 
         /// Required designer variable.
@@ -20,16 +20,9 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-       
 
-        #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label Namel_label;
+        private System.Windows.Forms.Label Price_label;
     }
 }
