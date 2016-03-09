@@ -79,7 +79,7 @@ namespace ConsoleApplication5
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 sourceFilePath = (openFileDialog1.FileName);
-                File.Copy(sourceFilePath, productPicturePath);
+                File.Copy(sourceFilePath, productPicturePath, true);
                 Console.WriteLine(pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png");
                 pictureBox1.Image = Image.FromFile(sourceFilePath);
             }
@@ -87,10 +87,8 @@ namespace ConsoleApplication5
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           // pictureBox1.Image = Image.FromFile(sourceFilePath);
         }
 
-      //  PictureBox pictureBox2 = new PictureBox();
         
        
     }
