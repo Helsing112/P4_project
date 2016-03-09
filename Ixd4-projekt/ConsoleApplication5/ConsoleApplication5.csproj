@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consmetic.cs" />
     <Compile Include="Custom_Controls\Admin_Edit_ctrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,11 +59,23 @@
     <Compile Include="Custom_Controls\TempReceiptControl\ProductInTempReceipt.Designer.cs">
       <DependentUpon>ProductInTempReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ListOfProductInTempReceipt.cs">
+    <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ListOfProductInTempReceipt.Designer.cs">
-      <DependentUpon>ListOfProductInTempReceipt.cs</DependentUpon>
+    <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.Designer.cs">
+      <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\TotalTabTempReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\TotalTabTempReceipt.Designer.cs">
+      <DependentUpon>TotalTabTempReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\productinflowdiagram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\productinflowdiagram.Designer.cs">
+      <DependentUpon>productinflowdiagram.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
@@ -126,6 +139,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductInTempReceipt.resx">
       <DependentUpon>ProductInTempReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.resx">
+      <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\TotalTabTempReceipt.resx">
+      <DependentUpon>TotalTabTempReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\productinflowdiagram.resx">
+      <DependentUpon>productinflowdiagram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>

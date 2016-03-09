@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class ProductInTempReceipt<T> where T :Product
+    partial class productinflowdiagram<T>
     {
         /// <summary> 
         /// Required designer variable.
@@ -20,9 +20,13 @@
             base.Dispose(disposing);
         }
 
+        
 
 
-        private System.Windows.Forms.Label Namel_label;
-        private System.Windows.Forms.Label Price_label;
+        private System.Windows.Forms.Label label_amount;
+        private System.Windows.Forms.Label label_describtion;
+        private System.Windows.Forms.Label label_price;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

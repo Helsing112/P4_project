@@ -28,6 +28,7 @@ namespace ConsoleApplication5
 
         private void Admin_login()
         {
+            
             Controls.Clear();
             Button Admin_login_button = new Button();
             Admin_login_button.Location = new System.Drawing.Point(12, 12);

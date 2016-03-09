@@ -14,44 +14,46 @@ namespace ConsoleApplication5
     {
         public ProductInTempReceipt(int SizeOfElement_x, int SizeOfElement_y, T product)
         {
-            InitializeComponent(product);
+            InitializeComponent(SizeOfElement_x, SizeOfElement_y ,product);
         }
-        private void InitializeComponent(T product)
+        private void InitializeComponent(int SizeOfElement_x, int SizeOfElement_y, T product)
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Namel_label = new System.Windows.Forms.Label();
+            this.Price_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.Namel_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0,0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = product.Name;
+            this.Namel_label.AutoSize = true;
+            this.Namel_label.Location = new System.Drawing.Point(0,0);
+            this.Namel_label.Name = "label1";
+            this.Namel_label.Size = new System.Drawing.Size(46, 17);
+            this.Namel_label.TabIndex = 0;
+            this.Namel_label.Text = product.Name;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.Price_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = product.Price.ToString();
+            this.Price_label.AutoSize = true;
+            this.Price_label.Location = new System.Drawing.Point(0, 20);
+            this.Price_label.Name = "label2";
+            this.Price_label.Size = new System.Drawing.Size(46, 17);
+            this.Price_label.TabIndex = 1;
+            this.Price_label.Text = product.Price.ToString();
             // 
             // ProductInTempReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Price_label);
+            this.Controls.Add(this.Namel_label);
+            this.Height = SizeOfElement_y;
+            this.Width = SizeOfElement_x-10;
+            this.BackColor = Color.Coral;
             this.Name = "ProductInTempReceipt";
-            this.Size = new System.Drawing.Size(317, 900);
             this.ResumeLayout(false);
             this.PerformLayout();
         }

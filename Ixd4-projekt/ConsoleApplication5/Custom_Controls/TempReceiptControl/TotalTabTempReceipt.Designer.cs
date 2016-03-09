@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class ListOfProductInTempReceipt
+    partial class TotalTabTempReceipt
     {
         /// <summary> 
         /// Required designer variable.
@@ -26,8 +26,12 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-
+        
 
         #endregion
+
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label Total_text_label;
+        private System.Windows.Forms.Label Price_label;
     }
 }
