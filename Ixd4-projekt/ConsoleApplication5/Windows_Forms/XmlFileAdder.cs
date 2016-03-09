@@ -73,7 +73,7 @@ namespace ConsoleApplication5
         {
             openFileDialog1.Title = "Select picture for item";
             openFileDialog1.Filter = "Png Image|*.png|Jpeg Image|*.jpg|Gif Image|*.gif";
-            pictureLibraryPath = @"C:\Users\kranzekage\Source\Repos\P4_project\PictureLibrary";
+            pictureLibraryPath = @"..\..\..\..\PictureLibrary";
             productPicturePath = pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
