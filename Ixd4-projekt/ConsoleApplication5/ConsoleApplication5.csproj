@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
     </Compile>
