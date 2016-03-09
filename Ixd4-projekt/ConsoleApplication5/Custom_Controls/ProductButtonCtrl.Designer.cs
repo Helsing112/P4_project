@@ -49,7 +49,8 @@
             this.MAD.Size = new System.Drawing.Size(24, 13);
             this.MAD.TabIndex = 0;
             this.MAD.Text = MAD.Name;
-            this.MAD.Font = new System.Drawing.Font("Corbel", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.MAD.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
             this.MAD.Click += new System.EventHandler(this.MAD_Click);
 
@@ -73,7 +74,7 @@
             this.Controls.Add(this.MAD);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductButtonCtrl";
-            this.Size = new System.Drawing.Size(117, 35);
+            this.Size = new System.Drawing.Size(117, 117);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TypeButtonCtrl_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
