@@ -24,7 +24,6 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
-C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Admin_visual.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.XmlFileAdder.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.csproj.GenerateResource.Cache
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe.config
@@ -46,3 +45,14 @@ C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TotalTabTenpReceipt.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductButtonInTempReceipt.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductDeleteButtonTempReceipt.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Admin_Edit_ctrl.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Properties.Resources.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Admin_function_window.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TempReceipt.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TreeViewerControl.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductButtonCtrl.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Main_page.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.FlowOfProductsInTempReceipt.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductButtonInTempReceipt.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductDeleteButtonTempReceipt.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TotalTabTenpReceipt.resources
