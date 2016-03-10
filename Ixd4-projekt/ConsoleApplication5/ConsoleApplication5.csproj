@@ -46,42 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consmetic.cs" />
+    <Compile Include="Cosmetics.cs" />
     <Compile Include="Custom_Controls\Admin_Edit_ctrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Custom_Controls\Admin_Edit_ctrl.Designer.cs">
       <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductInTempReceipt.cs">
+    <Compile Include="Custom_Controls\FlowOfProductsInTempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductInTempReceipt.Designer.cs">
-      <DependentUpon>ProductInTempReceipt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.Designer.cs">
+    <Compile Include="Custom_Controls\FlowOfProductsInTempReceipt.Designer.cs">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\TotalTabTempReceipt.cs">
+    <Compile Include="Custom_Controls\TotalTabTenpReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\TotalTabTempReceipt.Designer.cs">
-      <DependentUpon>TotalTabTempReceipt.cs</DependentUpon>
+    <Compile Include="Custom_Controls\TotalTabTenpReceipt.Designer.cs">
+      <DependentUpon>TotalTabTenpReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\productinflowdiagram.cs">
+    <Compile Include="Custom_Controls\ProductButtonInTempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\productinflowdiagram.Designer.cs">
-      <DependentUpon>productinflowdiagram.cs</DependentUpon>
+    <Compile Include="Custom_Controls\ProductButtonInTempReceipt.Designer.cs">
+      <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.cs">
+    <Compile Include="Custom_Controls\ProductDeleteButtonTempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Custom_Controls\ProductDeleteButtonTempReceipt.Designer.cs">
+      <DependentUpon>ProductDeleteButtonTempReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
@@ -90,10 +84,10 @@
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Menu.cs" />
-    <Compile Include="Custom_Controls\TempReceiptControl\TempReceipt.cs">
+    <Compile Include="Custom_Controls\TempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\TempReceipt.Designer.cs">
+    <Compile Include="Custom_Controls\TempReceipt.Designer.cs">
       <DependentUpon>TempReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom_Controls\TreeViewerControl.cs">
@@ -143,22 +137,22 @@
     <EmbeddedResource Include="Custom_Controls\Admin_Edit_ctrl.resx">
       <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductInTempReceipt.resx">
-      <DependentUpon>ProductInTempReceipt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.resx">
+    <EmbeddedResource Include="Custom_Controls\FlowOfProductsInTempReceipt.resx">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\TotalTabTempReceipt.resx">
-      <DependentUpon>TotalTabTempReceipt.cs</DependentUpon>
+    <EmbeddedResource Include="Custom_Controls\TotalTabTenpReceipt.resx">
+      <DependentUpon>TotalTabTenpReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\productinflowdiagram.resx">
-      <DependentUpon>productinflowdiagram.cs</DependentUpon>
+    <EmbeddedResource Include="Custom_Controls\ProductButtonInTempReceipt.resx">
+      <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_Controls\ProductDeleteButtonTempReceipt.resx">
+      <DependentUpon>ProductDeleteButtonTempReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\TempReceipt.resx">
+    <EmbeddedResource Include="Custom_Controls\TempReceipt.resx">
       <DependentUpon>TempReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TreeViewerControl.resx">
@@ -175,7 +169,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Custom_Controls\Hejsa\" />
     <Folder Include="Library\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
