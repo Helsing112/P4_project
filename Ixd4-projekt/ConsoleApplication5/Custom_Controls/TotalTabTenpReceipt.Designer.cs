@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class productinflowdiagram<T>
+    partial class TotalTabTenpReceipt
     {
         /// <summary> 
         /// Required designer variable.
@@ -22,11 +22,8 @@
 
         
 
-
-        private System.Windows.Forms.Label label_amount;
-        private System.Windows.Forms.Label label_describtion;
-        private System.Windows.Forms.Label label_price;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.Label label_price;
+        private System.Windows.Forms.Label label_Total;
     }
 }

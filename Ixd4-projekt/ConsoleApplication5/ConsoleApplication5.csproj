@@ -57,9 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.cs" />
     <Compile Include="Custom_Controls\TempReceiptControl\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
@@ -70,7 +68,9 @@
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Menu.cs" />
-    <Compile Include="Custom_Controls\TempReceipt.cs" />
+    <Compile Include="Custom_Controls\TempReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Custom_Controls\TempReceipt.Designer.cs">
       <DependentUpon>TempReceipt.cs</DependentUpon>
     </Compile>
