@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class TempReceipt
+    partial class ProductDeleteButtonTempReceipt
     {
         /// <summary> 
         /// Required designer variable.
@@ -19,16 +19,7 @@
             }
             base.Dispose(disposing);
         }
-
-        #region Component Designer generated code
-
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-       
-
-        #endregion
-
+        
+        private System.Windows.Forms.Label label_delete;
     }
 }

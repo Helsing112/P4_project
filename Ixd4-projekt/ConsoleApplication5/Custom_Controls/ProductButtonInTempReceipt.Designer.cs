@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class TempReceipt
+    partial class ProductButtonInTempReceipt
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,5 +30,9 @@
 
         #endregion
 
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label_Amount;
+        private System.Windows.Forms.Label label_Describtion;
+        private System.Windows.Forms.Label label_Price;
     }
 }

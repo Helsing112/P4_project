@@ -16,39 +16,58 @@ namespace ConsoleApplication5
         {
             InitializeComponent(size_x, size_y);
             Start(size_x, size_y);
+            //constructor
         }
-
         public void Clicked(object sender, ProductEventArgs e)
         {
-            listBox1.Items.Add(e.product.Name);
-            
+            ListOfProducts.Add_product(e.product);
         }
 
         private void InitializeComponent(int size_x, int size_y)
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            int height_of_total_tab = 50;
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(size_x, size_y);
-            this.listBox1.TabIndex = 0;
-            this.Controls.Add(this.listBox1);
-            listBox1.Items.Add("Hejsa");
-
-            // 
-            // TempReceipt
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ListOfProducts = new FlowOfProductsInTempReceipt(size_x, size_y, 40);
+            Total_tab = new TotalTabTenpReceipt(size_x, height_of_total_tab);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "TempReceipt";
-            this.Size = new System.Drawing.Size(size_x, size_y);
+            this.Height = size_x;
+            this.Width = size_y;
             this.ResumeLayout(false);
+            Total_tab.Location = new Point(0, size_y-height_of_total_tab);
+
+
+            Controls.Add(Total_tab);
+            Controls.Add(ListOfProducts);
 
         }
+        FlowOfProductsInTempReceipt ListOfProducts;
+        TotalTabTenpReceipt Total_tab;
+
+
+
+        //public void Clicked(object sender, ProductEventArgs e)
+        //{
+        //    ListOfProducts.Add_product(e.product);
+        //}
+
+        //private void InitializeComponent(int size_x, int size_y)
+        //{
+        //    this.SuspendLayout();
+        //    ListOfProducts = new ListOfProductInTempReceipt(this.Height, this.Width, 30);
+
+        //    this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+        //    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        //    this.Name = "TempReceipt";
+        //    this.Height = size_x;
+        //    this.Width = size_y;
+        //    this.BackColor = Color.Wheat;
+        //    this.ResumeLayout(false);
+
+        //    Controls.Add(ListOfProducts);
+
+        //}
+        //ListOfProductInTempReceipt ListOfProducts;
 
         private void Start(int size_x, int size_y)
         {

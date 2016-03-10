@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.Threading;
 
 namespace ConsoleApplication5
 {
     public partial class XmlFileAdder : Form
     {
-        private string _path { get; }
+        public string _path { get; }
+        public string sourceFilePath { get; private set; }
+        public string pictureLibraryPath { get; private set; }
+        public string productPicturePath { get; set; }
+
         public XmlFileAdder(string Current_path)
         {
             InitializeComponent();
@@ -28,14 +33,14 @@ namespace ConsoleApplication5
 
         public void Input_In_TextBoxes() {
             if (string.IsNullOrEmpty(Text_input.Text) || string.IsNullOrEmpty(PriceInputTextBox.Text))
-            {
+        {
                 button1.Enabled = false;
             }
             else
             {
-                button1.Enabled = true;
+            button1.Enabled = true;
 
-            }
+        }
             }
 
 
@@ -50,7 +55,10 @@ namespace ConsoleApplication5
             CreateLibrary creator = new CreateLibrary();
             Product _product = new Product();
             _product.Name = Text_input.Text;
+            _product.PicturePath = productPicturePath;
             _product.Price = decimal.Parse(PriceInputTextBox.Text);
+            
+
 
             creator.Create_File<Product>(_path, _product);
 
@@ -74,7 +82,7 @@ namespace ConsoleApplication5
             if (CategoryTextBox.Text.Length != 0)
             {
                 Create_Category_Button.Enabled = true;
-            }
+        }
             else
             {
                 Create_Category_Button.Enabled = false;
@@ -94,5 +102,33 @@ namespace ConsoleApplication5
             Thread.Sleep(500);
             Create_Category_Button.BackColor = Color.White;
         }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Select picture for item";
+            openFileDialog1.Filter = "Png Image|*.png|Jpeg Image|*.jpg|Gif Image|*.gif";
+            pictureLibraryPath = @"..\..\..\..\PictureLibrary";
+            productPicturePath = pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                sourceFilePath = (openFileDialog1.FileName);
+                File.Copy(sourceFilePath, productPicturePath, true);
+                Console.WriteLine(pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png");
+                pictureBox1.Image = Image.FromFile(sourceFilePath);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        
+       
     }
 }

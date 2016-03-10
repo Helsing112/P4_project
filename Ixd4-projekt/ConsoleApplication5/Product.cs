@@ -22,13 +22,16 @@ namespace ConsoleApplication5
 
         public string Name { get; set; }
 
+        public string PicturePath { get; set; }
+
         public List<Product> Varianter = new List<Product>();
 
-        public void Add_to_Varrianter_list(string name, decimal price)
+        public void Add_to_Varrianter_list(string name, decimal price, string PicturePath)
         {
             Product new_product = new Product();
             new_product.Name = name;
             new_product.Price = price;
+            new_product.PicturePath = PicturePath;
 
             Varianter.Add(new_product);
         }

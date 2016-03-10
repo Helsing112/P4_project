@@ -34,9 +34,9 @@ namespace ConsoleApplication5
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "TreeViewerControl";
-            Width = SizeTotal_x;
-            Height = SizeTotal_y;
-            BackColor = Color.Azure;
+            this.Width = SizeTotal_x;
+            this.Height = SizeTotal_y;
+            this.BackColor = Color.Azure;
             this.Load += new System.EventHandler(this.TreeViewerControl_Load);
             this.ResumeLayout(false);
         }
@@ -71,6 +71,9 @@ namespace ConsoleApplication5
         {
             ProductButtonCtrl<Product> temp_product_but = new ProductButtonCtrl<Product>(product);
             temp_product_but.Location = new Point(x, y);
+            temp_product_but.BackgroundImage = Image.FromFile(product.PicturePath);
+            temp_product_but.BackgroundImageLayout = ImageLayout.Stretch;
+
 
             //All subscribers!!----------------------------------------------------------------------
             temp_product_but.MouseClicked += new EventHandler<ProductEventArgs>(ProductButtonClick);
