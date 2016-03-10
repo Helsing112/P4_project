@@ -99,7 +99,7 @@ namespace ConsoleApplication5
             //delete button
             //
             this.BackColor = Color.BurlyWood;
-            temp_but = new ProductDeleteButtonTempReceipt(size_x, Size_y);//percent two
+            temp_but = new ProductDeleteButtonTempReceipt(size_x, Size_y);
             Controls.Add(temp_but);
             temp_but.Hide();
 
