@@ -20,14 +20,15 @@ namespace ConsoleApplication5
         /// <typeparam name="T"></typeparam>
         /// <param name="path"></param>
         /// <returns></returns>
-        public void Read_Employee<T>(string path, T employee) where T : Employee
+        public static T Read_Employee<T>(string path) where T : Employee
         {
             T TT;
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             StreamReader reader = new StreamReader(path);
 
             TT = (T)serializer.Deserialize(reader);
-            reader.Close();            
+            reader.Close();
+            return TT;         
         }
     }
 }

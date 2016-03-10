@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ConsoleApplication5
 {
@@ -17,6 +18,7 @@ namespace ConsoleApplication5
         {
             InitializeComponent();
             _path = path_of_employees;
+            ButtonDeactivated();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,32 +26,63 @@ namespace ConsoleApplication5
 
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
+
             Employee_Library creator = new Employee_Library();
             Employee _Employee = new Employee();
             _Employee.EmployeeName = EmployeeNametextBox.Text;
-            _Employee.EmployeeID = int.Parse (EmployeeIDtextBox.Text);
+            _Employee.EmployeeID = int.Parse(EmployeeIDtextBox.Text);
             _Employee.EmployeePassword = EmployeePasswordtextBox.Text;
             creator.Create_File_And_directory<Employee>(_path, _Employee);
             EmployeeNametextBox.Clear();
             EmployeePasswordtextBox.Clear();
             EmployeeIDtextBox.Clear();
+            
+                button1.BackColor = Color.Green;
+                MessageBox.Show("New Employee added");
+                Thread.Sleep(500);
+                button1.BackColor = Color.White;
+                //else {
+                //    button1.backcolor = color.red;
+                //    messagebox.show("forkert");
+                //    thread.sleep(500);
+            
         }
+
+      
+
 
         private void EmployeeNametextBox_TextChanged(object sender, EventArgs e)
         {
-
+            ButtonDeactivated();
         }
 
         private void EmployeeIDtextBox_TextChanged(object sender, EventArgs e)
         {
-
+            ButtonDeactivated();
         }
 
         private void EmployeePasswordtextBox_TextChanged(object sender, EventArgs e)
         {
+            ButtonDeactivated();
+        }
 
+        public void ButtonDeactivated()
+        {
+            if (string.IsNullOrEmpty(EmployeeNametextBox.Text) || string.IsNullOrEmpty(EmployeeIDtextBox.Text) || string.IsNullOrEmpty(EmployeePasswordtextBox.Text))
+            {
+
+
+                button1.Enabled = false;
+            }
+
+            else {
+                button1.Enabled = true;
+            }
+                
         }
     }
 }

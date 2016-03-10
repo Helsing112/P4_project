@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
-            this.Create_cat_but = new System.Windows.Forms.Button();
+            this.Create_Category_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Text_input
@@ -46,7 +46,7 @@
             this.Text_input.Name = "Text_input";
             this.Text_input.Size = new System.Drawing.Size(328, 22);
             this.Text_input.TabIndex = 0;
-            this.Text_input.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Text_input.TextChanged += new System.EventHandler(this.ProductNameTextbox_TextChanged);
             // 
             // label1
             // 
@@ -84,7 +84,7 @@
             this.PriceInputTextBox.Name = "textBox1";
             this.PriceInputTextBox.Size = new System.Drawing.Size(328, 22);
             this.PriceInputTextBox.TabIndex = 4;
-            this.PriceInputTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.PriceInputTextBox.TextChanged += new System.EventHandler(this.PriceTextBox_TextChanged_1);
             // 
             // label3
             // 
@@ -121,25 +121,25 @@
             this.CategoryTextBox.Name = "textBox2";
             this.CategoryTextBox.Size = new System.Drawing.Size(328, 22);
             this.CategoryTextBox.TabIndex = 7;
-            this.CategoryTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.CategoryTextBox.TextChanged += new System.EventHandler(this.CategoryTextbox_TextChanged);
             // 
             // Create_cat_but
             // 
-            this.Create_cat_but.Enabled = false;
-            this.Create_cat_but.Location = new System.Drawing.Point(184, 425);
-            this.Create_cat_but.Name = "Create_cat_but";
-            this.Create_cat_but.Size = new System.Drawing.Size(173, 36);
-            this.Create_cat_but.TabIndex = 9;
-            this.Create_cat_but.Text = "Create Category";
-            this.Create_cat_but.UseVisualStyleBackColor = true;
-            this.Create_cat_but.Click += new System.EventHandler(this.Create_cat_but_Click);
+            this.Create_Category_Button.Enabled = false;
+            this.Create_Category_Button.Location = new System.Drawing.Point(184, 425);
+            this.Create_Category_Button.Name = "Create_cat_but";
+            this.Create_Category_Button.Size = new System.Drawing.Size(173, 36);
+            this.Create_Category_Button.TabIndex = 9;
+            this.Create_Category_Button.Text = "Create Category";
+            this.Create_Category_Button.UseVisualStyleBackColor = true;
+            this.Create_Category_Button.Click += new System.EventHandler(this.Create_Category_Button_Click);
             // 
             // XmlFileAdder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 554);
-            this.Controls.Add(this.Create_cat_but);
+            this.Controls.Add(this.Create_Category_Button);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CategoryTextBox);
             this.Controls.Add(this.label4);
@@ -167,6 +167,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox CategoryTextBox;
-        private System.Windows.Forms.Button Create_cat_but;
+        private System.Windows.Forms.Button Create_Category_Button;
     }
 }

@@ -16,11 +16,13 @@ namespace ConsoleApplication5
     {
         private string Starting_lib_path;
         private string Path_of_product_library;
+        private string Path_of_Employee_library;
         public List<Product> Clicked_products;
         public Main_page(string library_path)
         {
             Starting_lib_path = library_path;
             Path_of_product_library = library_path + "\\Product library";
+            Path_of_Employee_library = library_path + "\\Product libraryEmployee Library\\";
             InitializeComponent();
             Admin_login();
             Clicked_products = new List<Product>();
@@ -49,11 +51,18 @@ namespace ConsoleApplication5
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
-            
-            
+
+
+            EmployeesReader EmployeeControl = new EmployeesReader(500, 200, Path_of_Employee_library);
+            EmployeeControl.Location = new Point(300, 50);
+            EmployeeControl.BorderStyle = BorderStyle.Fixed3D;
+
+
+            Controls.Add(EmployeeControl);
             Controls.Add(temp_receipt);
             Controls.Add(tree); 
             Controls.Add(Admin_login_button);
+
 
         }
         private void Admin_login_click(object sender, EventArgs e)

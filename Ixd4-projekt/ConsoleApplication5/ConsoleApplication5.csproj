@@ -58,6 +58,12 @@
     <Compile Include="Employees classes\AddEmployees.Designer.cs">
       <DependentUpon>AddEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees classes\EmployeesReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees classes\EmployeesReader.Designer.cs">
+      <DependentUpon>EmployeesReader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees classes\Employee_Library.cs" />
     <Compile Include="Employees classes\Employee.cs" />
     <Compile Include="Employees classes\XmlEmployeeReader.cs" />
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employees classes\AddEmployees.resx">
       <DependentUpon>AddEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees classes\EmployeesReader.resx">
+      <DependentUpon>EmployeesReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
