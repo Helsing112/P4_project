@@ -27,7 +27,8 @@ namespace ConsoleApplication5
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(200, 260);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.button1.Location = new System.Drawing.Point(341, 241);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(400, 100);
@@ -35,26 +36,22 @@ namespace ConsoleApplication5
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.Font = new Font(button1.Font.FontFamily, 20);
-            this.button1.Font = new Font("Segoe UI", button1.Font.Size);
-
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(200, 150);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.txtPassword.Location = new System.Drawing.Point(341, 115);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(400, 100);
+            this.txtPassword.Size = new System.Drawing.Size(400, 61);
             this.txtPassword.TabIndex = 0;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            this.txtPassword.Font = new Font(button1.Font.FontFamily, 30);
-            this.txtPassword.Font = new Font("Segoe UI", button1.Font.Size);
-            this.txtPassword.TextAlign = HorizontalAlignment.Center;
-
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(200, 600);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.button2.Location = new System.Drawing.Point(341, 766);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(400, 100);
@@ -62,21 +59,21 @@ namespace ConsoleApplication5
             this.button2.Text = "CLOSE";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.Font = new Font(button1.Font.FontFamily, 20);
-            this.button2.Font = new Font("Segoe UI", button1.Font.Size);
-
             // 
             // Admin_function_window
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 1000);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.CancelButton = this.button2;
+            this.ClientSize = new System.Drawing.Size(1151, 1000);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Admin_function_window";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -89,7 +86,11 @@ namespace ConsoleApplication5
 
         private void start()
         {
+            this.Size = new Size(1200, 800);
+            this.CenterToScreen();
             Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input);
+            admin_edit.Quit_button.Click += new EventHandler(button2_Click);
+
 
             Controls.Add(admin_edit);
 
