@@ -27,20 +27,23 @@ namespace ConsoleApplication5
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button1.Location = new System.Drawing.Point(341, 241);
+            this.button1.Location = new System.Drawing.Point(400, 241);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(400, 100);
             this.button1.TabIndex = 1;
+            this.button1.TabStop = false;
             this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.txtPassword.Location = new System.Drawing.Point(341, 115);
+            this.txtPassword.Location = new System.Drawing.Point(400, 115);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(400, 61);
@@ -50,8 +53,11 @@ namespace ConsoleApplication5
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button2.Location = new System.Drawing.Point(341, 766);
+            this.button2.Location = new System.Drawing.Point(400, 766);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(400, 100);
@@ -67,14 +73,15 @@ namespace ConsoleApplication5
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(1151, 1000);
+            this.ClientSize = new System.Drawing.Size(1198, 998);
+            this.ControlBox = false;
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Admin_function_window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,8 +107,12 @@ namespace ConsoleApplication5
         {
             if (txtPassword.Text == "password")
             {
-                Controls.Clear();
-                start();
+
+                test3 test = new test3();
+                test.Show();
+                this.Close();
+                //Controls.Clear();
+                //start();
             }
             else {
                 MessageBox.Show("Wrong Password");

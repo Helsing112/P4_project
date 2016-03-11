@@ -66,7 +66,6 @@ namespace ConsoleApplication5
             Quit_button.Width = 300;
             Quit_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
             Quit_button.Font = new System.Drawing.Font("Segoe UI", 20F);
-
             Quit_button.Location = new Point(900);
             Quit_button.FlatStyle = FlatStyle.Flat;
             //Quit_button.Location = new Point(500, 300);
