@@ -107,5 +107,7 @@ namespace ConsoleApplication5
         {
             txtPassword.PasswordChar = '*';
         }
+
+       
     }
 }
