@@ -12,15 +12,22 @@ namespace ConsoleApplication5
 {
     public partial class TempReceipt : UserControl
     {
+        private decimal total_price { get; set; }
         public TempReceipt(int size_x, int size_y)
         {
             InitializeComponent(size_x, size_y);
-            Start(size_x, size_y);
-            //constructor
         }
         public void Clicked(object sender, ProductEventArgs e)
         {
             ListOfProducts.Add_product(e.product);
+            
+            total_price += e.product.Price;
+            Total_tab.label_price.Text = total_price.ToString() + ",-";
+        }
+        private void Product_removed(object sender, ProductEventArgs e)
+        {
+            total_price -= e.product.Price;
+            Total_tab.label_price.Text = total_price.ToString() + ",-";
         }
 
         private void InitializeComponent(int size_x, int size_y)
@@ -29,6 +36,7 @@ namespace ConsoleApplication5
             this.SuspendLayout();
             ListOfProducts = new FlowOfProductsInTempReceipt(size_x, size_y, 40);
             Total_tab = new TotalTabTenpReceipt(size_x, height_of_total_tab);
+            ListOfProducts.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);//subscribe to remove event
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "TempReceipt";
             this.Height = size_x;
@@ -39,39 +47,8 @@ namespace ConsoleApplication5
 
             Controls.Add(Total_tab);
             Controls.Add(ListOfProducts);
-
         }
         FlowOfProductsInTempReceipt ListOfProducts;
-        TotalTabTenpReceipt Total_tab;
-
-
-
-        //public void Clicked(object sender, ProductEventArgs e)
-        //{
-        //    ListOfProducts.Add_product(e.product);
-        //}
-
-        //private void InitializeComponent(int size_x, int size_y)
-        //{
-        //    this.SuspendLayout();
-        //    ListOfProducts = new ListOfProductInTempReceipt(this.Height, this.Width, 30);
-
-        //    this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-        //    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        //    this.Name = "TempReceipt";
-        //    this.Height = size_x;
-        //    this.Width = size_y;
-        //    this.BackColor = Color.Wheat;
-        //    this.ResumeLayout(false);
-
-        //    Controls.Add(ListOfProducts);
-
-        //}
-        //ListOfProductInTempReceipt ListOfProducts;
-
-        private void Start(int size_x, int size_y)
-        {
-
-        }
+        TotalTabTenpReceipt Total_tab;   
     }
 }

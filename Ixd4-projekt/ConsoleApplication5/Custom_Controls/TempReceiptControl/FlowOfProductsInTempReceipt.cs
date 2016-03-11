@@ -12,6 +12,7 @@ namespace ConsoleApplication5
 {
     public partial class FlowOfProductsInTempReceipt : UserControl
     {
+        public int Index_of_item { get; private set; }
         public int Size_of_list_x { get; }
         public int Size_of_list_y { get; }
         public int Height_of_element { get; }
@@ -26,7 +27,6 @@ namespace ConsoleApplication5
             
             InitializeComponent();
         }
-        #region Component Designer generated code
 
         private void InitializeComponent()
         {
@@ -54,20 +54,32 @@ namespace ConsoleApplication5
             this.ResumeLayout(false);
 
         }
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+
         public void Add_product(Product product_to_add)
-        {
-            ProductButtonInTempReceipt product_item = new ProductButtonInTempReceipt(Size_of_list_x, Height_of_element, product_to_add);
+        {            
+            ProductButtonInFlowTempReciept product_item = new ProductButtonInFlowTempReciept(Size_of_list_x, Height_of_element, product_to_add);
             product_item.Location = new Point(0, Height_of_element * number_of_items);
-            //ProductInTempReceipt<Product> product_item = new ProductInTempReceipt<Product>(Size_of_list_x, Height_of_element, product_to_add);
-            //product_item.Location = new Point(0, Height_of_element * number_of_items);
-            product_item.BackColor = Color.AliceBlue;
+            //product_item.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);
+            product_item.BackColor = Color.White;
             flowLayoutPanel1.Controls.Add(product_item);
         }
 
-        #endregion
+        public void Product_removed(object sender, ProductEventArgs e)
+        {
+            OnProductRemoved(e.product);
+        }
+        public EventHandler<ProductEventArgs> ProductRemove;
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-    
+        protected virtual void OnProductRemoved(Product product)
+        {
+            if (ProductRemove != null)
+            {
+                ProductRemove(this, new ProductEventArgs() { product = product });
+            }
+        }
 
-}
+
+
+    }
 }

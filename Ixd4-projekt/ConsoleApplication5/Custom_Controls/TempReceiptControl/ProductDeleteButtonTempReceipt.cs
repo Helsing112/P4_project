@@ -19,10 +19,18 @@ namespace ConsoleApplication5
 
         private void label_delete_Click(object sender, EventArgs e)
         {
-
+            OnLabelClicked();
         }
 
+        public EventHandler LabelClicked;
 
+        protected virtual void OnLabelClicked()
+        {
+            if (LabelClicked != null)
+            {
+                LabelClicked(this, new EventArgs());
+            }
+        }
         private void InitializeComponent(int size_x, int size_y)
         {
             this.label_delete = new System.Windows.Forms.Label();
@@ -30,12 +38,11 @@ namespace ConsoleApplication5
             // 
             // label_delete
             // 
-            this.label_delete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_delete.Dock = DockStyle.Fill;
             this.label_delete.Location = new System.Drawing.Point(0, 0);
             this.label_delete.Name = "label_delete";
-            this.label_delete.Size = new System.Drawing.Size(size_x, size_y);
             this.label_delete.TabIndex = 0;
-            this.label_delete.Text = "D";
+            this.label_delete.Text = "Del";
             this.label_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_delete.Click += new System.EventHandler(this.label_delete_Click);
             
