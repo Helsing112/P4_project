@@ -34,25 +34,27 @@ namespace ConsoleApplication5
         private void CreateEmployeeButton(Employee EMP)
         {
             // Create a Button object 
-            Button dynamicButton = new Button();
+            EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
             // Set Button properties
-            dynamicButton.Height = 100;
-            dynamicButton.Width = 100;
-            dynamicButton.Text = EMP.EmployeeName;
-            dynamicButton.Name = EMP.EmployeeName;
+
             // Add a Button Click Event handler
-            dynamicButton.Click += new EventHandler(EmployeeButtonClick);
+            dynamicButton.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeButtonClick);
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             EmployeeHolder.Controls.Add(dynamicButton);
         }
 
-        private void EmployeeButtonClick(object sender, EventArgs e)
+        private void EmployeeButtonClick(object sender, EmployeeEventArgs e)
         {
-            
+            Controls.Clear();
+            MessageBox.Show(e.employee.EmployeeID + e.employee.EmployeeName);
+
+
         }
 
 
+       
+            
 
 
 
