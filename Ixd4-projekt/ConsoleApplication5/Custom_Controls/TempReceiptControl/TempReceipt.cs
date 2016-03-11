@@ -26,17 +26,19 @@ namespace ConsoleApplication5
         }
         private void Product_removed(object sender, ProductEventArgs e)
         {
-            total_price -= e.product.Price;
+            int Representing_amount = (int)sender;
+            total_price += e.product.Price * Representing_amount;
             Total_tab.label_price.Text = total_price.ToString() + ",-";
         }
 
         private void InitializeComponent(int size_x, int size_y)
         {
+            ProductButtonInFlowTempReciept.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);
             int height_of_total_tab = 50;
             this.SuspendLayout();
             ListOfProducts = new FlowOfProductsInTempReceipt(size_x, size_y, 40);
             Total_tab = new TotalTabTenpReceipt(size_x, height_of_total_tab);
-            ListOfProducts.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);//subscribe to remove event
+            //ListOfProducts.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);//subscribe to remove event
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "TempReceipt";
             this.Height = size_x;

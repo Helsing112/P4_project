@@ -56,9 +56,6 @@ namespace ConsoleApplication5
             this.BackColor = Color.Red;
             this.Name = "ProductDeleteButtonTempReceipt";
             this.ResumeLayout(false);
-
         }
-
-
     }
 }
