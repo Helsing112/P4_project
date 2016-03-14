@@ -43,14 +43,14 @@ namespace ConsoleApplication5
             }
             if (i == 0)
             {
-                CreateDynamicLabel(i.ToString(), "N/A", 80, 80 * i);
+                CreateDynamicLabel(i.ToString(), "No products to show", 80, 80 * i);
             }
         }
 
         private void Create_static_controls()
         {
             Create_home_button();
-            // Create_back_button();
+            //Create_back_button();
             Create_edit_button();
             Create_Closer_Button();
             Create_Employee_Button();
@@ -59,31 +59,42 @@ namespace ConsoleApplication5
 
         private void Create_Closer_Button()
         {
-            Button Quit_button = new Button();
+            Quit_button = new Button();
 
             // Set Button properties
-            Quit_button.Height = 40;
-            Quit_button.Width = 100;
-            Quit_button.Location = new Point(500, 300);
-            Quit_button.Text = "Quit";
+            Quit_button.Height = 80;
+            Quit_button.Width = 300;
+            Quit_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+            Quit_button.Font = new System.Drawing.Font("Segoe UI", 20F);
+            Quit_button.Location = new Point(900);
+            Quit_button.FlatStyle = FlatStyle.Flat;
+            //Quit_button.Location = new Point(500, 300);
+            Quit_button.Text = "QUIT";
             Quit_button.Name = "Quit button";
             // Add a Button Click Event handler
             Quit_button.Click += new EventHandler(Quit_button_click);
+            
 
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             Controls.Add(Quit_button);
         }
+        public Button Quit_button;
 
         private void Create_Employee_Button()
         {
             Button EditEmployee_button = new Button();
 
             // Set Button properties
-            EditEmployee_button.Height = 40;
-            EditEmployee_button.Width = 100;
-            EditEmployee_button.Location = new Point(240, 390);
-            EditEmployee_button.Text = "Edit Employee";
+            EditEmployee_button.Height = 80;
+            EditEmployee_button.Width = 300;
+            EditEmployee_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+            EditEmployee_button.FlatStyle = FlatStyle.Flat;
+            EditEmployee_button.Font = new System.Drawing.Font("Segoe UI", 20F);
+
+
+            EditEmployee_button.Location = new Point(300);
+            EditEmployee_button.Text = "ADD EMPLOYEE";
             EditEmployee_button.Name = "Edit Employee";
             // Add a Button Click Event handler
             EditEmployee_button.Click += new EventHandler(EditEmployee_button_click);
@@ -107,11 +118,15 @@ namespace ConsoleApplication5
             Button Edit_button = new Button();
 
             // Set Button properties
-            Edit_button.Height = 40;
-            Edit_button.Width = 100;
-            Edit_button.Location = new Point(200, 300);
-            Edit_button.Text = "Edit";
+            Edit_button.Height = 80;
+            Edit_button.Width = 300;
+            Edit_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+            Edit_button.FlatStyle = FlatStyle.Flat;
+            Edit_button.Location = new Point(0);
+            Edit_button.Text = "ADD PRODUCTS";
             Edit_button.Name = "Edit button";
+            Edit_button.Font = new System.Drawing.Font("Segoe UI", 20F);
+
             // Add a Button Click Event handler
             Edit_button.Click += new EventHandler(Edit_button_click);
 
@@ -136,11 +151,16 @@ namespace ConsoleApplication5
             Button Home_button = new Button();
 
             // Set Button properties
-            Home_button.Height = 40;
-            Home_button.Width = 100;
-            Home_button.Location = new Point(300, 300);
-            Home_button.Text = "Home";
+            Home_button.Height = 80;
+            Home_button.Width = 300;
+            Home_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+            Home_button.FlatStyle = FlatStyle.Flat;
+            Home_button.Font = new System.Drawing.Font("Segoe UI", 20F);
+
+            Home_button.Location = new Point(600);
+            Home_button.Text = "HOME";
             Home_button.Name = "Home button";
+           // Home_button.Dock = DockStyle.Bottom;
             // Add a Button Click Event handler
             Home_button.Click += new EventHandler(Home_button_click);
 

@@ -67,7 +67,7 @@ namespace ConsoleApplication5
 
 
             button1.BackColor = Color.Green;
-            MessageBox.Show("New Product Added");
+            MessageBox.Show(_product.Name + " Added" + "\n" + "Price: " + _product.Price);
             Thread.Sleep(500);
             button1.BackColor = Color.White;
         }
