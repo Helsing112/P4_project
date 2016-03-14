@@ -24,13 +24,16 @@ namespace ConsoleApplication5
             Path_of_product_library = library_path + "\\Product library";
             Path_of_Employee_library = library_path + "\\Product libraryEmployee Library\\";
             InitializeComponent();
+           
             Admin_login();
+           
             Clicked_products = new List<Product>();
        }
 
         private void Admin_login()
         {
             Controls.Clear();
+            
             Button Admin_login_button = new Button();
             Admin_login_button.Location = new System.Drawing.Point(12, 12);
             Admin_login_button.Name = "Admin_login_button";
@@ -53,16 +56,20 @@ namespace ConsoleApplication5
             temp_receipt.Name = "Receipt";
 
 
-            EmployeesReader EmployeeControl = new EmployeesReader(500, 200, Path_of_Employee_library);
-            EmployeeControl.Location = new Point(300, 50);
-            EmployeeControl.BorderStyle = BorderStyle.Fixed3D;
+            Button CheckIn_Button = new Button();
+            CheckIn_Button.Location = new System.Drawing.Point(12, 245);
+            CheckIn_Button.Name = "CheckInButton";
+            CheckIn_Button.Size = new System.Drawing.Size(139, 79);
+            CheckIn_Button.TabIndex = 0;
+            CheckIn_Button.Text = "CheckIn";
+            CheckIn_Button.UseVisualStyleBackColor = true;
+            CheckIn_Button.Click += new System.EventHandler(CheckInButton_click);
 
-
-            Controls.Add(EmployeeControl);
+           
             Controls.Add(temp_receipt);
             Controls.Add(tree); 
             Controls.Add(Admin_login_button);
-
+            Controls.Add(CheckIn_Button);
 
         }
         private void Admin_login_click(object sender, EventArgs e)
@@ -70,6 +77,14 @@ namespace ConsoleApplication5
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
             admin_window.Show();
         }
+
+       
+        private void CheckInButton_click(object sender, EventArgs e)
+        {
+            SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
+            SignIn.Show();
+        }
+
         protected void ClickReciever(object sender, ProductEventArgs e)
         {
         }

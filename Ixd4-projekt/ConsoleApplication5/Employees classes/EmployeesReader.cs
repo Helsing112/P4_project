@@ -13,10 +13,12 @@ namespace ConsoleApplication5
 {
     public partial class EmployeesReader : UserControl
     {
+        private Employee employeeinput { get; set; }
         public EmployeesReader(int size_x, int size_y, string path)
         {
             InitializeComponent(size_x, size_y);
             FillEmployeeHodler(path);
+            
         }
 
         private void FillEmployeeHodler(string path)
@@ -34,27 +36,87 @@ namespace ConsoleApplication5
         private void CreateEmployeeButton(Employee EMP)
         {
             // Create a Button object 
-            Button dynamicButton = new Button();
+            EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
             // Set Button properties
-            dynamicButton.Height = 100;
-            dynamicButton.Width = 100;
-            dynamicButton.Text = EMP.EmployeeName;
-            dynamicButton.Name = EMP.EmployeeName;
+
             // Add a Button Click Event handler
-            dynamicButton.Click += new EventHandler(EmployeeButtonClick);
+            dynamicButton.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeButtonClick);
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             EmployeeHolder.Controls.Add(dynamicButton);
         }
 
-        private void EmployeeButtonClick(object sender, EventArgs e)
+        public void EmployeeButtonClick(object sender, EmployeeEventArgs e)
         {
+            employeeinput = e.employee;
+            Controls.Clear();
+           
+            //LABEL TIL PASSWORD, DER SKRIVER EMPLOYEE'S NAVN.
+            Label Create_Label = new Label();
+                Create_Label.AutoSize = true;
+                Create_Label.Location = new System.Drawing.Point(100, 1);
+                Create_Label.Name = "label1";
+                Create_Label.Size = new System.Drawing.Size(168, 20);
+                Create_Label.TabIndex = 1;
+                Create_Label.Text = e.employee.EmployeeName;
+                Create_Label.Click += new System.EventHandler(this.Create_Label_Click);
+
+                Controls.Add(Create_Label);
+
+            //TEXTBOX DER INDEHOLDER PASSWORD FOR EMPLOYEE
+            EmployeeButtonClickTextbox = new TextBox();
+            EmployeeButtonClickTextbox.Location = new System.Drawing.Point(100, 30);
+            EmployeeButtonClickTextbox.Name = "EmployeeIDtextBox";
+            EmployeeButtonClickTextbox.Size = new System.Drawing.Size(100, 20);
+            EmployeeButtonClickTextbox.TabIndex = 2;
+            EmployeeButtonClickTextbox.TextChanged += new System.EventHandler(this.EmployeeButtonClickTextbox_TextChanged);
+
+            Controls.Add(EmployeeButtonClickTextbox);
+
+
+            Button Log_In = new Button();
+            Log_In.Location = new System.Drawing.Point(100, 60);
+            Log_In.Name = "Log In";
+            Log_In.Size = new System.Drawing.Size(105, 49);
+            Log_In.TabIndex = 11;
+            Log_In.Text = "Log In";
+            Log_In.UseVisualStyleBackColor = true;
+            Log_In.Click += new System.EventHandler(this.Log_In_Click);
+
+            Controls.Add(Log_In);
+
+           
+            //MessageBox.Show(e.employee.EmployeeID + e.employee.EmployeeName);
+
+
+        }
+        TextBox EmployeeButtonClickTextbox;
+
+        public void Log_In_Click(object sender, EventArgs e)
+        {
+
+            if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.Text)
+            {
+                Controls.Clear();
+                MessageBox.Show("Legit Password");
+            }
+            else {
+                MessageBox.Show("Wrong Password");
+            }
+
+
             
         }
 
+        public void EmployeeButtonClickTextbox_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
 
+        private void Create_Label_Click(object sender, EventArgs e)
+        {
 
-
+        }
 
         /// <summary> 
         /// Required method for Designer support - do not modify 

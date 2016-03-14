@@ -112,8 +112,11 @@
             this.Controls.Add(this.EmployeeIDtextBox);
             this.Controls.Add(this.EmployeeNametextBox);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddEmployees";
             this.Text = "AddEmployees";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
