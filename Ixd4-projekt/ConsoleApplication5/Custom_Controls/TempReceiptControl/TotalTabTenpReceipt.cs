@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class TotalTabTenpReceipt : UserControl
+    public partial class TotalTabTenpReceipt : UserControl 
     {
         public TotalTabTenpReceipt(int size_x, int size_y)
         {
