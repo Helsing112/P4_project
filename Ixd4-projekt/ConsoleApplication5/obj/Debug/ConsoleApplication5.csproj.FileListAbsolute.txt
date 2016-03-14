@@ -56,3 +56,7 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductButtonInTempReceipt.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductDeleteButtonTempReceipt.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TotalTabTenpReceipt.resources
+C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AddEmployees.resources
+C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.EmployeesReader.resources
+C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Properties.Resources.resources
+C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductButtonInFlowTempReciept.resources

@@ -14,25 +14,32 @@ namespace ConsoleApplication5
     {
         public int Size_x { get; private set; }
         public int Size_y { get;private set; }
+        public Product Product_input { get; private set; }
         public ProductButtonInTempReceipt(int size_x, int size_y, Product product)
         {
+            Product_input = product;
             Size_x = size_x;
             Size_y = size_y;
             InitializeComponent(size_x, size_y, product);
         }
         private void InitializeComponent(int size_x, int size_y, Product product)
         {
+            int percent_one = 15;
+            int percent_two = 85;
+            int percent_three = 56;
+            double decimal_one = percent_one / 100;
+
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_Amount = new System.Windows.Forms.Label();
             this.label_Describtion = new System.Windows.Forms.Label();
             this.label_Price = new System.Windows.Forms.Label();
             this.timer = new Timer();
+            this.Delete_button = new ProductDeleteButtonTempReceipt(size_x/6, Size_y);
+
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
 
-            int percent_one = 15;
-            int percent_two = 85;
-            int percent_three = 56;
+        
             // 
             // tableLayoutPanel1
             // 
@@ -90,19 +97,19 @@ namespace ConsoleApplication5
             timer.Interval = 3000;
             timer.Tick += new EventHandler(Timer_tick);
             //
-            //click events
+            //click events for labels
             //
             this.label_Amount.Click += new EventHandler(this.LabelClick);
             this.label_Price.Click += new EventHandler(this.LabelClick);
             this.label_Describtion.Click += new EventHandler(this.LabelClick);
             //
             //delete button
-            //
-            this.BackColor = Color.BurlyWood;
-            temp_but = new ProductDeleteButtonTempReceipt(size_x, Size_y);
-            Controls.Add(temp_but);
-            temp_but.Hide();
-
+            //                      
+            this.Delete_button.Location = new System.Drawing.Point((size_x/6)*5, 0);
+            this.Delete_button.Hide();
+            this.Delete_button.LabelClicked += new EventHandler(DeleteButtonClick);
+            this.Controls.Add(Delete_button);
+            
             // 
             // ProductButtonInTempReceipt
             // 
@@ -116,23 +123,37 @@ namespace ConsoleApplication5
             this.PerformLayout();
 
         }
+
         private Timer timer;
-        private ProductDeleteButtonTempReceipt temp_but;
+        private ProductDeleteButtonTempReceipt Delete_button;
 
-
+        private void DeleteButtonClick(object sender, EventArgs e)
+        {
+            OnProductRemoved(Product_input);
+            this.Parent = null;
+        }
         private void Timer_tick(object sender, EventArgs e)
         {
             timer.Stop();
-            temp_but.Hide();
+            Delete_button.Hide();
+            this.BackColor = Color.White;
         }
-
-
-
         private void LabelClick(object sender, EventArgs e)
         {
-            temp_but.Show();
-       
+            Delete_button.Show();
+            this.BackColor = Color.LightBlue;       
             timer.Start();
         }
+
+        public EventHandler<ProductEventArgs> ProductRemove;
+
+        protected virtual void OnProductRemoved(Product product)
+        {
+            if (ProductRemove != null)
+            {
+                ProductRemove(this, new ProductEventArgs() { product = product });
+            }
+        }
+
     }
 }

@@ -67,8 +67,9 @@ namespace ConsoleApplication5
             this.label_price.Name = "label_price";
             this.label_price.AutoSize = true;
             this.label_price.TabIndex = 1;
-            this.label_price.Text = "label2";
+            this.label_price.Text = "0.00,-";
             this.label_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            
             // 
             // TotalTabTenpReceipt
             // 
@@ -84,5 +85,8 @@ namespace ConsoleApplication5
         }
 
         #endregion
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.Label label_price;
+        private System.Windows.Forms.Label label_Total;
     }
 }

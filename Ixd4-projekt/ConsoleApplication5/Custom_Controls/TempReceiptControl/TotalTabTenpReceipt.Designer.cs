@@ -22,8 +22,6 @@
 
         
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        public System.Windows.Forms.Label label_price;
-        private System.Windows.Forms.Label label_Total;
+
     }
 }
