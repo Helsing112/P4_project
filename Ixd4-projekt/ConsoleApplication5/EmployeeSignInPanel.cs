@@ -47,7 +47,7 @@ namespace ConsoleApplication5
             this.Name = "EmployeeSignInPanel";
             this.ResumeLayout(false);
             this.PerformLayout();
-
+             
         }
 
         private void OnPasswordCorrect(object sender, EmployeeEventArgs e)
