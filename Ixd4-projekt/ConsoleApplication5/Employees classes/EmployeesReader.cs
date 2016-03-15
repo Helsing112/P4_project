@@ -20,7 +20,7 @@ namespace ConsoleApplication5
             FillEmployeeHodler(path);
             
         }
-
+        
         private void FillEmployeeHodler(string path)
         {
             DirectoryInfo Employer = new DirectoryInfo(path);
@@ -28,8 +28,7 @@ namespace ConsoleApplication5
             {
                 Employee Waiter =  XmlEmployeeReader.Read_Employee<Employee>(item.FullName);
                 CreateEmployeeButton(Waiter);
-            }
-         
+            }        
 
         }
 
@@ -59,7 +58,7 @@ namespace ConsoleApplication5
                 Create_Label.Size = new System.Drawing.Size(168, 20);
                 Create_Label.TabIndex = 1;
                 Create_Label.Text = e.employee.EmployeeName;
-                Create_Label.Click += new System.EventHandler(this.Create_Label_Click);
+
 
                 Controls.Add(Create_Label);
 
@@ -69,8 +68,7 @@ namespace ConsoleApplication5
             EmployeeButtonClickTextbox.Name = "EmployeeIDtextBox";
             EmployeeButtonClickTextbox.Size = new System.Drawing.Size(100, 20);
             EmployeeButtonClickTextbox.TabIndex = 2;
-            EmployeeButtonClickTextbox.TextChanged += new System.EventHandler(this.EmployeeButtonClickTextbox_TextChanged);
-
+       
             Controls.Add(EmployeeButtonClickTextbox);
 
 
@@ -94,29 +92,29 @@ namespace ConsoleApplication5
 
         public void Log_In_Click(object sender, EventArgs e)
         {
-
+            
             if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.Text)
             {
                 Controls.Clear();
-                MessageBox.Show("Legit Password");
+                OnPasswordCorrect(sender, e);              
             }
             else {
                 MessageBox.Show("Wrong Password");
             }
-
-
-            
         }
 
-        public void EmployeeButtonClickTextbox_TextChanged(object sender, EventArgs e)
+        public static EventHandler<EmployeeEventArgs> PasswordCorrect;
+
+        protected virtual void OnPasswordCorrect(object sender, EventArgs e)
         {
+            if (PasswordCorrect != null)
+            {
+                PasswordCorrect(this, new EmployeeEventArgs() { employee = employeeinput });
+            }
+
+        }
+
         
-        }
-
-        private void Create_Label_Click(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary> 
         /// Required method for Designer support - do not modify 

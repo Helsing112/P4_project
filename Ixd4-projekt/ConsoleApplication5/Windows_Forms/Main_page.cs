@@ -24,9 +24,9 @@ namespace ConsoleApplication5
             Path_of_product_library = library_path + "\\Product library";
             Path_of_Employee_library = library_path + "\\Product libraryEmployee Library\\";
             InitializeComponent();
-           
+
             Admin_login();
-           
+
             Clicked_products = new List<Product>();
        }
 
@@ -54,6 +54,11 @@ namespace ConsoleApplication5
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
+
+            EmployeeSignInPanel employee_sign_in_panel = new EmployeeSignInPanel();
+            employee_sign_in_panel.Location = new System.Drawing.Point(350, 0);
+            employee_sign_in_panel.Size = new System.Drawing.Size(600, 200);
+            Controls.Add(employee_sign_in_panel);
 
 
             Button CheckIn_Button = new Button();
@@ -87,6 +92,7 @@ namespace ConsoleApplication5
 
         protected void ClickReciever(object sender, ProductEventArgs e)
         {
+
         }
 
        
