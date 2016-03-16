@@ -55,6 +55,7 @@
             this.EmployeeNametextBox.Size = new System.Drawing.Size(100, 20);
             this.EmployeeNametextBox.TabIndex = 1;
             this.EmployeeNametextBox.TextChanged += new System.EventHandler(this.EmployeeNametextBox_TextChanged);
+            this.EmployeeNametextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmployeeNametextBox_KeyPress);
             // 
             // EmployeeIDtextBox
             // 
@@ -63,6 +64,7 @@
             this.EmployeeIDtextBox.Size = new System.Drawing.Size(100, 20);
             this.EmployeeIDtextBox.TabIndex = 2;
             this.EmployeeIDtextBox.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
+            this.EmployeeIDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmployeeIDtextBox_KeyPress);
             // 
             // EmployeePasswordtextBox
             // 
@@ -70,7 +72,7 @@
             this.EmployeePasswordtextBox.Name = "EmployeePasswordtextBox";
             this.EmployeePasswordtextBox.Size = new System.Drawing.Size(100, 20);
             this.EmployeePasswordtextBox.TabIndex = 3;
-            this.EmployeePasswordtextBox.TextChanged += new System.EventHandler(this.EmployeePasswordtextBox_TextChanged);
+            this.EmployeePasswordtextBox.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
             // 
             // label1
             // 

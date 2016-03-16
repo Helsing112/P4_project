@@ -58,16 +58,49 @@ namespace ConsoleApplication5
         private void EmployeeNametextBox_TextChanged(object sender, EventArgs e)
         {
             ButtonDeactivated();
+            if (System.Text.RegularExpressions.Regex.IsMatch(EmployeeNametextBox.Text, "  ^ [0-9]"))
+            {
+                EmployeeNametextBox.Text = "";
+            }
         }
+
+
+        private void EmployeeNametextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
 
         private void EmployeeIDtextBox_TextChanged(object sender, EventArgs e)
         {
             ButtonDeactivated();
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(EmployeeIDtextBox.Text, "  ^ [0-9]"))
+            {
+                EmployeeIDtextBox.Text = "";
+            }
+        }
+
+
+
+        private void EmployeeIDtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void EmployeePasswordtextBox_TextChanged(object sender, EventArgs e)
         {
             ButtonDeactivated();
+
+           
         }
 
         public void ButtonDeactivated()

@@ -51,9 +51,6 @@ namespace ConsoleApplication5
             }
         }
 
-        public void print_lortet()
-        {
-            
-        }
+       
     }
 }

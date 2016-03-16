@@ -16,7 +16,7 @@ namespace ConsoleApplication5
         {
             InitializeComponent();
         }
-        #region Component Designer generated code
+ 
 
         /// <summary> 
         /// Required method for Designer support - do not modify 
@@ -49,20 +49,25 @@ namespace ConsoleApplication5
             this.PerformLayout();
               
         }
-
+        
         private void OnPasswordCorrect(object sender, EmployeeEventArgs e)
         {
             EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
             this.Panel_for_employee.Controls.Add(temp);
-            temp.ClickEvent += new EventHandler<EmployeeEventArgs>(OnPassWordCorrectClick);
+            temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
         }
 
-        public void OnPassWordCorrectClick(object sender, EmployeeEventArgs e)
+        public EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;
+        protected virtual void EmployeeSignedInCLickButton(object sender, EmployeeEventArgs e)
         {
-            MessageBox.Show("Never gonna give you up, never gonna let you down, never gonna run around, and desert you");
+            if (this.EmployeeSignedInClickEvent != null)
+            {
+                EmployeeSignedInClickEvent(this, new EmployeeEventArgs() { employee = e.employee });
+            }
+
         }
 
-        #endregion
+       
 
         private System.Windows.Forms.FlowLayoutPanel Panel_for_employee;
     }
