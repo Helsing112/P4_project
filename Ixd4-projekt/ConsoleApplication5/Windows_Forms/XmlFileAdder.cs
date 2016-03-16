@@ -95,7 +95,7 @@ namespace ConsoleApplication5
         private void CategoryTextbox_TextChanged(object sender, EventArgs e)
         {
             if (CategoryTextBox.Text.Length != 0)
-            {
+            {  
                 Create_Category_Button.Enabled = true;
         }
             else
