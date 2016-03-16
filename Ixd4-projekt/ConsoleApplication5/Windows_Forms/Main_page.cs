@@ -55,7 +55,6 @@ namespace ConsoleApplication5
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
 
-
             Button CheckIn_Button = new Button();
             CheckIn_Button.Location = new System.Drawing.Point(12, 245);
             CheckIn_Button.Name = "CheckInButton";

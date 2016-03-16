@@ -16,6 +16,9 @@ namespace ConsoleApplication5
         [STAThread]
         static void Main(string[] args)
         {
+            Application.SetCompatibleTextRenderingDefault(false);
+
+
 
             //Admin_Menu menu = new Admin_Menu();
             //menu.Start();
@@ -25,7 +28,6 @@ namespace ConsoleApplication5
             //Console.WriteLine("jhlfgcxdhsfdfghl");
 
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main_page(@"..\..\..\..\Library"));
             
             Console.ReadKey();

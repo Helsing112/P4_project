@@ -40,15 +40,8 @@ namespace ConsoleApplication5
             EmployeeNametextBox.Clear();
             EmployeePasswordtextBox.Clear();
             EmployeeIDtextBox.Clear();
-            
-                button1.BackColor = Color.Green;
-                MessageBox.Show("New Employee added");
-                Thread.Sleep(500);
-                button1.BackColor = Color.White;
-                //else {
-                //    button1.backcolor = color.red;
-                //    messagebox.show("forkert");
-                //    thread.sleep(500);
+
+            Messages.ConfirmedAddEmployeees();
             
         }
 
