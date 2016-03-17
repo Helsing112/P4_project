@@ -107,10 +107,10 @@ namespace ConsoleApplication5
         {
             if (txtPassword.Text == "password")
             {
+                //testknapvindue vindue1 = new testknapvindue();
+                //vindue1.Show();
 
-                //test3 test = new test3();
-                //test.Show();
-                //this.Close();
+
                 Controls.Clear();
                 start();
             }
@@ -127,6 +127,10 @@ namespace ConsoleApplication5
             txtPassword.PasswordChar = '*';
         }
 
-       
+        protected void ClickReciever(object sender, ProductEventArgs e)
+        {
+        }
+
+
     }
 }

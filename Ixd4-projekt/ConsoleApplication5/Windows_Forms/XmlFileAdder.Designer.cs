@@ -1,4 +1,5 @@
-﻿namespace ConsoleApplication5
+﻿using System.Windows.Forms;
+namespace ConsoleApplication5
 {
     partial class XmlFileAdder
     {
@@ -42,6 +43,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.Create_Category_Button = new System.Windows.Forms.Button();
+            this.testknap11 = new ConsoleApplication5.testknap1();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +173,22 @@
             this.Create_Category_Button.UseVisualStyleBackColor = true;
             this.Create_Category_Button.Click += new System.EventHandler(this.Create_Category_Button_Click);
             // 
+            // testknap11
+            // 
+            this.testknap11.Location = new System.Drawing.Point(477, 366);
+            this.testknap11.Name = "testknap11";
+            this.testknap11.Size = new System.Drawing.Size(100, 90);
+            this.testknap11.TabIndex = 13;
+            this.testknap11.Button_Click += new System.EventHandler(button1_Click);
+
+
+            // 
             // XmlFileAdder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 742);
+            this.Controls.Add(this.testknap11);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Create_Category_Button);
@@ -218,5 +231,6 @@
         
         private System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.Button Create_Category_Button;
+        private testknap1 testknap11;
     }
 }

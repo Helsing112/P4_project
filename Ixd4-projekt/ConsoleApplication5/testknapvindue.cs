@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class test3 : Standard_Window_Layout
+    public partial class testknapvindue : Form
     {
-        public test3()
+        public testknapvindue()
         {
             InitializeComponent();
+            testknap1 knap1 = new testknap1();
+            Controls.Add(knap1);
+            
         }
 
-        private void standard_Button_layout2_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

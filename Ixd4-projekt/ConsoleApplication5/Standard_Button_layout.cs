@@ -8,9 +8,8 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    sealed public class Standard_Button_layout : System.Windows.Forms.Button
+    public class Standard_Button_layout : System.Windows.Forms.Button
     {
-        sealed override public Color BackColor { get { return Color.Red; } }
         public Standard_Button_layout() : base()
         {
 
@@ -19,6 +18,7 @@ namespace ConsoleApplication5
             Font = new System.Drawing.Font("Segoe UI", 20F);
             Size = new System.Drawing.Size(400, 100);
             BackColor = System.Drawing.Color.Blue;
+            
 
         }
     }

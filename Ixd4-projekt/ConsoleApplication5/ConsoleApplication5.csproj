@@ -132,11 +132,17 @@
     <Compile Include="SignInOnJobWindow.Designer.cs">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="test3.cs">
+    <Compile Include="testknap1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="testknap1.Designer.cs">
+      <DependentUpon>testknap1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testknapvindue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test3.Designer.cs">
-      <DependentUpon>test3.cs</DependentUpon>
+    <Compile Include="testknapvindue.Designer.cs">
+      <DependentUpon>testknapvindue.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
@@ -236,8 +242,11 @@
     <EmbeddedResource Include="SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test3.resx">
-      <DependentUpon>test3.cs</DependentUpon>
+    <EmbeddedResource Include="testknap1.resx">
+      <DependentUpon>testknap1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testknapvindue.resx">
+      <DependentUpon>testknapvindue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>

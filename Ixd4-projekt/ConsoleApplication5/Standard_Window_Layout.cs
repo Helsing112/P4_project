@@ -15,6 +15,11 @@ namespace ConsoleApplication5
         public Standard_Window_Layout()
         {
             InitializeComponent();
+
+
         }
+
+
+
     }
 }

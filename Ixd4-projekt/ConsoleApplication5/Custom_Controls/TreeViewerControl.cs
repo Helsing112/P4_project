@@ -53,12 +53,12 @@ namespace ConsoleApplication5
             int i = 0;
             foreach (Category item in Category.MasterCategory.Category_list)
             {
-                CreateCategoryButton(item.Name, item.Name, 40, 50 * i);
+                CreateCategoryButton(item.Name, item.Name, 40, 100 * i);
                 i++;
             }
             foreach (Product item in Category.MasterCategory.Product_list)
             {
-                createproductbutton(item, 40, 50 * i);
+                createproductbutton(item, 40, 100 * i);
                 i++;
             }
             if (!string.Equals(temp_path,INPUT_PATH))

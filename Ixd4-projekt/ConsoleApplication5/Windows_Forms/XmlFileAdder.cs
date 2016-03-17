@@ -66,10 +66,10 @@ namespace ConsoleApplication5
             PriceInputTextBox.Clear();
 
 
-            button1.BackColor = Color.Green;
-            MessageBox.Show(_product.Name + " Added" + "\n" + "Price: " + _product.Price);
-            Thread.Sleep(500);
-            button1.BackColor = Color.White;
+            //button1.BackColor = Color.Green;
+            //MessageBox.Show(_product.Name + " Added" + "\n" + "Price: " + _product.Price);
+            //Thread.Sleep(500);
+            //button1.BackColor = Color.White;
         }
 
         private void PriceTextBox_TextChanged_1(object sender, EventArgs e)
@@ -126,9 +126,7 @@ namespace ConsoleApplication5
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-        }
 
-        
-       
+        }
     }
 }
