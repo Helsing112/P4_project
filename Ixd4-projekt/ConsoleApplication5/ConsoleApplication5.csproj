@@ -105,10 +105,10 @@
     <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInFlowTempReciept.Designer.cs">
       <DependentUpon>ProductButtonInFlowTempReciept.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeSignInPanel.cs">
+    <Compile Include="Employees classes\EmployeeSignInPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeSignInPanel.Designer.cs">
+    <Compile Include="Employees classes\EmployeeSignInPanel.Designer.cs">
       <DependentUpon>EmployeeSignInPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -121,6 +121,17 @@
     </Compile>
     <Compile Include="Employees classes\SignInOnJobWindow.Designer.cs">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Tables and shit\TableAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables and shit\TableAdd.Designer.cs">
+      <DependentUpon>TableAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
@@ -207,7 +218,7 @@
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\TotalTabTenpReceipt.resx">
       <DependentUpon>TotalTabTenpReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeSignInPanel.resx">
+    <EmbeddedResource Include="Employees classes\EmployeeSignInPanel.resx">
       <DependentUpon>EmployeeSignInPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -216,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employees classes\SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables and shit\TableAdd.resx">
+      <DependentUpon>TableAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
@@ -242,6 +256,10 @@
     <Folder Include="Library\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\coke_bottle.png" />
   </ItemGroup>
   <ItemGroup>

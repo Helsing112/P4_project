@@ -106,12 +106,47 @@ namespace ConsoleApplication5
         
 
             Controls.Add(Create_Label);
+            //BackToFrontPage();
 
         }
 
 
+        //public void BackToFrontPage()
+        //{
+        //    Button BackToFrontPage = new Button();
+        //    BackToFrontPage.Location = new System.Drawing.Point(12, 245);
+        //    BackToFrontPage.Name = "CheckInButton";
+        //    BackToFrontPage.Size = new System.Drawing.Size(139, 79);
+        //    BackToFrontPage.TabIndex = 0;
+        //    BackToFrontPage.Text = "CheckOut";
+        //    BackToFrontPage.UseVisualStyleBackColor = true;
+        //    BackToFrontPage.Click += new System.EventHandler(BackToFrontPage_click);
 
+        //    Controls.Add(BackToFrontPage);
+        //}
+        
+       
 
+        //public void BackToFrontPage_click(object sender, EventArgs e)
+        //{
+        //    Controls.Clear();
+        //    lel(library_path);
+
+        //}
+
+        //private void lel(string library_path)
+        //{
+        //    Starting_lib_path = library_path;
+        //    Path_of_product_library = library_path + "\\Product library";
+        //    Path_of_Employee_library = library_path + "\\Product libraryEmployee Library\\";
+        //    InitializeComponent();
+
+        //    Admin_login();
+
+        //    employe_sign_inPanel();
+        //    Check_inButton();
+        //    Clicked_products = new List<Product>();
+        //}
 
         private void Admin_login_click(object sender, EventArgs e)
         {

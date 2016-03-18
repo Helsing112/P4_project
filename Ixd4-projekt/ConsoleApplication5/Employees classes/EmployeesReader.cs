@@ -95,8 +95,8 @@ namespace ConsoleApplication5
             
             if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.Text)
             {
-                Controls.Clear();
-                OnPasswordCorrect(sender, e);              
+                OnPasswordCorrect(sender, e);
+                        
             }
             else {
                 MessageBox.Show("Wrong Password");
