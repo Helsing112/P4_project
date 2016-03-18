@@ -78,7 +78,10 @@ namespace ConsoleApplication5
                     this.BackColor = Color.PaleVioletRed;
                     this.Controls.Add(pictureBox1);
                 }
-                else { }
+                else
+                {
+                    this.BackColor = Color.CornflowerBlue;
+                }
             }
             // 
             // Message_Box_standard
@@ -109,7 +112,7 @@ namespace ConsoleApplication5
             this.Dispose();
         }
         /// <summary>
-        /// Message to user. Tick mode 1 == green, -1 == red, 0 == neutral
+        /// Message to user. Tick mode 1 == green, -1 == red, 0 == neutral(is also selected if no tickmode is input
         /// </summary>
         /// <param name="input_string"></param>
         /// <param name="tick_mode"></param>
@@ -121,7 +124,7 @@ namespace ConsoleApplication5
         }
         public static void Message(string input_string)
         {
-            Message(input_string, 1);
+            Message(input_string, 0);
         }
 
 

@@ -14,6 +14,7 @@ namespace ConsoleApplication5
 {
     public partial class Main_page : Form
     {
+        
         private string Starting_lib_path;
         private string Path_of_product_library;
         private string Path_of_Employee_library;
@@ -43,18 +44,26 @@ namespace ConsoleApplication5
             Admin_login_button.UseVisualStyleBackColor = true;
             Admin_login_button.Click += new System.EventHandler(Admin_login_click);
 
-            TreeViewerControl tree = new TreeViewerControl(500, 500, Path_of_product_library);
-            tree.Location = new Point(300,300);
-            tree.BorderStyle = BorderStyle.Fixed3D;
-            tree.Name = "tree";
-            tree.MouseClicked += new EventHandler<ProductEventArgs>(ClickReciever);
+            Tree = new TreeViewerControl(500, 500, Path_of_product_library);
+            Tree.Location = new Point(300,300);
+            Tree.BorderStyle = BorderStyle.Fixed3D;
+            Tree.Name = "tree";
+            Tree.MouseDowned += MouseDownReciever;
+            Tree.MouseUpped += MouseUpReciever;
 
-            TempReceipt temp_receipt = new TempReceipt(500, 500);
-            tree.MouseClicked += new EventHandler<ProductEventArgs>(temp_receipt.Clicked); //subscribe to mouse click
+
+            Timer_for_wheel_controller = new Timer();
+            Timer_for_wheel_controller.Interval = 100;
+            Timer_for_wheel_controller.Tick += Timer_for_wheel_controller_Tick;
+            Timer_for_wheel = new Timer();
+            Timer_for_wheel.Interval = 500;
+            Timer_for_wheel.Tick += Timer_for_wheel_Tick;
+            temp_receipt = new TempReceipt(500, 500);
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
 
+            
             Button CheckIn_Button = new Button();
             CheckIn_Button.Location = new System.Drawing.Point(12, 245);
             CheckIn_Button.Name = "CheckInButton";
@@ -63,14 +72,19 @@ namespace ConsoleApplication5
             CheckIn_Button.Text = "CheckIn";
             CheckIn_Button.UseVisualStyleBackColor = true;
             CheckIn_Button.Click += new System.EventHandler(CheckInButton_click);
-
            
             Controls.Add(temp_receipt);
-            Controls.Add(tree); 
+            Controls.Add(Tree); 
             Controls.Add(Admin_login_button);
             Controls.Add(CheckIn_Button);
 
         }
+
+        TreeViewerControl Tree;
+        TempReceipt temp_receipt;
+        Timer Timer_for_wheel;
+        Timer Timer_for_wheel_controller;
+
         private void Admin_login_click(object sender, EventArgs e)
         {
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
@@ -84,10 +98,50 @@ namespace ConsoleApplication5
             SignIn.Show();
         }
 
-        protected void ClickReciever(object sender, ProductEventArgs e)
+        #region EventHandlers for product click to add to temp_receipt----------------------------------------------------
+        private bool timer_has_ticked = false;
+        private Product Product_to_add;
+        int test = 0;
+
+        protected void MouseDownReciever(object sender, ProductEventArgs e)
         {
+            Timer_for_wheel.Start();
+            Product_to_add = e.product;
+        }
+        private void MouseUpReciever(object sender, ProductEventArgs e)
+        {
+            if (!timer_has_ticked)
+            {
+                Timer_for_wheel.Stop();
+                temp_receipt.Add_products(e.product);
+            }
+
+        }
+        private void Timer_for_wheel_Tick(object sender, EventArgs e)
+        {
+            Timer_for_wheel.Stop();
+            Message_box.Message(test.ToString());
+            test++;
+            timer_has_ticked = true;
+            int Size_of_wheel = 400;
+            NumberWheelForm temp_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
+            temp_wheel.On_Pie_Clicked += Temp_wheel_On_Pie_Clicked;
+            Timer_for_wheel_controller.Start();
         }
 
-       
+        private void Temp_wheel_On_Pie_Clicked(int number)
+        {
+            temp_receipt.Add_products(Product_to_add, number);
+        }
+
+        private void Timer_for_wheel_controller_Tick(object sender, EventArgs e)
+        {
+            timer_has_ticked = false;
+            Timer_for_wheel_controller.Stop();
+        }
+
+        #endregion
+
+
     }
 }

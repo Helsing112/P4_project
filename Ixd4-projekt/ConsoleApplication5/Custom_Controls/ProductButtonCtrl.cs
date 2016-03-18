@@ -19,24 +19,34 @@ namespace ConsoleApplication5
             InitializeComponent(product);
             
         }
-        public EventHandler<ProductEventArgs> MouseClicked;
+        public EventHandler<ProductEventArgs> MouseDowned;
 
-        private void TypeButtonCtrl_MouseClick(object sender, MouseEventArgs e)
+        private void TypeButtonCtrl_MouseDown(object sender, MouseEventArgs e)
         {
-            OnMouseClicked(_product);
+            OnMouseDowned(_product);
         }
 
-        protected virtual void OnMouseClicked(T product)
+        protected virtual void OnMouseDowned(T product)
         {
-            if(MouseClicked != null)
+            if(MouseDowned != null)
             {
-                MouseClicked(this, new ProductEventArgs() { product = product });
+                MouseDowned(this, new ProductEventArgs() { product = product });
             }
         }
 
-        private void MAD_Click(object sender, EventArgs e)
+        public EventHandler<ProductEventArgs> MouseUpped;
+
+        private void TypeButtonCtrl_MouseUp(object sender, MouseEventArgs e)
         {
-            OnMouseClicked(_product);
+            OnMouseUpped(_product);
+        }
+
+        protected virtual void OnMouseUpped(T product)
+        {
+            if (MouseUpped != null)
+            {
+                MouseUpped(this, new ProductEventArgs() { product = product });
+            }
         }
     }
 }

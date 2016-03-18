@@ -76,7 +76,8 @@ namespace ConsoleApplication5
 
 
             //All subscribers!!----------------------------------------------------------------------
-            temp_product_but.MouseClicked += new EventHandler<ProductEventArgs>(ProductButtonClick);
+            temp_product_but.MouseDowned += new EventHandler<ProductEventArgs>(ProductButtonDown);
+            temp_product_but.MouseUpped += new EventHandler<ProductEventArgs>(ProductButtonUp);
             
             Controls.Add(temp_product_but);
         }
@@ -104,20 +105,7 @@ namespace ConsoleApplication5
             temp_path = temp_path + "\\" + tmp_button.Name;
             Start(temp_path);
         }       
-        private void ProductButtonClick(object sender, ProductEventArgs e)
-        {
-            OnMouseClicked(e.product);
-        }
-        //Event for mouse click
-        public EventHandler<ProductEventArgs> MouseClicked;
 
-        protected virtual void OnMouseClicked(Product product)
-        {
-            if (MouseClicked != null)
-            {
-                MouseClicked(this, new ProductEventArgs() { product = product });
-            }
-        }
         // Knap i valg af varer til at gå tilbage i menuen. 
         private void BackButton()
         {
@@ -135,6 +123,32 @@ namespace ConsoleApplication5
             string lastPath = temp_path.Substring(0, temp_path.LastIndexOf('\\'));
             temp_path = lastPath;
             Start(temp_path);
+        }
+        //event for mouse upped
+        public EventHandler<ProductEventArgs> MouseUpped;
+        private void ProductButtonUp(object sender, ProductEventArgs e)
+        {
+            OnMouseUpped(e.product);
+        }
+        protected virtual void OnMouseUpped(Product product)
+        {
+            if (MouseUpped != null)
+            {
+                MouseUpped(this, new ProductEventArgs() { product = product });
+            }
+        }
+        //Event for mouse down
+        public EventHandler<ProductEventArgs> MouseDowned;
+        private void ProductButtonDown(object sender, ProductEventArgs e)
+        {
+            OnMouseDowned(e.product);
+        }
+        protected virtual void OnMouseDowned(Product product)
+        {
+            if (MouseDowned != null)
+            {
+                MouseDowned(this, new ProductEventArgs() { product = product });
+            }
         }
     }
 }

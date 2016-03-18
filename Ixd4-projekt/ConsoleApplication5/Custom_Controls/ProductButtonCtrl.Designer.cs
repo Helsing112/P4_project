@@ -1,4 +1,7 @@
-﻿namespace ConsoleApplication5
+﻿using System;
+using System.Windows.Forms;
+
+namespace ConsoleApplication5
 {
     partial class ProductButtonCtrl <T>
     {
@@ -42,7 +45,6 @@
            | System.Windows.Forms.AnchorStyles.Left)
            | System.Windows.Forms.AnchorStyles.Right)));
 
-           
             this.MAD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.MAD.Name = "MAD";
             this.MAD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -52,7 +54,8 @@
 
             this.MAD.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-            this.MAD.Click += new System.EventHandler(this.MAD_Click);
+            this.MAD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TypeButtonCtrl_MouseUp);
+            this.MAD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TypeButtonCtrl_MouseDown);
 
 
             // 
@@ -75,11 +78,14 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductButtonCtrl";
             this.Size = new System.Drawing.Size(117, 117);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TypeButtonCtrl_MouseClick);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TypeButtonCtrl_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TypeButtonCtrl_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+
 
         #endregion
 

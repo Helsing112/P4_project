@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wheel _classes\CenterOnNumberWheel.Designer.cs">
+      <DependentUpon>CenterOnNumberWheel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Message\Messages.cs" />
     <Compile Include="Message\Message_box.cs">
       <SubType>Form</SubType>
@@ -54,16 +60,22 @@
     <Compile Include="Message\Message_box.Designer.cs">
       <DependentUpon>Message_box.cs</DependentUpon>
     </Compile>
-    <Compile Include="NumberWheel.cs">
+    <Compile Include="Wheel _classes\NumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NumberWheel.Designer.cs">
+    <Compile Include="Wheel _classes\NumberWheel.Designer.cs">
       <DependentUpon>NumberWheel.cs</DependentUpon>
     </Compile>
-    <Compile Include="PieOnNumberWheel.cs">
+    <Compile Include="Wheel _classes\NumberWheelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wheel _classes\NumberWheelForm.Designer.cs">
+      <DependentUpon>NumberWheelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wheel _classes\PieOnNumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PieOnNumberWheel.Designer.cs">
+    <Compile Include="Wheel _classes\PieOnNumberWheel.Designer.cs">
       <DependentUpon>PieOnNumberWheel.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard_Button_layout.cs">
@@ -206,8 +218,11 @@
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NumberWheel.resx">
+    <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
       <DependentUpon>NumberWheel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wheel _classes\NumberWheelForm.resx">
+      <DependentUpon>NumberWheelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard_Window_Layout.resx">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
