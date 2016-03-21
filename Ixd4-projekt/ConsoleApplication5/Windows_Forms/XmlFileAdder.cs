@@ -12,7 +12,7 @@ using System.Threading;
 
 namespace ConsoleApplication5
 {
-    public partial class XmlFileAdder : Form
+    public partial class XmlFileAdder : Standard_Window_Layout
     {
         public string _path { get; }
         public string sourceFilePath { get; private set; }
@@ -22,6 +22,15 @@ namespace ConsoleApplication5
         public XmlFileAdder(string Current_path)
         {
             InitializeComponent();
+            testknap11.Button_Click += new System.EventHandler(this.button1_Click);
+            testknap12.Button_Click += new System.EventHandler(this.button2_Click);
+            testknap13.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
+            testknap11.label1.Text = "Add product";
+            testknap12.label1.Text = "Add picture";
+            testknap13.label1.Text = "Add category";
+            Text_input.Click += new System.EventHandler(this.textbox_Click);
+
+
             _path = Current_path;
 
         }
@@ -46,8 +55,12 @@ namespace ConsoleApplication5
 
         private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
         {
-
             Input_In_TextBoxes();
+        }
+
+        private void textbox_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Program Files\Common Files\Microsoft Shared\ink\TabTip.exe");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -128,5 +141,17 @@ namespace ConsoleApplication5
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void testknap11_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }

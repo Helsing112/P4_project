@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class testknapvindue : Form
+    public partial class testknapvindue : Standard_Window_Layout
     {
         public testknapvindue()
         {
