@@ -25,6 +25,5 @@
         private System.Windows.Forms.Button CreateAmountOfTableButtons;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox AmountOfTableInput;
-        private System.Windows.Forms.TextBox textbox;
     }
 }

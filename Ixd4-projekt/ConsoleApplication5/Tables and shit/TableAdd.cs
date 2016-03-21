@@ -15,13 +15,7 @@ namespace ConsoleApplication5
         public TableAdd()
         {
             InitializeComponent();
-            this.textbox.Name = "textbox";
-            this.textbox.Size = new System.Drawing.Size(100, 20);
-            this.textbox.TabIndex = 1;
-            this.textbox.Location = Properties.Settings.Default.Location;
-            this.textbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textbox_MouseDown);
-            this.textbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.textbox_MouseMove);
-            this.textbox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.textbox_MouseUp);
+            this.CreateAmountOfTableButtons.Click += CreateAmountOfTableButtons_Click;
 
         }
         private Control activeControl;
@@ -31,7 +25,7 @@ namespace ConsoleApplication5
         {
 
         }
-        private void CreateAmountOfTableButtons_Click(object sender, EventArgs e)
+        public void CreateAmountOfTableButtons_Click(object sender, EventArgs e)
         {
             int lel;
             List<Button> Bordliste = new List<Button>();
@@ -46,8 +40,7 @@ namespace ConsoleApplication5
             foreach (var Button in Bordliste)
             {
 
-
-                Button.Location = new System.Drawing.Point(0, 24 * z);
+                Button.Location = new Point(Properties.Settings.Default.Location.X, Properties.Settings.Default.Location.Y + z*24);
                 Button.Name = "Bord";
                 Button.Size = new System.Drawing.Size(75, 23);
                 Button.TabIndex = 0;
@@ -55,13 +48,21 @@ namespace ConsoleApplication5
                 Button.UseVisualStyleBackColor = true;
                 Button.Click += new System.EventHandler(NewTable_Click);
                 Controls.Add(Button);
+                Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NewTable_MouseDown);
+                Button.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NewTable_MouseMove);
+                Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NewTable_MouseUp);
                 z++;
+
+ 
             }
       
 }
         private void NewTable_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("lålålålååå wolololo");
+            if (checkBox1.CheckState != CheckState.Checked)
+            {
+                MessageBox.Show("lålålålååå wolololo");
+            }
         }
 
         /// <summary>
@@ -73,7 +74,6 @@ namespace ConsoleApplication5
             this.CreateAmountOfTableButtons = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.AmountOfTableInput = new System.Windows.Forms.TextBox();
-            this.textbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CreateAmountOfTableButtons
@@ -84,6 +84,9 @@ namespace ConsoleApplication5
             this.CreateAmountOfTableButtons.TabIndex = 0;
             this.CreateAmountOfTableButtons.Text = "Create Tables";
             this.CreateAmountOfTableButtons.UseVisualStyleBackColor = true;
+         
+        
+
             // 
             // checkBox1
             // 
@@ -103,19 +106,11 @@ namespace ConsoleApplication5
             this.AmountOfTableInput.TabIndex = 2;
             this.AmountOfTableInput.TextChanged += new System.EventHandler(this.AmountOfTableInput_TextChanged);
             // 
-            // textbox
-            // 
-            this.textbox.Location = new System.Drawing.Point(91, 87);
-            this.textbox.Name = "textbox";
-            this.textbox.Size = new System.Drawing.Size(100, 20);
-            this.textbox.TabIndex = 3;
-            // 
             // TableAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 394);
-            this.Controls.Add(this.textbox);
             this.Controls.Add(this.AmountOfTableInput);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.CreateAmountOfTableButtons);
@@ -128,27 +123,21 @@ namespace ConsoleApplication5
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var textbox = new TextBox();
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    var textbox = new TextBox();
 
-            textbox.MouseDown += new MouseEventHandler(textbox_MouseDown);
-            textbox.MouseMove += new MouseEventHandler(textbox_MouseMove);
-            textbox.MouseUp += new MouseEventHandler(textbox_MouseUp);
-
-
-            this.Controls.Add(textbox);
+        //    textbox.MouseDown += new MouseEventHandler(NewTable_MouseDown);
+        //    textbox.MouseMove += new MouseEventHandler(NewTable_MouseMove);
+        //    textbox.MouseUp += new MouseEventHandler(NewTable_MouseUp);
 
 
+        //    this.Controls.Add(textbox);
 
-        }
-
-
-
+        //}
 
 
-
-        void textbox_MouseDown(object sender, MouseEventArgs e)
+        void NewTable_MouseDown(object sender, MouseEventArgs e)
         {
             if (checkBox1.CheckState == CheckState.Checked)
             {
@@ -156,12 +145,12 @@ namespace ConsoleApplication5
                 activeControl = sender as Control;
                 previousLocation = e.Location;
                 Cursor = Cursors.Hand;
-                Properties.Settings.Default.Location = textbox.Location;
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.Location = Table.Location;
+                //Properties.Settings.Default.Save();
             }
         }
 
-        void textbox_MouseMove(object sender, MouseEventArgs e)
+        void NewTable_MouseMove(object sender, MouseEventArgs e)
         {
             //if (checkbox1.checkstate == checkstate.checked)
             //{
@@ -172,12 +161,12 @@ namespace ConsoleApplication5
             var location = activeControl.Location;
             location.Offset(e.Location.X - previousLocation.X, e.Location.Y - previousLocation.Y);
             activeControl.Location = location;
-            Properties.Settings.Default.Location = textbox.Location;
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.Location = Bord.Location;
+            //Properties.Settings.Default.Save();
 
         }
 
-        void textbox_MouseUp(object sender, MouseEventArgs e)
+        void NewTable_MouseUp(object sender, MouseEventArgs e)
         {
             if (checkBox1.CheckState == CheckState.Checked)
             {

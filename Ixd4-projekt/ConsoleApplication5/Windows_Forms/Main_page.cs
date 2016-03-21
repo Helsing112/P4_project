@@ -103,36 +103,38 @@ namespace ConsoleApplication5
             Create_Label.Size = new System.Drawing.Size(168, 200);
             Create_Label.TabIndex = 1;
             Create_Label.Text = e.employee.EmployeeName;
-        
+            Create_Label.Font = new Font(Create_Label.Font.FontFamily, 100);
+            
 
             Controls.Add(Create_Label);
-            //BackToFrontPage();
+            BackToFrontPage();
 
         }
 
 
-        //public void BackToFrontPage()
-        //{
-        //    Button BackToFrontPage = new Button();
-        //    BackToFrontPage.Location = new System.Drawing.Point(12, 245);
-        //    BackToFrontPage.Name = "CheckInButton";
-        //    BackToFrontPage.Size = new System.Drawing.Size(139, 79);
-        //    BackToFrontPage.TabIndex = 0;
-        //    BackToFrontPage.Text = "CheckOut";
-        //    BackToFrontPage.UseVisualStyleBackColor = true;
-        //    BackToFrontPage.Click += new System.EventHandler(BackToFrontPage_click);
+        public void BackToFrontPage()
+        {
+            Button BackToFrontPage = new Button();
+            BackToFrontPage.Location = new System.Drawing.Point(12, 245);
+            BackToFrontPage.Name = "CheckInButton";
+            BackToFrontPage.Size = new System.Drawing.Size(139, 79);
+            BackToFrontPage.TabIndex = 0;
+            BackToFrontPage.Text = "CheckOut";
+            BackToFrontPage.UseVisualStyleBackColor = true;
+            BackToFrontPage.Click += new System.EventHandler(BackToFrontPage_click);
 
-        //    Controls.Add(BackToFrontPage);
-        //}
-        
-       
+            Controls.Add(BackToFrontPage);
+        }
 
-        //public void BackToFrontPage_click(object sender, EventArgs e)
-        //{
-        //    Controls.Clear();
-        //    lel(library_path);
 
-        //}
+
+        public void BackToFrontPage_click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ERROR 404, zhit aint working");
+            //Controls.Clear();
+            //lel(library_path);
+
+        }
 
         //private void lel(string library_path)
         //{

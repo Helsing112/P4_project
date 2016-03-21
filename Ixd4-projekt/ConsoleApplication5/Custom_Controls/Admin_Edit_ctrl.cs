@@ -54,6 +54,7 @@ namespace ConsoleApplication5
             Create_edit_button();
             Create_Closer_Button();
             Create_Employee_Button();
+            
             TableManager_button();
         }
 
