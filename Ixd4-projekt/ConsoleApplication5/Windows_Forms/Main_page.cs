@@ -14,7 +14,7 @@ namespace ConsoleApplication5
 {
     public partial class Main_page : Form
     {
-        
+
         private string Starting_lib_path;
         private string Path_of_product_library;
         private string Path_of_Employee_library;
@@ -25,16 +25,16 @@ namespace ConsoleApplication5
             Path_of_product_library = library_path + "\\Product library";
             Path_of_Employee_library = library_path + "\\Product libraryEmployee Library\\";
             InitializeComponent();
-           
+
             Admin_login();
-           
+
             Clicked_products = new List<Product>();
-       }
+        }
 
         private void Admin_login()
         {
             Controls.Clear();
-            
+
             Button Admin_login_button = new Button();
             Admin_login_button.Location = new System.Drawing.Point(12, 12);
             Admin_login_button.Name = "Admin_login_button";
@@ -45,7 +45,7 @@ namespace ConsoleApplication5
             Admin_login_button.Click += new System.EventHandler(Admin_login_click);
 
             Tree = new TreeViewerControl(500, 500, Path_of_product_library);
-            Tree.Location = new Point(300,300);
+            Tree.Location = new Point(300, 300);
             Tree.BorderStyle = BorderStyle.Fixed3D;
             Tree.Name = "tree";
             Tree.MouseDowned += MouseDownReciever;
@@ -63,7 +63,7 @@ namespace ConsoleApplication5
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
 
-            
+
             Button CheckIn_Button = new Button();
             CheckIn_Button.Location = new System.Drawing.Point(12, 245);
             CheckIn_Button.Name = "CheckInButton";
@@ -72,9 +72,9 @@ namespace ConsoleApplication5
             CheckIn_Button.Text = "CheckIn";
             CheckIn_Button.UseVisualStyleBackColor = true;
             CheckIn_Button.Click += new System.EventHandler(CheckInButton_click);
-           
+
             Controls.Add(temp_receipt);
-            Controls.Add(Tree); 
+            Controls.Add(Tree);
             Controls.Add(Admin_login_button);
             Controls.Add(CheckIn_Button);
 
@@ -91,17 +91,16 @@ namespace ConsoleApplication5
             admin_window.Show();
         }
 
-       
+
         private void CheckInButton_click(object sender, EventArgs e)
         {
             SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
             SignIn.Show();
         }
 
-        #region EventHandlers for product click to add to temp_receipt----------------------------------------------------
+        #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;
-        int test = 0;
 
         protected void MouseDownReciever(object sender, ProductEventArgs e)
         {
@@ -120,8 +119,6 @@ namespace ConsoleApplication5
         private void Timer_for_wheel_Tick(object sender, EventArgs e)
         {
             Timer_for_wheel.Stop();
-            Message_box.Message(test.ToString());
-            test++;
             timer_has_ticked = true;
             int Size_of_wheel = 400;
             NumberWheelForm temp_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
