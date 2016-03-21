@@ -48,13 +48,15 @@ namespace ConsoleApplication5
 
             Controls.Add(Admin_login_button);
         }
-            public void tree_thingy_And_Receipt() {
-            TreeViewerControl tree = new TreeViewerControl(500, 500, Path_of_product_library);
+        public void tree_thingy_And_Receipt()
+        {
+            tree = new TreeViewerControl(500, 500, Path_of_product_library);
             tree.Location = new Point(300, 300);
             tree.BorderStyle = BorderStyle.Fixed3D;
             tree.Name = "tree";
-            tree.MouseClicked += new EventHandler<ProductEventArgs>(ClickReciever);
-            //subscribe to mouse click
+            tree.MouseDowned += MouseDownReciever;
+            tree.MouseUpped += MouseUpReciever;
+
             Controls.Add(tree);
 
 
@@ -66,7 +68,6 @@ namespace ConsoleApplication5
             Timer_for_wheel.Tick += Timer_for_wheel_Tick;
             temp_receipt = new TempReceipt(500, 500);
             temp_receipt.Location = new Point(800, 300);
-            tree.MouseClicked += new EventHandler<ProductEventArgs>(temp_receipt.Clicked);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
 
@@ -144,7 +145,8 @@ namespace ConsoleApplication5
 
         }
 
-        TreeViewerControl Tree;
+
+        TreeViewerControl tree;
         TempReceipt temp_receipt;
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
