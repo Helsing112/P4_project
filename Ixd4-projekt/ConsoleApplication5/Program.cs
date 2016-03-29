@@ -18,15 +18,6 @@ namespace ConsoleApplication5
         {
             Application.SetCompatibleTextRenderingDefault(false);
 
-
-
-            //Admin_Menu menu = new Admin_Menu();
-            //menu.Start();
-
-            //Console.WriteLine("Hejsa bøsser");
-
-            //Console.WriteLine("jhlfgcxdhsfdfghl");
-
             Application.EnableVisualStyles();
             Application.Run(new Main_page(@"..\..\..\..\Library"));
             

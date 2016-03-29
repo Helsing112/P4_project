@@ -46,6 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tables\Table_button + table_control.cs" />
+    <Compile Include="Tables\Table_panel_for_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tables\XmlTableFileWriter.cs" />
+    <Compile Include="Tables\Table_management_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\Table_management_form.Designer.cs">
+      <DependentUpon>Table_management_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,12 +178,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Tables and shit\TableAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tables and shit\TableAdd.Designer.cs">
-      <DependentUpon>TableAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,14 +230,17 @@
       <DependentUpon>XmlFileAdder.cs</DependentUpon>
     </Compile>
     <Compile Include="FIle_readers\XmlProductReader.cs" />
+    <Compile Include="Tables\XmlTableFileReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Table_management_form.resx">
+      <DependentUpon>Table_management_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
       <DependentUpon>NumberWheel.cs</DependentUpon>
@@ -280,9 +288,6 @@
     <EmbeddedResource Include="Employees classes\SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tables and shit\TableAdd.resx">
-      <DependentUpon>TableAdd.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,7 +309,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Custom_Controls\Hejsa\" />
     <Folder Include="Library\" />
   </ItemGroup>
   <ItemGroup>

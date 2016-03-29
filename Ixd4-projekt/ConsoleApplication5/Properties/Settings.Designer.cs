@@ -37,13 +37,25 @@ namespace ConsoleApplication5.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\Library\\Table_Library\\")]
+        public string Path_of_Table_list_file {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["Path_of_Table_list_file"]));
             }
             set {
-                this["Setting"] = value;
+                this["Path_of_Table_list_file"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Tables")]
+        public string Table_file_name {
+            get {
+                return ((string)(this["Table_file_name"]));
+            }
+            set {
+                this["Table_file_name"] = value;
             }
         }
     }

@@ -5,8 +5,11 @@
     <Setting Name="Location" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="Path_of_Table_list_file" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\Library\Table_Library\</Value>
+    </Setting>
+    <Setting Name="Table_file_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tables</Value>
     </Setting>
   </Settings>
 </SettingsFile>

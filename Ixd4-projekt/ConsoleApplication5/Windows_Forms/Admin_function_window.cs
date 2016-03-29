@@ -107,10 +107,6 @@ namespace ConsoleApplication5
         {
             if (txtPassword.Text == "password")
             {
-
-                //test3 test = new test3();
-                //test.Show();
-                //this.Close();
                 Controls.Clear();
                 start();
             }

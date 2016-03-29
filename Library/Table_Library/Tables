@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTable_button xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>702</X>
+      <Y>601</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>503</X>
+      <Y>549</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>548</X>
+      <Y>218</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>192</X>
+      <Y>416</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>370</X>
+      <Y>424</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>531</X>
+      <Y>439</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>21</X>
+      <Y>609</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>262</X>
+      <Y>612</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>378</X>
+      <Y>321</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+  <Table_button>
+    <Table_Text />
+    <Location>
+      <X>464</X>
+      <Y>115</Y>
+    </Location>
+    <size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </size>
+  </Table_button>
+</ArrayOfTable_button>
