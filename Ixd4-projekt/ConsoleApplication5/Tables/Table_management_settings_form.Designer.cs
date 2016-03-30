@@ -1,4 +1,7 @@
-﻿namespace ConsoleApplication5
+﻿using System.Drawing.Drawing2D;
+using System.Drawing;
+using System.Windows.Forms;
+namespace ConsoleApplication5
 {
     partial class Table_management_settings_form
     {
@@ -143,6 +146,8 @@
             this.Button_TablePreview.Text = "404";
             this.Button_TablePreview.UseVisualStyleBackColor = true;
             #endregion
+
+            #region Shape panel
             // 
             // Label_ShapePanel
             // 
@@ -153,6 +158,14 @@
             this.Label_ShapePanel.Size = new System.Drawing.Size(212, 25);
             this.Label_ShapePanel.TabIndex = 4;
             this.Label_ShapePanel.Text = "Shape of the table type";
+            //Button_roundShape
+            System.Windows.Forms.Button Button_elipsis = new System.Windows.Forms.Button();
+            Button_elipsis.Location = new System.Drawing.Point(0, 0);
+            Button_elipsis.Size = new System.Drawing.Size(30, Panel_shape.Size.Height);
+            Button_elipsis.AutoSize = false;
+            Button_elipsis.Region = Create_Region_round(Button_elipsis.Size, Button_elipsis.Location);
+            //this.Label_ShapePanel.Controls.Add(Button_elipsis);
+
             // 
             // Panel_shape
             // 
@@ -160,6 +173,8 @@
             this.Panel_shape.Name = "Panel_shape";
             this.Panel_shape.Size = new System.Drawing.Size(295, 131);
             this.Panel_shape.TabIndex = 5;
+            #endregion
+
             #region Size controls
             // 
             // Label_size
@@ -231,6 +246,7 @@
             this.Button_save.TabIndex = 13;
             this.Button_save.Text = "Save Type";
             this.Button_save.UseVisualStyleBackColor = true;
+            this.Button_save.Click += Button_save_Click;
             // 
             // Button_back
             // 
@@ -276,6 +292,8 @@
             this.pictureBox_Plan.TabIndex = 1;
             this.pictureBox_Plan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox_Plan.TabStop = false;
+            this.pictureBox_Plan.Image = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
+            this.pictureBox_Plan.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // Button_addNewPlan
             // 
@@ -285,6 +303,7 @@
             this.Button_addNewPlan.TabIndex = 2;
             this.Button_addNewPlan.Text = "Add new plan";
             this.Button_addNewPlan.UseVisualStyleBackColor = true;
+            this.Button_addNewPlan.Click += Button_addNewPlan_Click;
             // 
             // Button_exit
             // 
@@ -304,6 +323,7 @@
             this.Button_savePlan.TabIndex = 4;
             this.Button_savePlan.Text = "Save";
             this.Button_savePlan.UseVisualStyleBackColor = true;
+            this.Button_savePlan.Click += Button_savePlan_Click;
 
             #endregion
             // 
@@ -328,14 +348,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Plan)).EndInit();
             this.ResumeLayout(false);
 
+
         }
-
-
-
 
 
         #endregion
 
+        private System.Windows.Forms.OpenFileDialog File_dialog;
         private System.Windows.Forms.Panel TableType_Panel;
         private System.Windows.Forms.Panel ResturantPlan_panel;
         private System.Windows.Forms.Label Label_middleSize;

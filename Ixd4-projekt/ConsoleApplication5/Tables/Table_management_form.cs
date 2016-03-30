@@ -46,9 +46,8 @@ namespace ConsoleApplication5
         private void Settings_button_Click(object sender, EventArgs e)
         {
             Table_management_settings_form settings_form = new Table_management_settings_form();
-            settings_form.Show();
+            settings_form.ShowDialog();
             settings_form.TopMost = true;
-
         }
         #endregion
         #region Windows Form Designer generated code
@@ -126,7 +125,7 @@ namespace ConsoleApplication5
             this.table_panel_for_manager.Width = this.Size.Width - 220;
             this.table_panel_for_manager.Height = this.Size.Height;
             this.table_panel_for_manager.Name = "table_panel_for_manager1";
-            this.table_panel_for_manager.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_Table_list_file + Properties.Settings.Default.Name_of_resturant_plan);
+            this.table_panel_for_manager.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
             this.table_panel_for_manager.BackgroundImageLayout = ImageLayout.Stretch;
             
             //

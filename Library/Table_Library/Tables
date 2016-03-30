@@ -3,30 +3,8 @@
   <Table_button_Xml_data>
     <Table_Text />
     <Location>
-      <X>444</X>
-      <Y>63</Y>
-    </Location>
-    <Size>
-      <Width>75</Width>
-      <Height>23</Height>
-    </Size>
-  </Table_button_Xml_data>
-  <Table_button_Xml_data>
-    <Table_Text />
-    <Location>
       <X>1192</X>
       <Y>496</Y>
-    </Location>
-    <Size>
-      <Width>75</Width>
-      <Height>23</Height>
-    </Size>
-  </Table_button_Xml_data>
-  <Table_button_Xml_data>
-    <Table_Text />
-    <Location>
-      <X>1192</X>
-      <Y>303</Y>
     </Location>
     <Size>
       <Width>75</Width>
@@ -49,6 +27,28 @@
     <Location>
       <X>68</X>
       <Y>579</Y>
+    </Location>
+    <Size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </Size>
+  </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text />
+    <Location>
+      <X>376</X>
+      <Y>224</Y>
+    </Location>
+    <Size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </Size>
+  </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text />
+    <Location>
+      <X>220</X>
+      <Y>54</Y>
     </Location>
     <Size>
       <Width>75</Width>

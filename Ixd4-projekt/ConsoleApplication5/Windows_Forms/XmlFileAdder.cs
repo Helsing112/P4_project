@@ -31,22 +31,21 @@ namespace ConsoleApplication5
 
         }
 
-        public void Input_In_TextBoxes() {
-            if (string.IsNullOrEmpty(Text_input.Text) || string.IsNullOrEmpty(PriceInputTextBox.Text))
+        public void Input_In_TextBoxes()
         {
+            if (string.IsNullOrEmpty(Text_input.Text) || string.IsNullOrEmpty(PriceInputTextBox.Text))
+            {
                 button1.Enabled = false;
             }
             else
             {
             button1.Enabled = true;
-
-        }
             }
+        }
 
 
         private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
         {
-
             Input_In_TextBoxes();
         }
 
@@ -57,8 +56,6 @@ namespace ConsoleApplication5
             _product.Name = Text_input.Text;
             _product.PicturePath = productPicturePath;
             _product.Price = decimal.Parse(PriceInputTextBox.Text);
-            
-
 
             creator.Create_File<Product>(_path, _product);
 

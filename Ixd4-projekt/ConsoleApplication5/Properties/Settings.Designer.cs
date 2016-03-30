@@ -61,13 +61,13 @@ namespace ConsoleApplication5.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Plan_OLearys.png")]
-        public string Name_of_resturant_plan {
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\Library\\Table_Library\\Plan_OLearys.png")]
+        public string Path_of_resturant_plan {
             get {
-                return ((string)(this["Name_of_resturant_plan"]));
+                return ((string)(this["Path_of_resturant_plan"]));
             }
             set {
-                this["Name_of_resturant_plan"] = value;
+                this["Path_of_resturant_plan"] = value;
             }
         }
         

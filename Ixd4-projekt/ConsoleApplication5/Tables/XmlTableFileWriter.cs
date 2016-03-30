@@ -69,13 +69,19 @@ namespace ConsoleApplication5
             XmlSerializer serial = new XmlSerializer(typeof(T));
             StreamWriter writer = new StreamWriter(directory+Content.Name);
 
-            serial.Serialize(writer, Content); //Creates the XML file with the List of Table_buttons
+            serial.Serialize(writer, Content); 
             writer.Close();
+            Messages.TableTypeSaveConfirmation();
         }
-        public static void Save_Button_Type(Table_Button_Type_Xml_data Type_to_save)
+        public static void Save_Button_Type(Table_Control_Manager Type_to_save)
         {
             XmlTableFileWriter writer = new XmlTableFileWriter();
-            writer.Create_File_and_directory_table_type(Type_to_save);
+            Table_Button_Type_Xml_data Xml_Button = new Table_Button_Type_Xml_data();
+            Xml_Button.Name = Type_to_save.Name;
+            Xml_Button.Region = Type_to_save.Region;
+            Xml_Button.Size = Type_to_save.Size;
+
+            writer.Create_File_and_directory_table_type(Xml_Button);
         }
         #endregion
     }
