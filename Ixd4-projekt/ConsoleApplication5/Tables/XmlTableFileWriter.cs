@@ -14,6 +14,7 @@ namespace ConsoleApplication5
     /// </summary>
     class XmlTableFileWriter
     {
+        #region Writer methods for tables.
         /// <summary>
         /// Creates a XML File and the directory of a table button LIST
         /// </summary>
@@ -23,15 +24,15 @@ namespace ConsoleApplication5
         public void Create_File_and_directory<T>(T Content) where T : List<Table_Control_Manager>
         {
             Directory.CreateDirectory(Properties.Settings.Default.Path_of_Table_list_file);
-            XmlSerializer serial = new XmlSerializer(typeof(List<Table_button>));
+            XmlSerializer serial = new XmlSerializer(typeof(List<Table_button_Xml_data>));
             StreamWriter writer = new StreamWriter(Properties.Settings.Default.Path_of_Table_list_file + Properties.Settings.Default.Table_file_name);
 
-            List<Table_button> button_list = new List<Table_button>();
+            List<Table_button_Xml_data> button_list = new List<Table_button_Xml_data>();
             foreach (Table_Control_Manager item in Content) //Creating Table button from Table control. To store only relevant data.
             {
-                Table_button temp_table = new Table_button();
+                Table_button_Xml_data temp_table = new Table_button_Xml_data();
                 temp_table.Table_Text = item.Text;
-                temp_table.size = item.Size;
+                temp_table.Size = item.Size;
                 temp_table.Location = item.Location;
                 button_list.Add(temp_table);
             }
@@ -58,5 +59,24 @@ namespace ConsoleApplication5
             }
             Save(list);
         }
+        #endregion
+
+        #region Writer methods for Table Types.
+        public void Create_File_and_directory_table_type<T>(T Content) where T : Table_Button_Type_Xml_data
+        {
+            string directory = Properties.Settings.Default.Path_of_table_type_lib;
+            Directory.CreateDirectory(directory);
+            XmlSerializer serial = new XmlSerializer(typeof(T));
+            StreamWriter writer = new StreamWriter(directory+Content.Name);
+
+            serial.Serialize(writer, Content); //Creates the XML file with the List of Table_buttons
+            writer.Close();
+        }
+        public static void Save_Button_Type(Table_Button_Type_Xml_data Type_to_save)
+        {
+            XmlTableFileWriter writer = new XmlTableFileWriter();
+            writer.Create_File_and_directory_table_type(Type_to_save);
+        }
+        #endregion
     }
 }

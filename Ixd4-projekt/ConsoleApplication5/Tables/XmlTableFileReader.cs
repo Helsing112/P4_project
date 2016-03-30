@@ -21,10 +21,10 @@ namespace ConsoleApplication5
         /// <returns></returns>
         public static List<Table_Control_Manager> Read_File() 
         {
-            List<Table_button> Tables_list = new List<Table_button>();
+            List<Table_button_Xml_data> Tables_list = new List<Table_button_Xml_data>();
             
             StreamReader reader;
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Table_button>));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Table_button_Xml_data>));
             List<Table_Control_Manager> Table_button_list = new List<Table_Control_Manager>();
 
             //; //makes sure that the directory exists
@@ -38,15 +38,15 @@ namespace ConsoleApplication5
                 return Table_button_list;
             }
 
-            Tables_list = (List<Table_button>)serializer.Deserialize(reader);
+            Tables_list = (List<Table_button_Xml_data>)serializer.Deserialize(reader);
             reader.Close();
 
             // make buttons from table list
-            foreach (Table_button item in Tables_list)
+            foreach (Table_button_Xml_data item in Tables_list)
             {
                 Table_Control_Manager temp_but = new Table_Control_Manager();
                 temp_but.Text = item.Table_Text;
-                temp_but.Size = item.size;
+                temp_but.Size = item.Size;
                 temp_but.Location = item.Location;
                 Table_button_list.Add(temp_but);              
             }

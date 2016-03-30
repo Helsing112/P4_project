@@ -43,8 +43,6 @@ namespace ConsoleApplication5
         }
 
         #region Event handlers for drag & drop and click of table
-
-
         private void Table_MouseMove(object sender, MouseEventArgs e)
         {
             if (activeControl == null || activeControl != sender)
@@ -52,6 +50,7 @@ namespace ConsoleApplication5
                 return;
             }
             Point location = activeControl.Location;
+
             location.Offset(e.Location.X - previousLocation.X, e.Location.Y - previousLocation.Y);
             activeControl.Location = location;
         }

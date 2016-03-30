@@ -57,6 +57,12 @@
     <Compile Include="Tables\Table_management_form.Designer.cs">
       <DependentUpon>Table_management_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tables\Table_management_settings_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\Table_management_settings_form.Designer.cs">
+      <DependentUpon>Table_management_settings_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\Table_management_form.resx">
       <DependentUpon>Table_management_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Table_management_settings_form.resx">
+      <DependentUpon>Table_management_settings_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
       <DependentUpon>NumberWheel.cs</DependentUpon>

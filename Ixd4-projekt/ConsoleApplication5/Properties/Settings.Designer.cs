@@ -58,5 +58,29 @@ namespace ConsoleApplication5.Properties {
                 this["Table_file_name"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Plan_OLearys.png")]
+        public string Name_of_resturant_plan {
+            get {
+                return ((string)(this["Name_of_resturant_plan"]));
+            }
+            set {
+                this["Name_of_resturant_plan"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\Library\\Table_Library\\Table_types\\")]
+        public string Path_of_table_type_lib {
+            get {
+                return ((string)(this["Path_of_table_type_lib"]));
+            }
+            set {
+                this["Path_of_table_type_lib"] = value;
+            }
+        }
     }
 }

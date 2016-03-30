@@ -11,5 +11,11 @@
     <Setting Name="Table_file_name" Type="System.String" Scope="User">
       <Value Profile="(Default)">Tables</Value>
     </Setting>
+    <Setting Name="Name_of_resturant_plan" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Plan_OLearys.png</Value>
+    </Setting>
+    <Setting Name="Path_of_table_type_lib" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\Library\Table_Library\Table_types\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
