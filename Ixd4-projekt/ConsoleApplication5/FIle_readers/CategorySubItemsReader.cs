@@ -34,10 +34,7 @@ namespace ConsoleApplication5
                 Category temp_category = new Category(item.Name, item.FullName);
 
                 category_input.Category_list.Add(temp_category);
-
             }
-
-
         }
         private void CreateProducts(Category input_category, string path)
         {

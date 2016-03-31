@@ -231,9 +231,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Tables and shit\TableAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Tables and shit\TableAdd.cs" />
     <Compile Include="Tables and shit\TableAdd.Designer.cs">
       <DependentUpon>TableAdd.cs</DependentUpon>
     </Compile>

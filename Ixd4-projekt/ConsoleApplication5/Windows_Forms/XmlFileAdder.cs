@@ -84,7 +84,7 @@ namespace ConsoleApplication5
             if (System.Text.RegularExpressions.Regex.IsMatch(PriceInputTextBox.Text, "  ^ [0-9]"))
             {
                 PriceInputTextBox.Text = "";
-        }
+            }
         }
 
         private void PriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -100,7 +100,7 @@ namespace ConsoleApplication5
         private void CategoryTextbox_TextChanged(object sender, EventArgs e)
         {
             if (CategoryTextBox.Text.Length != 0)
-            {
+            {  
                 save_Create_Button2.Enabled = true;
         }
             else

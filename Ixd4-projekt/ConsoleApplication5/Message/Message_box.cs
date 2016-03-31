@@ -47,7 +47,6 @@ namespace ConsoleApplication5
             this.pictureBox1.Size = new System.Drawing.Size(picture_size, Total_height);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
             this.pictureBox1.TabStop = false;
             // 
             // label1
@@ -85,8 +84,7 @@ namespace ConsoleApplication5
             }
             // 
             // Message_Box_standard
-            //    
-            
+            //                
             this.TopMost = true;
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - this.Width / 2, 0);
@@ -97,6 +95,7 @@ namespace ConsoleApplication5
             this.Name = "Message_box_standard";
             this.Text = "Message_box_standard";
             this.ResumeLayout(false);
+            this.TopMost = true;
             //Timer
             Timer timer = new Timer();
             timer.Interval = 2500 + input_string.Length * 50;

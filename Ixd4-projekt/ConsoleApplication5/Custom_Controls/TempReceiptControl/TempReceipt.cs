@@ -61,7 +61,6 @@ namespace ConsoleApplication5
             this.ResumeLayout(false);
             Total_tab.Location = new Point(0, size_y-height_of_total_tab);
 
-
             Controls.Add(Total_tab);
             Controls.Add(ListOfProducts);
         }
