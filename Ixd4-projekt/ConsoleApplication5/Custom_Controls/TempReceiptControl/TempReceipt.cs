@@ -53,22 +53,23 @@ namespace ConsoleApplication5
             this.SuspendLayout();
             ListOfProducts = new FlowOfProductsInTempReceipt(size_x, size_y, 40);
             Total_tab = new TotalTabTenpReceipt(size_x, height_of_total_tab);
-            //ListOfProducts.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);//subscribe to remove event
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "TempReceipt";
             this.Height = size_x;
             this.Width = size_y;
             this.ResumeLayout(false);
-            Total_tab.Location = new Point(0, size_y-height_of_total_tab);
-
-
-           
+            Total_tab.Location = new Point(0, size_y-height_of_total_tab);           
 
             Controls.Add(Total_tab);
-            Controls.Add(ListOfProducts);
-      
+            Controls.Add(ListOfProducts);      
         }
-       
+       /// <summary>
+       /// Returns the content of the current receipt
+       /// </summary>
+        public List<ProductWithAmount> GetReceiptContent()
+        {
+            return ListOfProducts.GetReceiptContent();
+        }
 
         FlowOfProductsInTempReceipt ListOfProducts;
         TotalTabTenpReceipt Total_tab;   

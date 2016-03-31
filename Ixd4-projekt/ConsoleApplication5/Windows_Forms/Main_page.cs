@@ -49,8 +49,9 @@ namespace ConsoleApplication5
 
             Controls.Add(Admin_login_button);
         }
-        public void tree_thingy_And_Receipt()
+        public void Products_and_receipt()
         {
+            //tree
             tree = new TreeViewerControl(500, 500, Path_of_product_library);
             tree.Location = new Point(300, 300);
             tree.BorderStyle = BorderStyle.Fixed3D;
@@ -59,8 +60,7 @@ namespace ConsoleApplication5
             tree.MouseUpped += MouseUpReciever;
 
             Controls.Add(tree);
-
-
+            //temp receipt
             Timer_for_wheel_controller = new Timer();
             Timer_for_wheel_controller.Interval = 100;
             Timer_for_wheel_controller.Tick += Timer_for_wheel_controller_Tick;
@@ -70,12 +70,7 @@ namespace ConsoleApplication5
             temp_receipt = new TempReceipt(400, 400); /*Har ændret størrelsen så jeg kan se total*/
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
-            temp_receipt.Name = "Receipt";
-
-
-       
-
-          
+            temp_receipt.Name = "Receipt";          
             Controls.Add(temp_receipt);
         }
 
@@ -99,7 +94,8 @@ namespace ConsoleApplication5
         }
 
 
-            public void Check_inButton() {
+        public void Check_inButton()
+        {
             Button CheckIn_Button = new Button();
             CheckIn_Button.Location = new System.Drawing.Point(12, 245);
             CheckIn_Button.Name = "CheckInButton";
@@ -119,18 +115,14 @@ namespace ConsoleApplication5
             else {
 
                 SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
-                SignIn.Show();
+                SignIn.ShowDialog();
                 SignIn.TopMost = true;
             }
         }
-        
-       
-
-
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
             this.Controls.Clear();
-            tree_thingy_And_Receipt();
+            Products_and_receipt();
 
             Label Create_Label = new Label();
             Create_Label.AutoSize = true;
@@ -146,8 +138,6 @@ namespace ConsoleApplication5
             BackToFrontPage();
             PayButton();
         }
-
-
         public void BackToFrontPage()
         {
             Button BackToFrontPage = new Button();
@@ -160,9 +150,7 @@ namespace ConsoleApplication5
             BackToFrontPage.Click += new System.EventHandler(BackToFrontPage_click);
 
             Controls.Add(BackToFrontPage);
-        }
-
-         
+        } 
 
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
@@ -182,6 +170,7 @@ namespace ConsoleApplication5
             PayButton.UseVisualStyleBackColor = true;
             PayButton.Click += new System.EventHandler(PayButton_click);
 
+
             Controls.Add(PayButton);
         }
 
@@ -194,15 +183,13 @@ namespace ConsoleApplication5
             {
                 Application.OpenForms.OfType<Paywindow>().First().BringToFront();
             }
-
-
-            else {
+            else
+            {
+                List<ProductWithAmount> ListOfContent = temp_receipt.GetReceiptContent();
                 Paywindow Pay_window = new Paywindow();
                 Pay_window.ShowDialog();
                 Pay_window.TopMost = true;
-            }
-           
-        
+            }       
         }    
      
         TreeViewerControl tree;
@@ -219,7 +206,7 @@ namespace ConsoleApplication5
             else {
 
                 Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
-                admin_window.Show();
+                admin_window.ShowDialog();
                 admin_window.TopMost = true;
             }
             }

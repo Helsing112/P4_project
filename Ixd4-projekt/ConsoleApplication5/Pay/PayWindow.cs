@@ -12,10 +12,11 @@ namespace ConsoleApplication5
 {
     public partial class Paywindow : Form
     {
-
+        
+        //LAv en konstructer der modtager en liste
         Double resultValue = 0;
         String operationPerformed = "";
-        bool isOperationPerformed = false;
+        bool isOperationPerformed = false;        
         public Paywindow()
         {
             InitializeComponent();
@@ -92,5 +93,7 @@ namespace ConsoleApplication5
             resultValue = Double.Parse(textBox_result.Text);
             labelCurrentOperation.Text = " ";
         }
+
+       
     }
 }

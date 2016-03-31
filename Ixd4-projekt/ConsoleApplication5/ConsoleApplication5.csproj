@@ -52,6 +52,7 @@
     <Compile Include="Pay\PayWindow.Designer.cs">
       <DependentUpon>PayWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductWithAmount.cs" />
     <Compile Include="Tables and shit\Table_button.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -135,12 +136,6 @@
     </Compile>
     <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.Designer.cs">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.Designer.cs">
-      <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom_Controls\TempReceiptControl\ProductDeleteButtonTempReceipt.cs">
       <SubType>UserControl</SubType>
@@ -249,6 +244,9 @@
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pay\PayWindow.resx">
+      <DependentUpon>PayWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tables and shit\TablesOnFrontpage.resx">
       <DependentUpon>TablesOnFrontpage.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,9 +276,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.resx">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.resx">
-      <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductDeleteButtonTempReceipt.resx">
       <DependentUpon>ProductDeleteButtonTempReceipt.cs</DependentUpon>
