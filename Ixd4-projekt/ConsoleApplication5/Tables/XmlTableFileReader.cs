@@ -54,6 +54,10 @@ namespace ConsoleApplication5
 
             return Table_button_list;
         }
+        /// <summary>
+        /// Reads XML files for the Table Types
+        /// </summary>
+        /// <returns>Returns a List of controls representing the types</returns>
         public static List<Table_Control_Manager> Read_TableType_files()
         {
             List<Table_Control_Manager> List = new List<Table_Control_Manager>();
@@ -61,16 +65,16 @@ namespace ConsoleApplication5
             XmlSerializer serializer = new XmlSerializer(typeof(Table_Button_Type_Xml_data));
             StreamReader reader;
 
-            try { reader = new StreamReader(Properties.Settings.Default.Path_of_table_type_lib); }
-            catch (DirectoryNotFoundException)//If the Directory is not found, we assume that no table are saved therefore returning a empty list 
-            {
-                return List;
-            }
+            //try { reader = new StreamReader(Properties.Settings.Default.Path_of_table_type_lib); }
+            //catch (DirectoryNotFoundException)//If the Directory is not found, we assume that no table types are saved therefore returning a empty list 
+            //{
+            //    return List;
+            //}
             DirectoryInfo Directory = new DirectoryInfo(Properties.Settings.Default.Path_of_table_type_lib);
-
+            int foreachruns = 0;
             foreach (var item in Directory.GetFiles("*.xml")) //foreach file in the directory ending with .xml
             {
-                try { reader = new StreamReader(Properties.Settings.Default.Path_of_table_type_lib+item.Name); }
+                try { reader = new StreamReader(item.FullName); }
                 catch (FileNotFoundException) //If the file is not found, we assume that no table are saved therfore returning a empty list
                 {
                     return List;
@@ -81,7 +85,9 @@ namespace ConsoleApplication5
                 temp_control.Name = temp_xmlData.Name;
                 temp_control.Region = temp_xmlData.Region;
                 temp_control.Size = temp_xmlData.Size;
+                List.Add(temp_control);
                 reader.Close();
+                foreachruns++;
             }
             return List;
         }

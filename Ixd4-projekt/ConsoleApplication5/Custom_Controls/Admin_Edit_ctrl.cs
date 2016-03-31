@@ -83,9 +83,9 @@ namespace ConsoleApplication5
 
         private void Table_manager_button_Click(object sender, EventArgs e)
         {
-            Table_management_form tables = new Table_management_form();
-            tables.TopMost = true;
+            Table_management_form tables = new Table_management_form();            
             tables.Show();
+            tables.BringToFront();
         }
 
         private void Create_Closer_Button()

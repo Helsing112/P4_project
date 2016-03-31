@@ -33,7 +33,11 @@ namespace ConsoleApplication5
         }
         private void Add_button_Click(object sender, EventArgs e)
         {
-            table_panel_for_manager.Add_table(new Table_Control_Manager());
+            Table_Control_Manager temp_control = Table_management_AddTableForm.Show_addForm();
+            if(temp_control != null)
+            {
+                table_panel_for_manager.Add_table(temp_control);
+            }
         }
         private void Quit_button_Click(object sender, EventArgs e)
         {
@@ -125,7 +129,13 @@ namespace ConsoleApplication5
             this.table_panel_for_manager.Width = this.Size.Width - 220;
             this.table_panel_for_manager.Height = this.Size.Height;
             this.table_panel_for_manager.Name = "table_panel_for_manager1";
-            this.table_panel_for_manager.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
+            try
+            {
+                this.table_panel_for_manager.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
+            }
+            catch (Exception)
+            {
+            }
             this.table_panel_for_manager.BackgroundImageLayout = ImageLayout.Stretch;
             
             //

@@ -15,7 +15,7 @@
       <Value Profile="(Default)">..\..\..\..\Library\Table_Library\Plan_OLearys.png</Value>
     </Setting>
     <Setting Name="Path_of_table_type_lib" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\..\Library\Table_Library\Table_types\</Value>
+      <Value Profile="(Default)">..\..\..\..\Library\Table_Library\Table_types</Value>
     </Setting>
   </Settings>
 </SettingsFile>

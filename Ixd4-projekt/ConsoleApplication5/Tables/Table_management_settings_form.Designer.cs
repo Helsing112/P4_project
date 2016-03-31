@@ -292,7 +292,13 @@ namespace ConsoleApplication5
             this.pictureBox_Plan.TabIndex = 1;
             this.pictureBox_Plan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox_Plan.TabStop = false;
-            this.pictureBox_Plan.Image = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
+            try
+            {
+                this.pictureBox_Plan.Image = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
+            }
+            catch (System.Exception) //if the image cannot be found we continue without an image
+            {
+            }
             this.pictureBox_Plan.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // Button_addNewPlan

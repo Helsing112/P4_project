@@ -64,7 +64,7 @@ namespace ConsoleApplication5
             Timer_for_wheel_controller.Interval = 100;
             Timer_for_wheel_controller.Tick += Timer_for_wheel_controller_Tick;
             Timer_for_wheel = new Timer();
-            Timer_for_wheel.Interval = 500;
+            Timer_for_wheel.Interval = 50;
             Timer_for_wheel.Tick += Timer_for_wheel_Tick;
             temp_receipt = new TempReceipt(500, 500);
             temp_receipt.Location = new Point(800, 300);

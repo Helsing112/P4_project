@@ -73,7 +73,7 @@ namespace ConsoleApplication5.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\Library\\Table_Library\\Table_types\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\Library\\Table_Library\\Table_types")]
         public string Path_of_table_type_lib {
             get {
                 return ((string)(this["Path_of_table_type_lib"]));

@@ -3,8 +3,8 @@
   <Table_button_Xml_data>
     <Table_Text />
     <Location>
-      <X>1192</X>
-      <Y>496</Y>
+      <X>1181</X>
+      <Y>387</Y>
     </Location>
     <Size>
       <Width>75</Width>
@@ -36,8 +36,8 @@
   <Table_button_Xml_data>
     <Table_Text />
     <Location>
-      <X>376</X>
-      <Y>224</Y>
+      <X>830</X>
+      <Y>131</Y>
     </Location>
     <Size>
       <Width>75</Width>
@@ -47,8 +47,19 @@
   <Table_button_Xml_data>
     <Table_Text />
     <Location>
-      <X>220</X>
-      <Y>54</Y>
+      <X>228</X>
+      <Y>58</Y>
+    </Location>
+    <Size>
+      <Width>75</Width>
+      <Height>23</Height>
+    </Size>
+  </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text />
+    <Location>
+      <X>476</X>
+      <Y>241</Y>
     </Location>
     <Size>
       <Width>75</Width>

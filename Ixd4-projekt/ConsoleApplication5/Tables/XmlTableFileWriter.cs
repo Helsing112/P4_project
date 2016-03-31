@@ -64,10 +64,10 @@ namespace ConsoleApplication5
         #region Writer methods for Table Types.
         public void Create_File_and_directory_table_type<T>(T Content) where T : Table_Button_Type_Xml_data
         {
-            string directory = Properties.Settings.Default.Path_of_table_type_lib;
+            string directory = Properties.Settings.Default.Path_of_table_type_lib+"\\";
             Directory.CreateDirectory(directory);
             XmlSerializer serial = new XmlSerializer(typeof(T));
-            StreamWriter writer = new StreamWriter(directory+Content.Name);
+            StreamWriter writer = new StreamWriter(directory+Content.Name+".xml");
 
             serial.Serialize(writer, Content); 
             writer.Close();
