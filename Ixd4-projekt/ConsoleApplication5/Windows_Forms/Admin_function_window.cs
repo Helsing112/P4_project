@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class Admin_function_window : Form
+    public partial class Admin_function_window : Standard_Window_Layout
     {
         private string path_input;
         public Admin_function_window(string path)
         {
             InitializeComponent();
             path_input = path;
+            
         }
         private void InitializeComponent()
         {
@@ -71,7 +72,7 @@ namespace ConsoleApplication5
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            //this.BackColor = System.Drawing.SystemColors.Window;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(798, 1198);
             this.ControlBox = false;
@@ -93,12 +94,11 @@ namespace ConsoleApplication5
 
         private void start()
         {
+
             this.Size = new Size(1200, 800);
             this.CenterToScreen();
             Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input);
             admin_edit.Quit_button.Click += new EventHandler(button2_Click);
-
-
             Controls.Add(admin_edit);
 
         }
@@ -107,14 +107,14 @@ namespace ConsoleApplication5
         {
             if (txtPassword.Text == "password")
             {
-                //testknapvindue vindue1 = new testknapvindue();
-                //vindue1.Show();
-
 
                 Controls.Clear();
                 start();
+
             }
-            else {
+
+            else
+            {
                 MessageBox.Show("Wrong Password");
             }
         }

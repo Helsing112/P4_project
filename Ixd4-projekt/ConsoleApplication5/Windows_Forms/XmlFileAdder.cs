@@ -14,6 +14,9 @@ namespace ConsoleApplication5
 {
     public partial class XmlFileAdder : Standard_Window_Layout
     {
+        /// <summary>
+        /// Window to add new products and categories to the product library
+        /// </summary>
         public string _path { get; }
         public string sourceFilePath { get; private set; }
         public string pictureLibraryPath { get; private set; }
@@ -21,36 +24,28 @@ namespace ConsoleApplication5
 
         public XmlFileAdder(string Current_path)
         {
-            InitializeComponent();
-            testknap11.Button_Click += new System.EventHandler(this.button1_Click);
-            testknap12.Button_Click += new System.EventHandler(this.button2_Click);
-            testknap13.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
-            testknap11.label1.Text = "Add product";
-            testknap12.label1.Text = "Add picture";
-            testknap13.label1.Text = "Add category";
-            Text_input.Click += new System.EventHandler(this.textbox_Click);
 
-
-            _path = Current_path;
+           InitializeComponent();
+           add_Button1.Button_Click += new System.EventHandler(this.button2_Click);
+           save_Create_Button1.Button_Click += new System.EventHandler(this.button1_Click);
+           save_Create_Button2.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
+           Text_input.Click += new System.EventHandler(this.textbox_Click);
+           _path = Current_path;
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void Input_In_TextBoxes()
         {
 
-        }
-
-        public void Input_In_TextBoxes() {
             if (string.IsNullOrEmpty(Text_input.Text) || string.IsNullOrEmpty(PriceInputTextBox.Text))
-        {
-                button1.Enabled = false;
+            {
+                save_Create_Button1.Enabled = false;
             }
             else
             {
-            button1.Enabled = true;
-
-        }
+                save_Create_Button1.Enabled = true;
             }
+        }
 
 
         private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
@@ -65,24 +60,21 @@ namespace ConsoleApplication5
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             CreateLibrary creator = new CreateLibrary();
             Product _product = new Product();
             _product.Name = Text_input.Text;
             _product.PicturePath = productPicturePath;
             _product.Price = decimal.Parse(PriceInputTextBox.Text);
-            
-
-
             creator.Create_File<Product>(_path, _product);
-
             Text_input.Clear();
             PriceInputTextBox.Clear();
 
+        }
 
-            //button1.BackColor = Color.Green;
-            //MessageBox.Show(_product.Name + " Added" + "\n" + "Price: " + _product.Price);
-            //Thread.Sleep(500);
-            //button1.BackColor = Color.White;
+        private void quit_button_click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void PriceTextBox_TextChanged_1(object sender, EventArgs e)
@@ -94,11 +86,11 @@ namespace ConsoleApplication5
         {
             if (CategoryTextBox.Text.Length != 0)
             {
-                Create_Category_Button.Enabled = true;
+                save_Create_Button2.Enabled = true;
         }
             else
             {
-                Create_Category_Button.Enabled = false;
+                save_Create_Button2.Enabled = false;
 
             }
         }
@@ -110,10 +102,8 @@ namespace ConsoleApplication5
             CategoryTextBox.Clear();
 
 
-            Create_Category_Button.BackColor = Color.Green;
             MessageBox.Show("New Category Created");
             Thread.Sleep(500);
-            Create_Category_Button.BackColor = Color.White;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -142,16 +132,20 @@ namespace ConsoleApplication5
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void testknap11_Load(object sender, EventArgs e)
         {
             
         }
 
-        
+        private void newtestbutton1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newtestbutton1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

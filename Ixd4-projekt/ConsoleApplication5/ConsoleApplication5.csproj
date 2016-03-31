@@ -47,19 +47,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom-Font.cs" />
     <Compile Include="CustomControl1.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomControl1.Designer.cs">
       <DependentUpon>CustomControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Standard layouts\Buttons\Accept_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Accept_Button.Designer.cs">
+      <DependentUpon>Accept_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Add_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Add_Button.Designer.cs">
+      <DependentUpon>Add_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Back_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Back_Button.Designer.cs">
+      <DependentUpon>Back_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Login_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Login_Button.Designer.cs">
+      <DependentUpon>Login_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Pay_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Pay_Button.Designer.cs">
+      <DependentUpon>Pay_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Quit_Close_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Quit_Close_Button.Designer.cs">
+      <DependentUpon>Quit_Close_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Save_Create_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
+      <DependentUpon>Save_Create_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
+      <DependentUpon>Std_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Blue_Rectangular_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Blue_Rectangular_Button.Designer.cs">
+      <DependentUpon>Blue_Rectangular_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Green_Rectangular_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Green_Rectangular_Button.Designer.cs">
+      <DependentUpon>Green_Rectangular_Button.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard_Button_layout.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Standard_Window_Layout.cs">
+    <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Standard_Window_Layout.Designer.cs">
+    <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.Designer.cs">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
     </Compile>
     <Compile Include="Cosmetics.cs" />
@@ -132,18 +193,6 @@
     <Compile Include="SignInOnJobWindow.Designer.cs">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="testknap1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="testknap1.Designer.cs">
-      <DependentUpon>testknap1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="testknapvindue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="testknapvindue.Designer.cs">
-      <DependentUpon>testknapvindue.cs</DependentUpon>
-    </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,7 +254,37 @@
     <EmbeddedResource Include="CustomControl1.resx">
       <DependentUpon>CustomControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard_Window_Layout.resx">
+    <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
+      <DependentUpon>Accept_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Add_Button.resx">
+      <DependentUpon>Add_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Back_Button.resx">
+      <DependentUpon>Back_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Login_Button.resx">
+      <DependentUpon>Login_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Pay_Button.resx">
+      <DependentUpon>Pay_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Quit_Close_Button.resx">
+      <DependentUpon>Quit_Close_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Save_Create_Button.resx">
+      <DependentUpon>Save_Create_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Super classes\Std_Button.resx">
+      <DependentUpon>Std_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Blue_Rectangular_Button.resx">
+      <DependentUpon>Blue_Rectangular_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Green_Rectangular_Button.resx">
+      <DependentUpon>Green_Rectangular_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Super classes\Standard_Window_Layout.resx">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\Admin_Edit_ctrl.resx">
@@ -242,12 +321,6 @@
     <EmbeddedResource Include="SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testknap1.resx">
-      <DependentUpon>testknap1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="testknapvindue.resx">
-      <DependentUpon>testknapvindue.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,12 +344,23 @@
   <ItemGroup>
     <Folder Include="Custom_Controls\Hejsa\" />
     <Folder Include="Library\" />
+    <Folder Include="Standard layouts\Windows and forms\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\coke_bottle.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Galano Grotesque DEMO Bold.otf" />
     <None Include="Resources\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Font-grotesque.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knap2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knap3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

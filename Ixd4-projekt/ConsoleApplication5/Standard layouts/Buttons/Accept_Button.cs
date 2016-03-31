@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConsoleApplication5
+namespace ConsoleApplication5.Standard_layouts.Buttons
 {
-    public partial class testknapvindue : Standard_Window_Layout
+    public partial class Accept_Button : Std_Button
     {
-        public testknapvindue()
+        public Accept_Button()
         {
             InitializeComponent();
-            testknap1 knap1 = new testknap1();
-            Controls.Add(knap1);
-            
         }
-
-
     }
 }
