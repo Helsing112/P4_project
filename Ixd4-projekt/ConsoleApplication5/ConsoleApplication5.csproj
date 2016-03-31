@@ -427,7 +427,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Custom_Controls\Hejsa\" />
     <Folder Include="Library\" />
   </ItemGroup>
   <ItemGroup>
