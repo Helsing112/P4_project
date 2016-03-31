@@ -143,13 +143,6 @@
     <Compile Include="Wheel _classes\PieOnNumberWheel.Designer.cs">
       <DependentUpon>PieOnNumberWheel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard_Button_layout.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Standard_Window_Layout.cs" />
-    <Compile Include="Standard_Window_Layout.Designer.cs">
-      <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cosmetics.cs" />
     <Compile Include="Custom_Controls\Admin_Edit_ctrl.cs">
       <SubType>UserControl</SubType>
@@ -290,7 +283,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Message\Message_box.resx">
@@ -331,9 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wheel _classes\NumberWheelForm.resx">
       <DependentUpon>NumberWheelForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Standard_Window_Layout.resx">
-      <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\Admin_Edit_ctrl.resx">
       <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
