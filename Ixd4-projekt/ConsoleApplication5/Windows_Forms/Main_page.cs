@@ -27,6 +27,7 @@ namespace ConsoleApplication5
             InitializeComponent();
            
             Admin_login();
+            Table_Panel();
            
             employe_sign_inPanel();
             Check_inButton();
@@ -48,8 +49,9 @@ namespace ConsoleApplication5
 
             Controls.Add(Admin_login_button);
         }
-        public void tree_thingy_And_Receipt()
+        public void Products_and_receipt()
         {
+            //tree
             tree = new TreeViewerControl(500, 500, Path_of_product_library);
             tree.Location = new Point(300, 300);
             tree.BorderStyle = BorderStyle.Fixed3D;
@@ -58,19 +60,17 @@ namespace ConsoleApplication5
             tree.MouseUpped += MouseUpReciever;
 
             Controls.Add(tree);
-
-
+            //temp receipt
             Timer_for_wheel_controller = new Timer();
             Timer_for_wheel_controller.Interval = 100;
             Timer_for_wheel_controller.Tick += Timer_for_wheel_controller_Tick;
             Timer_for_wheel = new Timer();
             Timer_for_wheel.Interval = 50;
             Timer_for_wheel.Tick += Timer_for_wheel_Tick;
-            temp_receipt = new TempReceipt(500, 500);
+            temp_receipt = new TempReceipt(400, 400); /*Har ændret størrelsen så jeg kan se total*/
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
-            temp_receipt.Name = "Receipt";
-
+            temp_receipt.Name = "Receipt";          
             Controls.Add(temp_receipt);
         }
 
@@ -84,9 +84,18 @@ namespace ConsoleApplication5
             Controls.Add(employee_sign_in_panel);
         }
 
+        public void Table_Panel()
+        {
+            TablesOnFrontpage Tables_On_Frontpage = new TablesOnFrontpage();
+            Tables_On_Frontpage.Location = new System.Drawing.Point(350, 200);
+            Tables_On_Frontpage.Size = new System.Drawing.Size(600, 200);
+
+            Controls.Add(Tables_On_Frontpage);
+        }
 
 
-            public void Check_inButton() {
+        public void Check_inButton()
+        {
             Button CheckIn_Button = new Button();
             CheckIn_Button.Location = new System.Drawing.Point(12, 245);
             CheckIn_Button.Name = "CheckInButton";
@@ -98,12 +107,22 @@ namespace ConsoleApplication5
 
             Controls.Add(CheckIn_Button);
         }
-        
+        public void CheckInButton_click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<SignInOnJobWindow>().Count() == 1)
+                Application.OpenForms.OfType<SignInOnJobWindow>().First().BringToFront();
 
+            else {
+
+                SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
+                SignIn.ShowDialog();
+                SignIn.TopMost = true;
+            }
+        }
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
             this.Controls.Clear();
-            tree_thingy_And_Receipt();
+            Products_and_receipt();
 
             Label Create_Label = new Label();
             Create_Label.AutoSize = true;
@@ -117,10 +136,8 @@ namespace ConsoleApplication5
 
             Controls.Add(Create_Label);
             BackToFrontPage();
-
+            PayButton();
         }
-
-
         public void BackToFrontPage()
         {
             Button BackToFrontPage = new Button();
@@ -133,9 +150,7 @@ namespace ConsoleApplication5
             BackToFrontPage.Click += new System.EventHandler(BackToFrontPage_click);
 
             Controls.Add(BackToFrontPage);
-        }
-
-
+        } 
 
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
@@ -144,8 +159,39 @@ namespace ConsoleApplication5
             //lel(library_path);
 
         }
+        public void PayButton()
+        {
+            Button PayButton = new Button();
+            PayButton.Location = new System.Drawing.Point(12, 345);
+            PayButton.Name = "Paybutton";
+            PayButton.Size = new System.Drawing.Size(139, 79);
+            PayButton.TabIndex = 0;
+            PayButton.Text = "PayDatZhitUp";
+            PayButton.UseVisualStyleBackColor = true;
+            PayButton.Click += new System.EventHandler(PayButton_click);
 
 
+            Controls.Add(PayButton);
+        }
+
+        //Paywindow Pay_window = null;
+
+        public void PayButton_click(object sender, EventArgs e)
+        {
+
+            if (Application.OpenForms.OfType<Paywindow>().Count() == 1)
+            {
+                Application.OpenForms.OfType<Paywindow>().First().BringToFront();
+            }
+            else
+            {
+                List<ProductWithAmount> ListOfContent = temp_receipt.GetReceiptContent();
+                Paywindow Pay_window = new Paywindow(ListOfContent);
+                Pay_window.ShowDialog();
+                Pay_window.TopMost = true;
+            }       
+        }    
+     
         TreeViewerControl tree;
         TempReceipt temp_receipt;
         Timer Timer_for_wheel;
@@ -153,19 +199,25 @@ namespace ConsoleApplication5
 
         private void Admin_login_click(object sender, EventArgs e)
         {
-            Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
-            admin_window.Show();
-        }
+            if (Application.OpenForms.OfType<Admin_function_window>().Count() == 1)
+            {
+                Application.OpenForms.OfType<Admin_function_window>().First().BringToFront();
+            }
+            else {
 
-       
-        private void CheckInButton_click(object sender, EventArgs e)
-        {
-            SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
-            SignIn.Show();
-        }
+                Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
+                admin_window.ShowDialog();
+                admin_window.TopMost = true;
+            }
+            }
 
-        #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
-        private bool timer_has_ticked = false;
+
+
+
+
+
+    #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
+    private bool timer_has_ticked = false;
         private Product Product_to_add;
 
         protected void MouseDownReciever(object sender, ProductEventArgs e)

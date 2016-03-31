@@ -92,5 +92,19 @@ namespace ConsoleApplication5
                 flowLayoutPanel1.Controls.Add(product_item);
             }
         }
+        public List<ProductWithAmount> GetReceiptContent()
+        {
+            List<ProductWithAmount> List = new List<ProductWithAmount>();
+            foreach (var item in this.flowLayoutPanel1.Controls)
+            {
+                ProductButtonInFlowTempReciept temp_but = (ProductButtonInFlowTempReciept)item;
+                ProductWithAmount temp_product = new ProductWithAmount(temp_but.Amount_to_represent);
+                temp_product.Price = temp_but.Product_input.Price;
+                temp_product.Name = temp_but.Product_input.Name;
+                List.Add(temp_product);
+            }
+
+            return List;
+        }
     }
 }

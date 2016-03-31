@@ -131,7 +131,6 @@ namespace ConsoleApplication5
             CategoryTextBox.Clear();
 
 
-            MessageBox.Show("New Category Created");
             Thread.Sleep(500);
         }
 

@@ -208,9 +208,7 @@
     <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.Designer.cs">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.cs" />
     <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.Designer.cs">
       <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
     </Compile>

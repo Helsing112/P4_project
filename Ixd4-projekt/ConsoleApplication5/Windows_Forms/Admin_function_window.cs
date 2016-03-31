@@ -112,10 +112,8 @@ namespace ConsoleApplication5
                 start();
 
             }
-
-            else
-            {
-                MessageBox.Show("Wrong Password");
+            else {
+              Messages.WrongPassword();
             }
         }
         private void button2_Click(object sender, EventArgs e)

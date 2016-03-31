@@ -44,7 +44,6 @@ C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Deb
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AddEmployees.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.EmployeesReader.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.FlowOfProductsInTempReceipt.resources
-C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductButtonInTempReceipt.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.ProductDeleteButtonTempReceipt.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TotalTabTenpReceipt.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Properties.Resources.resources
@@ -105,3 +104,5 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Std_Button.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Blue_Rectangular_Button.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Green_Rectangular_Button.resources
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TablesOnFrontpage.resources
+C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Paywindow.resources

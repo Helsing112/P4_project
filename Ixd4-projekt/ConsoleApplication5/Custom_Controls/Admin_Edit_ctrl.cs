@@ -50,11 +50,13 @@ namespace ConsoleApplication5
         private void Create_static_controls()
         {
             Create_home_button();
+         
             Create_edit_button();
             Create_Closer_Button();
             Create_Employee_Button();
             Create_table_manager_button();
             
+          
         }
 
         private void Create_table_manager_button()
@@ -110,7 +112,7 @@ namespace ConsoleApplication5
         }
         public Button Quit_button;
 
-        private void Create_Employee_Button()
+        public void Create_Employee_Button()
         {
             Button EditEmployee_button = new Button();
 
@@ -122,7 +124,7 @@ namespace ConsoleApplication5
             EditEmployee_button.Font = new System.Drawing.Font("Segoe UI", 20F);
             EditEmployee_button.Location = new Point(300);
             EditEmployee_button.Text = "ADD EMPLOYEE";
-            EditEmployee_button.Name = "Edit Employee";
+            EditEmployee_button.Name = "EditEmployee";
             // Add a Button Click Event handler
             EditEmployee_button.Click += new EventHandler(EditEmployee_button_click);
 
@@ -130,10 +132,21 @@ namespace ConsoleApplication5
             // will be based on the Location and Size of button
             Controls.Add(EditEmployee_button);
         }
-        private void EditEmployee_button_click(object sender, EventArgs e)
+        public void EditEmployee_button_click(object sender, EventArgs e)
         {
+            if (Application.OpenForms.OfType<AddEmployees>().Count() == 1)
+        {
+                Application.OpenForms.OfType<AddEmployees>().First().BringToFront();
+            }
+
+
+            else {
+
             AddEmployees Editor = new AddEmployees(Starting_lib_path + "Employee Library");
             Editor.Show();
+                Editor.TopMost = true;
+            }
+            
         }
         private void Quit_button_click(object sender, EventArgs e)
         {
@@ -164,8 +177,19 @@ namespace ConsoleApplication5
 
         private void Edit_button_click(object sender, EventArgs e)
         {
+
+            if (Application.OpenForms.OfType<XmlFileAdder>().Count() == 1)
+            {
+                Application.OpenForms.OfType<XmlFileAdder>().First().BringToFront();
+            }
+
+
+            else {
+
             XmlFileAdder Editor = new XmlFileAdder(path);
             Editor.Show();
+                Editor.TopMost = true;
+            }
         }
 
 
