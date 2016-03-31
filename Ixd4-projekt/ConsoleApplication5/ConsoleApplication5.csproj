@@ -221,10 +221,6 @@
     <Compile Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.Designer.cs">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.cs" />
-    <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.Designer.cs">
-      <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Custom_Controls\TempReceiptControl\ProductDeleteButtonTempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -393,9 +389,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\FlowOfProductsInTempReceipt.resx">
       <DependentUpon>FlowOfProductsInTempReceipt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductButtonInTempReceipt.resx">
-      <DependentUpon>ProductButtonInTempReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductDeleteButtonTempReceipt.resx">
       <DependentUpon>ProductDeleteButtonTempReceipt.cs</DependentUpon>
