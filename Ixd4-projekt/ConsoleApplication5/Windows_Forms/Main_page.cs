@@ -27,6 +27,7 @@ namespace ConsoleApplication5
             InitializeComponent();
            
             Admin_login();
+            Table_Panel();
            
             employe_sign_inPanel();
             Check_inButton();
@@ -66,11 +67,15 @@ namespace ConsoleApplication5
             Timer_for_wheel = new Timer();
             Timer_for_wheel.Interval = 500;
             Timer_for_wheel.Tick += Timer_for_wheel_Tick;
-            temp_receipt = new TempReceipt(500, 500);
+            temp_receipt = new TempReceipt(400, 400); /*Har ændret størrelsen så jeg kan se total*/
             temp_receipt.Location = new Point(800, 300);
             temp_receipt.BorderStyle = BorderStyle.Fixed3D;
             temp_receipt.Name = "Receipt";
 
+
+       
+
+          
             Controls.Add(temp_receipt);
         }
 
@@ -84,6 +89,14 @@ namespace ConsoleApplication5
             Controls.Add(employee_sign_in_panel);
         }
 
+        public void Table_Panel()
+        {
+            TablesOnFrontpage Tables_On_Frontpage = new TablesOnFrontpage();
+            Tables_On_Frontpage.Location = new System.Drawing.Point(350, 200);
+            Tables_On_Frontpage.Size = new System.Drawing.Size(600, 200);
+
+            Controls.Add(Tables_On_Frontpage);
+        }
 
 
             public void Check_inButton() {
@@ -98,7 +111,21 @@ namespace ConsoleApplication5
 
             Controls.Add(CheckIn_Button);
         }
+        public void CheckInButton_click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<SignInOnJobWindow>().Count() == 1)
+                Application.OpenForms.OfType<SignInOnJobWindow>().First().BringToFront();
+
+            else {
+
+                SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
+                SignIn.Show();
+                SignIn.TopMost = true;
+            }
+        }
         
+       
+
 
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
@@ -117,7 +144,7 @@ namespace ConsoleApplication5
 
             Controls.Add(Create_Label);
             BackToFrontPage();
-
+            PayButton();
         }
 
 
@@ -135,7 +162,7 @@ namespace ConsoleApplication5
             Controls.Add(BackToFrontPage);
         }
 
-
+         
 
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
@@ -144,8 +171,40 @@ namespace ConsoleApplication5
             //lel(library_path);
 
         }
+        public void PayButton()
+        {
+            Button PayButton = new Button();
+            PayButton.Location = new System.Drawing.Point(12, 345);
+            PayButton.Name = "Paybutton";
+            PayButton.Size = new System.Drawing.Size(139, 79);
+            PayButton.TabIndex = 0;
+            PayButton.Text = "PayDatZhitUp";
+            PayButton.UseVisualStyleBackColor = true;
+            PayButton.Click += new System.EventHandler(PayButton_click);
+
+            Controls.Add(PayButton);
+        }
+
+        //Paywindow Pay_window = null;
+
+        public void PayButton_click(object sender, EventArgs e)
+        {
+
+            if (Application.OpenForms.OfType<Paywindow>().Count() == 1)
+            {
+                Application.OpenForms.OfType<Paywindow>().First().BringToFront();
+            }
 
 
+            else {
+                Paywindow Pay_window = new Paywindow();
+                Pay_window.ShowDialog();
+                Pay_window.TopMost = true;
+            }
+           
+        
+        }    
+     
         TreeViewerControl tree;
         TempReceipt temp_receipt;
         Timer Timer_for_wheel;
@@ -153,19 +212,25 @@ namespace ConsoleApplication5
 
         private void Admin_login_click(object sender, EventArgs e)
         {
-            Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
-            admin_window.Show();
-        }
+            if (Application.OpenForms.OfType<Admin_function_window>().Count() == 1)
+            {
+                Application.OpenForms.OfType<Admin_function_window>().First().BringToFront();
+            }
+            else {
 
-       
-        private void CheckInButton_click(object sender, EventArgs e)
-        {
-            SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
-            SignIn.Show();
-        }
+                Admin_function_window admin_window = new Admin_function_window(Path_of_product_library);
+                admin_window.Show();
+                admin_window.TopMost = true;
+            }
+            }
 
-        #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
-        private bool timer_has_ticked = false;
+
+
+
+
+
+    #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
+    private bool timer_has_ticked = false;
         private Product Product_to_add;
 
         protected void MouseDownReciever(object sender, ProductEventArgs e)

@@ -49,13 +49,14 @@ namespace ConsoleApplication5
 
         private void Create_static_controls()
         {
+            TableManager_button();
             Create_home_button();
-            //Create_back_button();
+         
             Create_edit_button();
             Create_Closer_Button();
             Create_Employee_Button();
             
-            TableManager_button();
+          
         }
 
         private void Create_Closer_Button()
@@ -82,7 +83,7 @@ namespace ConsoleApplication5
         }
         public Button Quit_button;
 
-        private void Create_Employee_Button()
+        public void Create_Employee_Button()
         {
             Button EditEmployee_button = new Button();
 
@@ -96,7 +97,7 @@ namespace ConsoleApplication5
 
             EditEmployee_button.Location = new Point(300);
             EditEmployee_button.Text = "ADD EMPLOYEE";
-            EditEmployee_button.Name = "Edit Employee";
+            EditEmployee_button.Name = "EditEmployee";
             // Add a Button Click Event handler
             EditEmployee_button.Click += new EventHandler(EditEmployee_button_click);
 
@@ -104,10 +105,21 @@ namespace ConsoleApplication5
             // will be based on the Location and Size of button
             Controls.Add(EditEmployee_button);
         }
-        private void EditEmployee_button_click(object sender, EventArgs e)
+        public void EditEmployee_button_click(object sender, EventArgs e)
         {
-            AddEmployees Editor = new AddEmployees(Starting_lib_path + "Employee Library");
-            Editor.Show();
+            if (Application.OpenForms.OfType<AddEmployees>().Count() == 1)
+            {
+                Application.OpenForms.OfType<AddEmployees>().First().BringToFront();
+            }
+
+
+            else {
+
+                AddEmployees Editor = new AddEmployees(Starting_lib_path + "Employee Library");
+                Editor.Show();
+                Editor.TopMost = true;
+            }
+            
         }
 
         private void TableManager_button()
@@ -136,8 +148,19 @@ namespace ConsoleApplication5
 
         private void TableManager_button_click(object sender, EventArgs e)
         {
-            TableAdd TableAdd = new TableAdd();
-            TableAdd.Show();
+
+            if (Application.OpenForms.OfType<TableAdd>().Count() == 1)
+            {
+                Application.OpenForms.OfType<TableAdd>().First().BringToFront();
+            }
+
+
+            else {
+
+                TableAdd TableAdd = new TableAdd();
+                TableAdd.Show();
+                TableAdd.TopMost = true;
+            }
         }
 
 
@@ -170,8 +193,19 @@ namespace ConsoleApplication5
 
         private void Edit_button_click(object sender, EventArgs e)
         {
-            XmlFileAdder Editor = new XmlFileAdder(path);
-            Editor.Show();
+
+            if (Application.OpenForms.OfType<XmlFileAdder>().Count() == 1)
+            {
+                Application.OpenForms.OfType<XmlFileAdder>().First().BringToFront();
+            }
+
+
+            else {
+
+                XmlFileAdder Editor = new XmlFileAdder(path);
+                Editor.Show();
+                Editor.TopMost = true;
+            }
         }
 
         private void Create_back_button()

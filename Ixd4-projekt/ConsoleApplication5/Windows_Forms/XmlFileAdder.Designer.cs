@@ -91,7 +91,7 @@
             // PriceInputTextBox
             // 
             this.PriceInputTextBox.Location = new System.Drawing.Point(157, 117);
-            this.PriceInputTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceInputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceInputTextBox.Name = "PriceInputTextBox";
             this.PriceInputTextBox.Size = new System.Drawing.Size(247, 20);
             this.PriceInputTextBox.TabIndex = 4;
@@ -138,7 +138,7 @@
             this.pictureBox1.ImageLocation = "@\"C:\\Users\\kranzekage\\Source\\Repos\\P4_project\\PictureLibrary\"";
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(157, 182);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +154,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(157, 146);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 32);
             this.button2.TabIndex = 11;
@@ -165,17 +165,18 @@
             // CategoryTextBox
             // 
             this.CategoryTextBox.Location = new System.Drawing.Point(157, 354);
-            this.CategoryTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CategoryTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.Size = new System.Drawing.Size(247, 20);
             this.CategoryTextBox.TabIndex = 7;
             this.CategoryTextBox.TextChanged += new System.EventHandler(this.CategoryTextbox_TextChanged);
+            this.CategoryTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProductNameTextbox_KeyPress);
             // 
             // Create_Category_Button
             // 
             this.Create_Category_Button.Enabled = false;
             this.Create_Category_Button.Location = new System.Drawing.Point(157, 384);
-            this.Create_Category_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Create_Category_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Create_Category_Button.Name = "Create_Category_Button";
             this.Create_Category_Button.Size = new System.Drawing.Size(115, 23);
             this.Create_Category_Button.TabIndex = 9;

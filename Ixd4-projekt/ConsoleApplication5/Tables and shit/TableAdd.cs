@@ -29,6 +29,7 @@ namespace ConsoleApplication5
         {
             int lel;
             List<Button> Bordliste = new List<Button>();
+
             lel = Int32.Parse(AmountOfTableInput.Text);
             for (int i = 0; i < lel; i++)
             {

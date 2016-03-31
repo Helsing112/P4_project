@@ -62,9 +62,14 @@ namespace ConsoleApplication5
             Total_tab.Location = new Point(0, size_y-height_of_total_tab);
 
 
+           
+
             Controls.Add(Total_tab);
             Controls.Add(ListOfProducts);
+      
         }
+       
+
         FlowOfProductsInTempReceipt ListOfProducts;
         TotalTabTenpReceipt Total_tab;   
     }

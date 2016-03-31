@@ -115,7 +115,7 @@ namespace ConsoleApplication5
                 start();
             }
             else {
-                MessageBox.Show("Wrong Password");
+              Messages.WrongPassword();
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -127,6 +127,6 @@ namespace ConsoleApplication5
             txtPassword.PasswordChar = '*';
         }
 
-       
+      
     }
 }

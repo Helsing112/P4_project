@@ -15,7 +15,11 @@ namespace ConsoleApplication5
         public TotalTabTenpReceipt(int size_x, int size_y)
         {
             InitializeComponent(size_x, size_y);
+
+
+           
         }
+      
         #region Component Designer generated code
 
         /// <summary> 
@@ -52,7 +56,7 @@ namespace ConsoleApplication5
             // 
             this.label_Total.AutoSize = true;
             this.label_Total.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_Total.Location = new System.Drawing.Point(3, 0);
+            this.label_Total.Location = new System.Drawing.Point(20, 0);
             this.label_Total.Name = "label_Total";
             this.label_Total.AutoSize = true;
             this.label_Total.TabIndex = 0;
@@ -63,13 +67,16 @@ namespace ConsoleApplication5
             // 
             this.label_price.AutoSize = true;
             this.label_price.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_price.Location = new System.Drawing.Point(78, 0);
+            this.label_price.Location = new System.Drawing.Point(71, 0);
             this.label_price.Name = "label_price";
             this.label_price.AutoSize = true;
             this.label_price.TabIndex = 1;
             this.label_price.Text = "0.00,-";
             this.label_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            
+
+          
+
+
             // 
             // TotalTabTenpReceipt
             // 

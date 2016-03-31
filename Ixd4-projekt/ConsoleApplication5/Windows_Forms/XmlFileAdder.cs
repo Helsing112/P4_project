@@ -67,7 +67,7 @@ namespace ConsoleApplication5
 
 
             button1.BackColor = Color.Green;
-            MessageBox.Show(_product.Name + " Added" + "\n" + "Price: " + _product.Price);
+            Messages.CategoryCreated();
             Thread.Sleep(500);
             button1.BackColor = Color.White;
         }
@@ -127,7 +127,7 @@ namespace ConsoleApplication5
 
 
             Create_Category_Button.BackColor = Color.Green;
-            MessageBox.Show("New Category Created");
+            Messages.CategoryCreated();
             Thread.Sleep(500);
             Create_Category_Button.BackColor = Color.White;
         }
@@ -157,7 +157,14 @@ namespace ConsoleApplication5
         {
         }
 
-        
-       
+        private void ProductNameTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }
