@@ -53,6 +53,12 @@
       <DependentUpon>PayWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductWithAmount.cs" />
+    <Compile Include="Pay\PruductButtonInPayReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pay\PruductButtonInPayReceipt.Designer.cs">
+      <DependentUpon>PruductButtonInPayReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tables and shit\Table_button.cs">
       <SubType>Component</SubType>
     </Compile>

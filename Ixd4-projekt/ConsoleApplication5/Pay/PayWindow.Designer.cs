@@ -45,9 +45,12 @@
             this.textBox_result = new System.Windows.Forms.TextBox();
             this.labelCurrentOperation = new System.Windows.Forms.Label();
             this.PayReceipt = new System.Windows.Forms.Panel();
+            this.PayReceiptFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Totalamountlabel = new System.Windows.Forms.Label();
             this.Pay = new System.Windows.Forms.Button();
             this.TotalAmountNumber = new System.Windows.Forms.Label();
+            this.Quit = new System.Windows.Forms.Button();
+            this.PayReceipt.SuspendLayout();
             this.SuspendLayout();
             // 
             // ButtonNr7
@@ -214,10 +217,20 @@
             // 
             // PayReceipt
             // 
+            this.PayReceipt.Controls.Add(this.PayReceiptFlowPanel);
             this.PayReceipt.Location = new System.Drawing.Point(12, 65);
             this.PayReceipt.Name = "PayReceipt";
             this.PayReceipt.Size = new System.Drawing.Size(225, 299);
             this.PayReceipt.TabIndex = 22;
+            // 
+            // PayReceiptFlowPanel
+            // 
+            this.PayReceiptFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PayReceiptFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PayReceiptFlowPanel.Location = new System.Drawing.Point(0, 0);
+            this.PayReceiptFlowPanel.Name = "PayReceiptFlowPanel";
+            this.PayReceiptFlowPanel.Size = new System.Drawing.Size(225, 299);
+            this.PayReceiptFlowPanel.TabIndex = 0;
             // 
             // Totalamountlabel
             // 
@@ -246,11 +259,23 @@
             this.TotalAmountNumber.Text = "0";
             this.TotalAmountNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Quit
+            // 
+            this.Quit.BackColor = System.Drawing.Color.Red;
+            this.Quit.Location = new System.Drawing.Point(536, 407);
+            this.Quit.Name = "Quit";
+            this.Quit.Size = new System.Drawing.Size(75, 47);
+            this.Quit.TabIndex = 29;
+            this.Quit.Text = "Quit";
+            this.Quit.UseVisualStyleBackColor = false;
+            this.Quit.Click += new System.EventHandler(this.Quit_Click);
+            // 
             // Paywindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 485);
+            this.Controls.Add(this.Quit);
             this.Controls.Add(this.TotalAmountNumber);
             this.Controls.Add(this.Pay);
             this.Controls.Add(this.Totalamountlabel);
@@ -276,6 +301,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculater";
+            this.PayReceipt.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +328,8 @@
         private System.Windows.Forms.Label Totalamountlabel;
         private System.Windows.Forms.Button Pay;
         private System.Windows.Forms.Label TotalAmountNumber;
+        private System.Windows.Forms.FlowLayoutPanel PayReceiptFlowPanel;
+        private System.Windows.Forms.Button Quit;
     }
 }
 

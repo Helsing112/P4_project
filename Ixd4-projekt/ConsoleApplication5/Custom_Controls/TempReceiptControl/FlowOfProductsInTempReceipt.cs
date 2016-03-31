@@ -95,7 +95,7 @@ namespace ConsoleApplication5
         public List<ProductWithAmount> GetReceiptContent()
         {
             List<ProductWithAmount> List = new List<ProductWithAmount>();
-            foreach (var item in this.Controls)
+            foreach (var item in this.flowLayoutPanel1.Controls)
             {
                 ProductButtonInFlowTempReciept temp_but = (ProductButtonInFlowTempReciept)item;
                 ProductWithAmount temp_product = new ProductWithAmount(temp_but.Amount_to_represent);

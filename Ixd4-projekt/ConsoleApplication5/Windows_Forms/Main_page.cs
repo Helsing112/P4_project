@@ -186,7 +186,7 @@ namespace ConsoleApplication5
             else
             {
                 List<ProductWithAmount> ListOfContent = temp_receipt.GetReceiptContent();
-                Paywindow Pay_window = new Paywindow();
+                Paywindow Pay_window = new Paywindow(ListOfContent);
                 Pay_window.ShowDialog();
                 Pay_window.TopMost = true;
             }       
