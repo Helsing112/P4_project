@@ -101,6 +101,7 @@ namespace ConsoleApplication5
                 ProductWithAmount temp_product = new ProductWithAmount(temp_but.Amount_to_represent);
                 temp_product.Price = temp_but.Product_input.Price;
                 temp_product.Name = temp_but.Product_input.Name;
+                List.Add(temp_product);
             }
 
             return List;

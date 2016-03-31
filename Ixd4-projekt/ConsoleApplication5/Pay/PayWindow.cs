@@ -35,7 +35,7 @@ namespace ConsoleApplication5
             foreach (ProductWithAmount item in inputList)
             {
                 PruductButtonInPayReceipt product_item = new PruductButtonInPayReceipt(Size_of_list_x, Height_of_element, item);
-                product_item.BackColor = Color.Black;
+                product_item.BackColor = Color.White;
                 PayReceiptFlowPanel.Controls.Add(product_item);
                 
             }
