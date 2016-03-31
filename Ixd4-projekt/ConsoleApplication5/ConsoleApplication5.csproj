@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pay\PayWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pay\PayWindow.Designer.cs">
+      <DependentUpon>PayWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pay\PruductButtonInPayReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pay\PruductButtonInPayReceipt.Designer.cs">
+      <DependentUpon>PruductButtonInPayReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pay\ProductWithAmount.cs" />
     <Compile Include="Standard layouts\Blue_Rectangular_Button.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,6 +324,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pay\PayWindow.resx">
+      <DependentUpon>PayWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>

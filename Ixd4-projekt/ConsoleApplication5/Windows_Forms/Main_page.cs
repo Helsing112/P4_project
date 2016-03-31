@@ -27,7 +27,6 @@ namespace ConsoleApplication5
             InitializeComponent();
            
             Admin_login();
-            Table_Panel();
            
             employe_sign_inPanel();
             Check_inButton();
@@ -82,15 +81,6 @@ namespace ConsoleApplication5
             employee_sign_in_panel.Size = new System.Drawing.Size(600, 200);
 
             Controls.Add(employee_sign_in_panel);
-        }
-
-        public void Table_Panel()
-        {
-            TablesOnFrontpage Tables_On_Frontpage = new TablesOnFrontpage();
-            Tables_On_Frontpage.Location = new System.Drawing.Point(350, 200);
-            Tables_On_Frontpage.Size = new System.Drawing.Size(600, 200);
-
-            Controls.Add(Tables_On_Frontpage);
         }
 
 
