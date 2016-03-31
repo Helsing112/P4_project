@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Text;
 
 namespace ConsoleApplication5
 {
@@ -20,16 +21,15 @@ namespace ConsoleApplication5
         {
             this.path = path;
             Starting_lib_path = path;
-            
             InitializeComponent();
             start();
         }
         private void start()
         {
+
             int i = 0;
-            this.Controls.Clear();
+            Controls.Clear();
             Create_static_controls();
-            Console.WriteLine(Controls.Owner);
             DirectoryInfo mapper = new DirectoryInfo(path);
             foreach (var item in mapper.GetDirectories())
             {
@@ -50,7 +50,6 @@ namespace ConsoleApplication5
         private void Create_static_controls()
         {
             Create_home_button();
-            //Create_back_button();
             Create_edit_button();
             Create_Closer_Button();
             Create_Employee_Button();
@@ -66,14 +65,13 @@ namespace ConsoleApplication5
             Quit_button.Height = 80;
             Quit_button.Width = 300;
             Quit_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
-            Quit_button.Font = new System.Drawing.Font("Segoe UI", 20F);
+            //Quit_button.Font = new System.Drawing.Font(font1.Families[0], 20F);
             Quit_button.Location = new Point(900);
             Quit_button.FlatStyle = FlatStyle.Flat;
-            //Quit_button.Location = new Point(500, 300);
             Quit_button.Text = "QUIT";
             Quit_button.Name = "Quit button";
             // Add a Button Click Event handler
-            Quit_button.Click += new EventHandler(Quit_button_click);
+            //Quit_button.Click += new EventHandler(Quit_button_click);
             
 
             // Add Button to the Form. Placement of the Button
@@ -92,8 +90,6 @@ namespace ConsoleApplication5
             EditEmployee_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
             EditEmployee_button.FlatStyle = FlatStyle.Flat;
             EditEmployee_button.Font = new System.Drawing.Font("Segoe UI", 20F);
-
-
             EditEmployee_button.Location = new Point(300);
             EditEmployee_button.Text = "ADD EMPLOYEE";
             EditEmployee_button.Name = "Edit Employee";
@@ -144,6 +140,7 @@ namespace ConsoleApplication5
 
         private void Quit_button_click(object sender, EventArgs e)
         {
+            
         }
 
         private void Create_edit_button()
@@ -174,10 +171,6 @@ namespace ConsoleApplication5
             Editor.Show();
         }
 
-        private void Create_back_button()
-        {
-            throw new NotImplementedException();
-        }
 
         private void Create_home_button()
         {
@@ -193,13 +186,13 @@ namespace ConsoleApplication5
             Home_button.Location = new Point(600);
             Home_button.Text = "HOME";
             Home_button.Name = "Home button";
-           // Home_button.Dock = DockStyle.Bottom;
             // Add a Button Click Event handler
             Home_button.Click += new EventHandler(Home_button_click);
 
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             Controls.Add(Home_button);
+            Console.WriteLine("home added");
         }
         private void Home_button_click(object sender, EventArgs e)
         {

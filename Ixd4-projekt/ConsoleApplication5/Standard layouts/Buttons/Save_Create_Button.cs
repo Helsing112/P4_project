@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5.Standard_layouts.Buttons
 {
-    public partial class Back_Button : Std_Button
+    public partial class Save_Create_Button : Std_Button
     {
-        public Back_Button()
+        public Save_Create_Button()
         {
             InitializeComponent();
         }

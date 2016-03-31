@@ -80,9 +80,7 @@
     <Compile Include="Standard_Button_layout.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Standard_Window_Layout.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Standard_Window_Layout.cs" />
     <Compile Include="Standard_Window_Layout.Designer.cs">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
     </Compile>
@@ -173,9 +171,7 @@
     <Compile Include="Tables and shit\TableAdd.Designer.cs">
       <DependentUpon>TableAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows_Forms\Admin_function_window.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Windows_Forms\Admin_function_window.cs" />
     <Compile Include="Windows_Forms\Admin_function_window.Designer.cs">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </Compile>
@@ -218,9 +214,7 @@
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Windows_Forms\XmlFileAdder.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Windows_Forms\XmlFileAdder.cs" />
     <Compile Include="Windows_Forms\XmlFileAdder.Designer.cs">
       <DependentUpon>XmlFileAdder.cs</DependentUpon>
     </Compile>
