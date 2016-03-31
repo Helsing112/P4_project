@@ -44,7 +44,7 @@ namespace ConsoleApplication5
             TotalAmountNumber.Text = TempTotal.ToString() + ".-";
         }
 
-      
+       
         
         private void button_Click(object sender, EventArgs e)
         {
