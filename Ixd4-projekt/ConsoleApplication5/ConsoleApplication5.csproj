@@ -112,6 +112,36 @@
     <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
       <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tables\TableType_Show_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tables\TableType_Show_Control.Designer.cs">
+      <DependentUpon>TableType_Show_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\Table_button + table_control.cs" />
+    <Compile Include="Tables\Table_management_AddTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\Table_management_AddTableForm.Designer.cs">
+      <DependentUpon>Table_management_AddTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\Table_management_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\Table_management_form.Designer.cs">
+      <DependentUpon>Table_management_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\Table_management_settings_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\Table_management_settings_form.Designer.cs">
+      <DependentUpon>Table_management_settings_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\Table_panel_for_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tables\XmlTableFileReader.cs" />
+    <Compile Include="Tables\XmlTableFileWriter.cs" />
     <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,10 +254,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Tables and shit\TableAdd.cs" />
-    <Compile Include="Tables and shit\TableAdd.Designer.cs">
-      <DependentUpon>TableAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +344,18 @@
     <EmbeddedResource Include="Standard layouts\Super classes\Std_Button.resx">
       <DependentUpon>Std_Button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tables\TableType_Show_Control.resx">
+      <DependentUpon>TableType_Show_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Table_management_AddTableForm.resx">
+      <DependentUpon>Table_management_AddTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Table_management_form.resx">
+      <DependentUpon>Table_management_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Table_management_settings_form.resx">
+      <DependentUpon>Table_management_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
       <DependentUpon>NumberWheel.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,9 +398,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employees classes\SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tables and shit\TableAdd.resx">
-      <DependentUpon>TableAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
