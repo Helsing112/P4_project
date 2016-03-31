@@ -24,6 +24,21 @@ namespace ConsoleApplication5
             total_price += e.product.Price;
             Total_tab.label_price.Text = total_price.ToString() + ",-";
         }
+        public void Add_products(Product product_to_add)
+        {
+            ListOfProducts.Add_product(product_to_add);
+            total_price += product_to_add.Price;
+            Total_tab.label_price.Text = total_price.ToString() + ",-";
+        }
+
+        public void Add_products(Product product_to_add, int amount)
+        {
+            ListOfProducts.Add_product(product_to_add, amount);
+
+            total_price += product_to_add.Price*amount;
+            Total_tab.label_price.Text = total_price.ToString() + ",-";
+        }
+
         private void Product_removed(object sender, ProductEventArgs e)
         {
             int Representing_amount = (int)sender;

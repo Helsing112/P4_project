@@ -61,7 +61,6 @@ namespace ConsoleApplication5
             {
                 ClickEvent(this, new EmployeeEventArgs() { employee = employee });
             }
-
         }
 
         #endregion

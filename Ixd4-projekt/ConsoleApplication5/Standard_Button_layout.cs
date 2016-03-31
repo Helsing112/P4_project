@@ -10,10 +10,20 @@ namespace ConsoleApplication5
 {
     sealed public class Standard_Button_layout : System.Windows.Forms.Button
     {
-        sealed override public Color BackColor { get { return Color.Red; } }
+        override public Color BackColor { get { return Color.Red; } }
+        
+        public override Font Font
+        {
+            get
+            {
+                return base.Font;
+            }
+        }
+        
+
+        
         public Standard_Button_layout() : base()
         {
-
             ForeColor = System.Drawing.SystemColors.ControlText;
             FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             Font = new System.Drawing.Font("Segoe UI", 20F);

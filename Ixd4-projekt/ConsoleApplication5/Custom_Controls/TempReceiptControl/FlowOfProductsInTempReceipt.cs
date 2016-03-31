@@ -72,5 +72,25 @@ namespace ConsoleApplication5
                 flowLayoutPanel1.Controls.Add(product_item);
             }
         }
+        public void Add_product(Product product_to_add, int amount)
+        {
+            bool found_similar = false;
+            foreach (Control item in flowLayoutPanel1.Controls)
+            {
+                if (item.Name == product_to_add.Name)
+                {
+                    ProductButtonInFlowTempReciept product = (ProductButtonInFlowTempReciept)item;
+                    product.Amount_to_represent += amount;
+                    product.Redraw_labels_text();
+                    found_similar = true;
+                }
+            }
+            if (!found_similar)
+            {
+                ProductButtonInFlowTempReciept product_item = new ProductButtonInFlowTempReciept(Size_of_list_x, Height_of_element, product_to_add, amount);
+                product_item.BackColor = Color.White;
+                flowLayoutPanel1.Controls.Add(product_item);
+            }
+        }
     }
 }

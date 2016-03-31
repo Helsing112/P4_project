@@ -54,7 +54,8 @@ namespace ConsoleApplication5
             Create_edit_button();
             Create_Closer_Button();
             Create_Employee_Button();
-
+            
+            TableManager_button();
         }
 
         private void Create_Closer_Button()
@@ -108,6 +109,38 @@ namespace ConsoleApplication5
             AddEmployees Editor = new AddEmployees(Starting_lib_path + "Employee Library");
             Editor.Show();
         }
+
+        private void TableManager_button()
+        {
+
+            Button TableManager_button = new Button();
+
+            // Set Button properties
+            TableManager_button.Height = 80;
+            TableManager_button.Width = 300;
+            TableManager_button.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+            TableManager_button.FlatStyle = FlatStyle.Flat;
+            TableManager_button.Font = new System.Drawing.Font("Segoe UI", 20F);
+
+
+            TableManager_button.Location = new Point(200,100);
+            TableManager_button.Text = "Table Manager";
+            TableManager_button.Name = " TableManager";
+            // Add a Button Click Event handler
+            TableManager_button.Click += new EventHandler(TableManager_button_click);
+
+            // Add Button to the Form. Placement of the Button
+            // will be based on the Location and Size of button
+            Controls.Add(TableManager_button);
+        }
+
+        private void TableManager_button_click(object sender, EventArgs e)
+        {
+            TableAdd TableAdd = new TableAdd();
+            TableAdd.Show();
+        }
+
+
 
         private void Quit_button_click(object sender, EventArgs e)
         {

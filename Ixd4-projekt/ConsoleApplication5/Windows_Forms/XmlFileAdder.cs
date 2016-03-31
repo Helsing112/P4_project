@@ -75,12 +75,27 @@ namespace ConsoleApplication5
         private void PriceTextBox_TextChanged_1(object sender, EventArgs e)
         {
             Input_In_TextBoxes();
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(PriceInputTextBox.Text, "  ^ [0-9]"))
+            {
+                PriceInputTextBox.Text = "";
+            }
         }
+
+        private void PriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+        }
+
 
         private void CategoryTextbox_TextChanged(object sender, EventArgs e)
         {
             if (CategoryTextBox.Text.Length != 0)
-            {
+            {  
                 Create_Category_Button.Enabled = true;
         }
             else
@@ -88,6 +103,20 @@ namespace ConsoleApplication5
                 Create_Category_Button.Enabled = false;
 
             }
+            if (System.Text.RegularExpressions.Regex.IsMatch(CategoryTextBox.Text, "  ^ [0-9]"))
+            {
+                CategoryTextBox.Text = "";
+            }
+
+        }
+
+        private void CategoryTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void Create_Category_Button_Click(object sender, EventArgs e)

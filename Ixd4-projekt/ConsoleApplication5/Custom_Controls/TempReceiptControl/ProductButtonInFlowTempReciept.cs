@@ -56,7 +56,7 @@ namespace ConsoleApplication5
         }
 
         public static EventHandler<ProductEventArgs> ProductRemove;//static publisher for deletion or addition
-        public virtual void OnProductAmountAltered(int Representing_amount, Product product)
+        protected virtual void OnProductAmountAltered(int Representing_amount, Product product)
         {
             if (ProductRemove != null)
             {

@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,11 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControl1.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl1.Designer.cs">
-      <DependentUpon>CustomControl1.cs</DependentUpon>
+    <Compile Include="Wheel _classes\CenterOnNumberWheel.Designer.cs">
+      <DependentUpon>CenterOnNumberWheel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message\Messages.cs" />
+    <Compile Include="Message\Message_box.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message\Message_box.Designer.cs">
+      <DependentUpon>Message_box.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wheel _classes\NumberWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wheel _classes\NumberWheel.Designer.cs">
+      <DependentUpon>NumberWheel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wheel _classes\NumberWheelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wheel _classes\NumberWheelForm.Designer.cs">
+      <DependentUpon>NumberWheelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wheel _classes\PieOnNumberWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wheel _classes\PieOnNumberWheel.Designer.cs">
+      <DependentUpon>PieOnNumberWheel.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard_Button_layout.cs">
       <SubType>Component</SubType>
@@ -121,22 +145,33 @@
     <Compile Include="Custom_Controls\TempReceiptControl\ProductButtonInFlowTempReciept.Designer.cs">
       <DependentUpon>ProductButtonInFlowTempReciept.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees classes\EmployeeSignInPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees classes\EmployeeSignInPanel.Designer.cs">
+      <DependentUpon>EmployeeSignInPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SignInOnJobWindow.cs">
+    <Compile Include="Employees classes\SignInOnJobWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignInOnJobWindow.Designer.cs">
+    <Compile Include="Employees classes\SignInOnJobWindow.Designer.cs">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="test3.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Tables and shit\TableAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test3.Designer.cs">
-      <DependentUpon>test3.cs</DependentUpon>
+    <Compile Include="Tables and shit\TableAdd.Designer.cs">
+      <DependentUpon>TableAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\Admin_function_window.cs">
       <SubType>Form</SubType>
@@ -196,8 +231,14 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CustomControl1.resx">
-      <DependentUpon>CustomControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Message\Message_box.resx">
+      <DependentUpon>Message_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
+      <DependentUpon>NumberWheel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wheel _classes\NumberWheelForm.resx">
+      <DependentUpon>NumberWheelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard_Window_Layout.resx">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
@@ -229,15 +270,18 @@
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\TotalTabTenpReceipt.resx">
       <DependentUpon>TotalTabTenpReceipt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees classes\EmployeeSignInPanel.resx">
+      <DependentUpon>EmployeeSignInPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignInOnJobWindow.resx">
+    <EmbeddedResource Include="Employees classes\SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test3.resx">
-      <DependentUpon>test3.cs</DependentUpon>
+    <EmbeddedResource Include="Tables and shit\TableAdd.resx">
+      <DependentUpon>TableAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
@@ -264,6 +308,10 @@
     <Folder Include="Library\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\coke_bottle.png" />
   </ItemGroup>
   <ItemGroup>

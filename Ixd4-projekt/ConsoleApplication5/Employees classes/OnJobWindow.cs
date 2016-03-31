@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class SignInOnJobWindow : Form
+    public partial class OnJobWindow : Form
     {
-        public SignInOnJobWindow(string path)
+        public OnJobWindow(string path)
         {
             InitializeComponent();
-            Initializejobpeople(path);
+            Initializejobpeople(path);  
         }
 
         private void Initializejobpeople(string path)
         {
             EmployeesReader EmployeeControl = new EmployeesReader(500, 200, path);
-            EmployeeControl.Location = new Point(0, 0);
+            EmployeeControl.Location = new Point(0, 0  );
             EmployeeControl.BorderStyle = BorderStyle.Fixed3D;
 
             Controls.Add(EmployeeControl);
         }
 
         private void OnJobWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SignInOnJobWindow_Load(object sender, EventArgs e)
         {
 
         }
