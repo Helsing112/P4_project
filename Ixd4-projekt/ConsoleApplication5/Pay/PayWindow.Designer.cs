@@ -56,7 +56,7 @@
             // ButtonNr7
             // 
             this.ButtonNr7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr7.Location = new System.Drawing.Point(319, 104);
+            this.ButtonNr7.Location = new System.Drawing.Point(445, 100);
             this.ButtonNr7.Name = "ButtonNr7";
             this.ButtonNr7.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr7.TabIndex = 0;
@@ -67,7 +67,7 @@
             // ButtonNr8
             // 
             this.ButtonNr8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr8.Location = new System.Drawing.Point(369, 104);
+            this.ButtonNr8.Location = new System.Drawing.Point(495, 100);
             this.ButtonNr8.Name = "ButtonNr8";
             this.ButtonNr8.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr8.TabIndex = 1;
@@ -78,7 +78,7 @@
             // ButtonNr9
             // 
             this.ButtonNr9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr9.Location = new System.Drawing.Point(419, 104);
+            this.ButtonNr9.Location = new System.Drawing.Point(545, 100);
             this.ButtonNr9.Name = "ButtonNr9";
             this.ButtonNr9.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr9.TabIndex = 2;
@@ -89,7 +89,7 @@
             // Split
             // 
             this.Split.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Split.Location = new System.Drawing.Point(469, 104);
+            this.Split.Location = new System.Drawing.Point(595, 100);
             this.Split.Name = "Split";
             this.Split.Size = new System.Drawing.Size(116, 44);
             this.Split.TabIndex = 3;
@@ -100,7 +100,7 @@
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(470, 154);
+            this.Clear.Location = new System.Drawing.Point(596, 150);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(115, 44);
             this.Clear.TabIndex = 4;
@@ -111,7 +111,7 @@
             // ButtonNr6
             // 
             this.ButtonNr6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr6.Location = new System.Drawing.Point(419, 154);
+            this.ButtonNr6.Location = new System.Drawing.Point(545, 150);
             this.ButtonNr6.Name = "ButtonNr6";
             this.ButtonNr6.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr6.TabIndex = 7;
@@ -122,7 +122,7 @@
             // ButtonNr5
             // 
             this.ButtonNr5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr5.Location = new System.Drawing.Point(369, 154);
+            this.ButtonNr5.Location = new System.Drawing.Point(495, 150);
             this.ButtonNr5.Name = "ButtonNr5";
             this.ButtonNr5.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr5.TabIndex = 6;
@@ -133,7 +133,7 @@
             // ButtonNr4
             // 
             this.ButtonNr4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr4.Location = new System.Drawing.Point(319, 154);
+            this.ButtonNr4.Location = new System.Drawing.Point(445, 150);
             this.ButtonNr4.Name = "ButtonNr4";
             this.ButtonNr4.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr4.TabIndex = 5;
@@ -144,7 +144,7 @@
             // DisCount
             // 
             this.DisCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisCount.Location = new System.Drawing.Point(469, 204);
+            this.DisCount.Location = new System.Drawing.Point(595, 200);
             this.DisCount.Name = "DisCount";
             this.DisCount.Size = new System.Drawing.Size(116, 44);
             this.DisCount.TabIndex = 13;
@@ -155,7 +155,7 @@
             // ButtonNr3
             // 
             this.ButtonNr3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr3.Location = new System.Drawing.Point(419, 204);
+            this.ButtonNr3.Location = new System.Drawing.Point(545, 200);
             this.ButtonNr3.Name = "ButtonNr3";
             this.ButtonNr3.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr3.TabIndex = 12;
@@ -166,7 +166,7 @@
             // ButtonNr2
             // 
             this.ButtonNr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr2.Location = new System.Drawing.Point(369, 204);
+            this.ButtonNr2.Location = new System.Drawing.Point(495, 200);
             this.ButtonNr2.Name = "ButtonNr2";
             this.ButtonNr2.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr2.TabIndex = 11;
@@ -177,7 +177,7 @@
             // ButtonNr1
             // 
             this.ButtonNr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonNr1.Location = new System.Drawing.Point(319, 204);
+            this.ButtonNr1.Location = new System.Drawing.Point(445, 200);
             this.ButtonNr1.Name = "ButtonNr1";
             this.ButtonNr1.Size = new System.Drawing.Size(44, 44);
             this.ButtonNr1.TabIndex = 10;
@@ -188,7 +188,7 @@
             // Button0
             // 
             this.Button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button0.Location = new System.Drawing.Point(319, 254);
+            this.Button0.Location = new System.Drawing.Point(445, 250);
             this.Button0.Name = "Button0";
             this.Button0.Size = new System.Drawing.Size(94, 44);
             this.Button0.TabIndex = 15;
@@ -199,7 +199,7 @@
             // textBox_result
             // 
             this.textBox_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_result.Location = new System.Drawing.Point(319, 65);
+            this.textBox_result.Location = new System.Drawing.Point(445, 61);
             this.textBox_result.Name = "textBox_result";
             this.textBox_result.Size = new System.Drawing.Size(266, 29);
             this.textBox_result.TabIndex = 20;
@@ -210,7 +210,7 @@
             // 
             this.labelCurrentOperation.AutoSize = true;
             this.labelCurrentOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentOperation.Location = new System.Drawing.Point(313, 29);
+            this.labelCurrentOperation.Location = new System.Drawing.Point(439, 25);
             this.labelCurrentOperation.Name = "labelCurrentOperation";
             this.labelCurrentOperation.Size = new System.Drawing.Size(0, 33);
             this.labelCurrentOperation.TabIndex = 21;
@@ -243,7 +243,7 @@
             // 
             // Pay
             // 
-            this.Pay.Location = new System.Drawing.Point(469, 254);
+            this.Pay.Location = new System.Drawing.Point(595, 250);
             this.Pay.Name = "Pay";
             this.Pay.Size = new System.Drawing.Size(116, 44);
             this.Pay.TabIndex = 24;
@@ -262,7 +262,7 @@
             // Quit
             // 
             this.Quit.BackColor = System.Drawing.Color.Red;
-            this.Quit.Location = new System.Drawing.Point(536, 407);
+            this.Quit.Location = new System.Drawing.Point(662, 403);
             this.Quit.Name = "Quit";
             this.Quit.Size = new System.Drawing.Size(75, 47);
             this.Quit.TabIndex = 29;
@@ -274,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 485);
+            this.ClientSize = new System.Drawing.Size(747, 462);
             this.Controls.Add(this.Quit);
             this.Controls.Add(this.TotalAmountNumber);
             this.Controls.Add(this.Pay);

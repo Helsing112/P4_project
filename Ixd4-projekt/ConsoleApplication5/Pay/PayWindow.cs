@@ -13,7 +13,7 @@ namespace ConsoleApplication5
     public partial class Paywindow : Form
     {
         
-        //LAv en konstructer der modtager en liste
+    
         Double resultValue = 0;
         String operationPerformed = "";
         bool isOperationPerformed = false;
@@ -23,22 +23,25 @@ namespace ConsoleApplication5
         public int Height_of_element { get; }
         public Paywindow(List<ProductWithAmount> InputList)
         {
-            this.Size_of_list_x = Size_of_list_x;
+            this.Size_of_list_x = 220;
             this.Size_of_list_y = Size_of_list_y;
-            this.Height_of_element = Height_of_element;
+            this.Height_of_element = 50;
             InitializeComponent();
             InitializeReiptFlowPanel(InputList);
         }
 
         private void InitializeReiptFlowPanel(List<ProductWithAmount> inputList)
         {
+            decimal TempTotal = 0;
             foreach (ProductWithAmount item in inputList)
             {
                 PruductButtonInPayReceipt product_item = new PruductButtonInPayReceipt(Size_of_list_x, Height_of_element, item);
                 product_item.BackColor = Color.White;
                 PayReceiptFlowPanel.Controls.Add(product_item);
-                
+                TempTotal += (item.Amount * item.Price);
+
             }
+            TotalAmountNumber.Text = TempTotal.ToString() + ".-";
         }
 
       
@@ -118,5 +121,7 @@ namespace ConsoleApplication5
         {
             this.Close();
         }
+
+        
     }
 }

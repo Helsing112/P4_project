@@ -45,7 +45,8 @@ namespace ConsoleApplication5
             this.label_describtion = new System.Windows.Forms.Label();
             this.Label_amount = new System.Windows.Forms.Label();
             this.Label_price = new System.Windows.Forms.Label();
-
+            this.Height = Size_y;
+            this.Width = Size_x;
             #region label_describtion
             // 
             this.label_describtion.Font = Cosmetics.Standard_font;
@@ -88,7 +89,6 @@ namespace ConsoleApplication5
             this.Label_price.Click += new System.EventHandler(this.label_Click);
             #endregion
 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             Controls.Add(Label_amount);
             Controls.Add(label_describtion);
             Controls.Add(Label_price);
