@@ -53,9 +53,6 @@ namespace ConsoleApplication5
             this.StartPosition = FormStartPosition.Manual;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ResumeLayout(false);
-            this.Show();
-            this.TopMost = true;
-            this.Focus();
             mouse_event(MOUSEEVENTF_LEFTUP , MousePosition.X, MousePosition.Y, 0, 0);
         }
         public delegate void Pie_clicked(int number);

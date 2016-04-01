@@ -17,8 +17,11 @@ namespace ConsoleApplication5
 
         private string path;
         private string Starting_lib_path;
-        public Admin_Edit_ctrl(string path)
+        public Size Size_of_table_panel { get; }
+
+        public Admin_Edit_ctrl(string path, Size Size_of_table_panel)
         {
+            this.Size_of_table_panel = Size_of_table_panel;
             this.path = path;
             Starting_lib_path = path;
             InitializeComponent();
@@ -82,7 +85,7 @@ namespace ConsoleApplication5
 
         private void Table_manager_button_Click(object sender, EventArgs e)
         {
-            Table_management_form tables = new Table_management_form();            
+            Table_management_form tables = new Table_management_form(Size_of_table_panel);            
             tables.Show();
             tables.BringToFront();
         }

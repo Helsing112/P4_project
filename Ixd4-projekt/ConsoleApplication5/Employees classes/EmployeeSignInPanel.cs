@@ -16,8 +16,6 @@ namespace ConsoleApplication5
         {
             InitializeComponent();
         }
- 
-
         /// <summary> 
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
@@ -64,7 +62,6 @@ namespace ConsoleApplication5
             {
                 EmployeeSignedInClickEvent(this, new EmployeeEventArgs() { employee = e.employee });
             }
-
         }
 
        

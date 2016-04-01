@@ -9,6 +9,10 @@ using System.Reflection;
 
 namespace ConsoleApplication5
 {
+    public class Table_Info
+    {
+
+    }
     public class Table_button_Xml_data //used to save the relevant data of the buttons
     {
         public string Table_Text { get; set; }
@@ -52,6 +56,10 @@ namespace ConsoleApplication5
     }
     public class Table_Control_MainPage : Table_Control //The table_control for the Main window.
     {
+        Table_Info table_info;
+        public Table_Control_MainPage()
+        {
 
+        }
     }
 }

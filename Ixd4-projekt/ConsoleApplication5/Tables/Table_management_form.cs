@@ -20,10 +20,10 @@ namespace ConsoleApplication5
         private Table_panel_for_manager table_panel_for_manager;
         private Button Settings_button;
 
-        public Table_management_form()
+        public Table_management_form(Size Size_of_table_panel)
         {
-            table_list = XmlTableFileReader.Read_File(); //get tables from file.
-            InitializeComponent();
+            table_list = XmlTableFileReader.Read_File_For_Manager(); //get tables from file.
+            InitializeComponent(Size_of_table_panel);
         }
         #region Button click eventhandlers
         private void Save_Button_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace ConsoleApplication5
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(Size Size_of_table_panel)
         {
             this.Quit_button = new System.Windows.Forms.Button();
             this.Add_button = new System.Windows.Forms.Button();
@@ -73,7 +73,7 @@ namespace ConsoleApplication5
             // 
             // Table_management_form
             //             
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = false;
             this.AutoSize = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -124,20 +124,18 @@ namespace ConsoleApplication5
             // 
             // table_panel_for_manager1
             // 
-            this.AutoScaleMode = AutoScaleMode.Dpi;            
+            this.table_panel_for_manager.AutoScaleMode = AutoScaleMode.Font;
             this.table_panel_for_manager.Location = new System.Drawing.Point(125, 7);
-            this.table_panel_for_manager.Width = this.Size.Width - 220;
-            this.table_panel_for_manager.Height = this.Size.Height;
+            this.table_panel_for_manager.Size = Size_of_table_panel;
             this.table_panel_for_manager.Name = "table_panel_for_manager1";
             try
             {
                 this.table_panel_for_manager.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
             }
             catch (Exception)
-            {
+            { //We dont want to crash the system, just because our picture is not there
             }
-            this.table_panel_for_manager.BackgroundImageLayout = ImageLayout.Stretch;
-            
+            this.table_panel_for_manager.BackgroundImageLayout = ImageLayout.Stretch;            
             //
             //Settings Button
             //
@@ -147,8 +145,6 @@ namespace ConsoleApplication5
             this.Settings_button.Name = "Settings_button";
             this.Settings_button.Click += Settings_button_Click;
             this.Settings_button.Text = "Settings";
-            this.Settings_button.BackColor = Color.Wheat;
-
             //add controls
             this.Controls.Add(Settings_button);
             this.Controls.Add(Save_Button);

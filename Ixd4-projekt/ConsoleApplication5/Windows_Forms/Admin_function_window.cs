@@ -13,11 +13,13 @@ namespace ConsoleApplication5
     public partial class Admin_function_window : Standard_Window_Layout
     {
         private string path_input;
-        public Admin_function_window(string path)
+        public Size Size_for_table_panel { get; }
+
+        public Admin_function_window(string path, Size Size_For_table_Panel)
         {
+            this.Size_for_table_panel = Size_For_table_Panel;
             InitializeComponent();
-            path_input = path;
-            
+            path_input = path;            
         }
         private void InitializeComponent()
         {
@@ -97,7 +99,7 @@ namespace ConsoleApplication5
 
             this.Size = new Size(1200, 800);
             this.CenterToScreen();
-            Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input);
+            Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input, Size_for_table_panel);
             admin_edit.Quit_button.Click += new EventHandler(button2_Click);
             Controls.Add(admin_edit);
 

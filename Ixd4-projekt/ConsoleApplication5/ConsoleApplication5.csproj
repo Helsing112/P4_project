@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainPageForm\MainPage_StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPageForm\MainPage_TablesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPageForm\MainPage_ProductAdderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Standard layouts\Blue_Rectangular_Button.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +151,9 @@
     </Compile>
     <Compile Include="Tables\XmlTableFileReader.cs" />
     <Compile Include="Tables\XmlTableFileWriter.cs" />
+    <Compile Include="Tables\Table_Panel_for_MainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,7 +272,6 @@
     <Compile Include="Windows_Forms\Admin_function_window.Designer.cs">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Menu.cs" />
     <Compile Include="Custom_Controls\TempReceiptControl\TempReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,10 +292,10 @@
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom_Controls\ProductEventArgs.cs" />
-    <Compile Include="Windows_Forms\Main_page.cs">
+    <Compile Include="MainPageForm\Main_page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows_Forms\Main_page.Designer.cs">
+    <Compile Include="MainPageForm\Main_page.Designer.cs">
       <DependentUpon>Main_page.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
@@ -411,7 +422,7 @@
     <EmbeddedResource Include="Custom_Controls\ProductButtonCtrl.resx">
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows_Forms\Main_page.resx">
+    <EmbeddedResource Include="MainPageForm\Main_page.resx">
       <DependentUpon>Main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\XmlFileAdder.resx">
