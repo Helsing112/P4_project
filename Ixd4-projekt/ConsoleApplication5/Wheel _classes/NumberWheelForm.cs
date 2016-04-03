@@ -27,6 +27,7 @@ namespace ConsoleApplication5
             InitializeComponent(input_rect);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -47,23 +48,40 @@ namespace ConsoleApplication5
             // 
             // NumberWheelForm
             // 
-            this.Location = new Point(MousePosition.X - this.Width / 2, MousePosition.Y - this.Height / 2);
-
+            this.ShowInTaskbar = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ResumeLayout(false);
-            mouse_event(MOUSEEVENTF_LEFTUP , MousePosition.X, MousePosition.Y, 0, 0);
         }
+
+        /// <summary>
+        /// Shows the wheel with a set of properties on the location input 
+        /// </summary>
+        public void Show_NumberWheel()
+        {
+            Show_NumberWheel(new Point(MousePosition.X - this.Width / 2, MousePosition.Y - this.Height / 2));
+        }
+
+        public void Show_NumberWheel(Point WheelPosistion)
+        {
+            this.Location = WheelPosistion;
+            this.Show();
+            this.TopMost = true;
+            this.Focus();
+            mouse_event(MOUSEEVENTF_LEFTUP, MousePosition.X, MousePosition.Y, 0, 0);
+
+        }
+
         public delegate void Pie_clicked(int number);
-        public event Pie_clicked On_Pie_Clicked;
+        public event Pie_clicked On_Pie_Clicked; //Event to the click on one of the pies
         private void PieClicked(int number)
         {
             if(On_Pie_Clicked != null)
             {
                 On_Pie_Clicked(number);
             }
-            this.Close();
+            this.Hide();
         }
         
 

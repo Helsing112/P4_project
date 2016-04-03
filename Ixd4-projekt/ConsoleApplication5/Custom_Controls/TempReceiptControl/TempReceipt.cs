@@ -12,23 +12,26 @@ namespace ConsoleApplication5
 {
     public partial class TempReceipt : UserControl
     {
+        public List<ProductWithAmount> ActiveTableProductList { get;private set; }
         private decimal total_price { get; set; }
         public TempReceipt(int size_x, int size_y)
         {
             InitializeComponent(size_x, size_y);
         }
-        public void Clicked(object sender, ProductEventArgs e)
+        public void Table_receiptReciever(List<ProductWithAmount> ProductList)
         {
-            ListOfProducts.Add_product(e.product);
-            
-            total_price += e.product.Price;
-            Total_tab.label_price.Text = total_price.ToString() + ",-";
+            Reset_receipt(); //resets the receipt before drawing new data
+
+            foreach (ProductWithAmount item in ProductList)
+            {
+                Add_products((Product)item, item.Amount);
+            }
+            ActiveTableProductList = ProductList;           
         }
+
         public void Add_products(Product product_to_add)
         {
-            ListOfProducts.Add_product(product_to_add);
-            total_price += product_to_add.Price;
-            Total_tab.label_price.Text = total_price.ToString() + ",-";
+            Add_products(product_to_add, 1);
         }
 
         public void Add_products(Product product_to_add, int amount)
@@ -37,12 +40,18 @@ namespace ConsoleApplication5
 
             total_price += product_to_add.Price*amount;
             Total_tab.label_price.Text = total_price.ToString() + ",-";
-        }
 
+        }
         private void Product_removed(object sender, ProductEventArgs e)
         {
             int Representing_amount = (int)sender;
             total_price += e.product.Price * Representing_amount;
+            Total_tab.label_price.Text = total_price.ToString() + ",-";
+        }
+        public void Reset_receipt()
+        {
+            ListOfProducts.resetReceipt();
+            total_price = 0.00M;
             Total_tab.label_price.Text = total_price.ToString() + ",-";
         }
 
@@ -65,6 +74,11 @@ namespace ConsoleApplication5
             Controls.Add(ListOfProducts);
         }
         FlowOfProductsInTempReceipt ListOfProducts;
-        TotalTabTenpReceipt Total_tab;   
+        TotalTabTenpReceipt Total_tab;
+
+        internal void SaveReceiptToTableInfo(Table_Info TableInfoToSave)
+        {
+            ListOfProducts.SaveReceitpToTableInfo(TableInfoToSave);
+        }
     }
 }

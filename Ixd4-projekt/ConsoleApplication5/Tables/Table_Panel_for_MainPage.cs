@@ -19,14 +19,23 @@ namespace ConsoleApplication5
         public Table_Panel_for_MainPage(Size size_of_panel)
         {
             InitializeComponent(size_of_panel);
-            Add_tables();
+            Initialize_AllTables();
         }
-        private void Add_tables()
+        private void Initialize_AllTables()
         {
             List<Table_Control_MainPage> tablesList = XmlTableFileReader.Read_Tables_for_MainPage();
             foreach (Table_Control_MainPage item in tablesList)
             {
                 this.Controls.Add(item);
+                item.Click += TableClicked;
+            }
+        }
+        public EventHandler TableClick;
+        private void TableClicked(object sender, EventArgs e)
+        {
+            if (TableClick != null)
+            {
+                TableClick(sender, e);
             }
         }
         #region Component Designer generated code

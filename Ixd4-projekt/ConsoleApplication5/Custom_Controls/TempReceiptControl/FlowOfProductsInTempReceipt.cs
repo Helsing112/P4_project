@@ -12,11 +12,9 @@ namespace ConsoleApplication5
 {
     public partial class FlowOfProductsInTempReceipt : UserControl
     {
-        public int Index_of_item { get; private set; }
         public int Size_of_list_x { get; }
         public int Size_of_list_y { get; }
         public int Height_of_element { get; }
-        public decimal Total_price { get; private set; }
         public FlowOfProductsInTempReceipt(int Size_of_list_x, int Size_of_list_y, int Height_of_element)
         {
             this.Size_of_list_x = Size_of_list_x;
@@ -24,6 +22,11 @@ namespace ConsoleApplication5
             this.Height_of_element = Height_of_element;
             
             InitializeComponent();
+        }
+
+        public void resetReceipt()
+        {
+            flowLayoutPanel1.Controls.Clear();
         }
 
         private void InitializeComponent()
@@ -54,23 +57,7 @@ namespace ConsoleApplication5
 
         public void Add_product(Product product_to_add)
         {
-            bool found_similar = false;
-            foreach (Control item in flowLayoutPanel1.Controls)
-            {
-                if (item.Name == product_to_add.Name)
-                {
-                    ProductButtonInFlowTempReciept product = (ProductButtonInFlowTempReciept)item;
-                    product.Amount_to_represent++;
-                    product.Redraw_labels_text();
-                    found_similar = true;
-                }
-            }
-            if (!found_similar)
-            {
-                ProductButtonInFlowTempReciept product_item = new ProductButtonInFlowTempReciept(Size_of_list_x, Height_of_element, product_to_add, 1);
-                product_item.BackColor = Color.White;
-                flowLayoutPanel1.Controls.Add(product_item);
-            }
+            Add_product(product_to_add, 1);
         }
         public void Add_product(Product product_to_add, int amount)
         {
@@ -88,8 +75,19 @@ namespace ConsoleApplication5
             if (!found_similar)
             {
                 ProductButtonInFlowTempReciept product_item = new ProductButtonInFlowTempReciept(Size_of_list_x, Height_of_element, product_to_add, amount);
-                product_item.BackColor = Color.White;
                 flowLayoutPanel1.Controls.Add(product_item);
+            }
+        }
+
+        internal void SaveReceitpToTableInfo(Table_Info TableInfoToOverride)
+        {
+            TableInfoToOverride.TableReceipt.Clear(); //Clears all items in the list so that it will contain the correct information
+            foreach (ProductButtonInFlowTempReciept item in this.flowLayoutPanel1.Controls)
+            {
+                ProductWithAmount temp_product = new ProductWithAmount(item.Amount_to_represent);
+                temp_product.Name = item.Product_input.Name;
+                temp_product.Price = item.Product_input.Price;
+                TableInfoToOverride.TableReceipt.Add(temp_product);
             }
         }
     }

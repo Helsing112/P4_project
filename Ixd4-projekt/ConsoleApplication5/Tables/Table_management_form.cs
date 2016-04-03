@@ -126,6 +126,7 @@ namespace ConsoleApplication5
             // 
             this.table_panel_for_manager.AutoScaleMode = AutoScaleMode.Font;
             this.table_panel_for_manager.Location = new System.Drawing.Point(125, 7);
+            
             this.table_panel_for_manager.Size = Size_of_table_panel;
             this.table_panel_for_manager.Name = "table_panel_for_manager1";
             try

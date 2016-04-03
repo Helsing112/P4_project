@@ -10,6 +10,7 @@ namespace ConsoleApplication5
 {
     public partial class Main_page
     {
+        public Employee ActiveEmployee { get; private set; }
         /// <summary>
         /// Clears controls and Draws the page with the table panel
         /// </summary>
@@ -17,6 +18,7 @@ namespace ConsoleApplication5
         private void Draw_tablesPage(Employee Active_employee)
         {
             Controls.Clear();
+            ActiveEmployee = Active_employee;
 
             Controls.Add(tables_panel);
             Controls.Add(BackToFrontPageButton);
@@ -25,7 +27,7 @@ namespace ConsoleApplication5
         private void Initialize_Field_Controls_tablesPage()
         {
             BackToFrontPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
-            Tables_panel(new Point(200, 100), new Size(1200, 600));
+            Tables_panel(new Point(200, 20), Size_of_table_panel);
         }
         //field controls
         Table_Panel_for_MainPage tables_panel;
@@ -35,8 +37,12 @@ namespace ConsoleApplication5
         private void Tables_panel(Point Location_input, Size size_input)
         {
             tables_panel = new Table_Panel_for_MainPage(size_input);
+            tables_panel.TableClick += OnTableClick;
             tables_panel.Location = Location_input;
         }
+
+
+
         public void BackToFrontPage_button(Point Location_input, Size size_input)
         {
             BackToFrontPageButton = new Button();
@@ -54,6 +60,11 @@ namespace ConsoleApplication5
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
             Draw_startPage(); //returns to the start page
+        }
+        private void OnTableClick(object sender, EventArgs e)
+        {
+            Table_Control_MainPage temp_control = (Table_Control_MainPage)sender;
+            Draw_CreateReceipt(ActiveEmployee, temp_control.TableInfo);
         }
         #endregion
     }

@@ -9,10 +9,6 @@ using System.Reflection;
 
 namespace ConsoleApplication5
 {
-    public class Table_Info
-    {
-
-    }
     public class Table_button_Xml_data //used to save the relevant data of the buttons
     {
         public string Table_Text { get; set; }
@@ -56,10 +52,23 @@ namespace ConsoleApplication5
     }
     public class Table_Control_MainPage : Table_Control //The table_control for the Main window.
     {
-        Table_Info table_info;
-        public Table_Control_MainPage()
+        public Table_Info TableInfo { get; set; }
+        public Table_Control_MainPage(string Table_name)
         {
-
+            TableInfo = new Table_Info(Table_name);
+            this.Text = Table_name;
         }
     }
+    public class Table_Info //class for the table controls MainPage to store relevant data of the receipt.
+    {
+        public string Table_name { get; }
+        public List<ProductWithAmount> TableReceipt { get; set; }
+        public Table_Info(string table_name)
+        {
+            this.Table_name = table_name;
+            TableReceipt = new List<ProductWithAmount>();
+        }
+
+    }
+
 }

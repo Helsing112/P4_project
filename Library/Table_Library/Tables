@@ -1,69 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfTable_button_Xml_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Table_button_Xml_data>
-    <Table_Text />
+    <Table_Text>202</Table_Text>
     <Location>
-      <X>1181</X>
-      <Y>387</Y>
+      <X>54</X>
+      <Y>428</Y>
     </Location>
     <Size>
-      <Width>75</Width>
-      <Height>23</Height>
+      <Width>85</Width>
+      <Height>111</Height>
     </Size>
   </Table_button_Xml_data>
   <Table_button_Xml_data>
-    <Table_Text />
+    <Table_Text>403</Table_Text>
     <Location>
-      <X>60</X>
-      <Y>459</Y>
+      <X>255</X>
+      <Y>234</Y>
     </Location>
     <Size>
-      <Width>75</Width>
-      <Height>23</Height>
-    </Size>
-  </Table_button_Xml_data>
-  <Table_button_Xml_data>
-    <Table_Text />
-    <Location>
-      <X>68</X>
-      <Y>579</Y>
-    </Location>
-    <Size>
-      <Width>75</Width>
-      <Height>23</Height>
-    </Size>
-  </Table_button_Xml_data>
-  <Table_button_Xml_data>
-    <Table_Text />
-    <Location>
-      <X>830</X>
-      <Y>131</Y>
-    </Location>
-    <Size>
-      <Width>75</Width>
-      <Height>23</Height>
-    </Size>
-  </Table_button_Xml_data>
-  <Table_button_Xml_data>
-    <Table_Text />
-    <Location>
-      <X>228</X>
-      <Y>58</Y>
-    </Location>
-    <Size>
-      <Width>75</Width>
-      <Height>23</Height>
-    </Size>
-  </Table_button_Xml_data>
-  <Table_button_Xml_data>
-    <Table_Text />
-    <Location>
-      <X>476</X>
-      <Y>241</Y>
-    </Location>
-    <Size>
-      <Width>75</Width>
-      <Height>23</Height>
+      <Width>155</Width>
+      <Height>21</Height>
     </Size>
   </Table_button_Xml_data>
 </ArrayOfTable_button_Xml_data>

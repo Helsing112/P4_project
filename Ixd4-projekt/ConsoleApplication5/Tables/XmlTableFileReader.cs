@@ -45,8 +45,7 @@ namespace ConsoleApplication5
             // make buttons from table list
             foreach (Table_button_Xml_data item in Tables_list)
             {
-                Table_Control_MainPage temp_but = new Table_Control_MainPage();
-                temp_but.Text = item.Table_Text;
+                Table_Control_MainPage temp_but = new Table_Control_MainPage(item.Table_Text);
                 temp_but.Size = item.Size;
                 temp_but.Location = item.Location;
                 Table_button_list.Add(temp_but);

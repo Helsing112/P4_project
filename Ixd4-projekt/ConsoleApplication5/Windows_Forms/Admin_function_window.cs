@@ -96,7 +96,6 @@ namespace ConsoleApplication5
 
         private void start()
         {
-
             this.Size = new Size(1200, 800);
             this.CenterToScreen();
             Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input, Size_for_table_panel);

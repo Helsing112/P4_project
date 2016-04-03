@@ -10,30 +10,49 @@ namespace ConsoleApplication5
 {
     partial class Main_page
     {
+        public Table_Info ActiveTable { get;private set; }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
-        private void Draw_ProductAdderPage(Employee activeEmployee, )
+        private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
         {
             Controls.Clear();
+            //Creates the receipt from table data
+            ActiveTable = activeTable;
+            Temp_Receipt.Table_receiptReciever(ActiveTable.TableReceipt);
+            //active employee assignment (Property is in another file)
+            ActiveEmployee = activeEmployee;
 
             Controls.Add(tree);
-            Controls.Add(temp_receipt);
+            Controls.Add(Temp_Receipt);
+            Controls.Add(BackToFrontPageButton);
         }
         //Initialize all fields
-        private void Initialize_Field_Controls_ProductAdderPage()
+        private void Initialize_Field_Controls_CreateReceipt()
         {
             initialize_wheel(400);
             Product_tree(new Point(300, 300), new Size(500,500));
             Receipt(new Point(800, 300), new Size(500, 500));
+            BackToFrontPage_AndSave_button(new Point(0,0), new Size(100,100));
         }
         //Fields controls
         TreeViewerControl tree;
-        TempReceipt temp_receipt;
+        TempReceipt Temp_Receipt;
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
         NumberWheelForm Number_wheel;
 
+        #region Intialize methods
+        public void BackToFrontPage_AndSave_button(Point Location_input, Size size_input)
+        {
+            BackToFrontPageButton = new Button();
+            BackToFrontPageButton.Location = Location_input;
+            BackToFrontPageButton.Size = size_input;
+            BackToFrontPageButton.TabIndex = 0;
+            BackToFrontPageButton.Text = "Back";
+            BackToFrontPageButton.UseVisualStyleBackColor = true;
+            BackToFrontPageButton.Click += BackToFrontPage_AndSave_click;
+        }
         private void initialize_wheel(int Size_of_wheel)
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
@@ -56,17 +75,27 @@ namespace ConsoleApplication5
             Timer_for_wheel = new Timer();
             Timer_for_wheel.Interval = 50;
             Timer_for_wheel.Tick += Timer_for_wheel_Tick;
-            temp_receipt = new TempReceipt(size_input.Width, size_input.Height);
-            temp_receipt.Location = location_input;
-            temp_receipt.BorderStyle = BorderStyle.Fixed3D;
-            temp_receipt.Name = "Receipt";
+            Temp_Receipt = new TempReceipt(size_input.Width, size_input.Height);
+            Temp_Receipt.Location = location_input;
+            Temp_Receipt.BorderStyle = BorderStyle.Fixed3D;
+            Temp_Receipt.Name = "Receipt";
         }
+        #endregion
+        #region Eventhandlers---------------------------------
+        private void BackToFrontPage_AndSave_click(object sender, EventArgs e)
+        {
+            Temp_Receipt.SaveReceiptToTableInfo(ActiveTable);
+            Draw_startPage();
+        }
+
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;
+        private Point WheelSpawnPointForMouseDown;
 
         protected void MouseDownReciever(object sender, ProductEventArgs e)
         {
+            WheelSpawnPointForMouseDown = (new Point(MousePosition.X - Number_wheel.Width / 2, MousePosition.Y - Number_wheel.Height / 2));
             Timer_for_wheel.Start();
             Product_to_add = e.product;
         }
@@ -75,23 +104,22 @@ namespace ConsoleApplication5
             if (!timer_has_ticked)
             {
                 Timer_for_wheel.Stop();
-                temp_receipt.Add_products(e.product);
+                Temp_Receipt.Add_products(e.product); //Adds products to receipt
             }
 
         }
         private void Timer_for_wheel_Tick(object sender, EventArgs e)
         {
             Timer_for_wheel.Stop();
-            Number_wheel.Show();
-            Number_wheel.TopMost = true;
-            Number_wheel.Focus();
+            Number_wheel.Show_NumberWheel(WheelSpawnPointForMouseDown);
+
             timer_has_ticked = true;
             Timer_for_wheel_controller.Start();
         }
 
         private void Temp_wheel_On_Pie_Clicked(int number)
         {
-            temp_receipt.Add_products(Product_to_add, number);
+            Temp_Receipt.Add_products(Product_to_add, number);
         }
 
         private void Timer_for_wheel_controller_Tick(object sender, EventArgs e)
@@ -101,7 +129,7 @@ namespace ConsoleApplication5
         }
 
         #endregion
-
+        #endregion
     }
 
 }
