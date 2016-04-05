@@ -17,10 +17,10 @@ namespace ConsoleApplication5
         static void Main(string[] args)
         {
             Application.SetCompatibleTextRenderingDefault(false);
-
             Application.EnableVisualStyles();
+
             Application.Run(new Main_page(@"..\..\..\..\Library"));
-            
+
             Console.ReadKey();
         
     }

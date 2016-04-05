@@ -144,7 +144,6 @@ namespace ConsoleApplication5
             this.Button_TablePreview.Size = new System.Drawing.Size(113, 75);
             this.Button_TablePreview.TabIndex = 0;
             this.Button_TablePreview.Text = "404";
-            this.Button_TablePreview.UseVisualStyleBackColor = true;
             #endregion
 
             #region Shape panel
@@ -332,6 +331,7 @@ namespace ConsoleApplication5
             this.Button_savePlan.Click += Button_savePlan_Click;
 
             #endregion
+            
             // 
             // Table_management_settings_form
             // 

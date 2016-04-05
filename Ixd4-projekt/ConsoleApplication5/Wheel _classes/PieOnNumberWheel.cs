@@ -24,15 +24,14 @@ namespace ConsoleApplication5
             this.Height = rektangle.Height;
             this.Width = rektangle.Width;
             this.SuspendLayout();
-            GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);
-            graphics.AddPie(rektangle.Location.X, rektangle.Location.Y,rektangle.Width, rektangle.Height, start_pos_angle, Sweep_angle);
+            GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);                        
+            graphics.AddPie(rektangle.Location.X, rektangle.Location.Y,rektangle.Width, rektangle.Height, start_pos_angle, Sweep_angle); //standard method for drawing a pie
             //
             //Label properties
             //
             Label Text_label = new Label();
             Text_label.AutoSize = false;
-            Text_label.Text = Text_To_Label;
-            Text_label.Region = new Region(graphics);
+            Text_label.Text = "hejsa";
             Text_label.TextAlign = ContentAlignment.MiddleCenter;
             Controls.Add(Text_label);
             //
@@ -43,6 +42,7 @@ namespace ConsoleApplication5
             this.Region = new Region(graphics);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "UserControl1";
+            this.Controls.Add(Text_label);
             this.ResumeLayout(false);
         }
 

@@ -19,9 +19,5 @@ namespace ConsoleApplication5
             Category_list = new List<Category>();
             Product_list = new List<Product>();
         }
-
-
     }
-
-
 }

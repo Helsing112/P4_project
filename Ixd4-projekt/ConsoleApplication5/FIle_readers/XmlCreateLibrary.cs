@@ -11,7 +11,7 @@ namespace ConsoleApplication5
     /// <summary>
     /// Class to create library directories, and genericly add XML files inheirited from "product" class.
     /// </summary>
-    class CreateLibrary
+    class XmlCreateLibrary
     {
         /// <summary>
         /// Creates a file XML format from a generic class
@@ -32,7 +32,13 @@ namespace ConsoleApplication5
             Directory.CreateDirectory(Path);
         }
 
-
+        public static void Create_File_TEST<T>(string Path, T Content) 
+        {
+            XmlSerializer serial = new XmlSerializer(typeof(T));
+            StreamWriter writer = new StreamWriter(Path + "\\Products_TEST");
+            serial.Serialize(writer, Content);
+            writer.Close();
+        }
 
 
 

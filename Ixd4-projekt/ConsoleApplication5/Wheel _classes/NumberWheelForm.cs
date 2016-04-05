@@ -48,11 +48,18 @@ namespace ConsoleApplication5
             // 
             // NumberWheelForm
             // 
+            this.MouseLeave += NumberWheelForm_MouseLeave;
             this.ShowInTaskbar = false;
+            this.BackColor = Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ResumeLayout(false);
+        }
+
+        private void NumberWheelForm_MouseLeave(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         /// <summary>

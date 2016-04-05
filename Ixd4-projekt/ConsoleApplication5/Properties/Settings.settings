@@ -17,5 +17,8 @@
     <Setting Name="Path_of_table_type_lib" Type="System.String" Scope="User">
       <Value Profile="(Default)">..\..\..\..\Library\Table_Library\Table_types</Value>
     </Setting>
+    <Setting Name="Path_Of_ProductLibrary" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\Library\Product library</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

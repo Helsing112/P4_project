@@ -82,5 +82,17 @@ namespace ConsoleApplication5.Properties {
                 this["Path_of_table_type_lib"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\Library\\Product library")]
+        public string Path_Of_ProductLibrary {
+            get {
+                return ((string)(this["Path_Of_ProductLibrary"]));
+            }
+            set {
+                this["Path_Of_ProductLibrary"] = value;
+            }
+        }
     }
 }

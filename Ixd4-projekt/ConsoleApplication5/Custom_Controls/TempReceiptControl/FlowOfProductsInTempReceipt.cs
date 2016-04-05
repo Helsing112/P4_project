@@ -78,7 +78,17 @@ namespace ConsoleApplication5
                 flowLayoutPanel1.Controls.Add(product_item);
             }
         }
-
+        public void SaveReceiptToList(List<ProductWithAmount> ListToSave)
+        {
+            ListToSave.Clear(); //Clears all items in the list so that it will contain the correct information
+            foreach (ProductButtonInFlowTempReciept item in this.flowLayoutPanel1.Controls)
+            {
+                ProductWithAmount temp_product = new ProductWithAmount(item.Amount_to_represent);
+                temp_product.Name = item.Product_input.Name;
+                temp_product.Price = item.Product_input.Price;
+                ListToSave.Add(temp_product);
+            }
+        }
         internal void SaveReceitpToTableInfo(Table_Info TableInfoToOverride)
         {
             TableInfoToOverride.TableReceipt.Clear(); //Clears all items in the list so that it will contain the correct information

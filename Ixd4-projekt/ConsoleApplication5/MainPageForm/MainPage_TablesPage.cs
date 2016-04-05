@@ -40,9 +40,6 @@ namespace ConsoleApplication5
             tables_panel.TableClick += OnTableClick;
             tables_panel.Location = Location_input;
         }
-
-
-
         public void BackToFrontPage_button(Point Location_input, Size size_input)
         {
             BackToFrontPageButton = new Button();

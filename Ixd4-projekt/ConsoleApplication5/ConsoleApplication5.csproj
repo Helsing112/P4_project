@@ -129,25 +129,25 @@
       <DependentUpon>TableType_Show_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Tables\Table_button + table_control.cs" />
-    <Compile Include="Tables\Table_management_AddTableForm.cs">
+    <Compile Include="Tables\Table_management\Table_management_AddTableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tables\Table_management_AddTableForm.Designer.cs">
+    <Compile Include="Tables\Table_management\Table_management_AddTableForm.Designer.cs">
       <DependentUpon>Table_management_AddTableForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tables\Table_management_form.cs">
+    <Compile Include="Tables\Table_management\Table_management_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tables\Table_management_form.Designer.cs">
+    <Compile Include="Tables\Table_management\Table_management_form.Designer.cs">
       <DependentUpon>Table_management_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tables\Table_management_settings_form.cs">
+    <Compile Include="Tables\Table_management\Table_management_settings_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tables\Table_management_settings_form.Designer.cs">
+    <Compile Include="Tables\Table_management\Table_management_settings_form.Designer.cs">
       <DependentUpon>Table_management_settings_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tables\Table_panel_for_manager.cs">
+    <Compile Include="Tables\Table_management\Table_panel_for_manager.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Tables\XmlTableFileReader.cs" />
@@ -307,7 +307,7 @@
       <DependentUpon>CompleteLibraryReader.cs</DependentUpon>
     </Compile>
     <Compile Include="FIle_readers\CategoryTreeReader.cs" />
-    <Compile Include="FIle_readers\CreateLibrary.cs" />
+    <Compile Include="FIle_readers\XmlCreateLibrary.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -359,13 +359,13 @@
     <EmbeddedResource Include="Tables\TableType_Show_Control.resx">
       <DependentUpon>TableType_Show_Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tables\Table_management_AddTableForm.resx">
+    <EmbeddedResource Include="Tables\Table_management\Table_management_AddTableForm.resx">
       <DependentUpon>Table_management_AddTableForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tables\Table_management_form.resx">
+    <EmbeddedResource Include="Tables\Table_management\Table_management_form.resx">
       <DependentUpon>Table_management_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tables\Table_management_settings_form.resx">
+    <EmbeddedResource Include="Tables\Table_management\Table_management_settings_form.resx">
       <DependentUpon>Table_management_settings_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
@@ -432,7 +432,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Custom_Controls\Hejsa\" />
     <Folder Include="Library\" />
   </ItemGroup>
   <ItemGroup>

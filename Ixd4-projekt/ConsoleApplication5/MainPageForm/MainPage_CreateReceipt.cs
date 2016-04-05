@@ -25,7 +25,7 @@ namespace ConsoleApplication5
 
             Controls.Add(tree);
             Controls.Add(Temp_Receipt);
-            Controls.Add(BackToFrontPageButton);
+            Controls.Add(BackToFrontPageButton); //adds a back button from the tablesPage
         }
         //Initialize all fields
         private void Initialize_Field_Controls_CreateReceipt()
@@ -33,26 +33,16 @@ namespace ConsoleApplication5
             initialize_wheel(400);
             Product_tree(new Point(300, 300), new Size(500,500));
             Receipt(new Point(800, 300), new Size(500, 500));
-            BackToFrontPage_AndSave_button(new Point(0,0), new Size(100,100));
         }
         //Fields controls
         TreeViewerControl tree;
         TempReceipt Temp_Receipt;
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
-        NumberWheelForm Number_wheel;
+        NumberWheelForm Number_wheel;       
 
         #region Intialize methods
-        public void BackToFrontPage_AndSave_button(Point Location_input, Size size_input)
-        {
-            BackToFrontPageButton = new Button();
-            BackToFrontPageButton.Location = Location_input;
-            BackToFrontPageButton.Size = size_input;
-            BackToFrontPageButton.TabIndex = 0;
-            BackToFrontPageButton.Text = "Back";
-            BackToFrontPageButton.UseVisualStyleBackColor = true;
-            BackToFrontPageButton.Click += BackToFrontPage_AndSave_click;
-        }
+
         private void initialize_wheel(int Size_of_wheel)
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
@@ -67,7 +57,7 @@ namespace ConsoleApplication5
             tree.MouseDowned += MouseDownReciever;
             tree.MouseUpped += MouseUpReciever;
         }
-        public void Receipt(Point location_input, Size size_input)
+        private void Receipt(Point location_input, Size size_input)
         {
             Timer_for_wheel_controller = new Timer();
             Timer_for_wheel_controller.Interval = 100;
@@ -82,12 +72,6 @@ namespace ConsoleApplication5
         }
         #endregion
         #region Eventhandlers---------------------------------
-        private void BackToFrontPage_AndSave_click(object sender, EventArgs e)
-        {
-            Temp_Receipt.SaveReceiptToTableInfo(ActiveTable);
-            Draw_startPage();
-        }
-
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;

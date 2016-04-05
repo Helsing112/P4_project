@@ -24,11 +24,11 @@ namespace ConsoleApplication5
     }
     public abstract class Table_Control : Button //the superclass of the buttons. Should ONLY contain the general aestethics
     {
-        public override Color BackColor
+        sealed public override Color BackColor
         {
             get
             {
-                return Color.Yellow;
+                return Color.Blue;
             }
             set { }
         }

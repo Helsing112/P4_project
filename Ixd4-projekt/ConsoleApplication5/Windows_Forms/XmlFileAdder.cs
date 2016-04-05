@@ -26,10 +26,10 @@ namespace ConsoleApplication5
         {
 
             InitializeComponent();
-           add_Button1.Button_Click += new System.EventHandler(this.button2_Click);
-           save_Create_Button1.Button_Click += new System.EventHandler(this.button1_Click);
-           save_Create_Button2.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
-           Text_input.Click += new System.EventHandler(this.textbox_Click);
+            add_Button1.Button_Click += new System.EventHandler(this.button2_Click);
+            save_Create_Button1.Button_Click += new System.EventHandler(this.button1_Click);
+            save_Create_Button2.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
+            Text_input.Click += new System.EventHandler(this.textbox_Click);
             _path = Current_path;
 
         }
@@ -38,14 +38,14 @@ namespace ConsoleApplication5
         {
 
             if (string.IsNullOrEmpty(Text_input.Text) || string.IsNullOrEmpty(PriceInputTextBox.Text))
-        {
+            {
                 save_Create_Button1.Enabled = false;
             }
             else
             {
                 save_Create_Button1.Enabled = true;
-        }
             }
+        }
 
 
         private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace ConsoleApplication5
         private void button1_Click(object sender, EventArgs e)
         {
 
-            CreateLibrary creator = new CreateLibrary();
+            XmlCreateLibrary creator = new XmlCreateLibrary();
             Product _product = new Product();
             _product.Name = Text_input.Text;
             _product.PicturePath = productPicturePath;
@@ -100,9 +100,9 @@ namespace ConsoleApplication5
         private void CategoryTextbox_TextChanged(object sender, EventArgs e)
         {
             if (CategoryTextBox.Text.Length != 0)
-            {  
+            {
                 save_Create_Button2.Enabled = true;
-        }
+            }
             else
             {
                 save_Create_Button2.Enabled = false;
@@ -126,7 +126,7 @@ namespace ConsoleApplication5
 
         private void Create_Category_Button_Click(object sender, EventArgs e)
         {
-            CreateLibrary creator = new CreateLibrary();
+            XmlCreateLibrary creator = new XmlCreateLibrary();
             creator.Create_Category(_path + "\\" + CategoryTextBox.Text);
             CategoryTextBox.Clear();
 
@@ -164,17 +164,17 @@ namespace ConsoleApplication5
 
         private void testknap11_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void newtestbutton1_Load(object sender, EventArgs e)
         {
 
         }
-        
+
         private void newtestbutton1_Load_1(object sender, EventArgs e)
         {
-       
+
+        }
     }
-}
 }
