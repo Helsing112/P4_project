@@ -17,18 +17,53 @@ namespace ConsoleApplication5
         public int Amount_to_represent { get; set; }
         public int Size_x { get; }
         public int Size_y { get; }
+        public decimal TotalPrice { get; set; }
+
+        public delegate void TotalTableTabEventhandler(object source, PayEventArgs args);
+
+        public event TotalTableTabEventhandler TotalTabelTab;
 
         public PruductButtonInPayReceipt(int size_x, int size_y, ProductWithAmount product)
         {
+           
+
             Size_x = size_x;
             Size_y = size_y;
             Amount_to_represent = product.Amount;
             Product_input = product;
+            TotalPrice = (Product_input.Price * Amount_to_represent);
             InitializeComponent();
         }
+
+        //protected virtual void OnTableTab()
+        //{
+        //    if (TotalTabelTab != null)
+        //    {
+        //        TotalTabelTab(this, new PayEventArgs() { temptotal =  })
+        //    }
+        //}
         private void label_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("yolo");
+            if (Amount_to_represent == 1)
+            {
+                this.Parent = null;
+            }
+            else {
+
+                Amount_to_represent--;
+                Label_price.Text = (Product_input.Price * Amount_to_represent).ToString() + ",-";
+                RedrawLabelText();
+                TotalPrice = TotalPrice - (Product_input.Price * Amount_to_represent);
+            }
+            
+
+        }
+
+        private void RedrawLabelText()
+        {
+            
+            this.Label_amount.Text = "x" + Amount_to_represent;
+            //this.Label_price.Text = (Product_input.Price * Amount_to_represent).ToString() + ",-";
         }
 
         private void InitializeComponent()

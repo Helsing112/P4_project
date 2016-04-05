@@ -18,9 +18,12 @@ namespace ConsoleApplication5
         String operationPerformed = "";
         bool isOperationPerformed = false;
 
+
         public int Size_of_list_x { get; }
         public int Size_of_list_y { get; }
         public int Height_of_element { get; }
+        public decimal TempTotal { get; private set; }
+
         public Paywindow(List<ProductWithAmount> InputList)
         {
             this.Size_of_list_x = 220;
@@ -28,24 +31,39 @@ namespace ConsoleApplication5
             this.Height_of_element = 50;
             InitializeComponent();
             InitializeReiptFlowPanel(InputList);
+            
         }
 
         private void InitializeReiptFlowPanel(List<ProductWithAmount> inputList)
         {
-            decimal TempTotal = 0;
+          
             foreach (ProductWithAmount item in inputList)
             {
                 PruductButtonInPayReceipt product_item = new PruductButtonInPayReceipt(Size_of_list_x, Height_of_element, item);
                 product_item.BackColor = Color.White;
+
                 PayReceiptFlowPanel.Controls.Add(product_item);
+
                 TempTotal += (item.Amount * item.Price);
 
             }
             TotalAmountNumber.Text = TempTotal.ToString() + ".-";
+
+
+
+            //if (TempTotal != tempPrice)
+            //{
+            //    TotalAmountNumber.Text = TempTotal.ToString() + ".-";
+            //}
+            //else { 
+
+            //    TotalAmountNumber.Text = tempPrice.ToString();
+            //}
+
         }
 
-       
-        
+    
+
         private void button_Click(object sender, EventArgs e)
         {
             if ((textBox_result.Text == "0") || (isOperationPerformed))
