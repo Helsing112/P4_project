@@ -49,6 +49,12 @@
     <Compile Include="MainPageForm\MainPage_StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Numpad_button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Numpad_button.Designer.cs">
+      <DependentUpon>Numpad_button.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pay\PayEventArgs.cs" />
     <Compile Include="Pay\PayWindow.cs">
       <SubType>Form</SubType>
@@ -67,6 +73,12 @@
     </Compile>
     <Compile Include="Pay\PruductButtonInPayReceipt.Designer.cs">
       <DependentUpon>PruductButtonInPayReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pay_Window_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pay_Window_form.Designer.cs">
+      <DependentUpon>Pay_Window_form.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductWithAmount.cs" />
     <Compile Include="Standard layouts\Blue_Rectangular_Button.cs">
@@ -333,8 +345,14 @@
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Numpad_button.resx">
+      <DependentUpon>Numpad_button.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pay\PayWindow.resx">
       <DependentUpon>PayWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pay_Window_form.resx">
+      <DependentUpon>Pay_Window_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>

@@ -72,15 +72,6 @@ namespace ConsoleApplication5
             Controls.Add(Total_tab);
             Controls.Add(ListOfProducts);
         }
-       /// <summary>
-       /// Returns the content of the current receipt
-       /// </summary>
-        public List<ProductWithAmount> GetReceiptContent()
-        {
-            return ListOfProducts.GetReceiptContent();
-        }
-
-
         private void TempReceipt_ParentChanged(object sender, EventArgs e)
         {
             ListOfProducts.SaveReceiptToList(ActiveTableProductList);

@@ -33,6 +33,7 @@ namespace ConsoleApplication5
         {
             initialize_wheel(400);
             PayButtoninitialize(new System.Drawing.Point(12, 345), new System.Drawing.Size(139, 79));
+            Initialize_Pay_window();
             Product_tree(new Point(300, 300), new Size(500,500));
             Receipt(new Point(800, 300), new Size(500, 500));
         }
@@ -42,10 +43,14 @@ namespace ConsoleApplication5
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
         NumberWheelForm Number_wheel;
-        Button PayButton;   
+        Button PayButton;
+        Paywindow Pay_window;
 
         #region Intialize methods
-
+        private void Initialize_Pay_window()
+        {
+            Pay_window = new Paywindow();
+        }
         private void initialize_wheel(int Size_of_wheel)
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
@@ -90,15 +95,10 @@ namespace ConsoleApplication5
         #region Eventhandlers---------------------------------
         private void PayButton_click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<Paywindow>().Count() == 1)
-            {
-                Application.OpenForms.OfType<Paywindow>().First().BringToFront();
-            }
-            else
-            {
-                Pay_window.ShowDialog();
-                Pay_window.TopMost = true;
-            }
+
+            Temp_Receipt.SaveReceiptToTableInfo(ActiveTable); //first we save the receipt to the active table
+            Pay_window.Show_Pay_window(ActiveTable);// then we show the pay window with the receipt
+
         }
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
         private bool timer_has_ticked = false;
