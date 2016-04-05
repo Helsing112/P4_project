@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pay\PayEventArgs.cs" />
     <Compile Include="Pay\PayWindow.cs">
       <SubType>Form</SubType>
     </Compile>
