@@ -206,10 +206,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Standard_layouts.Standard_Label standard_Label1;
         private Standard_layouts.Standard_Label standard_Label2;
-        private Standard_layouts.Buttons.TextBox_Touch ID_TextBox;
+        private Standard_layouts.TextBox_Touch ID_TextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Standard_layouts.Standard_Label standard_Label5;
-        private Standard_layouts.Buttons.TextBox_Touch Name_TextBox;
+        private Standard_layouts.TextBox_Touch Name_TextBox;
         private Standard_layouts.Buttons.TextBox_Touch Password_TextBox;
         private Standard_layouts.Standard_Label standard_Label3;
         private Standard_layouts.Buttons.Save_Create_Button Add_Employee_Button;

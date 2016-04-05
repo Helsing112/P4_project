@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace ConsoleApplication5.Standard_layouts.Buttons
+namespace ConsoleApplication5
 {
     /// <summary>
     /// Basic textbox layout, that includes the opening of the touch keyboard 
@@ -23,7 +23,7 @@ namespace ConsoleApplication5.Standard_layouts.Buttons
             //this.textBox1.MouseLeave += new System.EventHandler(this.textbox_Focus);
         }
         // Opens the touch keyboard
-        private void textbox_Click(object sender, EventArgs e)
+        internal virtual void textbox_Click(object sender, EventArgs e)
         {
             Process.Start(@"C:\Program Files\Common Files\Microsoft Shared\ink\TabTip.exe");
 

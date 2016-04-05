@@ -68,6 +68,12 @@
     <Compile Include="Pay\PruductButtonInPayReceipt.Designer.cs">
       <DependentUpon>PruductButtonInPayReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pay_windowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pay_windowForm.Designer.cs">
+      <DependentUpon>Pay_windowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductWithAmount.cs" />
     <Compile Include="Standard layouts\Buttons\Accept_Button.cs">
       <SubType>UserControl</SubType>
@@ -117,16 +123,16 @@
     <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\TextBox_Touch.cs">
+    <Compile Include="Standard layouts\Other\TextBox_Touch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\TextBox_Touch.Designer.cs">
+    <Compile Include="Standard layouts\Other\TextBox_Touch.Designer.cs">
       <DependentUpon>TextBox_Touch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Standard_Label.cs">
+    <Compile Include="Standard layouts\Other\Standard_Label.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Standard_Label.Designer.cs">
+    <Compile Include="Standard layouts\Other\Standard_Label.Designer.cs">
       <DependentUpon>Standard_Label.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.cs">
@@ -173,6 +179,12 @@
     <Compile Include="Tables\XmlTableFileWriter.cs" />
     <Compile Include="Tables\Table_Panel_for_MainPage.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Other\TextBox_NonTouch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Other\TextBox_NonTouch.Designer.cs">
+      <DependentUpon>TextBox_NonTouch.cs</DependentUpon>
     </Compile>
     <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
       <SubType>UserControl</SubType>
@@ -342,6 +354,9 @@
     <EmbeddedResource Include="Pay\PayWindow.resx">
       <DependentUpon>PayWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pay_windowForm.resx">
+      <DependentUpon>Pay_windowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,10 +381,10 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Save_Create_Button.resx">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\TextBox_Touch.resx">
+    <EmbeddedResource Include="Standard layouts\Other\TextBox_Touch.resx">
       <DependentUpon>TextBox_Touch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Standard_Label.resx">
+    <EmbeddedResource Include="Standard layouts\Other\Standard_Label.resx">
       <DependentUpon>Standard_Label.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Super classes\Standard_Window_Layout.resx">
