@@ -49,12 +49,6 @@
     <Compile Include="MainPageForm\MainPage_StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Numpad_button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Numpad_button.Designer.cs">
-      <DependentUpon>Numpad_button.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pay\PayEventArgs.cs" />
     <Compile Include="Pay\PayWindow.cs">
       <SubType>Form</SubType>
@@ -74,17 +68,7 @@
     <Compile Include="Pay\PruductButtonInPayReceipt.Designer.cs">
       <DependentUpon>PruductButtonInPayReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pay_Window_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pay_Window_form.Designer.cs">
-      <DependentUpon>Pay_Window_form.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProductWithAmount.cs" />
-    <Compile Include="Standard layouts\Blue_Rectangular_Button.cs" />
-    <Compile Include="Standard layouts\Blue_Rectangular_Button.Designer.cs">
-      <DependentUpon>Blue_Rectangular_Button.cs</DependentUpon>
-    </Compile>
     <Compile Include="Standard layouts\Buttons\Accept_Button.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +93,12 @@
     <Compile Include="Standard layouts\Buttons\Login_Button.Designer.cs">
       <DependentUpon>Login_Button.cs</DependentUpon>
     </Compile>
+    <Compile Include="Standard layouts\Buttons\Numpad_button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Numpad_button.Designer.cs">
+      <DependentUpon>Numpad_button.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard layouts\Buttons\Pay_Button.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,9 +117,17 @@
     <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Green_Rectangular_Button.cs" />
-    <Compile Include="Standard layouts\Green_Rectangular_Button.Designer.cs">
-      <DependentUpon>Green_Rectangular_Button.cs</DependentUpon>
+    <Compile Include="Standard layouts\Buttons\TextBox_Touch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\TextBox_Touch.Designer.cs">
+      <DependentUpon>TextBox_Touch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Standard_Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Standard_Label.Designer.cs">
+      <DependentUpon>Standard_Label.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.cs">
       <SubType>Form</SubType>
@@ -341,14 +339,8 @@
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Numpad_button.resx">
-      <DependentUpon>Numpad_button.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pay\PayWindow.resx">
       <DependentUpon>PayWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pay_Window_form.resx">
-      <DependentUpon>Pay_Window_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>
@@ -362,6 +354,9 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Login_Button.resx">
       <DependentUpon>Login_Button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Numpad_button.resx">
+      <DependentUpon>Numpad_button.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Pay_Button.resx">
       <DependentUpon>Pay_Button.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,8 +366,11 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Save_Create_Button.resx">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Green_Rectangular_Button.resx">
-      <DependentUpon>Green_Rectangular_Button.cs</DependentUpon>
+    <EmbeddedResource Include="Standard layouts\Buttons\TextBox_Touch.resx">
+      <DependentUpon>TextBox_Touch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Standard_Label.resx">
+      <DependentUpon>Standard_Label.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Super classes\Standard_Window_Layout.resx">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
