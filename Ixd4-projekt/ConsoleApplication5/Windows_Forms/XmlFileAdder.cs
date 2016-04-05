@@ -26,14 +26,29 @@ namespace ConsoleApplication5
         {
 
             InitializeComponent();
-           add_Button1.Button_Click += new System.EventHandler(this.button2_Click);
-           save_Create_Button1.Button_Click += new System.EventHandler(this.button1_Click);
-           save_Create_Button2.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
-           Text_input.Click += new System.EventHandler(this.textbox_Click);
+            add_Button1.Button_Click += new System.EventHandler(this.button2_Click);
+            save_Create_Button1.Button_Click += new System.EventHandler(this.button1_Click);
+            save_Create_Button2.Button_Click += new System.EventHandler(this.Create_Category_Button_Click);
+            Text_input.Click += new System.EventHandler(this.textbox_Click);
+            PriceInputTextBox.Click += new System.EventHandler(this.textbox_Click);
+
             _path = Current_path;
+            save_Create_Button1.Enabled = false;
+            save_Create_Button2.Enabled = false;
 
         }
 
+        private void Activate_Create_Buttons()
+        {
+            if ((!string.IsNullOrWhiteSpace(Text_input.Text)) && (!string.IsNullOrWhiteSpace(PriceInputTextBox.Text))){
+                save_Create_Button1.Enabled = true;
+            }
+            if (!string.IsNullOrWhiteSpace(CategoryTextBox.Text))
+            {
+                save_Create_Button2.Enabled = true;
+            }
+        }
+        
         public void Input_In_TextBoxes()
         {
 
@@ -47,10 +62,10 @@ namespace ConsoleApplication5
         }
             }
 
-
         private void ProductNameTextbox_TextChanged(object sender, EventArgs e)
         {
-            Input_In_TextBoxes();
+            //Input_In_TextBoxes();
+            Activate_Create_Buttons();
         }
 
         private void textbox_Click(object sender, EventArgs e)
@@ -69,6 +84,7 @@ namespace ConsoleApplication5
             creator.Create_File<Product>(_path, _product);
             Text_input.Clear();
             PriceInputTextBox.Clear();
+            Messages.ConfirmedAddProduct();
 
         }
 
@@ -84,11 +100,12 @@ namespace ConsoleApplication5
             if (System.Text.RegularExpressions.Regex.IsMatch(PriceInputTextBox.Text, "  ^ [0-9]"))
             {
                 PriceInputTextBox.Text = "";
-        }
+            }
         }
 
         private void PriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -129,10 +146,8 @@ namespace ConsoleApplication5
             CreateLibrary creator = new CreateLibrary();
             creator.Create_Category(_path + "\\" + CategoryTextBox.Text);
             CategoryTextBox.Clear();
+            Messages.ConfirmedAddCategory();
 
-
-            MessageBox.Show("New Category Created");
-            Thread.Sleep(500);
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -155,26 +170,5 @@ namespace ConsoleApplication5
                 pictureBox1.Image = Image.FromFile(sourceFilePath);
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void testknap11_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void newtestbutton1_Load(object sender, EventArgs e)
-        {
-
-        }
-        
-        private void newtestbutton1_Load_1(object sender, EventArgs e)
-        {
-       
     }
-}
 }

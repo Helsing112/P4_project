@@ -9,5 +9,7 @@ namespace ConsoleApplication5
     public class Messages
     {
         public static void ConfirmedAddEmployeees() { Message_box.Message("Employee has been added", 1); }
+        public static void ConfirmedAddProduct() { Message_box.Message("Product has been added", 1);  }
+        public static void ConfirmedAddCategory() { Message_box.Message("Category has been added", 1);  }
     }
 }
