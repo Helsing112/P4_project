@@ -16,5 +16,12 @@ namespace ConsoleApplication5
         public static void ConfirmRestPlanSaved() { Message_box.Message("The resturant plan has been saved", 1); }
         #endregion
 
+        public static void CategoryCreated() { Message_box.Message("Category Created", 1); }
+
+        public static void CategoryCreated(Product inputProduct) { Message_box.Message(inputProduct.Name + " Added" + "\n" + "Price: " + inputProduct.Price, 1); }
+        public static void WrongPassword() { Message_box.Message("Wrong Password", -1); }
+
+
     }
+
 }

@@ -18,6 +18,7 @@ namespace ConsoleApplication5
         //fields for selection
         private Table_Control_Manager selectedControl;
         public Control ActiveControl { get { return activeControl; }}
+        private Color selectedControlPrevBackColor;
         public Table_panel_for_manager(List<Table_Control_Manager> List_input)
         {
             InitializeComponent();

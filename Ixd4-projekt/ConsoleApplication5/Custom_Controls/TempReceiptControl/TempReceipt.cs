@@ -21,7 +21,7 @@ namespace ConsoleApplication5
         public void Table_receiptReciever(List<ProductWithAmount> ProductList)
         {
             Reset_receipt(); //resets the receipt before drawing new data
-
+            
             foreach (ProductWithAmount item in ProductList)
             {
                 Add_products((Product)item, item.Amount);
@@ -62,7 +62,6 @@ namespace ConsoleApplication5
             this.SuspendLayout();
             ListOfProducts = new FlowOfProductsInTempReceipt(size_x, size_y, 40);
             Total_tab = new TotalTabTenpReceipt(size_x, height_of_total_tab);
-            //ListOfProducts.ProductRemove += new EventHandler<ProductEventArgs>(Product_removed);//subscribe to remove event
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "TempReceipt";
             this.Height = size_x;
@@ -73,6 +72,14 @@ namespace ConsoleApplication5
             Controls.Add(Total_tab);
             Controls.Add(ListOfProducts);
         }
+       /// <summary>
+       /// Returns the content of the current receipt
+       /// </summary>
+        public List<ProductWithAmount> GetReceiptContent()
+        {
+            return ListOfProducts.GetReceiptContent();
+        }
+
 
         private void TempReceipt_ParentChanged(object sender, EventArgs e)
         {
@@ -80,7 +87,7 @@ namespace ConsoleApplication5
         }
 
         FlowOfProductsInTempReceipt ListOfProducts;
-        TotalTabTenpReceipt Total_tab;
+        TotalTabTenpReceipt Total_tab;   
 
         internal void SaveReceiptToTableInfo(Table_Info TableInfoToSave)
         {

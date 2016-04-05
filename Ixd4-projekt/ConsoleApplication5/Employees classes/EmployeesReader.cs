@@ -99,7 +99,7 @@ namespace ConsoleApplication5
                         
             }
             else {
-                MessageBox.Show("Wrong Password");
+                Messages.WrongPassword();
             }
         }
 
