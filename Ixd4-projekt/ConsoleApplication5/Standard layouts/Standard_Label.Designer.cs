@@ -1,12 +1,13 @@
-﻿namespace ConsoleApplication5
+﻿namespace ConsoleApplication5.Standard_layouts
 {
-    partial class Admin_function_window
+    partial class Standard_Label
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        /// <summary>
+
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -19,8 +20,19 @@
             base.Dispose(disposing);
         }
 
-        private Standard_layouts.Buttons.Login_Button login_Button1;
-        private Standard_layouts.Buttons.Quit_Close_Button quit_Close_Button1;
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+
+
+        }
+
+        #endregion
     }
 }
-

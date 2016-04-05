@@ -22,6 +22,8 @@ namespace ConsoleApplication5
         public static void WrongPassword() { Message_box.Message("Wrong Password", -1); }
 
 
+        public static void ConfirmedAddProduct() { Message_box.Message("Product has been added", 1);  }
+        public static void ConfirmedAddCategory() { Message_box.Message("Category has been added", 1);  }
     }
 
 }

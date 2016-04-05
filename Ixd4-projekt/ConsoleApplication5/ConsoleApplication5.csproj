@@ -81,9 +81,7 @@
       <DependentUpon>Pay_Window_form.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductWithAmount.cs" />
-    <Compile Include="Standard layouts\Blue_Rectangular_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Standard layouts\Blue_Rectangular_Button.cs" />
     <Compile Include="Standard layouts\Blue_Rectangular_Button.Designer.cs">
       <DependentUpon>Blue_Rectangular_Button.cs</DependentUpon>
     </Compile>
@@ -129,9 +127,7 @@
     <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Green_Rectangular_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Standard layouts\Green_Rectangular_Button.cs" />
     <Compile Include="Standard layouts\Green_Rectangular_Button.Designer.cs">
       <DependentUpon>Green_Rectangular_Button.cs</DependentUpon>
     </Compile>

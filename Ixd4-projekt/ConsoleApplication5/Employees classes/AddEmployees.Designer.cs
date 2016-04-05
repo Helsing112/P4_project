@@ -28,110 +28,191 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.EmployeeNametextBox = new System.Windows.Forms.TextBox();
-            this.EmployeeIDtextBox = new System.Windows.Forms.TextBox();
-            this.EmployeePasswordtextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.Add_Employee_Button = new ConsoleApplication5.Standard_layouts.Buttons.Save_Create_Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.standard_Label5 = new ConsoleApplication5.Standard_layouts.Standard_Label();
+            this.Name_TextBox = new ConsoleApplication5.Standard_layouts.Buttons.TextBox_Touch();
+            this.standard_Label2 = new ConsoleApplication5.Standard_layouts.Standard_Label();
+            this.ID_TextBox = new ConsoleApplication5.Standard_layouts.Buttons.TextBox_Touch();
+            this.Password_TextBox = new ConsoleApplication5.Standard_layouts.Buttons.TextBox_Touch();
+            this.standard_Label3 = new ConsoleApplication5.Standard_layouts.Standard_Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.standard_Label1 = new ConsoleApplication5.Standard_layouts.Standard_Label();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // tableLayoutPanel3
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(189, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create Employee";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.Add_Employee_Button, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(11, 452);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(821, 100);
+            this.tableLayoutPanel3.TabIndex = 14;
             // 
-            // EmployeeNametextBox
+            // Add_Employee_Button
             // 
-            this.EmployeeNametextBox.Location = new System.Drawing.Point(189, 120);
-            this.EmployeeNametextBox.Name = "EmployeeNametextBox";
-            this.EmployeeNametextBox.Size = new System.Drawing.Size(100, 20);
-            this.EmployeeNametextBox.TabIndex = 1;
-            this.EmployeeNametextBox.TextChanged += new System.EventHandler(this.EmployeeNametextBox_TextChanged);
-            this.EmployeeNametextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmployeeNametextBox_KeyPress);
+            this.Add_Employee_Button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Add_Employee_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Add_Employee_Button.Image_set = null;
+            this.Add_Employee_Button.Location = new System.Drawing.Point(266, 8);
+            this.Add_Employee_Button.Name = "Add_Employee_Button";
+            this.Add_Employee_Button.Size = new System.Drawing.Size(288, 84);
+            this.Add_Employee_Button.TabIndex = 13;
+            this.Add_Employee_Button.Textlabel = "Add Employee";
             // 
-            // EmployeeIDtextBox
+            // tableLayoutPanel2
             // 
-            this.EmployeeIDtextBox.Location = new System.Drawing.Point(189, 202);
-            this.EmployeeIDtextBox.Name = "EmployeeIDtextBox";
-            this.EmployeeIDtextBox.Size = new System.Drawing.Size(100, 20);
-            this.EmployeeIDtextBox.TabIndex = 2;
-            this.EmployeeIDtextBox.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
-            this.EmployeeIDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmployeeIDtextBox_KeyPress);
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.52427F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.47573F));
+            this.tableLayoutPanel2.Controls.Add(this.standard_Label5, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.Name_TextBox, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.standard_Label2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.ID_TextBox, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Password_TextBox, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.standard_Label3, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(11, 167);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(824, 256);
+            this.tableLayoutPanel2.TabIndex = 12;
             // 
-            // EmployeePasswordtextBox
+            // standard_Label5
             // 
-            this.EmployeePasswordtextBox.Location = new System.Drawing.Point(189, 273);
-            this.EmployeePasswordtextBox.Name = "EmployeePasswordtextBox";
-            this.EmployeePasswordtextBox.Size = new System.Drawing.Size(100, 20);
-            this.EmployeePasswordtextBox.TabIndex = 3;
-            this.EmployeePasswordtextBox.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
+            this.standard_Label5.AutoSize = true;
+            this.standard_Label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.standard_Label5.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.standard_Label5.ForeColor = System.Drawing.Color.White;
+            this.standard_Label5.Location = new System.Drawing.Point(3, 170);
+            this.standard_Label5.Name = "standard_Label5";
+            this.standard_Label5.Size = new System.Drawing.Size(262, 86);
+            this.standard_Label5.TabIndex = 13;
+            this.standard_Label5.Text = "Password";
+            this.standard_Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // Name_TextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(186, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Employee Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.Name_TextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Name_TextBox.Location = new System.Drawing.Point(271, 106);
+            this.Name_TextBox.Name = "Name_TextBox";
+            this.Name_TextBox.Size = new System.Drawing.Size(331, 42);
+            this.Name_TextBox.TabIndex = 11;
             // 
-            // label2
+            // standard_Label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(186, 186);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Employee ID";
+            this.standard_Label2.AutoSize = true;
+            this.standard_Label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.standard_Label2.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.standard_Label2.ForeColor = System.Drawing.Color.White;
+            this.standard_Label2.Location = new System.Drawing.Point(3, 0);
+            this.standard_Label2.Name = "standard_Label2";
+            this.standard_Label2.Size = new System.Drawing.Size(262, 85);
+            this.standard_Label2.TabIndex = 8;
+            this.standard_Label2.Text = "ID";
+            this.standard_Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // ID_TextBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(186, 257);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "EmployeePassword";
+            this.ID_TextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ID_TextBox.Location = new System.Drawing.Point(271, 21);
+            this.ID_TextBox.Name = "ID_TextBox";
+            this.ID_TextBox.Size = new System.Drawing.Size(331, 42);
+            this.ID_TextBox.TabIndex = 9;
+            // 
+            // Password_TextBox
+            // 
+            this.Password_TextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Password_TextBox.Location = new System.Drawing.Point(271, 192);
+            this.Password_TextBox.Name = "Password_TextBox";
+            this.Password_TextBox.Size = new System.Drawing.Size(331, 42);
+            this.Password_TextBox.TabIndex = 12;
+            // 
+            // standard_Label3
+            // 
+            this.standard_Label3.AutoSize = true;
+            this.standard_Label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.standard_Label3.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.standard_Label3.ForeColor = System.Drawing.Color.White;
+            this.standard_Label3.Location = new System.Drawing.Point(3, 85);
+            this.standard_Label3.Name = "standard_Label3";
+            this.standard_Label3.Size = new System.Drawing.Size(262, 85);
+            this.standard_Label3.TabIndex = 14;
+            this.standard_Label3.Text = "Name";
+            this.standard_Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.standard_Label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 48);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(824, 100);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // standard_Label1
+            // 
+            this.standard_Label1.AutoSize = true;
+            this.standard_Label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.standard_Label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.standard_Label1.ForeColor = System.Drawing.Color.White;
+            this.standard_Label1.Location = new System.Drawing.Point(3, 0);
+            this.standard_Label1.Name = "standard_Label1";
+            this.standard_Label1.Size = new System.Drawing.Size(818, 100);
+            this.standard_Label1.TabIndex = 0;
+            this.standard_Label1.Text = "ADD A NEW EMPLOYEE";
+            this.standard_Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AddEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 488);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.EmployeePasswordtextBox);
-            this.Controls.Add(this.EmployeeIDtextBox);
-            this.Controls.Add(this.EmployeeNametextBox);
-            this.Controls.Add(this.button1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(846, 868);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddEmployees";
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.Text = "AddEmployees";
             this.TopMost = true;
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox EmployeeNametextBox;
-        private System.Windows.Forms.TextBox EmployeeIDtextBox;
-        private System.Windows.Forms.TextBox EmployeePasswordtextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Standard_layouts.Standard_Label standard_Label1;
+        private Standard_layouts.Standard_Label standard_Label2;
+        private Standard_layouts.Buttons.TextBox_Touch ID_TextBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Standard_layouts.Standard_Label standard_Label5;
+        private Standard_layouts.Buttons.TextBox_Touch Name_TextBox;
+        private Standard_layouts.Buttons.TextBox_Touch Password_TextBox;
+        private Standard_layouts.Standard_Label standard_Label3;
+        private Standard_layouts.Buttons.Save_Create_Button Add_Employee_Button;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
