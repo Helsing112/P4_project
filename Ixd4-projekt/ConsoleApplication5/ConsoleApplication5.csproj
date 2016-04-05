@@ -56,6 +56,9 @@
     <Compile Include="MainPageForm\MainPage_CreateReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pay\PayWindow.Designer.cs">
+      <DependentUpon>PayWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductWithAmount.cs" />
     <Compile Include="Standard layouts\Blue_Rectangular_Button.cs">
       <SubType>UserControl</SubType>
@@ -320,6 +323,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pay\PayWindow.resx">
+      <DependentUpon>PayWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>
