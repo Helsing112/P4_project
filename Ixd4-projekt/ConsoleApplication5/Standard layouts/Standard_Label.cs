@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConsoleApplication5.Standard_layouts
+namespace ConsoleApplication5
 {
     public partial class Standard_Label : Label
     {

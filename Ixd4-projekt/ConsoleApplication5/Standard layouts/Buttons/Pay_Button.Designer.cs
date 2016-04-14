@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication5.Standard_layouts.Buttons
+﻿namespace ConsoleApplication5
 {
     partial class Pay_Button
     {
