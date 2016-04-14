@@ -1,4 +1,5 @@
-﻿namespace ConsoleApplication5
+﻿
+namespace ConsoleApplication5
 
 {
     partial class Paywindow
@@ -106,7 +107,7 @@
             this.Clear.TabIndex = 4;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.button4_Click);
+            this.Clear.Click += new System.EventHandler(this.button_Clear_Click);
             // 
             // ButtonNr6
             // 

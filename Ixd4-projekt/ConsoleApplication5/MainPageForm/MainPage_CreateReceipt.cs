@@ -25,12 +25,15 @@ namespace ConsoleApplication5
 
             Controls.Add(tree);
             Controls.Add(Temp_Receipt);
+            Controls.Add(PayButton);
             Controls.Add(BackToFrontPageButton); //adds a back button from the tablesPage
         }
         //Initialize all fields
         private void Initialize_Field_Controls_CreateReceipt()
         {
             initialize_wheel(400);
+            PayButtoninitialize(new System.Drawing.Point(12, 345), new System.Drawing.Size(139, 79));
+            Initialize_Pay_window();
             Product_tree(new Point(300, 300), new Size(500,500));
             Receipt(new Point(800, 300), new Size(500, 500));
         }
@@ -39,10 +42,15 @@ namespace ConsoleApplication5
         TempReceipt Temp_Receipt;
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
-        NumberWheelForm Number_wheel;       
+        NumberWheelForm Number_wheel;
+        Button PayButton;
+        Paywindow Pay_window;
 
         #region Intialize methods
-
+        private void Initialize_Pay_window()
+        {
+            Pay_window = new Paywindow();
+        }
         private void initialize_wheel(int Size_of_wheel)
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
@@ -70,8 +78,28 @@ namespace ConsoleApplication5
             Temp_Receipt.BorderStyle = BorderStyle.Fixed3D;
             Temp_Receipt.Name = "Receipt";
         }
+        private void PayButtoninitialize(Point location_input, Size size_input)
+        {
+            PayButton = new Button();
+            PayButton.Location = location_input;
+            PayButton.Name = "Paybutton";
+            PayButton.Size = size_input;
+            PayButton.TabIndex = 0;
+            PayButton.Text = "Pay";
+            PayButton.UseVisualStyleBackColor = true;
+            PayButton.Click += new System.EventHandler(PayButton_click);
+        }
+
+
         #endregion
         #region Eventhandlers---------------------------------
+        private void PayButton_click(object sender, EventArgs e)
+        {
+
+            Temp_Receipt.SaveReceiptToTableInfo(ActiveTable); //first we save the receipt to the active table
+            Pay_window.Show_Pay_window(ActiveTable);// then we show the pay window with the receipt
+
+        }
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;

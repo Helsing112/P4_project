@@ -45,6 +45,34 @@ namespace ConsoleApplication5
                 Pies.Add(new PieOnNumberWheel(input_rectangle, 0 + i * (360 / amount_of_pies)+22, (350 / amount_of_pies)));
             }
 
+            // Sunes test kode til tal på hjulet
+            using (StringFormat string_format = new StringFormat())
+            {
+                string_format.Alignment = StringAlignment.Center;
+                string_format.LineAlignment = StringAlignment.Center;
+
+                float label_x = (input_rectangle.Left + input_rectangle.Right) / 2f;
+                float label_y = (input_rectangle.Top + input_rectangle.Bottom) / 2f;
+
+                float label_radius = (input_rectangle.Width + input_rectangle.Height) / 2f * 0.33f;
+                Graphics g = this.CreateGraphics();
+                Brush lol = new SolidBrush(Color.Black);
+                for (int index = 0; index < amount_of_pies; index++)
+                {
+                    float sweep_angle_label = (350f / amount_of_pies);
+                    float start_angle_label = 0 + index * (360 / amount_of_pies) + 22;
+
+                    double label_angle = Math.PI * (start_angle_label + sweep_angle_label / 2f) / 180f;
+                    float single_label_x = label_x + (float)(label_radius * Math.Cos(label_angle));
+                    float single_label_y = label_y + (float)(label_radius * Math.Sin(label_angle));
+
+                    g.DrawString("lol", DefaultFont, lol, single_label_x, single_label_y, string_format);
+                    start_angle_label += sweep_angle_label;
+                }
+
+            }
+            // test kode slut
+
             int x = 2;
             foreach (PieOnNumberWheel item in Pies)
             {
