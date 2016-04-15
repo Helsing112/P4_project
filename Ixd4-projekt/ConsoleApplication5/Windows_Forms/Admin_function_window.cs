@@ -26,8 +26,8 @@ namespace ConsoleApplication5
         private void InitializeComponent()
         {
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.login_Button1 = new ConsoleApplication5.Standard_layouts.Buttons.Login_Button();
-            this.quit_Close_Button1 = new ConsoleApplication5.Standard_layouts.Buttons.Quit_Close_Button();
+            this.login_Button1 = new ConsoleApplication5.Login_Button();
+            this.quit_Close_Button1 = new ConsoleApplication5.Quit_Close_Button();
             this.SuspendLayout();
             // 
             // txtPassword

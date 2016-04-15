@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace ConsoleApplication5.Standard_layouts.Buttons
+namespace ConsoleApplication5
 {
     /// <summary>
     /// Basic textbox layout, that includes the opening of the touch keyboard 

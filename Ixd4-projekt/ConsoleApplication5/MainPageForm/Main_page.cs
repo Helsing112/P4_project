@@ -12,6 +12,7 @@ using System.IO;
 
 namespace ConsoleApplication5
 {
+  
     public partial class Main_page : Form
     {
 
@@ -29,12 +30,22 @@ namespace ConsoleApplication5
             InitializeComponent(); // draws the main_page form
 
             Initialize_Field_Controls();
-
-
+           
+        
             Draw_startPage();
             Clicked_products = new List<Product>();
-            
-        }
+
+
+      
+       
+
+
+  
+
+
+    }
+      
+
         /// <summary>
         /// This method should contain all initializations of field controls that should
         /// </summary>
@@ -45,6 +56,7 @@ namespace ConsoleApplication5
             Initialize_Field_Controls_CreateReceipt();
         }//declare partial method
 
+       
 
 
     }

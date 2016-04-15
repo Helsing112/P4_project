@@ -27,6 +27,7 @@ namespace ConsoleApplication5
             Controls.Add(Temp_Receipt);
             Controls.Add(PayButton);
             Controls.Add(BackToFrontPageButton); //adds a back button from the tablesPage
+            Controls.Add(Timer_panel);
         }
         //Initialize all fields
         private void Initialize_Field_Controls_CreateReceipt()
@@ -45,12 +46,16 @@ namespace ConsoleApplication5
         NumberWheelForm Number_wheel;
         Button PayButton;
         Paywindow Pay_window;
+   
 
         #region Intialize methods
         private void Initialize_Pay_window()
         {
             Pay_window = new Paywindow();
         }
+
+      
+
         private void initialize_wheel(int Size_of_wheel)
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));

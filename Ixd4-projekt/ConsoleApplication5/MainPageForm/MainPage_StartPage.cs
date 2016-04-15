@@ -21,6 +21,7 @@ namespace ConsoleApplication5
             Controls.Add(employee_sign_in_panel);
             Controls.Add(Admin_login_button);
             Controls.Add(CheckIn_Button);
+            Controls.Add(Timer_panel);
         }
         private void Initialize_Field_Controls_startPage()
         {
@@ -29,11 +30,13 @@ namespace ConsoleApplication5
             //employee controls
             Employee_signedInPanel(new System.Drawing.Point(350, 0), new System.Drawing.Size(600, 200));
             Check_inButton(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
+            TimerPanel();
         }
         //Field of controls
         EmployeeSignInPanel employee_sign_in_panel;
         Button Admin_login_button;
         Button CheckIn_Button;
+        TimerInfo Timer_panel;
 
         #region Draw_startpage methods------------------------------------------------
         public void Employee_signedInPanel(Point location_input, Size size_input)
@@ -45,6 +48,17 @@ namespace ConsoleApplication5
 
             Controls.Add(employee_sign_in_panel);
         }
+
+        public void TimerPanel()
+        {
+         Timer_panel = new TimerInfo();
+         Timer_panel.Location = new System.Drawing.Point(1100, 0);
+            Timer_panel.BorderStyle = BorderStyle.Fixed3D;
+            Timer_panel.Size = new System.Drawing.Size(250, 100);
+            Controls.Add(Timer_panel);
+
+        }
+
         private void Admin_login_Button(Point location_input, Size size_input)
         {
             Admin_login_button = new Button();
@@ -60,6 +74,7 @@ namespace ConsoleApplication5
         }
         public void Check_inButton(Point location_input, Size size_input)
         {
+          
             CheckIn_Button = new Button();
             CheckIn_Button.Location = location_input;
             CheckIn_Button.Name = "CheckInButton";
@@ -77,12 +92,12 @@ namespace ConsoleApplication5
         private void Admin_login_click(object sender, EventArgs e)
         {
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library, Size_of_table_panel);
-            admin_window.Show();
+            admin_window.ShowDialog();
         }
         private void CheckInButton_click(object sender, EventArgs e)
         {
             SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
-            SignIn.Show();
+            SignIn.ShowDialog();
         }
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {

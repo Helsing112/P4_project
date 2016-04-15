@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConsoleApplication5.Standard_layouts.Buttons
+namespace ConsoleApplication5
 {
     public partial class Save_Create_Button : Std_Button
     {
