@@ -69,7 +69,7 @@ namespace ConsoleApplication5
         {
             if (Button_Click != null)
             {
-                Button_Click(sender, e);
+                Button_Click(this, e);
             }
         }
     }

@@ -146,7 +146,7 @@ namespace ConsoleApplication5
             else {
 
             AddEmployees Editor = new AddEmployees(Starting_lib_path + "Employee Library");
-            Editor.Show();
+            Editor.ShowDialog();
                 Editor.TopMost = true;
             }
             
@@ -190,7 +190,7 @@ namespace ConsoleApplication5
             else {
 
             XmlFileAdder Editor = new XmlFileAdder(path);
-            Editor.Show();
+            Editor.ShowDialog();
                 Editor.TopMost = true;
             }
         }

@@ -200,6 +200,12 @@
     <Compile Include="Standard layouts\Other\TextBox_NonTouch.Designer.cs">
       <DependentUpon>TextBox_NonTouch.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerInfo.Designer.cs">
+      <DependentUpon>TimerInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wheel _classes\CenterOnNumberWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -380,6 +386,9 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Back_Button.resx">
       <DependentUpon>Back_Button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\EmployeeSignInButton.resx">
+      <DependentUpon>EmployeeSignInButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Login_Button.resx">
       <DependentUpon>Login_Button.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\Table_management\Table_management_settings_form.resx">
       <DependentUpon>Table_management_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerInfo.resx">
+      <DependentUpon>TimerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wheel _classes\NumberWheel.resx">
       <DependentUpon>NumberWheel.cs</DependentUpon>

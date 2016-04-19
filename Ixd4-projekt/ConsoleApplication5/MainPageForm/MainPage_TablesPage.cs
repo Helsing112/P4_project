@@ -10,7 +10,9 @@ namespace ConsoleApplication5
 {
     public partial class Main_page
     {
-        public Employee ActiveEmployee { get; private set; }
+
+        private Employee _employee;
+        public Employee ActiveEmployee { get { return _employee; } private set { _employee = value; Timer_panel.UpdateEmployeename(ActiveEmployee); } }
         /// <summary>
         /// Clears controls and Draws the page with the table panel
         /// </summary>
@@ -19,7 +21,7 @@ namespace ConsoleApplication5
         {
             Controls.Clear();
             ActiveEmployee = Active_employee;
-
+            
             Controls.Add(tables_panel);
             Controls.Add(BackToFrontPageButton);
         }
@@ -56,7 +58,9 @@ namespace ConsoleApplication5
         #region Eventhandlers-----------------------------
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
+            Timer_panel.DeleteNameAndTablesFromTimer();
             Draw_startPage(); //returns to the start page
+
         }
         private void OnTableClick(object sender, EventArgs e)
         {

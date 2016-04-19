@@ -35,29 +35,33 @@ namespace ConsoleApplication5
         private void CreateEmployeeButton(Employee EMP)
         {
             // Create a Button object 
-            EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
+            //EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
+            EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP);
             // Set Button properties
 
             // Add a Button Click Event handler
-            dynamicButton.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeButtonClick);
+            dynamicButton.Button_Click += EmployeeButtonClick;
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             EmployeeHolder.Controls.Add(dynamicButton);
+            
         }
+        
 
-        public void EmployeeButtonClick(object sender, EmployeeEventArgs e)
+        public void EmployeeButtonClick(object sender, EventArgs e)
         {
-            employeeinput = e.employee;
+            EmployeeSignInButton temp = (EmployeeSignInButton)sender;
+            employeeinput = temp.employee;
             Controls.Clear();
            
             //LABEL TIL PASSWORD, DER SKRIVER EMPLOYEE'S NAVN.
-            Label Create_Label = new Label();
+            Standard_Label Create_Label = new Standard_Label();
                 Create_Label.AutoSize = true;
                 Create_Label.Location = new System.Drawing.Point(100, 1);
                 Create_Label.Name = "label1";
                 Create_Label.Size = new System.Drawing.Size(168, 20);
                 Create_Label.TabIndex = 1;
-                Create_Label.Text = e.employee.EmployeeName;
+                Create_Label.Text = employeeinput.EmployeeName;
 
 
                 Controls.Add(Create_Label);
@@ -72,23 +76,36 @@ namespace ConsoleApplication5
             Controls.Add(EmployeeButtonClickTextbox);
 
 
-            Button Log_In = new Button();
+            Login_Button Log_In = new Login_Button();
             Log_In.Location = new System.Drawing.Point(100, 60);
             Log_In.Name = "Log In";
             Log_In.Size = new System.Drawing.Size(105, 49);
             Log_In.TabIndex = 11;
             Log_In.Text = "Log In";
-            Log_In.UseVisualStyleBackColor = true;
-            Log_In.Click += new System.EventHandler(this.Log_In_Click);
+            Log_In.Button_Click += new System.EventHandler(this.Log_In_Click);
+
+            Quit_Close_Button quit = new Quit_Close_Button();
+            quit.Location = new System.Drawing.Point(380, 140);
+            quit.Name = "quit";
+            quit.Size = Log_In.Size = new System.Drawing.Size(105, 49);
+            quit.TabIndex = 11;
+            quit.Text = "Quit";
+            quit.Button_Click += new System.EventHandler(quit_Click);
+
 
             Controls.Add(Log_In);
-
+            Controls.Add(quit);
            
             //MessageBox.Show(e.employee.EmployeeID + e.employee.EmployeeName);
 
 
         }
         TextBox EmployeeButtonClickTextbox;
+
+        public void quit_Click(object sender, EventArgs e)
+        {
+           MessageBox.Show("Press alt+f4");
+        }
 
         public void Log_In_Click(object sender, EventArgs e)
         {

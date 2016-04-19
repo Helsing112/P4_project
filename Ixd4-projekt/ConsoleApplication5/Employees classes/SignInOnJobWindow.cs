@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class SignInOnJobWindow : Form
+    public partial class SignInOnJobWindow : Standard_Window_Layout
     {
         public SignInOnJobWindow(string path)
         {

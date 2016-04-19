@@ -204,15 +204,15 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private  Standard_Label standard_Label1;
-        private  Standard_Label standard_Label2;
+        private Standard_Label standard_Label1;
+        private Standard_Label standard_Label2;
         private TextBox_Touch ID_TextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private  Standard_Label standard_Label5;
+        private Standard_Label standard_Label5;
         private TextBox_Touch Name_TextBox;
         private TextBox_Touch Password_TextBox;
-        private  Standard_Label standard_Label3;
-        private  Save_Create_Button Add_Employee_Button;
+        private Standard_Label standard_Label3;
+        private Save_Create_Button Add_Employee_Button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

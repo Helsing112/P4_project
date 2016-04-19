@@ -9,5 +9,6 @@ namespace ConsoleApplication5
     public class EmployeeEventArgs : EventArgs
     {
         public Employee employee { get; set;}
+        
     }
 }

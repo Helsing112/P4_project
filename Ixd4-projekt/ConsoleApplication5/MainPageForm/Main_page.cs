@@ -12,7 +12,8 @@ using System.IO;
 
 namespace ConsoleApplication5
 {
-    public partial class Main_page : Standard_Window_Layout
+  
+    public partial class Main_page : Form
     {
 
         private string Starting_lib_path;
@@ -34,7 +35,17 @@ namespace ConsoleApplication5
             Draw_startPage();
             Clicked_products = new List<Product>();
             
+
+      
+       
+
+
+  
+
+
         }
+      
+
         /// <summary>
         /// This method should contain all initializations of field controls that should
         /// </summary>
@@ -44,6 +55,7 @@ namespace ConsoleApplication5
             Initialize_Field_Controls_tablesPage();
             Initialize_Field_Controls_CreateReceipt();
         }//declare partial method
+
 
 
 

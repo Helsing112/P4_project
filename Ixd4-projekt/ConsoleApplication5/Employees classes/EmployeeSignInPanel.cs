@@ -56,7 +56,8 @@ namespace ConsoleApplication5
         }
 
         public EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;
-        protected virtual void EmployeeSignedInCLickButton(object sender, EmployeeEventArgs e)
+
+        public virtual void EmployeeSignedInCLickButton(object sender, EmployeeEventArgs e)     /*har lavet den public*/
         {
             if (this.EmployeeSignedInClickEvent != null)
             {
