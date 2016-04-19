@@ -20,6 +20,7 @@ namespace ConsoleApplication5
             InitializeComponent(input_rect);
         }
 
+
         #region Component Designer generated code
 
         /// <summary> 
@@ -31,11 +32,25 @@ namespace ConsoleApplication5
             this.Size = input_rect.Size;
             GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);
             graphics.AddEllipse(input_rect);
+            PointF center = new PointF(input_rect.Width / 2, input_rect.Height / 2);
+
+            string stringText = "1";
+            FontFamily family = new FontFamily("Segoe UI");
+            int fontStyle = (int)FontStyle.Bold;
+            int emSize = 35;
+            StringFormat format = StringFormat.GenericDefault;
+            format.Alignment = StringAlignment.Center;
+            format.LineAlignment = StringAlignment.Center;
+            this.BackColor = Color.DarkCyan;
+            graphics.AddString(stringText, family, fontStyle, emSize, center, format);
             components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.MouseLeave += CenterOnNumberWheel_MouseLeave;
             this.MouseEnter += CenterOnNumberWheel_MouseEnter;
             this.Region = new Region(graphics);
+
+            
+
         }
 
         private void CenterOnNumberWheel_MouseEnter(object sender, EventArgs e)

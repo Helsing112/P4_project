@@ -248,7 +248,7 @@ namespace ConsoleApplication5
             this.PriceInputTextBox.Name = "PriceInputTextBox";
             this.PriceInputTextBox.Size = new System.Drawing.Size(586, 40);
             this.PriceInputTextBox.TabIndex = 4;
-            this.PriceInputTextBox.TextChanged += new System.EventHandler(this.PriceTextBox_TextChanged_1);
+            this.PriceInputTextBox.TextChanged += new System.EventHandler(this.PriceTextBox_TextChanged);
             // 
             // label2
             // 

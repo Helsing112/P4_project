@@ -19,12 +19,14 @@ namespace ConsoleApplication5
         public string _path { get; }
         public AddEmployees(string path_of_employees)
         {
-
             InitializeComponent();
             _path = path_of_employees;
-           ButtonDeactivated();
-           // Add_Employee_Button.Enabled = false;
+            this.Add_Employee_Button.Button_Click += new System.EventHandler(this.button1_Click);
+            this.Name_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeeNametextBox_TextChanged);
+            this.ID_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
+            this.Password_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeePasswordtextBox_TextChanged);
 
+            Add_Employee_Button.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +43,6 @@ namespace ConsoleApplication5
             Name_TextBox.textBox1.Clear();
 
             Messages.ConfirmedAddEmployeees();
-            
         }
 
         private void Enable_Add_Button()
@@ -50,68 +51,35 @@ namespace ConsoleApplication5
             {
                 Add_Employee_Button.Enabled = true;
             }
+            else
+            {
+                Add_Employee_Button.Enabled = false;
+            }
         }
 
-        // Can't write numbers in name field
+        // name changed event
         private void EmployeeNametextBox_TextChanged(object sender, EventArgs e)
         {
-            ButtonDeactivated();
-            //Enable_Add_Button();
-            if (System.Text.RegularExpressions.Regex.IsMatch(Name_TextBox.textBox1.Text, "  ^ [0-9]"))
-            {
-                Name_TextBox.textBox1.Text = "";
-            }
-        }
-
-        // 
-        private void EmployeeNametextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            Enable_Add_Button();
         }
 
         // Can only write numbers in ID field
         private void EmployeeIDtextBox_TextChanged(object sender, EventArgs e)
         {
-            ButtonDeactivated();
-            //Enable_Add_Button();
-
-            if (System.Text.RegularExpressions.Regex.IsMatch(ID_TextBox.textBox1.Text, "  ^ [0-9]"))
-            {
-                ID_TextBox.textBox1.Text = "";
-            }
-        }
-
-        private void EmployeeIDtextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-        }
-
-        private void EmployeePasswordtextBox_TextChanged(object sender, EventArgs e)
-        {
-
-            ButtonDeactivated();
-            //Enable_Add_Button();
-
-        }
-
-        public void ButtonDeactivated()
-        {
-            if (string.IsNullOrEmpty(Name_TextBox.textBox1.Text) || string.IsNullOrEmpty(ID_TextBox.textBox1.Text) || string.IsNullOrEmpty(Password_TextBox.textBox1.Text))
+            if (System.Text.RegularExpressions.Regex.IsMatch(ID_TextBox.textBox1.Text, "  ^ [0-9]+$"))
             {
                 Add_Employee_Button.Enabled = false;
             }
-
             else
             {
-                Add_Employee_Button.Enabled = true;
-            }       
+                Enable_Add_Button();
+            }
+        }
+
+        // password changed event
+        private void EmployeePasswordtextBox_TextChanged(object sender, EventArgs e)
+        {
+            Enable_Add_Button();
         }
     }
 }

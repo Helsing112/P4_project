@@ -42,7 +42,7 @@ namespace ConsoleApplication5
             wheel.On_Pie_Clicked += PieClicked;
             Controls.Add(wheel);
 
-            GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);
+            GraphicsPath graphics = new GraphicsPath();
             graphics.AddEllipse(input_rect);
             this.Region = new Region(graphics);
             // 
@@ -50,7 +50,7 @@ namespace ConsoleApplication5
             // 
             this.MouseLeave += NumberWheelForm_MouseLeave;
             this.ShowInTaskbar = false;
-            this.BackColor = Color.Black;
+            this.BackColor = Color.DarkCyan;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

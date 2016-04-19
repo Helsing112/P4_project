@@ -21,8 +21,8 @@ namespace ConsoleApplication5
             InitializeComponent();
             path_input = path;
             login_Button1.Enabled = false;
-            
         }
+
         private void InitializeComponent()
         {
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -75,8 +75,8 @@ namespace ConsoleApplication5
             this.Name = "Admin_function_window";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
         private System.Windows.Forms.TextBox txtPassword;
 
         private void start()
@@ -86,7 +86,6 @@ namespace ConsoleApplication5
             Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input, Size_for_table_panel);
             admin_edit.Quit_button.Click += new EventHandler(button2_Click);
             Controls.Add(admin_edit);
-
         }
 
         private void Activate_Login_Button()
@@ -95,6 +94,7 @@ namespace ConsoleApplication5
             {
                 login_Button1.Enabled = true;
             }
+
             else
             {
                 login_Button1.Enabled = false;
@@ -105,15 +105,14 @@ namespace ConsoleApplication5
         {
             if (txtPassword.Text == "password")
             {
-
                 Controls.Clear();
                 start();
-
             }
             else {
               Messages.WrongPassword();
             }
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
@@ -123,11 +122,5 @@ namespace ConsoleApplication5
             txtPassword.PasswordChar = '*';
             Activate_Login_Button();
         }
-
-        protected void ClickReciever(object sender, ProductEventArgs e)
-        {
-        }
-
-
     }
 }

@@ -69,6 +69,7 @@ namespace ConsoleApplication5
             panel_preview.Controls.Add(activePreview);
             button_flip.Enabled = true;
         }
+
         private void button_flip_Click(object sender, EventArgs e) //swaps the height and the lenght
         {
             int temp_lenght;
