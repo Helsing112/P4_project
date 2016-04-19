@@ -179,13 +179,13 @@ namespace ConsoleApplication5
 
         private void operator_click(object sender, EventArgs e)
         {
-            Label reciever = (Label)sender;
-            if(reciever.Text == "." && (Label_EnteredAmount.Text.Contains(".") || Label_EnteredAmount.Text == "")) //only one decimal point or a deciamlpoint as the first char
+            Numpad_button reciever = (Numpad_button)sender;
+            if(reciever.label1.Text == "." && (Label_EnteredAmount.Text.Contains(".") || Label_EnteredAmount.Text == "")) //only one decimal point or a deciamlpoint as the first char
             {
             }
             else
             {
-                Label_EnteredAmount.Text += reciever.Text;
+                Label_EnteredAmount.Text += reciever.label1.Text;
             }
         }
 

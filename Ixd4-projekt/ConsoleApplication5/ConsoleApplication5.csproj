@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Pay\ReceipCompletetInfo.cs" />
     <Compile Include="Pay\ReceiptProduct.cs" />
+    <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.Designer.cs">
+      <DependentUpon>EmployeeSignInButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard layouts\Buttons\Pay Buttons\Split_button.cs">
       <SubType>UserControl</SubType>
     </Compile>
