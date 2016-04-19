@@ -9,13 +9,11 @@ namespace ConsoleApplication5
 {
     public class ReceiptCompleteInfo
     {
-        public List<ReceiptProduct> ProductList { get;private set; }
         public Table_Info Table { get; private set; }
         public Employee Employee { get; private set; }
 
-        public ReceiptCompleteInfo(List<ReceiptProduct> List, Table_Info CurrentTable, Employee CurrentEmployee)
+        public ReceiptCompleteInfo(Table_Info CurrentTable, Employee CurrentEmployee)
         {
-            this.ProductList = List;
             this.Employee = CurrentEmployee;
             this.Table = CurrentTable;
         }

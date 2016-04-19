@@ -20,15 +20,21 @@ namespace ConsoleApplication5
 
         private void Initializejobpeople(string path)
         {
+            
             EmployeesReader EmployeeControl = new EmployeesReader(500, 200, path);
             EmployeeControl.Location = new Point(0, 0);
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
             Controls.Add(EmployeeControl);
         }
 
+        private void CloseWindow(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
         private void Close_window(object sender, EmployeeEventArgs e)
         {
-            Close();
+            this.Hide();
         }
 
         private void OnJobWindow_Load(object sender, EventArgs e)

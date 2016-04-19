@@ -34,15 +34,6 @@ namespace ConsoleApplication5
 
             Draw_startPage();
             Clicked_products = new List<Product>();
-            
-
-      
-       
-
-
-  
-
-
         }
       
 
@@ -56,10 +47,10 @@ namespace ConsoleApplication5
             Initialize_Field_Controls_tablesPage();
             Initialize_Field_Controls_CreateReceipt();
         }
-        }//declare partial method
+     }//declare partial method
 
 
 
 
     }
-}
+
