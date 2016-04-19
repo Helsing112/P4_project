@@ -22,7 +22,6 @@ namespace ConsoleApplication5
         {
             EmployeesReader EmployeeControl = new EmployeesReader(500, 200, path);
             EmployeeControl.Location = new Point(0, 0);
-            EmployeeControl.BorderStyle = BorderStyle.Fixed3D;
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
             Controls.Add(EmployeeControl);
         }

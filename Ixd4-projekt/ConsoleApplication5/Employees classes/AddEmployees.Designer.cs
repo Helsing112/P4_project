@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Add_Employee_Button = new ConsoleApplication5. Save_Create_Button();
+            this.Add_Employee_Button = new ConsoleApplication5.Save_Create_Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.standard_Label5 = new ConsoleApplication5. Standard_Label();
+            this.standard_Label5 = new ConsoleApplication5.Standard_Label();
             this.Name_TextBox = new ConsoleApplication5.TextBox_Touch();
-            this.standard_Label2 = new ConsoleApplication5. Standard_Label();
+            this.standard_Label2 = new ConsoleApplication5.Standard_Label();
             this.ID_TextBox = new ConsoleApplication5.TextBox_Touch();
             this.Password_TextBox = new ConsoleApplication5.TextBox_Touch();
-            this.standard_Label3 = new ConsoleApplication5. Standard_Label();
+            this.standard_Label3 = new ConsoleApplication5.Standard_Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.standard_Label1 = new ConsoleApplication5. Standard_Label();
+            this.standard_Label1 = new ConsoleApplication5.Standard_Label();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();

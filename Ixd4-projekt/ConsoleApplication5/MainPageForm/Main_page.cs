@@ -12,7 +12,7 @@ using System.IO;
 
 namespace ConsoleApplication5
 {
-    public partial class Main_page : Form
+    public partial class Main_page : Standard_Window_Layout
     {
 
         private string Starting_lib_path;

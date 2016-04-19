@@ -95,6 +95,10 @@ namespace ConsoleApplication5
             {
                 login_Button1.Enabled = true;
             }
+            else
+            {
+                login_Button1.Enabled = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
