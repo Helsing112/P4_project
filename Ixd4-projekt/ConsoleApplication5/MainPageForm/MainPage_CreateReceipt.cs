@@ -29,12 +29,8 @@ namespace ConsoleApplication5
             Controls.Add(PayButton);
             Controls.Add(BackToFrontPageButton); //adds a back button from the tablesPage
 
-            Controls.Add(Timer_panel);
-
-            
-        }
-
-        
+            Controls.Add(Timer_panel);            
+        }        
         //Initialize all fields
         private void Initialize_Field_Controls_CreateReceipt()
         {
@@ -109,7 +105,7 @@ namespace ConsoleApplication5
         {
 
             Temp_Receipt.SaveReceiptToTableInfo(ActiveTable); //first we save the receipt to the active table
-            Pay_window.Show_Pay_window(new ReceiptCompleteInfo(ActiveTable.TableReceipt, ActiveTable, ActiveEmployee));// then we show the pay window with the receipt
+            Pay_window.Show_Pay_window(new ReceiptCompleteInfo(ActiveTable, ActiveEmployee));// then we show the pay window with the receipt
 
         }
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------

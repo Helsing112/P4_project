@@ -85,22 +85,23 @@ namespace ConsoleApplication5
             Log_In.Text = "Log In";
             Log_In.Button_Click += new System.EventHandler(this.Log_In_Click);
 
-            Quit_Close_Button quit = new Quit_Close_Button();
-            quit.Location = new System.Drawing.Point(380, 140);
-            quit.Name = "quit";
-            quit.Size = Log_In.Size = new System.Drawing.Size(105, 49);
-            quit.TabIndex = 11;
-            quit.Text = "Quit";
-            quit.Button_Click += new System.EventHandler(quit_Click);
+            quit_button = new Quit_Close_Button();
+            quit_button.Location = new System.Drawing.Point(380, 140);
+            quit_button.Name = "quit";
+            quit_button.Size = Log_In.Size = new System.Drawing.Size(105, 49);
+            quit_button.TabIndex = 11;
+            quit_button.Text = "Quit";
+            quit_button.Button_Click += new System.EventHandler(quit_Click);
 
 
             Controls.Add(Log_In);
-            Controls.Add(quit);
+            Controls.Add(quit_button);
            
             //MessageBox.Show(e.employee.EmployeeID + e.employee.EmployeeName);
 
 
         }
+        public Quit_Close_Button quit_button;
         TextBox EmployeeButtonClickTextbox;
 
         public void quit_Click(object sender, EventArgs e)
