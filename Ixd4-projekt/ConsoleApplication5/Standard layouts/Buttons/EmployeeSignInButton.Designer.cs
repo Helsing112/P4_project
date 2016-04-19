@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class Save_Create_Button
+    partial class EmployeeSignInButton
     {
         /// <summary> 
         /// Required designer variable.
@@ -26,27 +26,25 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(Employee employee)
         {
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\Standard layouts\Buttons\Numpad_button.cs
+            // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Text = "";
+            this.label1.Size = new System.Drawing.Size(150, 150);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             // 
-            // Save_Create_Button
+            // EmployeeSignInButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Save_Create_Button";
-            this.Textlabel = "Save / Accept";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Name = "EmployeeSignInButton";
+            this.Size = new System.Drawing.Size(150, 150);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

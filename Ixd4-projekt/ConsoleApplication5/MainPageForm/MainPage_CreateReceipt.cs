@@ -10,7 +10,8 @@ namespace ConsoleApplication5
 {
     partial class Main_page
     {
-        public Table_Info ActiveTable { get;private set; }
+        private Table_Info _activeTable;
+        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
@@ -22,13 +23,18 @@ namespace ConsoleApplication5
             Temp_Receipt.Table_receiptReciever(ActiveTable.TableReceipt);
             //active employee assignment (Property is in another file)
             ActiveEmployee = activeEmployee;
-
+       
             Controls.Add(tree);
             Controls.Add(Temp_Receipt);
             Controls.Add(PayButton);
             Controls.Add(BackToFrontPageButton); //adds a back button from the tablesPage
+
             Controls.Add(Timer_panel);
+
+            
         }
+
+        
         //Initialize all fields
         private void Initialize_Field_Controls_CreateReceipt()
         {
@@ -46,7 +52,7 @@ namespace ConsoleApplication5
         NumberWheelForm Number_wheel;
         Button PayButton;
         Paywindow Pay_window;
-   
+  
 
         #region Intialize methods
         private void Initialize_Pay_window()
@@ -95,6 +101,7 @@ namespace ConsoleApplication5
             PayButton.Click += new System.EventHandler(PayButton_click);
         }
 
+     
 
         #endregion
         #region Eventhandlers---------------------------------
@@ -147,6 +154,9 @@ namespace ConsoleApplication5
 
         #endregion
         #endregion
-    }
+}
 
 }
+
+
+             

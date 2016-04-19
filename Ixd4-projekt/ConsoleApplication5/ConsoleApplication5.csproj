@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.Designer.cs">
+      <DependentUpon>EmployeeSignInButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPageForm\MainPage_StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Back_Button.resx">
       <DependentUpon>Back_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\EmployeeSignInButton.resx">
+      <DependentUpon>EmployeeSignInButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Login_Button.resx">
       <DependentUpon>Login_Button.cs</DependentUpon>

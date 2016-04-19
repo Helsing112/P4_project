@@ -22,13 +22,15 @@ namespace ConsoleApplication5
             Controls.Add(Admin_login_button);
             Controls.Add(CheckIn_Button);
             Controls.Add(Timer_panel);
+
+
         }
         private void Initialize_Field_Controls_startPage()
         {
             //admin button
-            Admin_login_Button(new System.Drawing.Point(12, 12), new System.Drawing.Size(139, 79));
+            Admin_login_Button(new System.Drawing.Point(12, 100), new System.Drawing.Size(139, 79));
             //employee controls
-            Employee_signedInPanel(new System.Drawing.Point(350, 0), new System.Drawing.Size(600, 200));
+            Employee_signedInPanel(new System.Drawing.Point(350, 100), new System.Drawing.Size(600, 200));
             Check_inButton(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
             TimerPanel();
         }
@@ -47,8 +49,9 @@ namespace ConsoleApplication5
             employee_sign_in_panel.Size = size_input;
 
             Controls.Add(employee_sign_in_panel);
-        }
 
+        }
+    
         public void TimerPanel()
         {
          Timer_panel = new TimerInfo();
@@ -107,3 +110,7 @@ namespace ConsoleApplication5
 
     }
 }
+
+
+
+

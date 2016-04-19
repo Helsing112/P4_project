@@ -35,19 +35,23 @@ namespace ConsoleApplication5
         private void CreateEmployeeButton(Employee EMP)
         {
             // Create a Button object 
-            EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
+            //EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
+            EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP);
             // Set Button properties
 
             // Add a Button Click Event handler
-            dynamicButton.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeButtonClick);
+            dynamicButton.Button_Click += EmployeeButtonClick;
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             EmployeeHolder.Controls.Add(dynamicButton);
+            
         }
+        
 
-        public void EmployeeButtonClick(object sender, EmployeeEventArgs e)
+        public void EmployeeButtonClick(object sender, EventArgs e)
         {
-            employeeinput = e.employee;
+            EmployeeSignInButton temp = (EmployeeSignInButton)sender;
+            employeeinput = temp.employee;
             Controls.Clear();
            
             //LABEL TIL PASSWORD, DER SKRIVER EMPLOYEE'S NAVN.
@@ -57,7 +61,7 @@ namespace ConsoleApplication5
                 Create_Label.Name = "label1";
                 Create_Label.Size = new System.Drawing.Size(168, 20);
                 Create_Label.TabIndex = 1;
-                Create_Label.Text = e.employee.EmployeeName;
+                Create_Label.Text = employeeinput.EmployeeName;
 
 
                 Controls.Add(Create_Label);
