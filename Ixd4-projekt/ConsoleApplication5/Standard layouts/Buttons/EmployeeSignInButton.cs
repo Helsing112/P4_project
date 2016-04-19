@@ -17,7 +17,7 @@ namespace ConsoleApplication5
         {
             
             this.employee = employee;
-            InitializeComponent(employee);
+            InitializeComponent(employee); 
 
         }
         
