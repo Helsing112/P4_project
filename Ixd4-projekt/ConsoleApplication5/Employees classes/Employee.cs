@@ -11,6 +11,5 @@ namespace ConsoleApplication5
         public string EmployeeName;
         public int EmployeeID;
         public string EmployeePassword;
-
     }
 }

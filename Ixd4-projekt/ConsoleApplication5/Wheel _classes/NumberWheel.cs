@@ -40,38 +40,26 @@ namespace ConsoleApplication5
             //iterate over the amount of pies added and instantiating them
             this.SuspendLayout();
             List<PieOnNumberWheel> Pies = new List<PieOnNumberWheel>();
+
+            // calculations regarding location of numbers
+            float label_x = (input_rectangle.Left + input_rectangle.Right) / 2f;
+            float label_y = (input_rectangle.Top + input_rectangle.Bottom) / 2f;
+            float label_radius = ((input_rectangle.Width + input_rectangle.Height) / 2f) * 0.33f;
+
+            // Adds the pies of the wheel
             for (int i=0; i < amount_of_pies; i++)
             {
-                Pies.Add(new PieOnNumberWheel(input_rectangle, 0 + i * (360 / amount_of_pies)+22, (350 / amount_of_pies)));
+                // calculates location for numbers on wheel
+                float sweep_angle_label = (350f / amount_of_pies);
+                float start_angle_label = 0 + i * (360 / amount_of_pies) + 22;
+                double label_angle = Math.PI * (start_angle_label + sweep_angle_label / 2f) / 180f;
+                float single_label_x = label_x + (float)(label_radius * Math.Cos(label_angle));
+                float single_label_y = label_y + (float)(label_radius * Math.Sin(label_angle));
+                start_angle_label += sweep_angle_label;
+                // end of calculation
+
+                Pies.Add(new PieOnNumberWheel(input_rectangle, 0 + i * (360 / amount_of_pies)+22, (350 / amount_of_pies), single_label_x, single_label_y, i));
             }
-
-            // Sunes test kode til tal på hjulet
-            using (StringFormat string_format = new StringFormat())
-            {
-                string_format.Alignment = StringAlignment.Center;
-                string_format.LineAlignment = StringAlignment.Center;
-
-                float label_x = (input_rectangle.Left + input_rectangle.Right) / 2f;
-                float label_y = (input_rectangle.Top + input_rectangle.Bottom) / 2f;
-
-                float label_radius = (input_rectangle.Width + input_rectangle.Height) / 2f * 0.33f;
-                Graphics g = this.CreateGraphics();
-                Brush lol = new SolidBrush(Color.Black);
-                for (int index = 0; index < amount_of_pies; index++)
-                {
-                    float sweep_angle_label = (350f / amount_of_pies);
-                    float start_angle_label = 0 + index * (360 / amount_of_pies) + 22;
-
-                    double label_angle = Math.PI * (start_angle_label + sweep_angle_label / 2f) / 180f;
-                    float single_label_x = label_x + (float)(label_radius * Math.Cos(label_angle));
-                    float single_label_y = label_y + (float)(label_radius * Math.Sin(label_angle));
-
-                    g.DrawString("lol", DefaultFont, lol, single_label_x, single_label_y, string_format);
-                    start_angle_label += sweep_angle_label;
-                }
-
-            }
-            // test kode slut
 
             int x = 2;
             foreach (PieOnNumberWheel item in Pies)
@@ -81,16 +69,10 @@ namespace ConsoleApplication5
                 item.Name = x.ToString();
                 item.BackColor = Color.Azure;                
                 Controls.Add(item);
-                item.BackColor = Color.LightGoldenrodYellow;
-                
+                item.BackColor = Color.LightGoldenrodYellow;                
                 x++;
             }
-
-            // 
-            // NumberWheel
-            // 
             this.ResumeLayout(false);
-
         }
 
         private void Middle_clicked(object sender, MouseEventArgs e)
@@ -106,7 +88,6 @@ namespace ConsoleApplication5
             PieOnNumberWheel temp_sender = (PieOnNumberWheel)sender;
             On_Pie_click(int.Parse(temp_sender.Name));
         }
-
 
         protected virtual void On_Pie_click(int number)
         {
