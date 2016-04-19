@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication5.Standard_layouts
+﻿namespace ConsoleApplication5
 {
     partial class Standard_Label
     {

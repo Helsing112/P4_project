@@ -78,14 +78,12 @@ namespace ConsoleApplication5
                 flowLayoutPanel1.Controls.Add(product_item);
             }
         }
-        public void SaveReceiptToList(List<ProductWithAmount> ListToSave)
+        public void SaveReceiptToList(List<ReceiptProduct> ListToSave)
         {
             ListToSave.Clear(); //Clears all items in the list so that it will contain the correct information
             foreach (ProductButtonInFlowTempReciept item in this.flowLayoutPanel1.Controls)
             {
-                ProductWithAmount temp_product = new ProductWithAmount(item.Amount_to_represent);
-                temp_product.Name = item.Product_input.Name;
-                temp_product.Price = item.Product_input.Price;
+                ReceiptProduct temp_product = new ReceiptProduct(item.Product_input, item.Amount_to_represent);
                 ListToSave.Add(temp_product);
             }
         }
@@ -94,21 +92,17 @@ namespace ConsoleApplication5
             TableInfoToOverride.TableReceipt.Clear(); //Clears all items in the list so that it will contain the correct information
             foreach (ProductButtonInFlowTempReciept item in this.flowLayoutPanel1.Controls)
             {
-                ProductWithAmount temp_product = new ProductWithAmount(item.Amount_to_represent);
-                temp_product.Name = item.Product_input.Name;
-                temp_product.Price = item.Product_input.Price;
+                ReceiptProduct temp_product = new ReceiptProduct(item.Product_input, item.Amount_to_represent);
                 TableInfoToOverride.TableReceipt.Add(temp_product);
             }
         }
-        public List<ProductWithAmount> GetReceiptContent()
+        public List<ReceiptProduct> GetReceiptContent()
         {
-            List<ProductWithAmount> List = new List<ProductWithAmount>();
+            List<ReceiptProduct> List = new List<ReceiptProduct>();
             foreach (var item in this.flowLayoutPanel1.Controls)
             {
                 ProductButtonInFlowTempReciept temp_but = (ProductButtonInFlowTempReciept)item;
-                ProductWithAmount temp_product = new ProductWithAmount(temp_but.Amount_to_represent);
-                temp_product.Price = temp_but.Product_input.Price;
-                temp_product.Name = temp_but.Product_input.Name;
+                ReceiptProduct temp_product = new ReceiptProduct(temp_but.Product_input, temp_but.Amount_to_represent);
                 List.Add(temp_product);
             }
 

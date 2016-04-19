@@ -3,8 +3,8 @@
   <Table_button_Xml_data>
     <Table_Text>202</Table_Text>
     <Location>
-      <X>54</X>
-      <Y>428</Y>
+      <X>290</X>
+      <Y>15</Y>
     </Location>
     <Size>
       <Width>85</Width>
@@ -14,12 +14,34 @@
   <Table_button_Xml_data>
     <Table_Text>403</Table_Text>
     <Location>
-      <X>255</X>
-      <Y>234</Y>
+      <X>1023</X>
+      <Y>153</Y>
     </Location>
     <Size>
       <Width>155</Width>
       <Height>21</Height>
+    </Size>
+  </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text>606</Table_Text>
+    <Location>
+      <X>1046</X>
+      <Y>446</Y>
+    </Location>
+    <Size>
+      <Width>125</Width>
+      <Height>51</Height>
+    </Size>
+  </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text>Hejsa</Table_Text>
+    <Location>
+      <X>751</X>
+      <Y>16</Y>
+    </Location>
+    <Size>
+      <Width>185</Width>
+      <Height>141</Height>
     </Size>
   </Table_button_Xml_data>
 </ArrayOfTable_button_Xml_data>

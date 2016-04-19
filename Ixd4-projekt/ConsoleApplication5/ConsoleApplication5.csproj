@@ -46,11 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pay\ReceipCompletetInfo.cs" />
+    <Compile Include="Pay\ReceiptProduct.cs" />
+    <Compile Include="Standard layouts\Buttons\Pay Buttons\Split_button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Pay Buttons\Split_button.Designer.cs">
+      <DependentUpon>Split_button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Pay Buttons\Discount_buttons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\Pay Buttons\Discount_buttons.Designer.cs">
+      <DependentUpon>Discount_buttons.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPageForm\MainPage_StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pay\PayEventArgs.cs" />
-    <Compile Include="Pay\PayWindow.cs">
+    <Compile Include="Pay\Mortens Shit\PayEventArgs.cs" />
+    <Compile Include="Pay\Mortens Shit\PayWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainPageForm\MainPage_TablesPage.cs">
@@ -59,19 +73,19 @@
     <Compile Include="MainPageForm\MainPage_CreateReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pay\PayWindow.Designer.cs">
+    <Compile Include="Pay\Mortens Shit\PayWindow.Designer.cs">
       <DependentUpon>PayWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pay\PruductButtonInPayReceipt.cs">
+    <Compile Include="Pay\Mortens Shit\ProductButtonInPayReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pay\PruductButtonInPayReceipt.Designer.cs">
-      <DependentUpon>PruductButtonInPayReceipt.cs</DependentUpon>
+    <Compile Include="Pay\Mortens Shit\ProductButtonInPayReceipt.Designer.cs">
+      <DependentUpon>ProductButtonInPayReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pay_windowForm.cs">
+    <Compile Include="Pay\Pay_windowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pay_windowForm.Designer.cs">
+    <Compile Include="Pay\Pay_windowForm.Designer.cs">
       <DependentUpon>Pay_windowForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductWithAmount.cs" />
@@ -351,10 +365,10 @@
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pay\PayWindow.resx">
+    <EmbeddedResource Include="Pay\Mortens Shit\PayWindow.resx">
       <DependentUpon>PayWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pay_windowForm.resx">
+    <EmbeddedResource Include="Pay\Pay_windowForm.resx">
       <DependentUpon>Pay_windowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
@@ -371,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Numpad_button.resx">
       <DependentUpon>Numpad_button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Pay Buttons\Discount_buttons.resx">
+      <DependentUpon>Discount_buttons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\Pay Buttons\Split_button.resx">
+      <DependentUpon>Split_button.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Pay_Button.resx">
       <DependentUpon>Pay_Button.cs</DependentUpon>

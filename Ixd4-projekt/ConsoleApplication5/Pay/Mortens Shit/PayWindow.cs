@@ -30,20 +30,20 @@ namespace ConsoleApplication5
             InitializeComponent();            
         }
 
-        private void InitializeReiptFlowPanel(List<ProductWithAmount> inputList)
+        private void InitializeReiptFlowPanel(List<ReceiptProduct> inputList)
         {   
             //reset the receipt
             PayReceiptFlowPanel.Controls.Clear();
             TempTotal = 0M;
             //Create new
-            foreach (ProductWithAmount item in inputList)
+            foreach (ReceiptProduct item in inputList)
             {
-                PruductButtonInPayReceipt product_item = new PruductButtonInPayReceipt(Size_of_list_x, Height_of_element, item);
+                ProductButtonInPayReceipt product_item = new ProductButtonInPayReceipt(Size_of_list_x, Height_of_element, item);
                 product_item.BackColor = Color.White;
 
                 PayReceiptFlowPanel.Controls.Add(product_item);
 
-                TempTotal += (item.Amount * item.Price);
+                TempTotal += (item.Amount * item.Product.Price);
 
             }
             TotalAmountNumber.Text = TempTotal.ToString() + ".-";

@@ -44,12 +44,12 @@ namespace ConsoleApplication5
         Timer Timer_for_wheel_controller;
         NumberWheelForm Number_wheel;
         Button PayButton;
-        Paywindow Pay_window;
+        Pay_windowForm Pay_window;
 
         #region Intialize methods
         private void Initialize_Pay_window()
         {
-            Pay_window = new Paywindow();
+            Pay_window = new Pay_windowForm();
         }
         private void initialize_wheel(int Size_of_wheel)
         {
@@ -97,7 +97,7 @@ namespace ConsoleApplication5
         {
 
             Temp_Receipt.SaveReceiptToTableInfo(ActiveTable); //first we save the receipt to the active table
-            Pay_window.Show_Pay_window(ActiveTable);// then we show the pay window with the receipt
+            Pay_window.Show_Pay_window(new ReceiptCompleteInfo(ActiveTable.TableReceipt, ActiveTable, ActiveEmployee));// then we show the pay window with the receipt
 
         }
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------

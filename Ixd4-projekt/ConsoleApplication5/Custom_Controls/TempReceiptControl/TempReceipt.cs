@@ -12,19 +12,19 @@ namespace ConsoleApplication5
 {
     public partial class TempReceipt : UserControl
     {
-        public List<ProductWithAmount> ActiveTableProductList { get;private set; }
+        public List<ReceiptProduct> ActiveTableProductList { get;private set; }
         private decimal total_price { get; set; }
         public TempReceipt(int size_x, int size_y)
         {
             InitializeComponent(size_x, size_y);
         }
-        public void Table_receiptReciever(List<ProductWithAmount> ProductList)
+        public void Table_receiptReciever(List<ReceiptProduct> ProductList)
         {
             Reset_receipt(); //resets the receipt before drawing new data
             
-            foreach (ProductWithAmount item in ProductList)
+            foreach (ReceiptProduct item in ProductList)
             {
-                Add_products((Product)item, item.Amount);
+                Add_products(item.Product, item.Amount);
             }
             ActiveTableProductList = ProductList;           
         }

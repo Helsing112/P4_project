@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class PruductButtonInPayReceipt
+    partial class ProductButtonInPayReceipt
     {
         /// <summary> 
         /// Required designer variable.

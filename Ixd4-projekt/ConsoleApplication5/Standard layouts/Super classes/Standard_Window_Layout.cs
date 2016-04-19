@@ -22,6 +22,7 @@ namespace ConsoleApplication5
             this.BackColor = System.Drawing.ColorTranslator.FromHtml("#29344c");
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.ResizeRedraw = true;
         }
         // Makes a border around the forms
         protected override void OnPaint(PaintEventArgs e)

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class Save_Create_Button : Std_Button
+    public partial class Split_button : Std_Button
     {
-        public Save_Create_Button()
+        public Split_button()
         {
             InitializeComponent();
         }

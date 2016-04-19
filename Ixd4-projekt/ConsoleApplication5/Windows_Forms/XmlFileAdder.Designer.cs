@@ -40,8 +40,8 @@ namespace ConsoleApplication5
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.add_Button1 = new ConsoleApplication5.Standard_layouts.Buttons.Add_Button();
-            this.save_Create_Button1 = new ConsoleApplication5.Standard_layouts.Buttons.Save_Create_Button();
+            this.add_Button1 = new ConsoleApplication5. Add_Button();
+            this.save_Create_Button1 = new ConsoleApplication5. Save_Create_Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PriceInputTextBox = new System.Windows.Forms.TextBox();
@@ -50,7 +50,7 @@ namespace ConsoleApplication5
             this.Text_input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.save_Create_Button2 = new ConsoleApplication5.Standard_layouts.Buttons.Save_Create_Button();
+            this.save_Create_Button2 = new ConsoleApplication5. Save_Create_Button();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -386,8 +386,8 @@ namespace ConsoleApplication5
         private Label label2;
         private Label label6;
         private TableLayoutPanel tableLayoutPanel7;
-        private Standard_layouts.Buttons.Add_Button add_Button1;
-        private Standard_layouts.Buttons.Save_Create_Button save_Create_Button1;
-        private Standard_layouts.Buttons.Save_Create_Button save_Create_Button2;
+        private  Add_Button add_Button1;
+        private  Save_Create_Button save_Create_Button1;
+        private  Save_Create_Button save_Create_Button2;
     }
 }

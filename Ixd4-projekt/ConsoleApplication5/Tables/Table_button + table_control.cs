@@ -61,12 +61,13 @@ namespace ConsoleApplication5
     }
     public class Table_Info //class for the table controls MainPage to store relevant data of the receipt.
     {
+        public decimal PaidAmount { get; set; }
         public string Table_name { get; }
-        public List<ProductWithAmount> TableReceipt { get; set; }
+        public List<ReceiptProduct> TableReceipt { get; set; }
         public Table_Info(string table_name)
         {
             this.Table_name = table_name;
-            TableReceipt = new List<ProductWithAmount>();
+            TableReceipt = new List<ReceiptProduct>();
         }
 
     }

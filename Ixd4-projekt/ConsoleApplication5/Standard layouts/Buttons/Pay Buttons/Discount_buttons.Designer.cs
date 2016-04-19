@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class Login_Button
+    partial class Discount_buttons
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,18 +34,17 @@
             // 
             // label1
             // 
-            this.label1.Text = "";
+            this.label1.Text = "Placeholder";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
             // 
-            // Login_Button
+            // Discount_buttons
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Login_Button";
-            this.Textlabel = "Login";
+            this.Name = "Discount_buttons";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

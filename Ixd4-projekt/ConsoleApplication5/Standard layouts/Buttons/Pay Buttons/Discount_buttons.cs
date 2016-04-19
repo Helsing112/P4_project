@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class Pay_windowForm : Standard_Window_Layout
+    public partial class Discount_buttons : Std_Button
     {
-        public Pay_windowForm()
+        public Discount_buttons()
         {
             InitializeComponent();
         }

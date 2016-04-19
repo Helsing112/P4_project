@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class PruductButtonInPayReceipt : UserControl
+    public partial class ProductButtonInPayReceipt : UserControl
     {
-
-        public Product Product_input { get; }
-        public int Amount_to_represent { get; set; }
+        private int _amount_to_represent;
+        public ReceiptProduct Product_input { get; }
+        public int Amount_to_represent { get { return _amount_to_represent; }
+                                        set { if (value < 1) { this.Parent = null; } else { _amount_to_represent = value; RedrawLabelText(); } }}
         public int Size_x { get; }
         public int Size_y { get; }
         public decimal TotalPrice { get; set; }
@@ -23,47 +24,33 @@ namespace ConsoleApplication5
 
         public event TotalTableTabEventhandler TotalTabelTab;
 
-        public PruductButtonInPayReceipt(int size_x, int size_y, ProductWithAmount product)
+        public ProductButtonInPayReceipt(int size_x, int size_y, ReceiptProduct product)
         {
-           
-
+            Product_input = product;
             Size_x = size_x;
             Size_y = size_y;
-            Amount_to_represent = product.Amount;
-            Product_input = product;
-            TotalPrice = (Product_input.Price * Amount_to_represent);
+            TotalPrice = (Product_input.Product.Price * product.Amount);
+
             InitializeComponent();
+            Amount_to_represent = product.Amount;
         }
 
-        //protected virtual void OnTableTab()
-        //{
-        //    if (TotalTabelTab != null)
-        //    {
-        //        TotalTabelTab(this, new PayEventArgs() { temptotal =  })
-        //    }
-        //}
+        public event EventHandler ProductClick;
+
+
         private void label_Click(object sender, EventArgs e)
         {
-            if (Amount_to_represent == 1)
+            if(ProductClick != null)
             {
-                this.Parent = null;
+                ProductClick(this, e);
             }
-            else {
-
-                Amount_to_represent--;
-                Label_price.Text = (Product_input.Price * Amount_to_represent).ToString() + ",-";
-                RedrawLabelText();
-                TotalPrice = TotalPrice - (Product_input.Price * Amount_to_represent);
-            }
-            
-
         }
 
         private void RedrawLabelText()
         {
-            
-            this.Label_amount.Text = "x" + Amount_to_represent;
-            //this.Label_price.Text = (Product_input.Price * Amount_to_represent).ToString() + ",-";
+            TotalPrice = (Product_input.Product.Price * Amount_to_represent);
+            this.Label_amount.Text = "x" + Amount_to_represent.ToString();
+            this.Label_price.Text = TotalPrice.ToString() + ",-";
         }
 
         private void InitializeComponent()
@@ -92,7 +79,7 @@ namespace ConsoleApplication5
             this.label_describtion.Name = "label_describtion";
             this.label_describtion.Padding = new System.Windows.Forms.Padding(1, 1, 1, 5);
             this.label_describtion.TabIndex = 0;
-            this.label_describtion.Text = Product_input.Name;
+            this.label_describtion.Text = Product_input.Product.Name;
             this.label_describtion.TextAlign = ContentAlignment.MiddleLeft;
             this.label_describtion.Click += new System.EventHandler(this.label_Click);
             #endregion
@@ -119,7 +106,7 @@ namespace ConsoleApplication5
             this.Label_price.Width = (int)(Size_x * (1F - percent_LP));
             this.Label_price.Name = "Label_price";
             this.Label_price.TabIndex = 4;
-            this.Label_price.Text = (Product_input.Price * Amount_to_represent).ToString() + ",-";
+            this.Label_price.Text = (Product_input.Product.Price * Product_input.Amount).ToString() + ",-";
             this.Label_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label_price.Click += new System.EventHandler(this.label_Click);
             #endregion
