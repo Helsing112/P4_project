@@ -32,19 +32,14 @@
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Size = new System.Drawing.Size(150, 150);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
             // 
             // EmployeeSignInButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.Name = "EmployeeSignInButton";
-            this.Size = new System.Drawing.Size(150, 150);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

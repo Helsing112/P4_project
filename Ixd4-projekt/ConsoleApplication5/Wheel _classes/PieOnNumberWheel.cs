@@ -35,7 +35,7 @@ namespace ConsoleApplication5
             this.Height = rektangle.Height;
             this.Width = rektangle.Width;
             this.SuspendLayout();
-            GraphicsPath graphics = new GraphicsPath();                        
+            GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);                        
 
             // sets the properties of the numbers on the wheel
             string stringText = _number.ToString();

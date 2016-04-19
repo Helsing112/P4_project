@@ -37,6 +37,7 @@ namespace ConsoleApplication5
             // Create a Button object 
             //EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
             EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP);
+            dynamicButton.Textlabel = EMP.EmployeeName;
             // Set Button properties
 
             // Add a Button Click Event handler
