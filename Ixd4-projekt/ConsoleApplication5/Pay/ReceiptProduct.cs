@@ -23,5 +23,9 @@ namespace ConsoleApplication5
             this.IsPaid = IsPaid;
         }
 
+        public override string ToString()
+        {
+            return (Amount.ToString()+ " " + Product);
+        }
     }
 }

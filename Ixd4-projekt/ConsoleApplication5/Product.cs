@@ -35,5 +35,10 @@ namespace ConsoleApplication5
 
             Varianter.Add(new_product);
         }
+        public override string ToString()
+        {
+            return (Name + " " + _price+ " " + "kr");
+  
+        }
     }
 }

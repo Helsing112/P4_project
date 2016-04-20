@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+using System.Drawing;
 
 namespace ConsoleApplication5
 {
@@ -170,6 +172,7 @@ namespace ConsoleApplication5
                 ReceiptInfo.Table.PaidAmount = PaidAmount;
                 Label_EnteredAmount.Text = "";
             }
+            PrinterInfo.MethodThatPrints(ReceiptInfo.Table.Table_name, ReceiptInfo.Employee.EmployeeName, ReceiptInfo.Table.TableReceipt, TotalAmount);
         }
 
         private void Clear_numpad_click(object sender, EventArgs e)
@@ -265,5 +268,7 @@ namespace ConsoleApplication5
             Panel_splitReceipt.Controls.Add(Label_SplitTop);
             Panel_splitReceipt.Controls.Add(Flow_SplitReceipt);
         }
+
+
     }
 }
