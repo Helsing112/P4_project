@@ -26,7 +26,6 @@ namespace ConsoleApplication5
         {
             PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount);
             
-            //private void button1_Click(object sender, EventArgs e)
         
             try
             {
@@ -44,16 +43,65 @@ namespace ConsoleApplication5
     }
         public void MethodThatDoesThePrinting(object sender, PrintPageEventArgs ev)
         {
-            string stringtoprint = $"************************************************************************* \n You were served by {EmployeeName} at table {TableName}\n You bought:\n";
 
-  
+            Graphics graphics = ev.Graphics;
+
+            Font font = new Font("Courier New", 12);
+
+            float fontHeight = font.GetHeight();
+
+            int startX = 10;
+            int startY = 10;
+            int offset = 40;
+
+            graphics.DrawString(" Morten Linnets Fun&Go", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+
+            string top = "Item Name".PadRight(30) + "Price";
+
+            graphics.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
+
+            offset = offset + (int)fontHeight;
+
+            graphics.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
+
+            offset = offset + (int)fontHeight + 5;
+
+            const string format = "{0,-5} {1,-10} {2,10} {3,0}";
+            string stringtoprint = "\n";
 
             foreach (var item in ProductList)
             {
-                stringtoprint += $"  {item.Amount} {item.Product.Name} {(item.Product.Price*item.Amount)}kr \n ";
+               stringtoprint += string.Format(format, item.Amount, item.Product.Name, (item.Product.Price * item.Amount),"kr\n");
+               offset = offset + 20;
             }
-            stringtoprint += $"\n \n Total: {totalamount}kr \n *************************************************************************";
             ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
+            offset = offset + 40;
+
+            graphics.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalamount), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            string StringWithEmployeeAndTable = $"You were served by {EmployeeName} at table {TableName}";
+            offset = offset + 30;
+            ev.Graphics.DrawString(StringWithEmployeeAndTable.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
+
+            offset = offset + 30; 
+            graphics.DrawString("       Thank-you for givin' us moneyz,", font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + 15;
+            graphics.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
+
+
+
+
+
+
+            //string stringtoprint = $"************************************************************************* \n You were served by {EmployeeName} at table {TableName}\n You bought:\n";
+
+  
+
+            //foreach (var item in ProductList)
+            //{
+            //    stringtoprint += $"  {item.Amount} {item.Product.Name} {(item.Product.Price*item.Amount)}kr \n ";
+            //}
+            //stringtoprint += $"\n \n Total: {totalamount}kr \n *************************************************************************";
+            //ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
         }
         }
     }

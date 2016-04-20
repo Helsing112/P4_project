@@ -172,7 +172,6 @@ namespace ConsoleApplication5
                 ReceiptInfo.Table.PaidAmount = PaidAmount;
                 Label_EnteredAmount.Text = "";
             }
-            PrinterInfo.MethodThatPrints(ReceiptInfo.Table.Table_name, ReceiptInfo.Employee.EmployeeName, ReceiptInfo.Table.TableReceipt, TotalAmount);
         }
 
         private void Clear_numpad_click(object sender, EventArgs e)
