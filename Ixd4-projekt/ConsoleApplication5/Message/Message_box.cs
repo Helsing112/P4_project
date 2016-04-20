@@ -126,7 +126,6 @@ namespace ConsoleApplication5
             Message(input_string, 0);
         }
 
-
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }

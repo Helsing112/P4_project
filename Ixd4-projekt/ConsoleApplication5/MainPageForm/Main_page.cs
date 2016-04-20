@@ -34,30 +34,23 @@ namespace ConsoleApplication5
 
             Draw_startPage();
             Clicked_products = new List<Product>();
-            
-
-      
-       
-
-
-  
-
-
         }
       
 
         /// <summary>
         /// This method should contain all initializations of field controls that should
         /// </summary>
+
         private void Initialize_Field_Controls()
         {
             Initialize_Field_Controls_startPage();
             Initialize_Field_Controls_tablesPage();
             Initialize_Field_Controls_CreateReceipt();
-        }//declare partial method
+        }
+     }//declare partial method
 
 
 
 
     }
-}
+

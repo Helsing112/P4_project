@@ -32,15 +32,13 @@ namespace ConsoleApplication5
             Directory.CreateDirectory(Path);
         }
 
-        public static void Create_File_TEST<T>(string Path, T Content) 
+        public static void Create_File_TEST<T>(string Path, T Content)
         {
             XmlSerializer serial = new XmlSerializer(typeof(T));
             StreamWriter writer = new StreamWriter(Path + "\\Products_TEST");
             serial.Serialize(writer, Content);
             writer.Close();
         }
-
-
 
     }
 }

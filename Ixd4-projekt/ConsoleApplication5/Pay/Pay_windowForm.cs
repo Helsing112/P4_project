@@ -229,7 +229,7 @@ namespace ConsoleApplication5
         {
             Flow_receiptMain.Controls.Clear();
             this.ReceiptInfo = paymentInfo;
-            foreach (var item in paymentInfo.ProductList)
+            foreach (var item in paymentInfo.Table.TableReceipt)
             {
                 ProductButtonInPayReceipt tempBut = new ProductButtonInPayReceipt(Flow_receiptMain.Size.Width - 20, 50, item);
                 tempBut.ProductClick += ProductClickHandler;
