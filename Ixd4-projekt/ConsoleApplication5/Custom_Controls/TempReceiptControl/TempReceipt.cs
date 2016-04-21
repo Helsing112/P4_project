@@ -68,19 +68,15 @@ namespace ConsoleApplication5
             this.Width = size_y;
             this.ResumeLayout(false);
             Total_tab.Location = new Point(0, size_y-height_of_total_tab);
-            this.ParentChanged += TempReceipt_ParentChanged;
             Controls.Add(Total_tab);
             Controls.Add(ListOfProducts);
         }
-        private void TempReceipt_ParentChanged(object sender, EventArgs e)
-        {
-            ListOfProducts.SaveReceiptToList(ActiveTableProductList);
-        }
+
 
         FlowOfProductsInTempReceipt ListOfProducts;
         TotalTabTenpReceipt Total_tab;   
 
-        internal void SaveReceiptToTableInfo(Table_Info TableInfoToSave)
+        internal void SaveReceiptToTable(Table_Info TableInfoToSave)
         {
             ListOfProducts.SaveReceitpToTableInfo(TableInfoToSave);
         }

@@ -384,7 +384,6 @@ namespace ConsoleApplication5
             // label_remaingingText
             // 
             this.label_remaingingText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_remaingingText.AutoSize = true;
             this.label_remaingingText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label_remaingingText.ForeColor = System.Drawing.Color.White;
             this.label_remaingingText.Location = new System.Drawing.Point(86, 431);
@@ -393,6 +392,7 @@ namespace ConsoleApplication5
             this.label_remaingingText.Size = new System.Drawing.Size(112, 25);
             this.label_remaingingText.TabIndex = 7;
             this.label_remaingingText.Text = "Remaining:";
+            this.label_remaingingText.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // Label_total_Number
             // 
