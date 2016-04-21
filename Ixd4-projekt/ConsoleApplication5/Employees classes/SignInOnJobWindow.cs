@@ -14,10 +14,16 @@ namespace ConsoleApplication5
     {
         public SignInOnJobWindow(string path)
         {
+
+
             InitializeComponent();
             Initializejobpeople(path);
-        }
 
+          
+        }
+        //public string[] Listofemp { get; set; }
+
+   
         private void Initializejobpeople(string path)
         {
             
@@ -25,6 +31,15 @@ namespace ConsoleApplication5
             EmployeeControl.Location = new Point(0, 0);
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
             Controls.Add(EmployeeControl);
+
+            // List<EmployeeButton> ListOfEmployees = EmployeeControl.EmployeeHolder.Controls.OfType<EmployeeButton>().ToList();
+
+            //List<string> list = new List<string>();
+            //foreach (var item in ListOfEmployees)
+            //{
+            //    list.Add(item.employee.EmployeeName);
+            //}
+            //Listofemp = list.ToArray();
         }
 
         private void CloseWindow(object sender, EventArgs e)
@@ -45,6 +60,27 @@ namespace ConsoleApplication5
         private void SignInOnJobWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            //textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //var autoComplete = new AutoCompleteStringCollection();
+            //autoComplete.AddRange(Listofemp);
+            //textBox1.AutoCompleteCustomSource = autoComplete;
+            //textBox1.AutoCompleteCustomSource = Listofemp.ToAutoCompleteStringCollection();
+        }
+    }
+    public static class EnumerableExtensionsEx
+    {
+        public static AutoCompleteStringCollection ToAutoCompleteStringCollection(
+            this IEnumerable<string> enumerable)
+        {
+            if (enumerable == null) throw new ArgumentNullException("enumerable");
+            var autoComplete = new AutoCompleteStringCollection();
+            foreach (var item in enumerable) autoComplete.Add(item);
+            return autoComplete;
         }
     }
 }

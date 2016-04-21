@@ -132,8 +132,21 @@ namespace ConsoleApplication5
             CheckOutGlobal = false;
             EmployeeButton.MethodForCheckOut(CheckOutGlobal);
 
-            SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
-            SignIn.ShowDialog();
+            //try
+            //{
+                SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
+                SignIn.ShowDialog();
+            //}
+            //catch (AccessViolationException)
+            //{
+
+            //    MessageBox.Show("det var ikke heldigt");
+            //}
+           
+
+            
+
+            
             
         }
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
