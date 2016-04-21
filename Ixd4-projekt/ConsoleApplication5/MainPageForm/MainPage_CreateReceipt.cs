@@ -27,7 +27,7 @@ namespace ConsoleApplication5
             Controls.Add(tree);
             Controls.Add(Temp_Receipt);
             Controls.Add(PayButton);
-            Controls.Add(BackToFrontPageButton); //adds a back button from the tablesPage
+            Controls.Add(BackToTablesPage); //adds a back button from the tablesPage
 
             Controls.Add(Timer_panel);            
         }        
@@ -39,7 +39,9 @@ namespace ConsoleApplication5
             Initialize_Pay_window();
             Product_tree(new Point(300, 300), new Size(500,500));
             Receipt(new Point(800, 300), new Size(500, 500));
+            BackToTablesPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
         }
+
         //Fields controls
         TreeViewerControl tree;
         TempReceipt Temp_Receipt;
@@ -48,21 +50,34 @@ namespace ConsoleApplication5
         NumberWheelForm Number_wheel;
         Button PayButton;
         Pay_windowForm Pay_window;
+        Button BackToTablesPage;
 
 
-        #region Intialize methods
+        #region Intialize methods-------------------------------------------------------
+        public void BackToTablesPage_button(Point Location_input, Size size_input)
+        {
+            BackToTablesPage = new Button();
+            BackToTablesPage.Location = Location_input;
+            BackToTablesPage.Name = "CheckInButton";
+            BackToTablesPage.Size = size_input;
+            BackToTablesPage.TabIndex = 0;
+            BackToTablesPage.Text = "Back";
+            BackToTablesPage.UseVisualStyleBackColor = true;
+            BackToTablesPage.Click += new System.EventHandler(BackToTablesPage_click);
+        }
+
         private void Initialize_Pay_window()
         {
             Pay_window = new Pay_windowForm();
+            Pay_window.ProductsPaid += Pay_window_ProductsPaid;
         }
-
-      
 
         private void initialize_wheel(int Size_of_wheel)
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
             Number_wheel.On_Pie_Clicked += Temp_wheel_On_Pie_Clicked;
         }
+
         private void Product_tree(Point Location_input, Size size_input)
         {
             tree = new TreeViewerControl(size_input.Width, size_input.Height, Path_of_product_library);
@@ -96,17 +111,20 @@ namespace ConsoleApplication5
             PayButton.UseVisualStyleBackColor = true;
             PayButton.Click += new System.EventHandler(PayButton_click);
         }
-
-
-
         #endregion
+
         #region Eventhandlers---------------------------------
+        private void BackToTablesPage_click(object sender, EventArgs e)
+        {
+            Temp_Receipt.SaveReceiptToTable(ActiveTable);
+            ActiveTable = null;
+            Draw_tablesPage(ActiveEmployee);
+        }
+
         private void PayButton_click(object sender, EventArgs e)
         {
-
-            Temp_Receipt.SaveReceiptToTableInfo(ActiveTable); //first we save the receipt to the active table
-            Pay_window.Show_Pay_window(new ReceiptCompleteInfo(ActiveTable, ActiveEmployee));// then we show the pay window with the receipt
-
+            Temp_Receipt.SaveReceiptToTable(ActiveTable); //first we save the receipt to the active table
+            Pay_window.Show_Pay_window(ActiveEmployee, ActiveTable);// then we show the pay window with the receipt
         }
         #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
         private bool timer_has_ticked = false;
@@ -147,7 +165,11 @@ namespace ConsoleApplication5
             timer_has_ticked = false;
             Timer_for_wheel_controller.Stop();
         }
-
+        private void Pay_window_ProductsPaid(object sender, PayEventArgs e)
+        {
+            tables_panel.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
+            Temp_Receipt.Table_receiptReciever(ActiveTable.TableReceipt);
+        }
         #endregion
         #endregion
     }

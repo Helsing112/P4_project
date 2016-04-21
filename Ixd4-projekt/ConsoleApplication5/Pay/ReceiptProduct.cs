@@ -10,7 +10,7 @@ namespace ConsoleApplication5
     {
         public Product Product { get; private set; }
         public bool IsPaid { get;  set; }
-        public int Amount { get; private set; }
+        public int Amount { get; set; }
         /// <summary>
         /// The product will by default not be paid
         /// </summary>

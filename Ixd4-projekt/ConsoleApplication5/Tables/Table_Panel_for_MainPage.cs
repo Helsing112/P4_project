@@ -27,8 +27,14 @@ namespace ConsoleApplication5
             foreach (Table_Control_MainPage item in tablesList)
             {
                 this.Controls.Add(item);
+                
                 item.Click += TableClicked;
             }
+        }
+
+        public void removeProductsFromTableReceipt(string NameOfTable, List<ReceiptProduct> ProductsToRemove)
+        {
+            this.Controls.OfType<Table_Control_MainPage>().First(x => x.TableInfo.Table_name == NameOfTable).removeProducts(ProductsToRemove);
         }
         public EventHandler TableClick;
         private void TableClicked(object sender, EventArgs e)
@@ -38,6 +44,8 @@ namespace ConsoleApplication5
                 TableClick(sender, e);
             }
         }
+
+        
         #region Component Designer generated code
 
         /// <summary> 
