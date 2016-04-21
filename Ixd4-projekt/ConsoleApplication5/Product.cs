@@ -12,7 +12,7 @@ namespace ConsoleApplication5
         private decimal _price;
         /// <summary>
         /// Boolean that determines wether price has been set
-        /// </summary>
+        /// </summary> 
         public bool Is_set { get { return _Is_set; } }
         public decimal Price
         {            
