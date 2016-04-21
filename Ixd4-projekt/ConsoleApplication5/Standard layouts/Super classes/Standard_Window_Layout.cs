@@ -19,15 +19,17 @@ namespace ConsoleApplication5
         {
 
             InitializeComponent();
-            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#29344c");
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#e8eae8");
+            //this.BackColor = Color.FromArgb(100, 235, 235, 235);
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.ResizeRedraw = true;
         }
+
         // Makes a border around the forms
         protected override void OnPaint(PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.White, 2, ButtonBorderStyle.Solid, Color.White, 2, ButtonBorderStyle.Solid, Color.White, 2, ButtonBorderStyle.Solid, Color.White, 2, ButtonBorderStyle.Solid);
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, 1, ButtonBorderStyle.Solid, Color.Black, 1, ButtonBorderStyle.Solid, Color.Black, 1, ButtonBorderStyle.Solid, Color.Black, 1, ButtonBorderStyle.Solid);
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
         }
     }

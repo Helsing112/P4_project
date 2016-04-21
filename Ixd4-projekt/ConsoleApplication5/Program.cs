@@ -19,7 +19,7 @@ namespace ConsoleApplication5
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
 
-            Application.Run(new Main_page(@"..\..\..\..\Library"));
+            Application.Run(new MainPage(@"..\..\..\..\Library"));
 
             Console.ReadKey();
         }

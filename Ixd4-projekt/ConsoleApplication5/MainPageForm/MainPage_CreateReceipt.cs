@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace ConsoleApplication5
 {
-    partial class Main_page
+    partial class MainPage
     {
         private Table_Info _activeTable;
         public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }

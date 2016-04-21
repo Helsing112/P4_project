@@ -39,7 +39,7 @@ namespace ConsoleApplication5
             this.SuspendLayout();
             this.ClientSize = input_rect.Size;
             NumberWheel wheel = new NumberWheel(new Rectangle(0, 0, input_rect.Width, input_rect.Height));
-            wheel.On_Pie_Clicked += PieClicked;
+            wheel.OnPieClicked += PieClicked;
             Controls.Add(wheel);
 
             GraphicsPath graphics = new GraphicsPath();

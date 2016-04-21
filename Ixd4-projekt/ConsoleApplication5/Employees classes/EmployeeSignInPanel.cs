@@ -22,26 +22,27 @@ namespace ConsoleApplication5
         /// </summary>
         private void InitializeComponent()
         {
-            this.Panel_for_employee = new System.Windows.Forms.FlowLayoutPanel();
+            this._panelForEmployee = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(OnPasswordCorrect);
 
             // 
             // Panel_for_employee
             // 
-            this.Panel_for_employee.AutoSize = true;
-            this.Panel_for_employee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._panelForEmployee.AutoSize = true;
+            this._panelForEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
            
-            this.Panel_for_employee.Name = "Panel_for_employee";
+            this._panelForEmployee.Name = "_panelForEmployee";
            
-            this.Panel_for_employee.TabIndex = 0;
-            this.Panel_for_employee.BorderStyle = BorderStyle.Fixed3D;
+            this._panelForEmployee.TabIndex = 0;
+            this._panelForEmployee.BorderStyle = BorderStyle.FixedSingle;
+            
             // 
             // EmployeeSignInPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Panel_for_employee);
+            this.Controls.Add(this._panelForEmployee);
             this.Name = "EmployeeSignInPanel";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -51,7 +52,7 @@ namespace ConsoleApplication5
         private void OnPasswordCorrect(object sender, EmployeeEventArgs e)
         {
             EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
-            this.Panel_for_employee.Controls.Add(temp);
+            this._panelForEmployee.Controls.Add(temp);
             temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
         }
 
@@ -65,8 +66,6 @@ namespace ConsoleApplication5
             }
         }
 
-       
-
-        private System.Windows.Forms.FlowLayoutPanel Panel_for_employee;
+        private FlowLayoutPanel _panelForEmployee;
     }
 }

@@ -15,11 +15,14 @@ namespace ConsoleApplication5
         public Employee employee { get; set; }
         public EmployeeSignInButton(Employee employee)
         {
-            
             this.employee = employee;
             InitializeComponent(employee); 
-
         }
-        
+
+        private void EmployeeSignInButton_Load(object sender, EventArgs e)
+        {
+            this.Size = new Size((Parent.Width-50)/4, (Parent.Height-50)/4);
+            this.Margin = new Padding(5);
+        }
     }
 }
