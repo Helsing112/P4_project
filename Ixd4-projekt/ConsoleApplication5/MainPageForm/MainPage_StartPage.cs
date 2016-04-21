@@ -22,6 +22,7 @@ namespace ConsoleApplication5
             Controls.Add(Admin_login_button);
             Controls.Add(CheckIn_Button);
             Controls.Add(Timer_panel);
+            Controls.Add(Check_Out_button);
 
 
         }
@@ -29,6 +30,7 @@ namespace ConsoleApplication5
         {
             //admin button
             Admin_login_Button(new System.Drawing.Point(12, 100), new System.Drawing.Size(139, 79));
+            Check_Out_Button(new System.Drawing.Point(12, 300), new System.Drawing.Size(139, 79));
             //employee controls
             Employee_signedInPanel(new System.Drawing.Point(350, 100), new System.Drawing.Size(600, 200));
             Check_inButton(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
@@ -39,6 +41,7 @@ namespace ConsoleApplication5
         Button Admin_login_button;
         Button CheckIn_Button;
         TimerInfo Timer_panel;
+        Button Check_Out_button;
 
         #region Draw_startpage methods------------------------------------------------
         public void Employee_signedInPanel(Point location_input, Size size_input)
@@ -49,7 +52,7 @@ namespace ConsoleApplication5
             employee_sign_in_panel.Size = size_input;
 
             Controls.Add(employee_sign_in_panel);
-
+          
         }
     
         public void TimerPanel()
@@ -75,6 +78,29 @@ namespace ConsoleApplication5
 
             Controls.Add(Admin_login_button);
         }
+
+        private void Check_Out_Button(Point location_input, Size size_input)
+        {
+            Check_Out_button = new Button();
+            Check_Out_button.Location = location_input;
+            Check_Out_button.Name = "Check_Out_button";
+            Check_Out_button.Size = size_input;
+            Check_Out_button.TabIndex = 0;
+            Check_Out_button.Text = "Check out";
+            Check_Out_button.UseVisualStyleBackColor = true;
+            Check_Out_button.Click += new System.EventHandler(Check_Out_Button_click);
+
+            Controls.Add(Check_Out_button);
+        }
+
+        public bool CheckOutGlobal = false;
+        public void Check_Out_Button_click(object sender, EventArgs e)
+        {
+            CheckOutGlobal = true;                                              /*sender en bool afsted, og hvis bool er true når der trykkes på employee i panel bliver employeeipanel slettet*/
+            EmployeeButton.MethodForCheckOut(CheckOutGlobal);
+
+        }
+
         public void Check_inButton(Point location_input, Size size_input)
         {
           
@@ -94,17 +120,28 @@ namespace ConsoleApplication5
         #region Eventhandlers-----------------------------------------------------
         private void Admin_login_click(object sender, EventArgs e)
         {
+            CheckOutGlobal = false;
+            EmployeeButton.MethodForCheckOut(CheckOutGlobal);
+
+
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library, Size_of_table_panel);
             admin_window.ShowDialog();
         }
         private void CheckInButton_click(object sender, EventArgs e)
         {
+            CheckOutGlobal = false;
+            EmployeeButton.MethodForCheckOut(CheckOutGlobal);
+
             SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
             SignIn.ShowDialog();
+            
         }
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
-            Draw_tablesPage(e.employee); //draws the next page
+
+        
+                Draw_tablesPage(e.employee);
+            
         }
         #endregion
 

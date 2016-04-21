@@ -14,6 +14,7 @@ namespace ConsoleApplication5
     public partial class EmployeeButton : UserControl
     {
         public Employee employee { get; set; }
+      
 
         public EmployeeButton(int size_x, int size_y, Employee employee)
         {
@@ -55,12 +56,28 @@ namespace ConsoleApplication5
 
         public EventHandler<EmployeeEventArgs> ClickEvent;
 
-        protected virtual void EmployeeButtonClick(object sender, EventArgs e)
+      static bool checkout;
+        static public void MethodForCheckOut(bool check)
         {
-            if (this.ClickEvent != null)
+            checkout = check;
+        }
+         
+        public virtual void EmployeeButtonClick(object sender, EventArgs e)
+        {
+
+            if (checkout == true)
             {
-                ClickEvent(this, new EmployeeEventArgs() { employee = employee });
+                this.Dispose();
             }
+
+            else if (checkout == false)
+            {
+                if (this.ClickEvent != null)
+                {
+                    ClickEvent(this, new EmployeeEventArgs() { employee = employee });
+                }
+            }
+            checkout = false;
         }
 
         #endregion
