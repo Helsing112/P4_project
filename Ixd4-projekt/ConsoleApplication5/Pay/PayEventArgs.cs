@@ -8,6 +8,7 @@ namespace ConsoleApplication5
 {
     public class PayEventArgs : EventArgs
     {
-        public decimal temptotal { get; set; }
+        public List<ReceiptProduct> BoughtProducts { get; set; }
+        public Table_Info ActiveTable { get; set; }
     }
 }

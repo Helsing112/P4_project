@@ -18,24 +18,32 @@ namespace ConsoleApplication5
         public decimal PaidAmount { get { return _paidAmount; } //prop for paid amount will update remaining and paid amount labels if set
             private set { _paidAmount = value;
                 Label_Remain_Number.Text = (TotalAmount - PaidAmount).ToString();
-                Label_Paid_number.Text = PaidAmount.ToString();}}
+                label_remaingingText.Text = "Remaining:";
+                Label_Paid_number.Text = PaidAmount.ToString();
+            } }
         public decimal TotalAmount { get { return _totalAmount; }//prop for total amount will update remaining and total amount labels if set
             private set { _totalAmount = value;
                 Label_Remain_Number.Text = (TotalAmount - PaidAmount).ToString();
-                Label_total_Number.Text = TotalAmount.ToString();} }
-        public ReceiptCompleteInfo ReceiptInfo { get; private set; }
+                label_remaingingText.Text = "Remaining:";
+                Label_total_Number.Text = TotalAmount.ToString();
+            }
+        }
+        List<ReceiptProduct> BoughtProducts;
+        public Employee ActiveEmployee { get; private set; }
+        public Table_Info ActiveTable { get; private set; }
+
         public Pay_windowForm()
         {
+            BoughtProducts = new List<ReceiptProduct>();
             InitializeComponent();
             InitializeSplitCompoenets();
-            SubscribeEvents();
-            
+            SubscribeEvents();            
         }
         Panel Panel_splitReceipt;
         Standard_Label Label_SplitTop;
         FlowLayoutPanel Flow_SplitReceipt;
        
-        #region Eventhandlers
+        #region Eventhandlers---------------------------------------------------
         private void SubscribeEvents()
         {
             Flow_receiptMain.ControlAdded += Total_amountHandler;
@@ -155,21 +163,21 @@ namespace ConsoleApplication5
                 Panel_splitReceipt.Parent = null;
                 this.Width -= Panel_receipt.Width + 20;
                 this.CenterToScreen();
-                Create_receipt(ReceiptInfo);
+                Create_receipt(ActiveEmployee,ActiveTable);
                 IsSplitActive = false;
                 Flow_SplitReceipt.Controls.Clear();
             }
         }
-
 
         private void Pay_button_click(object sender, EventArgs e)
         {
             if(Label_EnteredAmount.Text != "")
             {
                 PaidAmount += Decimal.Parse(Label_EnteredAmount.Text);
-                ReceiptInfo.Table.PaidAmount = PaidAmount;
+                ActiveTable.PaidAmount = PaidAmount;
                 Label_EnteredAmount.Text = "";
             }
+            IsTheProductsPaidFor();
         }
 
         private void Clear_numpad_click(object sender, EventArgs e)
@@ -193,9 +201,13 @@ namespace ConsoleApplication5
         {
             this.Hide();
             DeActivateSplit();
+
             Flow_SplitReceipt.Controls.Clear();
             Flow_receiptMain.Controls.Clear();
+            this.PaidAmount = 0;
+            this.TotalAmount = 0;
         }
+
         private void Total_amountHandler(object sender, ControlEventArgs e)
         {
             Update_TotalAmount();
@@ -222,25 +234,52 @@ namespace ConsoleApplication5
         #endregion
 
 
+        private void IsTheProductsPaidFor()
+        {
+            if(PaidAmount >= TotalAmount)
+            {
+                ProductsHasBeenBought();
+            }
+        }
 
-        private void Create_receipt(ReceiptCompleteInfo paymentInfo)
+        private void ProductsHasBeenBought()
+        {
+            decimal saveRemaingingAmount = TotalAmount - PaidAmount;
+            List<ProductButtonInPayReceipt> BoughtControls = Flow_receiptMain.Controls.OfType<ProductButtonInPayReceipt>().ToList();
+            foreach (ProductButtonInPayReceipt item in BoughtControls)
+            {
+                BoughtProducts.Add(new ReceiptProduct(item.Product_input.Product, item.Amount_to_represent));
+                item.Parent = null;              
+            }
+            if (ProductsPaid != null)
+            {
+                ProductsPaid(this, new PayEventArgs() { BoughtProducts = this.BoughtProducts, ActiveTable = this.ActiveTable });
+                BoughtProducts = new List<ReceiptProduct>();
+                PaidAmount = 0;
+                label_remaingingText.Text = "Pay Back:";
+                Label_Remain_Number.Text = saveRemaingingAmount.ToString();
+            }
+        }
+        public event EventHandler<PayEventArgs> ProductsPaid;
+
+        private void Create_receipt(Employee ActiveEmployee, Table_Info ActiveTable)
         {
             Flow_receiptMain.Controls.Clear();
-            this.ReceiptInfo = paymentInfo;
-            foreach (var item in paymentInfo.Table.TableReceipt)
+            this.ActiveEmployee = ActiveEmployee;
+            this.ActiveTable = ActiveTable;
+            foreach (var item in ActiveTable.TableReceipt)
             {
                 ProductButtonInPayReceipt tempBut = new ProductButtonInPayReceipt(Flow_receiptMain.Size.Width - 20, 50, item);
                 tempBut.ProductClick += ProductClickHandler;
                 Flow_receiptMain.Controls.Add(tempBut);
             }
-            PaidAmount = paymentInfo.Table.PaidAmount;//Gets any paid amount that there has been paid in previous payments
 
-            Label_tableInfo.Text = "Table: " + paymentInfo.Table.Table_name;
+            Label_tableInfo.Text = "Table: " + ActiveTable.Table_name;
         }
 
-        internal void Show_Pay_window(ReceiptCompleteInfo paymentInfo)
+        internal void Show_Pay_window(Employee ActiveEmployee, Table_Info ActiveTable)
         {
-            Create_receipt(paymentInfo);
+            Create_receipt(ActiveEmployee, ActiveTable);
             this.ShowDialog();
         }
         private void InitializeSplitCompoenets()

@@ -22,8 +22,6 @@ namespace ConsoleApplication5
 
         public delegate void TotalTableTabEventhandler(object source, PayEventArgs args);
 
-        public event TotalTableTabEventhandler TotalTabelTab;
-
         public ProductButtonInPayReceipt(int size_x, int size_y, ReceiptProduct product)
         {
             Product_input = product;

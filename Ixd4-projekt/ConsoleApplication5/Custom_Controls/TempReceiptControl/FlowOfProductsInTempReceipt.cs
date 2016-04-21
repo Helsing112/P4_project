@@ -93,7 +93,7 @@ namespace ConsoleApplication5
             foreach (ProductButtonInFlowTempReciept item in this.flowLayoutPanel1.Controls)
             {
                 ReceiptProduct temp_product = new ReceiptProduct(item.Product_input, item.Amount_to_represent);
-                TableInfoToOverride.TableReceipt.Add(temp_product);
+                TableInfoToOverride.AddReceiptProducts(temp_product);
             }
         }
         public List<ReceiptProduct> GetReceiptContent()
