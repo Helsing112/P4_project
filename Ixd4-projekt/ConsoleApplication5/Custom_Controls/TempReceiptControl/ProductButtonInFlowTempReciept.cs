@@ -70,6 +70,7 @@ namespace ConsoleApplication5
             float percent_ButMin = 0.45F;
             float percent_ButMore = 0.60F;
             float percent_LP = 0.70F;
+            
 
             this.label_describtion = new System.Windows.Forms.Label();
             this.Label_amount = new System.Windows.Forms.Label();

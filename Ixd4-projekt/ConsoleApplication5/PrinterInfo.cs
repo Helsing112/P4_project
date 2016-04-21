@@ -36,11 +36,10 @@ namespace ConsoleApplication5
             }
             catch (Exception ex)
             {
-
-               
+                
             }
-        
-    }
+
+        }
         public void MethodThatDoesThePrinting(object sender, PrintPageEventArgs ev)
         {
 

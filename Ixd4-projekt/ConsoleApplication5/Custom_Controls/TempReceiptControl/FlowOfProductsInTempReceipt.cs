@@ -104,6 +104,7 @@ namespace ConsoleApplication5
                 ProductButtonInFlowTempReciept temp_but = (ProductButtonInFlowTempReciept)item;
                 ReceiptProduct temp_product = new ReceiptProduct(temp_but.Product_input, temp_but.Amount_to_represent);
                 List.Add(temp_product);
+                
             }
 
             return List;

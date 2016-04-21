@@ -49,15 +49,16 @@ namespace ConsoleApplication5
             TotalPrice = (Product_input.Product.Price * Amount_to_represent);
             this.Label_amount.Text = "x" + Amount_to_represent.ToString();
             this.Label_price.Text = TotalPrice.ToString() + ",-";
+
         }
 
         private void InitializeComponent()
         {
             float percent_LA = 0.55F;
             float percent_ButMin = 0.45F;
-            float percent_ButMore = 0.60F;
+            float percent_ButMore = 0.65F;
             float percent_LP = 0.70F;
-
+            
             components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 
@@ -91,7 +92,7 @@ namespace ConsoleApplication5
             this.Label_amount.Name = "Label_amount";
             this.Label_amount.Padding = new System.Windows.Forms.Padding(1);
             this.Label_amount.TabIndex = 1;
-            this.Label_amount.Text = "x" + Amount_to_represent;
+            this.Label_amount.Text =/* "x" + */Amount_to_represent.ToString();
             this.Label_amount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label_amount.Click += new System.EventHandler(this.label_Click);
             #endregion
