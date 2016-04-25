@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Drawing.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,44 +14,46 @@ namespace ConsoleApplication5
 {
     public partial class PieOnNumberWheel : UserControl
     {
-        private Color prev_color { get; set; }
-        public string Text_To_Label { get; set; }
-        public PieOnNumberWheel(Rectangle rektangle, int start_pos_angle, int Sweep_angle, float posx, float posy, int number_on_wheel)
+        private Color PrevColor { get; set; }
+        public string TextToLabel { get; set; }
+        public PieOnNumberWheel(Rectangle rektangle, int startPosAngle, int sweepAngle, float posX, float posY, int numberOnWheel)
         {
-            _posx = posx;
-            _posy = posy;
-            _number = number_on_wheel + 2;
-            InitializeComponent(rektangle,start_pos_angle, Sweep_angle);
+            _posx = posX;
+            _posy = posY;
+            _number = numberOnWheel + 2;
+            InitializeComponent(rektangle,startPosAngle, sweepAngle);
 
 
             this.MouseEnter += PieOnNumberWheel_MouseEnter;
             this.MouseLeave += PieOnNumberWheel_MouseLeave;
 
         }
-        private float _posx;
-        private float _posy;
-        private int _number;
-        private void InitializeComponent(Rectangle rektangle, int start_pos_angle, int Sweep_angle)
+        private readonly float _posx;
+        private readonly float _posy;
+        private readonly int _number;
+        private void InitializeComponent(Rectangle rektangle, int startPosAngle, int sweepAngle)
         {
             this.Height = rektangle.Height;
             this.Width = rektangle.Width;
             this.SuspendLayout();
-            GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);                        
+            GraphicsPath graphics = new GraphicsPath(FillMode.Alternate);
 
             // sets the properties of the numbers on the wheel
             string stringText = _number.ToString();
             FontFamily family = new FontFamily("Segoe UI");
-            int fontStyle = (int)FontStyle.Bold;
-            int emSize = 35;
+            const int fontStyle = (int)FontStyle.Bold;
+            const int emSize = 35;
             PointF origin = new PointF(_posx, _posy);
             StringFormat format = StringFormat.GenericDefault;
             format.Alignment = StringAlignment.Center;
             format.LineAlignment = StringAlignment.Center;
             graphics.AddString(stringText, family, fontStyle, emSize, origin, format);
-            graphics.CloseFigure();
-            graphics.AddPie(rektangle.Location.X, rektangle.Location.Y, rektangle.Width, rektangle.Height, start_pos_angle, Sweep_angle); //standard method for drawing a pie
-            graphics.CloseFigure();
+            // numbers have been drawn
+            
+            graphics.AddPie(rektangle.Location.X, rektangle.Location.Y, rektangle.Width, rektangle.Height, startPosAngle, sweepAngle); //standard method for drawing a pie
+
             this.Region = new Region(graphics);
+
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Name = "UserControl1";
             this.ResumeLayout(false);
@@ -58,12 +61,12 @@ namespace ConsoleApplication5
 
         private void PieOnNumberWheel_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = prev_color;
+            this.BackColor = PrevColor;
         }
 
         private void PieOnNumberWheel_MouseEnter(object sender, EventArgs e)
         {
-            prev_color = this.BackColor;
+            PrevColor = this.BackColor;
             this.BackColor = Color.Yellow;
         }
     }

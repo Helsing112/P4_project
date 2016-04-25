@@ -22,6 +22,8 @@ namespace ConsoleApplication5
             InitializeComponent();
             _path = path_of_employees;
             this.Add_Employee_Button.Button_Click += new System.EventHandler(this.button1_Click);
+            this.quit_Close_Button1.Button_Click += new EventHandler(quit_Close_Button1_Click);
+
             this.Name_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeeNametextBox_TextChanged);
             this.ID_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
             this.Password_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeePasswordtextBox_TextChanged);
@@ -33,16 +35,24 @@ namespace ConsoleApplication5
         {
 
             Employee_Library creator = new Employee_Library();
-            Employee _Employee = new Employee();
-            _Employee.EmployeeName = Name_TextBox.textBox1.Text;
-            _Employee.EmployeeID = int.Parse(ID_TextBox.textBox1.Text);
-            _Employee.EmployeePassword = Password_TextBox.textBox1.Text;
-            creator.Create_File_And_directory<Employee>(_path, _Employee);
+            Employee employee = new Employee
+            {
+                EmployeeName = Name_TextBox.textBox1.Text,
+                EmployeeID = int.Parse(ID_TextBox.textBox1.Text),
+                EmployeePassword = Password_TextBox.textBox1.Text
+            };
+
+            creator.Create_File_And_directory<Employee>(_path, employee);
             Password_TextBox.textBox1.Clear();
             ID_TextBox.textBox1.Clear();
             Name_TextBox.textBox1.Clear();
 
             Messages.ConfirmedAddEmployeees();
+        }
+
+        private void quit_Close_Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Enable_Add_Button()

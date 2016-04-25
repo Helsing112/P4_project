@@ -18,18 +18,17 @@ namespace ConsoleApplication5
         {
             InitializeComponent(size_x, size_y);
             FillEmployeeHodler(path);
-            
         }
         
         private void FillEmployeeHodler(string path)
         {
             DirectoryInfo Employer = new DirectoryInfo(path);
-               foreach (var item in Employer.GetFiles())
+
+            foreach (var item in Employer.GetFiles())
             {
                 Employee Waiter =  XmlEmployeeReader.Read_Employee<Employee>(item.FullName);
                 CreateEmployeeButton(Waiter);
-            }        
-
+            }
         }
 
         private void CreateEmployeeButton(Employee EMP)
@@ -39,13 +38,12 @@ namespace ConsoleApplication5
             EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP);
             dynamicButton.Textlabel = EMP.EmployeeName;
             // Set Button properties
-
             // Add a Button Click Event handler
             dynamicButton.Button_Click += EmployeeButtonClick;
+            dynamicButton.Anchor = AnchorStyles.None;
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             EmployeeHolder.Controls.Add(dynamicButton);
-            
         }
         
 
@@ -54,7 +52,7 @@ namespace ConsoleApplication5
             EmployeeSignInButton temp = (EmployeeSignInButton)sender;
             employeeinput = temp.employee;
             Controls.Clear();
-           
+            
             //LABEL TIL PASSWORD, DER SKRIVER EMPLOYEE'S NAVN.
             Standard_Label Create_Label = new Standard_Label();
                 Create_Label.AutoSize = true;
@@ -63,7 +61,6 @@ namespace ConsoleApplication5
                 Create_Label.Size = new System.Drawing.Size(168, 20);
                 Create_Label.TabIndex = 1;
                 Create_Label.Text = employeeinput.EmployeeName;
-
 
                 Controls.Add(Create_Label);
 
@@ -101,12 +98,13 @@ namespace ConsoleApplication5
 
 
         }
-        public Quit_Close_Button quit_button;
+        public Quit_Close_Button quit_button; 
         TextBox EmployeeButtonClickTextbox;
 
         public void quit_Click(object sender, EventArgs e)
         {
-           MessageBox.Show("Press alt+f4");
+            ((Form)this.TopLevelControl).Hide();
+            
         }
 
         public void Log_In_Click(object sender, EventArgs e)
@@ -114,10 +112,11 @@ namespace ConsoleApplication5
             
             if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.Text)
             {
-                OnPasswordCorrect(sender, e);
-                        
+                OnPasswordCorrect(sender, e);     
             }
-            else {
+
+            else
+            {
                 Messages.WrongPassword();
             }
         }
@@ -130,7 +129,6 @@ namespace ConsoleApplication5
             {
                 PasswordCorrect(this, new EmployeeEventArgs() { employee = employeeinput });
             }
-
         }
 
         
@@ -146,12 +144,14 @@ namespace ConsoleApplication5
             // 
             // EmployeeHolder
             // 
+
             this.EmployeeHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeHolder.Location = new System.Drawing.Point(0, 0);
             this.EmployeeHolder.Name = "EmployeeHolder";
             this.EmployeeHolder.Width = size_x;
             this.EmployeeHolder.Height = size_y;
             this.EmployeeHolder.TabIndex = 0;
+            this.EmployeeHolder.Padding = new Padding(5);
             // 
             // EmployeesReader
             // 
@@ -164,7 +164,5 @@ namespace ConsoleApplication5
             this.ResumeLayout(false);
 
         }
-
     }
-
 }

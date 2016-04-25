@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace ConsoleApplication5
 {
-    public partial class Main_page
+    partial class MainPage
     {
         /// <summary>
         /// Clears all controls and Draws the starting page of the main window 
@@ -22,70 +22,100 @@ namespace ConsoleApplication5
             Controls.Add(Admin_login_button);
             Controls.Add(CheckIn_Button);
             Controls.Add(Timer_panel);
-
+            Controls.Add(checkOutButton);
 
         }
         private void Initialize_Field_Controls_startPage()
         {
             //admin button
-            Admin_login_Button(new System.Drawing.Point(12, 100), new System.Drawing.Size(139, 79));
+            Admin_login_Button(new Point(50, 100), new Size(200, 100));
             //employee controls
-            Employee_signedInPanel(new System.Drawing.Point(350, 100), new System.Drawing.Size(600, 200));
-            Check_inButton(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
+            Employee_signedInPanel(new Point(450, 100), new Size(600, 200));
+            Check_inButton(new Point(50, 250), new Size(200, 100));
+            CheckOutButtonAdd(new Point(50, 400), new Size(200, 100));
+
+            InitilizeSignInOnJobWindow();
+
             TimerPanel();
         }
+
+
+
         //Field of controls
-        EmployeeSignInPanel employee_sign_in_panel;
+        SignInPanelControl employee_sign_in_panel;
         Button Admin_login_button;
-        Button CheckIn_Button;
+        CheckInButton CheckIn_Button;
         TimerInfo Timer_panel;
+        CheckOutButton checkOutButton;
+        private SignInOnJobWindow SignIn;
+
 
         #region Draw_startpage methods------------------------------------------------
+        private void InitilizeSignInOnJobWindow()
+        {
+            SignIn = new SignInOnJobWindow(Path_of_Employee_library);
+        }
         public void Employee_signedInPanel(Point location_input, Size size_input)
         {
-            employee_sign_in_panel = new EmployeeSignInPanel();
-            employee_sign_in_panel.EmployeeSignedInClickEvent += new EventHandler<EmployeeEventArgs>(EmployesignedInEventClickButton);
+            employee_sign_in_panel = new SignInPanelControl();
+            employee_sign_in_panel.Employeepanel.EmployeeSignedInClickEvent += new EventHandler<EmployeeEventArgs>(EmployesignedInEventClickButton);
             employee_sign_in_panel.Location = location_input;
             employee_sign_in_panel.Size = size_input;
 
             Controls.Add(employee_sign_in_panel);
 
         }
+
+        public void CheckOutButtonAdd(Point location, Size size)
+        {
+            checkOutButton = new CheckOutButton
+            {
+                Location = location,
+                Size = size
+            };
+            checkOutButton.Button_Click += new System.EventHandler(CheckoutButtonClick);
+
+        }
     
         public void TimerPanel()
         {
-         Timer_panel = new TimerInfo();
-         Timer_panel.Location = new System.Drawing.Point(1100, 0);
-            Timer_panel.BorderStyle = BorderStyle.Fixed3D;
-            Timer_panel.Size = new System.Drawing.Size(250, 100);
+            Timer_panel = new TimerInfo
+            {
+                Location = new Point(1100, 0),
+                BorderStyle = BorderStyle.Fixed3D,
+                Size = new Size(250, 100),
+                Dock = DockStyle.Top,
+            };
             Controls.Add(Timer_panel);
 
         }
 
         private void Admin_login_Button(Point location_input, Size size_input)
         {
-            Admin_login_button = new Button();
-            Admin_login_button.Location = location_input;
-            Admin_login_button.Name = "Admin_login_button";
-            Admin_login_button.Size = size_input;
-            Admin_login_button.TabIndex = 0;
-            Admin_login_button.Text = "Admin";
-            Admin_login_button.UseVisualStyleBackColor = true;
+            Admin_login_button = new Button
+            {
+                Location = location_input,
+                Name = "Admin_login_button",
+                Size = size_input,
+                TabIndex = 0,
+                Text = "Admin",
+                UseVisualStyleBackColor = true
+            };
             Admin_login_button.Click += new System.EventHandler(Admin_login_click);
 
             Controls.Add(Admin_login_button);
         }
         public void Check_inButton(Point location_input, Size size_input)
         {
-          
-            CheckIn_Button = new Button();
-            CheckIn_Button.Location = location_input;
-            CheckIn_Button.Name = "CheckInButton";
-            CheckIn_Button.Size = size_input;
-            CheckIn_Button.TabIndex = 0;
-            CheckIn_Button.Text = "CheckIn";
-            CheckIn_Button.UseVisualStyleBackColor = true;
-            CheckIn_Button.Click += new System.EventHandler(CheckInButton_click);
+
+            CheckIn_Button = new CheckInButton
+            {
+                Location = location_input,
+                Name = "CheckInButton",
+                Size = size_input,
+                TabIndex = 0,
+            };
+            CheckIn_Button.Button_Click += new System.EventHandler(CheckInButton_click);
 
             Controls.Add(CheckIn_Button);
         }
@@ -99,9 +129,17 @@ namespace ConsoleApplication5
         }
         private void CheckInButton_click(object sender, EventArgs e)
         {
-            SignInOnJobWindow SignIn = new SignInOnJobWindow(Path_of_Employee_library);
             SignIn.ShowDialog();
+            //EmployeeLoginTest test = new EmployeeLoginTest(Path_of_Employee_library);
+            //test.ShowDialog();
         }
+
+        private void CheckoutButtonClick(object sender, EventArgs e)
+        {
+            // lol
+        }
+
+        
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
             Draw_tablesPage(e.employee); //draws the next page

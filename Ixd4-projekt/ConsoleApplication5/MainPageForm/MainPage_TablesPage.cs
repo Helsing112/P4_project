@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class Main_page
+    public partial class MainPage
     {
 
         private Employee _employee;
@@ -44,13 +44,15 @@ namespace ConsoleApplication5
         }
         public void BackToFrontPage_button(Point Location_input, Size size_input)
         {
-            BackToFrontPageButton = new Button();
-            BackToFrontPageButton.Location = Location_input;
-            BackToFrontPageButton.Name = "CheckInButton";
-            BackToFrontPageButton.Size = size_input;
-            BackToFrontPageButton.TabIndex = 0;
-            BackToFrontPageButton.Text = "Back";
-            BackToFrontPageButton.UseVisualStyleBackColor = true;
+            BackToFrontPageButton = new Button
+            {
+                Location = Location_input,
+                Name = "CheckInButton",
+                Size = size_input,
+                TabIndex = 0,
+                Text = "Back",
+                UseVisualStyleBackColor = true
+            };
             BackToFrontPageButton.Click += new System.EventHandler(BackToFrontPage_click);
         }
         #endregion
@@ -58,7 +60,7 @@ namespace ConsoleApplication5
         #region Eventhandlers-----------------------------
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
-            Timer_panel.DeleteNameAndTablesFromTimer();
+            // Timer_panel.DeleteNameAndTablesFromTimer();
             Draw_startPage(); //returns to the start page
 
         }
