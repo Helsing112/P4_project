@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Pay\ReceipCompletetInfo.cs" />
     <Compile Include="Pay\ReceiptProduct.cs" />
+    <Compile Include="PrinterInfo.cs" />
     <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,7 +70,7 @@
     <Compile Include="MainPageForm\MainPage_StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pay\Mortens Shit\PayEventArgs.cs" />
+    <Compile Include="Pay\PayEventArgs.cs" />
     <Compile Include="Pay\Mortens Shit\PayWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -505,6 +506,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Library\" />
+    <Folder Include="Print\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">

@@ -24,15 +24,8 @@ namespace ConsoleApplication5
     }
     public abstract class Table_Control : Button //the superclass of the buttons. Should ONLY contain the general aestethics
     {
-        sealed public override Color BackColor
-        {
-            get
-            {
-                return Color.Blue;
-            }
-            set { }
-        }
-
+        public Color OccupiedColor = Color.Yellow;
+        public Color NOTOccupiedColor = Color.Tomato;
     }
     public class Table_Control_Manager : Table_Control //The table_control for the manager window.
     {
@@ -57,6 +50,24 @@ namespace ConsoleApplication5
         {
             TableInfo = new Table_Info(Table_name);
             this.Text = Table_name;
+            TableInfo.TableReceiptIsEmpty += TableIsNotOcupied;
+            TableInfo.TableReceiptIsNOTEmpty += TableIsOccupied;
+            this.BackColor = NOTOccupiedColor;
+        }
+
+        private void TableIsOccupied(object sender, EventArgs e)
+        {
+            this.BackColor = OccupiedColor;
+        }
+
+        private void TableIsNotOcupied(object sender, EventArgs e)
+        {
+            this.BackColor = NOTOccupiedColor;
+        }
+
+        internal void removeProducts(List<ReceiptProduct> productsToRemove)
+        {
+            TableInfo.RemoveProducts(productsToRemove);
         }
     }
     public class Table_Info //class for the table controls MainPage to store relevant data of the receipt.
@@ -70,6 +81,32 @@ namespace ConsoleApplication5
             TableReceipt = new List<ReceiptProduct>();
         }
 
+        public void AddReceiptProducts(ReceiptProduct ProductToAdd)
+        {
+            TableReceipt.Add(ProductToAdd);
+            if(TableReceipt.Count != 0 && TableReceiptIsNOTEmpty != null)
+            {
+                TableReceiptIsNOTEmpty(this, new EventArgs());
+            }
+        }
+        public event EventHandler TableReceiptIsNOTEmpty;
+        public event EventHandler TableReceiptIsEmpty;
+        internal void RemoveProducts(List<ReceiptProduct> productsToRemove)
+        {
+            foreach (ReceiptProduct item in productsToRemove)
+            {
+                ReceiptProduct temp = TableReceipt.First(x => x.Product.Name == item.Product.Name);
+                temp.Amount -= item.Amount;
+                if (temp.Amount <= 0)
+                {
+                    TableReceipt.RemoveAll(x => x.Product.Name == item.Product.Name);
+                }
+            }
+            if (TableReceipt.Count == 0 && TableReceiptIsEmpty != null)
+            {
+                TableReceiptIsEmpty(this, new EventArgs());
+            }
+        }
     }
 
 }

@@ -33,16 +33,15 @@ namespace ConsoleApplication5
         }
         public void UpdateTableName(Table_Info table)
         {
-            if (table.Table_name== null)
-            {
-                NameTextBox.Text = "";
-            }
-            else
+
+            try
             {
                 TableInfo.Text = (table.Table_name);
             }
-
-            
+            catch (NullReferenceException)
+            {
+                NameTextBox.Text = "";
+            }            
         }
         public void DeleteNameAndTablesFromTimer()
         {

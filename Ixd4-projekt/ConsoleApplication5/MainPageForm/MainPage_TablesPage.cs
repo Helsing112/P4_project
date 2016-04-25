@@ -66,6 +66,7 @@ namespace ConsoleApplication5
         {
             Table_Control_MainPage temp_control = (Table_Control_MainPage)sender;
             Draw_CreateReceipt(ActiveEmployee, temp_control.TableInfo);
+           
         }
         #endregion
     }
