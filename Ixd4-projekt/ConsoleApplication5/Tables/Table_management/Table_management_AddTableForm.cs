@@ -13,7 +13,6 @@ namespace ConsoleApplication5
     public partial class Table_management_AddTableForm : Form
     {
         private Table_Control_Manager activePreview;
-        private Control activePreviewPreviousParent;
         public Table_management_AddTableForm()
         {
             InitializeComponent();
@@ -34,12 +33,15 @@ namespace ConsoleApplication5
             try
             {
                 tmp_control = temp_form.activePreview.CloneForAddConfirm();
+
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
-                return tmp_control;
+
             }
-            return tmp_control; 
+
+            return tmp_control;
+
         }
         private void ReadTypeFile_AddToPanel()
         {
@@ -80,7 +82,14 @@ namespace ConsoleApplication5
         public EventHandler ButtonConfirmClick;
         private void button_add_confirm_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(textBox_NumberInput.Text != "")
+            {
+                this.Close();
+            }
+            else
+            {
+                Messages.TableTypeSaveNoNameDenied();
+            }
         }        
 
         private void button_quit_Click(object sender, EventArgs e)

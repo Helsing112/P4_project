@@ -46,33 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeLoginTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeLoginTest.Designer.cs">
-      <DependentUpon>EmployeeLoginTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckInButton.cs">
+    <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckInButton.Designer.cs">
-      <DependentUpon>CheckInButton.cs</DependentUpon>
+    <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.Designer.cs">
+      <DependentUpon>AdminFunctionButtons.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckOutButton.cs">
+    <Compile Include="Windows_Forms\AdminWindomUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckOutButton.Designer.cs">
-      <DependentUpon>CheckOutButton.cs</DependentUpon>
+    <Compile Include="Windows_Forms\AdminWindomUserControl.Designer.cs">
+      <DependentUpon>AdminWindomUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Pay\ReceipCompletetInfo.cs" />
     <Compile Include="Pay\ReceiptProduct.cs" />
     <Compile Include="PrinterInfo.cs" />
-    <Compile Include="SignInPanelControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SignInPanelControl.Designer.cs">
-      <DependentUpon>SignInPanelControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,19 +79,13 @@
     <Compile Include="Standard layouts\Buttons\Pay Buttons\Discount_buttons.Designer.cs">
       <DependentUpon>Discount_buttons.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPageForm\MainPage_StartPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MainPageForm\MainPage_StartPage.cs" />
     <Compile Include="Pay\PayEventArgs.cs" />
     <Compile Include="Pay\Mortens Shit\PayWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPageForm\MainPage_TablesPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainPageForm\MainPage_CreateReceipt.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MainPageForm\MainPage_TablesPage.cs" />
+    <Compile Include="MainPageForm\MainPage_CreateReceipt.cs" />
     <Compile Include="Pay\Mortens Shit\PayWindow.Designer.cs">
       <DependentUpon>PayWindow.cs</DependentUpon>
     </Compile>
@@ -162,9 +144,7 @@
     <Compile Include="Standard layouts\Buttons\Quit_Close_Button.Designer.cs">
       <DependentUpon>Quit_Close_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\Save_Create_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Standard layouts\Buttons\Save_Create_Button.cs" />
     <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </Compile>
@@ -369,11 +349,9 @@
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom_Controls\ProductEventArgs.cs" />
-    <Compile Include="MainPageForm\MainPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainPageForm\MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <Compile Include="MainPageForm\Main_page.cs" />
+    <Compile Include="MainPageForm\Main_page.Designer.cs">
+      <DependentUpon>Main_page.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Windows_Forms\CompleteLibraryReader.cs">
@@ -399,15 +377,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EmployeeLoginTest.resx">
-      <DependentUpon>EmployeeLoginTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\CheckInButton.resx">
-      <DependentUpon>CheckInButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\CheckOutButton.resx">
-      <DependentUpon>CheckOutButton.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,14 +386,14 @@
     <EmbeddedResource Include="Pay\Pay_windowForm.resx">
       <DependentUpon>Pay_windowForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignInPanelControl.resx">
-      <DependentUpon>SignInPanelControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Add_Button.resx">
       <DependentUpon>Add_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\AdminFunctionButtons.resx">
+      <DependentUpon>AdminFunctionButtons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Back_Button.resx">
       <DependentUpon>Back_Button.cs</DependentUpon>
@@ -520,6 +489,9 @@
     <EmbeddedResource Include="Employees classes\SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\AdminWindomUserControl.resx">
+      <DependentUpon>AdminWindomUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
     </EmbeddedResource>
@@ -532,8 +504,8 @@
     <EmbeddedResource Include="Custom_Controls\ProductButtonCtrl.resx">
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPageForm\MainPage.resx">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <EmbeddedResource Include="MainPageForm\Main_page.resx">
+      <DependentUpon>Main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\XmlFileAdder.resx">
       <DependentUpon>XmlFileAdder.cs</DependentUpon>
@@ -553,9 +525,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\placeholder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\checkin.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

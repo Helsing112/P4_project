@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
-using System.Drawing;
 
 namespace ConsoleApplication5
 {
@@ -256,6 +255,7 @@ namespace ConsoleApplication5
             if (ProductsPaid != null)
             {
                 ProductsPaid(this, new PayEventArgs() { BoughtProducts = this.BoughtProducts, ActiveTable = this.ActiveTable });
+                PrinterInfo.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, BoughtProducts, TotalAmount);
                 BoughtProducts = new List<ReceiptProduct>();
                 PaidAmount = 0;
                 label_remaingingText.Text = "Pay Back:";

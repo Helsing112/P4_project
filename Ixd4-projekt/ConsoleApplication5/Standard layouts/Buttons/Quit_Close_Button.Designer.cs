@@ -38,8 +38,9 @@
             // 
             // Quit_Close_Button
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Quit_Close_Button";
             this.Textlabel = "Quit";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

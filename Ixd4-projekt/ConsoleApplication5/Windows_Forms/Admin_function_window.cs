@@ -21,10 +21,14 @@ namespace ConsoleApplication5
             InitializeComponent();
             path_input = path;
             login_Button1.Enabled = false;
+            AdminControl = new AdminWindomUserControl(path_input, Size_for_table_panel);
+            AdminControl.quit_Close_Button1.Button_Click += button2_Click;
+
         }
 
         private void InitializeComponent()
         {
+
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.login_Button1 = new  Login_Button();
             this.quit_Close_Button1 = new  Quit_Close_Button();
@@ -52,7 +56,7 @@ namespace ConsoleApplication5
             this.login_Button1.Textlabel = "Login";
             this.login_Button1.Button_Click += new System.EventHandler(this.button1_Click);
             // 
-            // quit_Close_Button1
+            // quit_Close_Button1    
             // 
             this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button1.Image_set = null;
@@ -78,14 +82,19 @@ namespace ConsoleApplication5
         }
 
         private System.Windows.Forms.TextBox txtPassword;
-
+        private AdminWindomUserControl AdminControl;
         private void start()
         {
-            this.Size = new Size(1200, 800);
+            Controls.Clear();
+
+            //this.Size = new Size(1200, 800);
+            //this.CenterToScreen();
+            //Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input, Size_for_table_panel);
+            //admin_edit.Quit_button.Click += new EventHandler(button2_Click);
+            //Controls.Add(admin_edit);
+          
             this.CenterToScreen();
-            Admin_Edit_ctrl admin_edit = new Admin_Edit_ctrl(path_input, Size_for_table_panel);
-            admin_edit.Quit_button.Click += new EventHandler(button2_Click);
-            Controls.Add(admin_edit);
+           Controls.Add(AdminControl);
         }
 
         private void Activate_Login_Button()
@@ -105,10 +114,12 @@ namespace ConsoleApplication5
         {
             if (txtPassword.Text == "password")
             {
-                Controls.Clear();
                 start();
+             
+              
             }
-            else {
+            else
+            {
               Messages.WrongPassword();
             }
         }

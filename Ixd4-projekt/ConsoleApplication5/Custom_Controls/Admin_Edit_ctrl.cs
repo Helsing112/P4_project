@@ -26,6 +26,7 @@ namespace ConsoleApplication5
             Starting_lib_path = path;
             InitializeComponent();
             start();
+
         }
         private void start()
         {
@@ -34,20 +35,20 @@ namespace ConsoleApplication5
             Controls.Clear();
             Create_static_controls();
             DirectoryInfo mapper = new DirectoryInfo(path);
-            foreach (var item in mapper.GetDirectories())
-            {
-                CreateDynamicButton(i.ToString(), item.Name, 80, 80 * i);
-                i++;
-            }
-            foreach (var item in mapper.GetFiles())
-            {
-                CreateDynamicLabel(i.ToString(), item.Name, 80, 80 * i);
-                i++;
-            }
-            if (i == 0)
-            {
-                CreateDynamicLabel(i.ToString(), "No products to show", 80, 80 * i);
-            }
+            //foreach (var item in mapper.GetDirectories())
+            //{
+            //    CreateDynamicButton(i.ToString(), item.Name, 80, 80 * i);
+            //    i++;
+            //}
+            //foreach (var item in mapper.GetFiles())
+            //{
+            //    CreateDynamicLabel(i.ToString(), item.Name, 80, 80 * i);
+            //    i++;
+            //}
+            //if (i == 0)
+            //{
+            //    CreateDynamicLabel(i.ToString(), "No products to show", 80, 80 * i);
+            //}
         }
 
         private void Create_static_controls()
@@ -181,17 +182,14 @@ namespace ConsoleApplication5
         private void Edit_button_click(object sender, EventArgs e)
         {
 
-            if (Application.OpenForms.OfType<XmlFileAdder>().Count() == 1)
+            if (Application.OpenForms.OfType<ProductAdderForm>().Count() == 1)
             {
-                Application.OpenForms.OfType<XmlFileAdder>().First().BringToFront();
+                Application.OpenForms.OfType<ProductAdderForm>().First().BringToFront();
             }
-
-
-            else {
-
-            XmlFileAdder Editor = new XmlFileAdder(path);
+            else
+            {
+            ProductAdderForm Editor = new ProductAdderForm();
             Editor.ShowDialog();
-                Editor.TopMost = true;
             }
         }
 

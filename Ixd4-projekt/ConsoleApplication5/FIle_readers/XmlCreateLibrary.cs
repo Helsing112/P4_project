@@ -35,7 +35,7 @@ namespace ConsoleApplication5
         public static void Create_File_TEST<T>(string Path, T Content)
         {
             XmlSerializer serial = new XmlSerializer(typeof(T));
-            StreamWriter writer = new StreamWriter(Path + "\\Products_TEST");
+            StreamWriter writer = new StreamWriter(Path);
             serial.Serialize(writer, Content);
             writer.Close();
         }

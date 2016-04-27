@@ -10,60 +10,96 @@ namespace ConsoleApplication5
 {
     partial class MainPage
     {
+        private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
         public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
-        private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
-        {
-            Controls.Clear();
-            //Creates the receipt from table data
-            ActiveTable = activeTable;
-            Temp_Receipt.Table_receiptReciever(ActiveTable.TableReceipt);
-            //active employee assignment (Property is in another file)
-            ActiveEmployee = activeEmployee;
+        //private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
+        //{
+        //    this.Padding = new Padding();
+        //    Controls.Clear();
+        //    //Creates the receipt from table data
+        //    ActiveTable = activeTable;
+        //    CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
+        //    //active employee assignment (Property is in another file)
+        //    ActiveEmployee = activeEmployee;
 
-            Controls.Add(tree);
-            Controls.Add(Temp_Receipt);
-            Controls.Add(PayButton);
-            Controls.Add(BackToTablesPage); //adds a back button from the tablesPage
+        //    //Controls.Add(treeFood);
+        //    //Controls.Add(treeDrinks);
 
-            Controls.Add(Timer_panel);            
-        }        
-        //Initialize all fields
+        //    Controls.Add(Temp_Receipt);
+        //    Controls.Add(PayButton);
+        //    Controls.Add(BackToTablesPage); //adds a back button from the tablesPage
+
+        //    Controls.Add(Timer_panel);            
+        //}        
+
+        ////Initialize all fields
+        //private void Initialize_Field_Controls_CreateReceipt()
+        //{
+        //    initialize_wheel(400);
+        //    PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
+        //    Initialize_Pay_window();
+        //    Product_trees(new Point(700, 100), new Size(400,700));
+        //    Receipt(new Point(50, 100), new Size(600, 500));
+        //    BackToTablesPage_button();
+        //}
         private void Initialize_Field_Controls_CreateReceipt()
         {
-            initialize_wheel(400);
-            PayButtoninitialize(new System.Drawing.Point(12, 345), new System.Drawing.Size(139, 79));
-            Initialize_Pay_window();
-            Product_tree(new Point(300, 300), new Size(500,500));
-            Receipt(new Point(800, 300), new Size(500, 500));
-            BackToTablesPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
-        }
+            CreateReceipt = new TEST();
+            CreateReceipt.Location = new Point(0, 0);
+            CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
+            CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
+            CreateReceipt.ProductView_Drinks.MouseUpped += MouseUpReciever;
+            CreateReceipt.ProductView_Drinks.MouseDowned += MouseDownReciever;
 
+            initialize_wheel(400);
+
+            CreateReceipt.Pay_Button.Button_Click += PayButton_click;
+            CreateReceipt.Button_BackToTable.Button_Click += BackToTablesPage_click;
+
+            PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
+            Initialize_Pay_window();
+            Product_trees(new Point(700, 100), new Size(400, 700));
+            BackToTablesPage_button();
+        }
+        private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
+        {
+            ActiveEmployee = activeEmployee;
+            ActiveTable = activeTable;
+
+            Controls.Clear();
+            CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
+
+            Controls.Add(CreateReceipt);
+            
+        }
+        TEST CreateReceipt;
         //Fields controls
-        TreeViewerControl tree;
-        TempReceipt Temp_Receipt;
+        SuperClassProductViewer treeFood;
+        SuperClassProductViewer treeDrinks;
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
         NumberWheelForm Number_wheel;
-        Button PayButton;
+        Pay_Button PayButton;
         Pay_windowForm Pay_window;
-        Button BackToTablesPage;
+        Back_Button BackToTablesPage;
 
 
         #region Intialize methods-------------------------------------------------------
-        public void BackToTablesPage_button(Point Location_input, Size size_input)
+        public void BackToTablesPage_button()
         {
-            BackToTablesPage = new Button();
-            BackToTablesPage.Location = Location_input;
+            BackToTablesPage = new Back_Button();
+            BackToTablesPage.Size = new Size(139,79);
+
+            BackToTablesPage.Location = new Point(this.Width - BackToTablesPage.Width, Screen.PrimaryScreen.Bounds.Height - BackToTablesPage.Height);
+            BackToTablesPage.Padding = new Padding(10);
             BackToTablesPage.Name = "CheckInButton";
-            BackToTablesPage.Size = size_input;
             BackToTablesPage.TabIndex = 0;
-            BackToTablesPage.Text = "Back";
-            BackToTablesPage.UseVisualStyleBackColor = true;
-            BackToTablesPage.Click += new System.EventHandler(BackToTablesPage_click);
+            BackToTablesPage.Textlabel = "Back";
+            BackToTablesPage.Button_Click += new System.EventHandler(BackToTablesPage_click);
         }
 
         private void Initialize_Pay_window()
@@ -76,57 +112,59 @@ namespace ConsoleApplication5
         {
             Number_wheel = new NumberWheelForm(new Rectangle(0, 0, Size_of_wheel, Size_of_wheel));
             Number_wheel.On_Pie_Clicked += Temp_wheel_On_Pie_Clicked;
-        }
-
-        private void Product_tree(Point Location_input, Size size_input)
-        {
-            tree = new TreeViewerControl(size_input.Width, size_input.Height, Path_of_product_library);
-            tree.Location = Location_input;
-            tree.BorderStyle = BorderStyle.Fixed3D;
-            tree.Name = "tree";
-            tree.MouseDowned += MouseDownReciever;
-            tree.MouseUpped += MouseUpReciever;
-        }
-        private void Receipt(Point location_input, Size size_input)
-        {
             Timer_for_wheel_controller = new Timer();
             Timer_for_wheel_controller.Interval = 100;
             Timer_for_wheel_controller.Tick += Timer_for_wheel_controller_Tick;
             Timer_for_wheel = new Timer();
             Timer_for_wheel.Interval = 50;
             Timer_for_wheel.Tick += Timer_for_wheel_Tick;
-            Temp_Receipt = new TempReceipt(size_input.Width, size_input.Height);
-            Temp_Receipt.Location = location_input;
-            Temp_Receipt.BorderStyle = BorderStyle.Fixed3D;
-            Temp_Receipt.Name = "Receipt";
         }
+
+        private void Product_trees(Point Location_input, Size size_input)
+        {
+            treeFood = new SuperClassProductViewer();
+            treeFood.Size = size_input;
+            treeFood.Location = Location_input;
+            treeFood.MouseDowned += MouseDownReciever;
+            treeFood.MouseUpped += MouseUpReciever;
+            treeFood.initializeFlowOfProducts(Properties.Resources.LocationOfProductLib + Properties.Resources.FoodLibFile);
+
+            treeDrinks = new SuperClassProductViewer();
+            treeDrinks.Size = size_input;
+            treeDrinks.Location = new Point(Location_input.X + treeDrinks.Width+20, Location_input.Y);
+            treeDrinks.MouseDowned += MouseDownReciever;
+            treeDrinks.MouseUpped += MouseUpReciever;
+            treeDrinks.initializeFlowOfProducts(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile);
+        }
+
         private void PayButtoninitialize(Point location_input, Size size_input)
         {
-            PayButton = new Button();
+            PayButton = new Pay_Button();
+            PayButton.Padding = new Padding(10);
+
             PayButton.Location = location_input;
             PayButton.Name = "Paybutton";
             PayButton.Size = size_input;
             PayButton.TabIndex = 0;
-            PayButton.Text = "Pay";
-            PayButton.UseVisualStyleBackColor = true;
-            PayButton.Click += new System.EventHandler(PayButton_click);
+            PayButton.Textlabel = "Pay";
+            PayButton.Button_Click += new System.EventHandler(PayButton_click);
         }
         #endregion
 
         #region Eventhandlers---------------------------------
         private void BackToTablesPage_click(object sender, EventArgs e)
         {
-            Temp_Receipt.SaveReceiptToTable(ActiveTable);
+            CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
             ActiveTable = null;
             Draw_tablesPage(ActiveEmployee);
         }
 
         private void PayButton_click(object sender, EventArgs e)
         {
-            Temp_Receipt.SaveReceiptToTable(ActiveTable); //first we save the receipt to the active table
+            CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable); //first we save the receipt to the active table
             Pay_window.Show_Pay_window(ActiveEmployee, ActiveTable);// then we show the pay window with the receipt
         }
-        #region EventHandlers for product click and wheel to add to temp_receipt----------------------------------------------------
+        #region EventHandlers for product click and wheel to add to CreateReceipt.tempReceipt1----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;
         private Point WheelSpawnPointForMouseDown;
@@ -142,7 +180,7 @@ namespace ConsoleApplication5
             if (!timer_has_ticked)
             {
                 Timer_for_wheel.Stop();
-                Temp_Receipt.Add_products(e.product); //Adds products to receipt
+                CreateReceipt.tempReceipt1.Add_products(e.product); //Adds products to receipt
             }
 
         }
@@ -157,7 +195,7 @@ namespace ConsoleApplication5
 
         private void Temp_wheel_On_Pie_Clicked(int number)
         {
-            Temp_Receipt.Add_products(Product_to_add, number);
+            CreateReceipt.tempReceipt1.Add_products(Product_to_add, number);
         }
 
         private void Timer_for_wheel_controller_Tick(object sender, EventArgs e)
@@ -168,7 +206,7 @@ namespace ConsoleApplication5
         private void Pay_window_ProductsPaid(object sender, PayEventArgs e)
         {
             tables_panel.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
-            Temp_Receipt.Table_receiptReciever(ActiveTable.TableReceipt);
+            CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
         }
         #endregion
         #endregion

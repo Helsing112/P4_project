@@ -12,10 +12,13 @@ namespace ConsoleApplication5
 
         #region Table management messages--------------------------------------------------------------------
         public static void ConfirmTableBeenSaved() { Message_box.Message("Table setting has been saved", 1); }
-        public static void TableTypeSaveNoNameDenied() { Message_box.Message("Your table type needs to have a name", -1); }
+        public static void TableTypeSaveNoNameDenied() { Message_box.Message("Your table needs to have a name or number", -1); }
         public static void TableTypeSaveConfirmation() { Message_box.Message("Your table type has been saved", 1); }
         public static void ConfirmRestPlanSaved() { Message_box.Message("The resturant plan has been saved", 1); }
         #endregion
+        public static void DenyProductOrCatNoName(string ProductOrCat) { Message_box.Message($"The {ProductOrCat} needs to have a name", -1); }
+        public static void DenyProductNoPrice() { Message_box.Message("The product needs to have a price", -1); }
+
 
         public static void CategoryCreated() { Message_box.Message("Category Created", 1); }
 
@@ -24,6 +27,9 @@ namespace ConsoleApplication5
 
         public static void ConfirmedAddProduct() { Message_box.Message("Product has been added", 1);  }
         public static void ConfirmedAddCategory() { Message_box.Message("Category has been added", 1);  }
+
+        internal static void DenyProductPriceFormat() { Message_box.Message("Product Price is wrong format", -1); }
+
     }
 
 }
