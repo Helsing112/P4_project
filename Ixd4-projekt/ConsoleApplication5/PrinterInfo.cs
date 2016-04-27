@@ -22,25 +22,26 @@ namespace ConsoleApplication5
             this.EmployeeName = EmployeeName;
             this.totalamount = totalamount;
         }
-         static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount)
+         public static void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount)
         {
-            PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount);
-            
-        
-            try
-            {
-                PrintDocument print = new PrintDocument();
-                print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
-                print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatDoesThePrinting);
-                print.Print();
-            }
-            catch (Exception ex)
-            {
 
-               
-            }
-        
-    }
+            PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount);
+
+             try
+             {
+                 PrintDocument print = new PrintDocument
+                 {
+                     DefaultPageSettings = {PaperSize = new PaperSize("A4", 827, 1170)}
+                 };
+                 print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatDoesThePrinting);
+                 print.Print();
+             }
+
+             catch (InvalidPrinterException)
+             {
+                 Messages.PrinterError();
+             }
+        }
         public void MethodThatDoesThePrinting(object sender, PrintPageEventArgs ev)
         {
 
@@ -50,8 +51,8 @@ namespace ConsoleApplication5
 
             float fontHeight = font.GetHeight();
 
-            int startX = 10;
-            int startY = 10;
+            const int startX = 10;
+            const int startY = 10;
             int offset = 40;
 
             graphics.DrawString(" Morten Linnets Fun&Go", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
@@ -59,7 +60,6 @@ namespace ConsoleApplication5
             string top = "Item Name".PadRight(30) + "Price";
 
             graphics.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
-
             offset = offset + (int)fontHeight;
 
             graphics.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
@@ -74,13 +74,14 @@ namespace ConsoleApplication5
                stringtoprint += string.Format(format, item.Amount, item.Product.Name, (item.Product.Price * item.Amount),"kr\n");
                offset = offset + 20;
             }
+
             ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
             offset = offset + 40;
 
-            graphics.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalamount), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            graphics.DrawString("Total to pay ".PadRight(30) + $"{totalamount:c}", new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
             string StringWithEmployeeAndTable = $"You were served by {EmployeeName} at table {TableName}";
             offset = offset + 30;
-            ev.Graphics.DrawString(StringWithEmployeeAndTable.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
+            ev.Graphics.DrawString(StringWithEmployeeAndTable, new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
 
             offset = offset + 30; 
             graphics.DrawString("       Thank-you for givin' us moneyz,", font, new SolidBrush(Color.Black), startX, startY + offset);

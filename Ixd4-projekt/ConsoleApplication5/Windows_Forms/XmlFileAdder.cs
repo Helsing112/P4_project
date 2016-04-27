@@ -136,7 +136,6 @@ namespace ConsoleApplication5
             {
                 sourceFilePath = (openFileDialog1.FileName);
                 File.Copy(sourceFilePath, productPicturePath, true);
-                Console.WriteLine(pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png");
                 pictureBox1.Image = Image.FromFile(sourceFilePath);
             }
         }

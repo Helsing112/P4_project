@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
-using System.Drawing;
+
 
 namespace ConsoleApplication5
 {
@@ -17,14 +17,23 @@ namespace ConsoleApplication5
         private decimal _paidAmount;
         private decimal _totalAmount;
         bool IsSplitActive;
-        public decimal PaidAmount { get { return _paidAmount; } //prop for paid amount will update remaining and paid amount labels if set
-            private set { _paidAmount = value;
+        public decimal PaidAmount
+        {
+            get { return _paidAmount; } //prop for paid amount will update remaining and paid amount labels if set
+            private set
+            {
+                _paidAmount = value;
                 Label_Remain_Number.Text = (TotalAmount - PaidAmount).ToString();
                 label_remaingingText.Text = "Remaining:";
                 Label_Paid_number.Text = PaidAmount.ToString();
-            } }
-        public decimal TotalAmount { get { return _totalAmount; }//prop for total amount will update remaining and total amount labels if set
-            private set { _totalAmount = value;
+            }
+        }
+        public decimal TotalAmount
+        {
+            get { return _totalAmount; }//prop for total amount will update remaining and total amount labels if set
+            private set
+            {
+                _totalAmount = value;
                 Label_Remain_Number.Text = (TotalAmount - PaidAmount).ToString();
                 label_remaingingText.Text = "Remaining:";
                 Label_total_Number.Text = TotalAmount.ToString();
@@ -39,12 +48,12 @@ namespace ConsoleApplication5
             BoughtProducts = new List<ReceiptProduct>();
             InitializeComponent();
             InitializeSplitCompoenets();
-            SubscribeEvents();            
+            SubscribeEvents();
         }
         Panel Panel_splitReceipt;
         Standard_Label Label_SplitTop;
         FlowLayoutPanel Flow_SplitReceipt;
-       
+
         #region Eventhandlers---------------------------------------------------
         private void SubscribeEvents()
         {
@@ -87,14 +96,14 @@ namespace ConsoleApplication5
         }
         private void ActivateSplit()
         {
-            if(IsSplitActive == false)
+            if (IsSplitActive == false)
             {
                 foreach (Control item in this.Flow_receiptMain.Controls.OfType<ProductButtonInPayReceipt>().ToArray())
                 {
                     Flow_receiptMain.Controls.Remove(item);
-                    Flow_SplitReceipt.Controls.Add(item);                    
+                    Flow_SplitReceipt.Controls.Add(item);
                 }
-               
+
                 this.Width += Panel_receipt.Width + 20;
                 this.CenterToScreen();
                 IsSplitActive = true;
@@ -108,7 +117,7 @@ namespace ConsoleApplication5
             {
                 addProductsToSplitReceipt(temp, 1);
             }
-            if(temp.Parent == Flow_SplitReceipt)
+            if (temp.Parent == Flow_SplitReceipt)
             {
                 addProductToMainReceipt(temp, 1);
             }
@@ -127,7 +136,7 @@ namespace ConsoleApplication5
             }
             catch (InvalidOperationException) //This will only be caught when there is no controls with that product
             {
-                ProductButtonInPayReceipt temp = new 
+                ProductButtonInPayReceipt temp = new
                     ProductButtonInPayReceipt(Flow_receiptMain.Size.Width - 20, 50, new ReceiptProduct(productToAdd.Product_input.Product, AmountToAdd));
                 temp.ProductClick += ProductClickHandler;
                 Flow_SplitReceipt.Controls.Add(temp);
@@ -165,7 +174,7 @@ namespace ConsoleApplication5
                 Panel_splitReceipt.Parent = null;
                 this.Width -= Panel_receipt.Width + 20;
                 this.CenterToScreen();
-                Create_receipt(ActiveEmployee,ActiveTable);
+                Create_receipt(ActiveEmployee, ActiveTable);
                 IsSplitActive = false;
                 Flow_SplitReceipt.Controls.Clear();
             }
@@ -173,7 +182,7 @@ namespace ConsoleApplication5
 
         private void Pay_button_click(object sender, EventArgs e)
         {
-            if(Label_EnteredAmount.Text != "")
+            if (Label_EnteredAmount.Text != "")
             {
                 PaidAmount += Decimal.Parse(Label_EnteredAmount.Text);
                 ActiveTable.PaidAmount = PaidAmount;
@@ -190,7 +199,7 @@ namespace ConsoleApplication5
         private void operator_click(object sender, EventArgs e)
         {
             Numpad_button reciever = (Numpad_button)sender;
-            if(reciever.label1.Text == "." && (Label_EnteredAmount.Text.Contains(".") || Label_EnteredAmount.Text == "")) //only one decimal point or a deciamlpoint as the first char
+            if (reciever.label1.Text == "." && (Label_EnteredAmount.Text.Contains(".") || Label_EnteredAmount.Text == "")) //only one decimal point or a deciamlpoint as the first char
             {
             }
             else
@@ -238,7 +247,7 @@ namespace ConsoleApplication5
 
         private void IsTheProductsPaidFor()
         {
-            if(PaidAmount >= TotalAmount)
+            if (PaidAmount >= TotalAmount)
             {
                 ProductsHasBeenBought();
             }
@@ -251,11 +260,12 @@ namespace ConsoleApplication5
             foreach (ProductButtonInPayReceipt item in BoughtControls)
             {
                 BoughtProducts.Add(new ReceiptProduct(item.Product_input.Product, item.Amount_to_represent));
-                item.Parent = null;              
+                item.Parent = null;
             }
             if (ProductsPaid != null)
             {
                 ProductsPaid(this, new PayEventArgs() { BoughtProducts = this.BoughtProducts, ActiveTable = this.ActiveTable });
+                PrinterInfo.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, BoughtProducts, TotalAmount);
                 BoughtProducts = new List<ReceiptProduct>();
                 PaidAmount = 0;
                 label_remaingingText.Text = "Pay Back:";

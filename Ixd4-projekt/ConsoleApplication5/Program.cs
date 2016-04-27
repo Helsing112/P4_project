@@ -20,8 +20,6 @@ namespace ConsoleApplication5
             Application.EnableVisualStyles();
 
             Application.Run(new MainPage(@"..\..\..\..\Library"));
-
-            Console.ReadKey();
         }
     }
 }
