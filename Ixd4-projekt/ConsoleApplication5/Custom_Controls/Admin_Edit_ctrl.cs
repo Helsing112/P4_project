@@ -34,20 +34,20 @@ namespace ConsoleApplication5
             Controls.Clear();
             Create_static_controls();
             DirectoryInfo mapper = new DirectoryInfo(path);
-            foreach (var item in mapper.GetDirectories())
-            {
-                CreateDynamicButton(i.ToString(), item.Name, 80, 80 * i);
-                i++;
-            }
-            foreach (var item in mapper.GetFiles())
-            {
-                CreateDynamicLabel(i.ToString(), item.Name, 80, 80 * i);
-                i++;
-            }
-            if (i == 0)
-            {
-                CreateDynamicLabel(i.ToString(), "No products to show", 80, 80 * i);
-            }
+            //foreach (var item in mapper.GetDirectories())
+            //{
+            //    CreateDynamicButton(i.ToString(), item.Name, 80, 80 * i);
+            //    i++;
+            //}
+            //foreach (var item in mapper.GetFiles())
+            //{
+            //    CreateDynamicLabel(i.ToString(), item.Name, 80, 80 * i);
+            //    i++;
+            //}
+            //if (i == 0)
+            //{
+            //    CreateDynamicLabel(i.ToString(), "No products to show", 80, 80 * i);
+            //}
         }
 
         private void Create_static_controls()

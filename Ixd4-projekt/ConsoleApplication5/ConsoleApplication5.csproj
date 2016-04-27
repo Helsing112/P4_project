@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.Designer.cs">
+      <DependentUpon>AdminFunctionButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Forms\AdminWindomUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\AdminWindomUserControl.Designer.cs">
+      <DependentUpon>AdminWindomUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pay\ReceipCompletetInfo.cs" />
     <Compile Include="Pay\ReceiptProduct.cs" />
     <Compile Include="PrinterInfo.cs" />
@@ -390,6 +402,9 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Add_Button.resx">
       <DependentUpon>Add_Button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\AdminFunctionButtons.resx">
+      <DependentUpon>AdminFunctionButtons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Back_Button.resx">
       <DependentUpon>Back_Button.cs</DependentUpon>
     </EmbeddedResource>
@@ -483,6 +498,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employees classes\SignInOnJobWindow.resx">
       <DependentUpon>SignInOnJobWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\AdminWindomUserControl.resx">
+      <DependentUpon>AdminWindomUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Admin_function_window.resx">
       <DependentUpon>Admin_function_window.cs</DependentUpon>
