@@ -54,6 +54,7 @@ namespace ConsoleApplication5
             EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
             this._panelForEmployee.Controls.Add(temp);
             temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
+
         }
 
         public EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;

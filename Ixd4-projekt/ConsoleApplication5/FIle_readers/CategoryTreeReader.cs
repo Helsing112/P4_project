@@ -47,7 +47,6 @@ namespace ConsoleApplication5
             foreach (FileInfo item in directories.GetFiles("*.xml"))
             {
                 input_category.Product_list.Add(Read_product<Product>(item.FullName));
-                Console.WriteLine();
             }
         }
 

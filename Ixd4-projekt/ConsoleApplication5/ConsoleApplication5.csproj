@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.cs">
+    <Compile Include="Standard layouts\Buttons\CheckInButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.Designer.cs">
@@ -210,6 +211,12 @@
     </Compile>
     <Compile Include="Standard layouts\Other\TextBox_NonTouch.Designer.cs">
       <DependentUpon>TextBox_NonTouch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testsune.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testsune.Designer.cs">
+      <DependentUpon>testsune.cs</DependentUpon>
     </Compile>
     <Compile Include="TimerInfo.cs">
       <SubType>UserControl</SubType>
@@ -377,6 +384,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Standard layouts\Buttons\CheckInButton.resx">
+      <DependentUpon>CheckInButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\CheckOutButton.resx">
+      <DependentUpon>CheckOutButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\Table_management\Table_management_settings_form.resx">
       <DependentUpon>Table_management_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testsune.resx">
+      <DependentUpon>testsune.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimerInfo.resx">
       <DependentUpon>TimerInfo.cs</DependentUpon>

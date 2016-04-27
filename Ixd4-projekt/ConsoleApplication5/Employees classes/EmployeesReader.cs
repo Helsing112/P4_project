@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace ConsoleApplication5
         private Employee employeeinput { get; set; }
         public EmployeesReader(int size_x, int size_y, string path)
         {
+            this.Padding = new Padding(0);
+            this.Margin = new Padding(0);
             InitializeComponent(size_x, size_y);
             FillEmployeeHodler(path);
         }
@@ -35,8 +38,7 @@ namespace ConsoleApplication5
         {
             // Create a Button object 
             //EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
-            EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP);
-            dynamicButton.Textlabel = EMP.EmployeeName;
+            EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP) {Textlabel = EMP.EmployeeName};
             // Set Button properties
             // Add a Button Click Event handler
             dynamicButton.Button_Click += EmployeeButtonClick;
@@ -45,79 +47,134 @@ namespace ConsoleApplication5
             // will be based on the Location and Size of button
             EmployeeHolder.Controls.Add(dynamicButton);
         }
-        
 
         public void EmployeeButtonClick(object sender, EventArgs e)
         {
+            
             EmployeeSignInButton temp = (EmployeeSignInButton)sender;
             employeeinput = temp.employee;
             Controls.Clear();
-            
-            //LABEL TIL PASSWORD, DER SKRIVER EMPLOYEE'S NAVN.
-            Standard_Label Create_Label = new Standard_Label();
-                Create_Label.AutoSize = true;
-                Create_Label.Location = new System.Drawing.Point(100, 1);
-                Create_Label.Name = "label1";
-                Create_Label.Size = new System.Drawing.Size(168, 20);
-                Create_Label.TabIndex = 1;
-                Create_Label.Text = employeeinput.EmployeeName;
 
-                Controls.Add(Create_Label);
+            Panel FirstBluePanel = new Panel
+            {
+                BackColor = Color.FromArgb(255, 26, 117, 186),
+                Size = new Size(Parent.Width/3, Parent.Height/5),
+                Anchor = AnchorStyles.None,
+                Margin = new Padding(3)
+            };
+
+
+            Panel SecondBluePanel = new Panel
+            {
+                BackColor = Color.FromArgb(255, 26, 117, 186),
+                Size = new Size(Parent.Width/3, Parent.Height/2),
+                Anchor = AnchorStyles.None,
+                Padding = new Padding(0),
+                Margin = new Padding(0)
+            };
+
+
+            Panel ThirdBluePanel = new Panel
+            {
+                BackColor = Color.FromArgb(255, 26, 117, 186),
+                Size = new Size(Parent.Width/3, Parent.Height/2),
+                Anchor = AnchorStyles.None,
+                Padding = new Padding(0),
+                Margin = new Padding(0)
+            };
+
+            // creates the tablelayout panel
+            TableLayoutPanel tableLayoutPanel1 = new TableLayoutPanel();
+
+            tableLayoutPanel1.ColumnCount = 0;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0F));
+            tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
+            tableLayoutPanel1.Dock = DockStyle.Top;
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(this.Width, 500);
+            tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.BackColor = Color.Transparent;
+            tableLayoutPanel1.Margin = new Padding(0);
+            tableLayoutPanel1.Padding = new Padding(0);
+
+            // end of table layout panel
+
+            //LABEL TIL PASSWORD, DER SKRIVER EMPLOYEE'S NAVN.
+            Standard_Label Create_Label = new Standard_Label
+            {
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.White,
+                Text = employeeinput.EmployeeName.ToUpper(),
+                Name = "label1",
+                TabIndex = 1,
+                Anchor = AnchorStyles.None,
+                Dock = DockStyle.Fill,
+                Font = new Font("Segoe UI", 30F, FontStyle.Regular)
+            };
+
+            Standard_Label passwordLabel = new Standard_Label
+            {
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.White,
+                Text = "PASSWORD",
+                Name = "label1",
+                TabIndex = 1,
+                Anchor = AnchorStyles.None,
+                Dock = DockStyle.Fill,
+                Font = new Font("Segoe UI", 30F, FontStyle.Regular)
+            };
+
+
+            FirstBluePanel.Controls.Add(Create_Label);
+            SecondBluePanel.Controls.Add(passwordLabel);
 
             //TEXTBOX DER INDEHOLDER PASSWORD FOR EMPLOYEE
-            EmployeeButtonClickTextbox = new TextBox();
-            EmployeeButtonClickTextbox.Location = new System.Drawing.Point(100, 30);
-            EmployeeButtonClickTextbox.Name = "EmployeeIDtextBox";
-            EmployeeButtonClickTextbox.Size = new System.Drawing.Size(100, 20);
-            EmployeeButtonClickTextbox.TabIndex = 2;
-       
-            Controls.Add(EmployeeButtonClickTextbox);
+            EmployeeButtonClickTextbox = new TextBox_Touch
+            {
+                Name = "EmployeeIDtextBox",
+                Size = new System.Drawing.Size(ThirdBluePanel.Width, ThirdBluePanel.Height),
+                Font = new Font("Segoe UI", 30F, FontStyle.Regular),
+                TabIndex = 2,
+                textBox1 =
+                {
+                    Anchor = AnchorStyles.None,
+                    Width = ThirdBluePanel.Width - 100,
+                    Font = new Font("Segoe UI", 50F, FontStyle.Regular),
+                    Location = new Point(50, 10),
+                    PasswordChar = '*',
+                    TextAlign = HorizontalAlignment.Center
+                }
+            };
 
+            EmployeeButtonClickTextbox.textBox1.TextChanged += new EventHandler(Log_In_Click);
 
-            Login_Button Log_In = new Login_Button();
-            Log_In.Location = new System.Drawing.Point(100, 60);
-            Log_In.Name = "Log In";
-            Log_In.Size = new System.Drawing.Size(105, 49);
-            Log_In.TabIndex = 11;
-            Log_In.Text = "Log In";
-            Log_In.Button_Click += new System.EventHandler(this.Log_In_Click);
+            ThirdBluePanel.Controls.Add(EmployeeButtonClickTextbox);
 
-            quit_button = new Quit_Close_Button();
-            quit_button.Location = new System.Drawing.Point(380, 140);
-            quit_button.Name = "quit";
-            quit_button.Size = Log_In.Size = new System.Drawing.Size(105, 49);
-            quit_button.TabIndex = 11;
-            quit_button.Text = "Quit";
-            quit_button.Button_Click += new System.EventHandler(quit_Click);
+            Controls.Add(tableLayoutPanel1);
+            tableLayoutPanel1.Controls.Add(FirstBluePanel, 0, 0);
+            tableLayoutPanel1.Controls.Add(SecondBluePanel, 0, 1);
+            tableLayoutPanel1.Controls.Add(ThirdBluePanel, 0, 2);
 
-
-            Controls.Add(Log_In);
-            Controls.Add(quit_button);
-           
-            //MessageBox.Show(e.employee.EmployeeID + e.employee.EmployeeName);
 
 
         }
         public Quit_Close_Button quit_button; 
-        TextBox EmployeeButtonClickTextbox;
 
-        public void quit_Click(object sender, EventArgs e)
-        {
-            ((Form)this.TopLevelControl).Hide();
-            
-        }
+        TextBox_Touch EmployeeButtonClickTextbox;
 
         public void Log_In_Click(object sender, EventArgs e)
         {
             
-            if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.Text)
+            if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.textBox1.Text)
             {
                 OnPasswordCorrect(sender, e);     
-            }
+                Messages.EmployeeConfirmedLogin();
 
-            else
-            {
-                Messages.WrongPassword();
+
             }
         }
 
@@ -125,10 +182,13 @@ namespace ConsoleApplication5
 
         protected virtual void OnPasswordCorrect(object sender, EventArgs e)
         {
+
             if (PasswordCorrect != null)
             {
                 PasswordCorrect(this, new EmployeeEventArgs() { employee = employeeinput });
+
             }
+
         }
 
         
@@ -164,5 +224,6 @@ namespace ConsoleApplication5
             this.ResumeLayout(false);
 
         }
+
     }
 }

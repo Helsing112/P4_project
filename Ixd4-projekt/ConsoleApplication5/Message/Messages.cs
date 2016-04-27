@@ -28,6 +28,11 @@ namespace ConsoleApplication5
         public static void ConfirmedAddProduct() { Message_box.Message("Product has been added", 1);  }
         public static void ConfirmedAddCategory() { Message_box.Message("Category has been added", 1);  }
 
+        public static void EmployeeConfirmedLogin() { Message_box.Message("Employee signed in", 1);}
+        
+
+        public static void PrinterError() { Message_box.Message(("The printer was not found"));}
+
         internal static void DenyProductPriceFormat() { Message_box.Message("Product Price is wrong format", -1); }
 
     }
