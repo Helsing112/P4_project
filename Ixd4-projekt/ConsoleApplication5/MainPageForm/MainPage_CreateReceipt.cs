@@ -10,6 +10,7 @@ namespace ConsoleApplication5
 {
     partial class Main_page
     {
+        private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
         public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
         /// <summary>
@@ -17,6 +18,7 @@ namespace ConsoleApplication5
         /// </summary>
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
         {
+            this.Padding = new Padding();
             Controls.Clear();
             //Creates the receipt from table data
             ActiveTable = activeTable;
@@ -24,7 +26,9 @@ namespace ConsoleApplication5
             //active employee assignment (Property is in another file)
             ActiveEmployee = activeEmployee;
 
-            Controls.Add(tree);
+            //Controls.Add(treeFood);
+            //Controls.Add(treeDrinks);
+
             Controls.Add(Temp_Receipt);
             Controls.Add(PayButton);
             Controls.Add(BackToTablesPage); //adds a back button from the tablesPage
@@ -35,35 +39,37 @@ namespace ConsoleApplication5
         private void Initialize_Field_Controls_CreateReceipt()
         {
             initialize_wheel(400);
-            PayButtoninitialize(new System.Drawing.Point(12, 345), new System.Drawing.Size(139, 79));
+            PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
             Initialize_Pay_window();
-            Product_tree(new Point(300, 300), new Size(500,500));
-            Receipt(new Point(800, 300), new Size(500, 500));
-            BackToTablesPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
+            Product_trees(new Point(700, 100), new Size(400,700));
+            Receipt(new Point(50, 100), new Size(600, 500));
+            BackToTablesPage_button();
         }
 
         //Fields controls
-        TreeViewerControl tree;
+        SuperClassProductViewer treeFood;
+        SuperClassProductViewer treeDrinks;
         TempReceipt Temp_Receipt;
         Timer Timer_for_wheel;
         Timer Timer_for_wheel_controller;
         NumberWheelForm Number_wheel;
-        Button PayButton;
+        Pay_Button PayButton;
         Pay_windowForm Pay_window;
-        Button BackToTablesPage;
+        Back_Button BackToTablesPage;
 
 
         #region Intialize methods-------------------------------------------------------
-        public void BackToTablesPage_button(Point Location_input, Size size_input)
+        public void BackToTablesPage_button()
         {
-            BackToTablesPage = new Button();
-            BackToTablesPage.Location = Location_input;
+            BackToTablesPage = new Back_Button();
+            BackToTablesPage.Size = new Size(139,79);
+
+            BackToTablesPage.Location = new Point(this.Width - BackToTablesPage.Width, Screen.PrimaryScreen.Bounds.Height - BackToTablesPage.Height);
+            BackToTablesPage.Padding = new Padding(10);
             BackToTablesPage.Name = "CheckInButton";
-            BackToTablesPage.Size = size_input;
             BackToTablesPage.TabIndex = 0;
-            BackToTablesPage.Text = "Back";
-            BackToTablesPage.UseVisualStyleBackColor = true;
-            BackToTablesPage.Click += new System.EventHandler(BackToTablesPage_click);
+            BackToTablesPage.Textlabel = "Back";
+            BackToTablesPage.Button_Click += new System.EventHandler(BackToTablesPage_click);
         }
 
         private void Initialize_Pay_window()
@@ -78,14 +84,21 @@ namespace ConsoleApplication5
             Number_wheel.On_Pie_Clicked += Temp_wheel_On_Pie_Clicked;
         }
 
-        private void Product_tree(Point Location_input, Size size_input)
+        private void Product_trees(Point Location_input, Size size_input)
         {
-            tree = new TreeViewerControl(size_input.Width, size_input.Height, Path_of_product_library);
-            tree.Location = Location_input;
-            tree.BorderStyle = BorderStyle.Fixed3D;
-            tree.Name = "tree";
-            tree.MouseDowned += MouseDownReciever;
-            tree.MouseUpped += MouseUpReciever;
+            treeFood = new SuperClassProductViewer();
+            treeFood.Size = size_input;
+            treeFood.Location = Location_input;
+            treeFood.MouseDowned += MouseDownReciever;
+            treeFood.MouseUpped += MouseUpReciever;
+            treeFood.initializeFlowOfProducts(Properties.Resources.LocationOfProductLib + Properties.Resources.FoodLibFile);
+
+            treeDrinks = new SuperClassProductViewer();
+            treeDrinks.Size = size_input;
+            treeDrinks.Location = new Point(Location_input.X + treeDrinks.Width+20, Location_input.Y);
+            treeDrinks.MouseDowned += MouseDownReciever;
+            treeDrinks.MouseUpped += MouseUpReciever;
+            treeDrinks.initializeFlowOfProducts(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile);
         }
         private void Receipt(Point location_input, Size size_input)
         {
@@ -102,14 +115,15 @@ namespace ConsoleApplication5
         }
         private void PayButtoninitialize(Point location_input, Size size_input)
         {
-            PayButton = new Button();
+            PayButton = new Pay_Button();
+            PayButton.Padding = new Padding(10);
+
             PayButton.Location = location_input;
             PayButton.Name = "Paybutton";
             PayButton.Size = size_input;
             PayButton.TabIndex = 0;
-            PayButton.Text = "Pay";
-            PayButton.UseVisualStyleBackColor = true;
-            PayButton.Click += new System.EventHandler(PayButton_click);
+            PayButton.Textlabel = "Pay";
+            PayButton.Button_Click += new System.EventHandler(PayButton_click);
         }
         #endregion
 

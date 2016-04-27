@@ -42,7 +42,7 @@
             // 
             // Back_Button
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "Back_Button";
             this.Textlabel = "Back";

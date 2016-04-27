@@ -46,9 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Product And Category\Buttons\Category\CategoryNoImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\CategoryNoImage.Designer.cs">
+      <DependentUpon>CategoryNoImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\CategoryWithImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\CategoryWithImage.Designer.cs">
+      <DependentUpon>CategoryWithImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\CategoryLogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\CategoryLogo.Designer.cs">
+      <DependentUpon>CategoryLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\CategoryNew.cs" />
     <Compile Include="Pay\ReceipCompletetInfo.cs" />
     <Compile Include="Pay\ReceiptProduct.cs" />
-    <Compile Include="PrinterInfo.cs" />
+    <Compile Include="Print\PrinterInfo.cs" />
+    <Compile Include="Product And Category\Buttons\Product\ProductWithImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Product\ProductWithImage.Designer.cs">
+      <DependentUpon>ProductWithImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Product\ProductNoImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Product\ProductNoImage.Designer.cs">
+      <DependentUpon>ProductNoImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Product\ProductLogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Product\ProductLogo.Designer.cs">
+      <DependentUpon>ProductLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\SuperClassProductViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\SuperClassProductViewer.Designer.cs">
+      <DependentUpon>SuperClassProductViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\ProductAdderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product And Category\ProductAdderForm.Designer.cs">
+      <DependentUpon>ProductAdderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,7 +144,6 @@
     <Compile Include="Pay\Pay_windowForm.Designer.cs">
       <DependentUpon>Pay_windowForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductWithAmount.cs" />
     <Compile Include="Standard layouts\Buttons\Accept_Button.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +216,18 @@
     <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
       <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product And Category\Buttons\Product\SuperClassProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Product\SuperClassProduct.Designer.cs">
+      <DependentUpon>SuperClassProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\SuperClassCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product And Category\Buttons\Category\SuperClassCategory.Designer.cs">
+      <DependentUpon>SuperClassCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tables\TableType_Show_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +266,12 @@
     </Compile>
     <Compile Include="Standard layouts\Other\TextBox_NonTouch.Designer.cs">
       <DependentUpon>TextBox_NonTouch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TEST.Designer.cs">
+      <DependentUpon>TEST.cs</DependentUpon>
     </Compile>
     <Compile Include="TimerInfo.cs">
       <SubType>UserControl</SubType>
@@ -360,7 +426,7 @@
     </Compile>
     <Compile Include="FIle_readers\CategoryTreeReader.cs" />
     <Compile Include="FIle_readers\XmlCreateLibrary.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Product And Category\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Windows_Forms\XmlFileAdder.cs">
@@ -383,6 +449,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pay\Pay_windowForm.resx">
       <DependentUpon>Pay_windowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Category\CategoryLogo.resx">
+      <DependentUpon>CategoryLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Category\CategoryNoImage.resx">
+      <DependentUpon>CategoryNoImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Category\CategoryWithImage.resx">
+      <DependentUpon>CategoryWithImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Product\ProductLogo.resx">
+      <DependentUpon>ProductLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Product\ProductNoImage.resx">
+      <DependentUpon>ProductNoImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Product\ProductWithImage.resx">
+      <DependentUpon>ProductWithImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\SuperClassProductViewer.resx">
+      <DependentUpon>SuperClassProductViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\ProductAdderForm.resx">
+      <DependentUpon>ProductAdderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\Accept_Button.resx">
       <DependentUpon>Accept_Button.cs</DependentUpon>
@@ -440,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\Table_management\Table_management_settings_form.resx">
       <DependentUpon>Table_management_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>TEST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimerInfo.resx">
       <DependentUpon>TimerInfo.cs</DependentUpon>
@@ -506,7 +599,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Library\" />
-    <Folder Include="Print\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">

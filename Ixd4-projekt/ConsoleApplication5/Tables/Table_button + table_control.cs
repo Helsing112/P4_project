@@ -89,6 +89,17 @@ namespace ConsoleApplication5
                 TableReceiptIsNOTEmpty(this, new EventArgs());
             }
         }
+        public void CheckIfEmpty()
+        {
+            if (TableReceipt.Count == 0 && TableReceiptIsEmpty != null)
+            {
+                TableReceiptIsEmpty(this, new EventArgs());
+            }
+            if (TableReceipt.Count != 0 && TableReceiptIsNOTEmpty != null)
+            {
+                TableReceiptIsNOTEmpty(this, new EventArgs());
+            }
+        }
         public event EventHandler TableReceiptIsNOTEmpty;
         public event EventHandler TableReceiptIsEmpty;
         internal void RemoveProducts(List<ReceiptProduct> productsToRemove)

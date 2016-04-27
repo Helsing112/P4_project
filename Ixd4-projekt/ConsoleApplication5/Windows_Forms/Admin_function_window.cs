@@ -108,7 +108,8 @@ namespace ConsoleApplication5
                 Controls.Clear();
                 start();
             }
-            else {
+            else
+            {
               Messages.WrongPassword();
             }
         }

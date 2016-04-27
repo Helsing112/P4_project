@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 
-
 namespace ConsoleApplication5
 {
     public partial class Pay_windowForm : Standard_Window_Layout

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CategoryNew xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_pathOfImage>C:\Users\User\Desktop\Small-mario.png</_pathOfImage>
+  <HasImage>true</HasImage>
+  <IsLogo>false</IsLogo>
+  <PathOfImage>C:\Users\User\Desktop\Small-mario.png</PathOfImage>
+  <Name>Hejsa</Name>
+  <Product_list>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>200</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>200</Price>
+      <Name>Hejsa</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>231</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>231</Price>
+      <Name>bøh</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>111</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>111</Price>
+      <Name>bævn</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>111</_price>
+      <_pathOfImage>C:\Users\User\Desktop\Small-mario.png</_pathOfImage>
+      <Varianter />
+      <IsLogo>true</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>111</Price>
+      <Name>asd</Name>
+      <HasImage>true</HasImage>
+      <PathOfImage>C:\Users\User\Desktop\Small-mario.png</PathOfImage>
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>111</_price>
+      <_pathOfImage>C:\Users\User\Desktop\Small-mario.png</_pathOfImage>
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>111</Price>
+      <Name>blabla</Name>
+      <HasImage>true</HasImage>
+      <PathOfImage>C:\Users\User\Desktop\Small-mario.png</PathOfImage>
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>20.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>20.00</Price>
+      <Name>Burger</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>20.00</_price>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>20.00</Price>
+      <Name>Bburger</Name>
+      <HasImage>true</HasImage>
+      <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+    </Product>
+  </Product_list>
+  <Category_list>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+      <Name>Burger</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>Burger</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>StorBurger</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+        </Product>
+      </Product_list>
+      <Category_list>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+          <Name>StorBurger</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>20.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>20.00</Price>
+              <Name>StorBurger</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>20.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>20.00</Price>
+              <Name>StorBurger</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list>
+            <CategoryNew>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+              <HasImage>true</HasImage>
+              <IsLogo>false</IsLogo>
+              <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+              <Name>StorBurger</Name>
+              <Product_list />
+              <Category_list />
+            </CategoryNew>
+            <CategoryNew>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+              <HasImage>true</HasImage>
+              <IsLogo>false</IsLogo>
+              <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+              <Name>StorBurger</Name>
+              <Product_list>
+                <Product>
+                  <_Is_set>true</_Is_set>
+                  <_price>20.00</_price>
+                  <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+                  <Varianter />
+                  <IsLogo>false</IsLogo>
+                  <Is_set>true</Is_set>
+                  <Price>20.00</Price>
+                  <Name>StorBurger</Name>
+                  <HasImage>true</HasImage>
+                  <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+                </Product>
+                <Product>
+                  <_Is_set>true</_Is_set>
+                  <_price>20.00</_price>
+                  <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+                  <Varianter />
+                  <IsLogo>false</IsLogo>
+                  <Is_set>true</Is_set>
+                  <Price>20.00</Price>
+                  <Name>StorBurger</Name>
+                  <HasImage>true</HasImage>
+                  <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+                </Product>
+                <Product>
+                  <_Is_set>true</_Is_set>
+                  <_price>20.00</_price>
+                  <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+                  <Varianter />
+                  <IsLogo>false</IsLogo>
+                  <Is_set>true</Is_set>
+                  <Price>20.00</Price>
+                  <Name>StorBurger</Name>
+                  <HasImage>true</HasImage>
+                  <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+                </Product>
+                <Product>
+                  <_Is_set>true</_Is_set>
+                  <_price>20.00</_price>
+                  <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+                  <Varianter />
+                  <IsLogo>false</IsLogo>
+                  <Is_set>true</Is_set>
+                  <Price>20.00</Price>
+                  <Name>StorBurger</Name>
+                  <HasImage>true</HasImage>
+                  <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+                </Product>
+              </Product_list>
+              <Category_list>
+                <CategoryNew>
+                  <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+                  <HasImage>true</HasImage>
+                  <IsLogo>false</IsLogo>
+                  <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+                  <Name>StorBurger</Name>
+                  <Product_list>
+                    <Product>
+                      <_Is_set>true</_Is_set>
+                      <_price>20.00</_price>
+                      <_pathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</_pathOfImage>
+                      <Varianter />
+                      <IsLogo>false</IsLogo>
+                      <Is_set>true</Is_set>
+                      <Price>20.00</Price>
+                      <Name>StorBurger</Name>
+                      <HasImage>true</HasImage>
+                      <PathOfImage>..\..\..\..\PictureLibrary\Bburger picture.png</PathOfImage>
+                    </Product>
+                  </Product_list>
+                  <Category_list />
+                </CategoryNew>
+              </Category_list>
+            </CategoryNew>
+          </Category_list>
+        </CategoryNew>
+      </Category_list>
+    </CategoryNew>
+  </Category_list>
+</CategoryNew>

@@ -14,6 +14,10 @@ namespace ConsoleApplication5
     {
         public List<ReceiptProduct> ActiveTableProductList { get;private set; }
         private decimal total_price { get; set; }
+        public TempReceipt()
+        {
+
+        }
         public TempReceipt(int size_x, int size_y)
         {
             InitializeComponent(size_x, size_y);

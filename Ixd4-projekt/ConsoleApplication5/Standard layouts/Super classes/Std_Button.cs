@@ -49,10 +49,9 @@ namespace ConsoleApplication5
             this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 100) * 98), System.Drawing.FontStyle.Bold);
             this.Location = new Point((this.Location.X + 3), (this.Location.Y + 3));
             this.Refresh();
-
         }
 
-        public EventHandler Button_Click;
+        public event EventHandler Button_Click;
         private void pictureBox1_MouseUp(object sender, EventArgs e)
         {
 

@@ -13,7 +13,7 @@ namespace ConsoleApplication5
     public partial class TreeViewerControl : UserControl
     {
         private string temp_path;
-        private string INPUT_PATH;
+        private readonly string INPUT_PATH;
         public int SizeTotal_x { get; private set; }
         public int SizeTotal_y { get; private set; }
         public string Path { get; private set; }
@@ -71,7 +71,7 @@ namespace ConsoleApplication5
         {
             ProductButtonCtrl<Product> temp_product_but = new ProductButtonCtrl<Product>(product);
             temp_product_but.Location = new Point(x, y);
-            temp_product_but.BackgroundImage = Image.FromFile(product.PicturePath);
+            temp_product_but.BackgroundImage = Image.FromFile(product.PathOfImage);
             temp_product_but.BackgroundImageLayout = ImageLayout.Stretch;
 
 

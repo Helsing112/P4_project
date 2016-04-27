@@ -133,4 +133,16 @@
   <data name="knap3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\knap3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LocationOfProductLib" xml:space="preserve">
+    <value>..\..\..\..\Library\Product library\</value>
+  </data>
+  <data name="DrinkLibFile" xml:space="preserve">
+    <value>Drink Library</value>
+  </data>
+  <data name="FoodLibFile" xml:space="preserve">
+    <value>Food Library</value>
+  </data>
+  <data name="OtherLibFile" xml:space="preserve">
+    <value>Other Library</value>
+  </data>
 </root>

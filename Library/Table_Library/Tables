@@ -44,4 +44,26 @@
       <Height>141</Height>
     </Size>
   </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text>222</Table_Text>
+    <Location>
+      <X>23</X>
+      <Y>462</Y>
+    </Location>
+    <Size>
+      <Width>125</Width>
+      <Height>51</Height>
+    </Size>
+  </Table_button_Xml_data>
+  <Table_button_Xml_data>
+    <Table_Text>7327</Table_Text>
+    <Location>
+      <X>322</X>
+      <Y>182</Y>
+    </Location>
+    <Size>
+      <Width>85</Width>
+      <Height>111</Height>
+    </Size>
+  </Table_button_Xml_data>
 </ArrayOfTable_button_Xml_data>
