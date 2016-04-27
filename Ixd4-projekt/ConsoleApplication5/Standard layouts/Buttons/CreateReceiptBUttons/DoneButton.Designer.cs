@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class TempReceipt
+    partial class DoneButton
     {
         /// <summary> 
         /// Required designer variable.
@@ -26,11 +26,27 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
+        private void InitializeComponent()
+        {
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            // 
+            // DoneButton
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "DoneButton";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pictureBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
 
+        }
 
         #endregion
-
-        private FlowOfProductsInTempReceipt flowOfProductsInTempReceipt1;
-        private TotalTabTenpReceipt Total_tab;
     }
 }

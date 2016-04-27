@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\DoneButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\DoneButton.Designer.cs">
+      <DependentUpon>DoneButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\CreateReceiptGreyButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\CreateReceiptGreyButtons.Designer.cs">
+      <DependentUpon>CreateReceiptGreyButtons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product And Category\Buttons\Category\CategoryNoImage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,10 +198,10 @@
     <Compile Include="Standard layouts\Buttons\Quit_Close_Button.Designer.cs">
       <DependentUpon>Quit_Close_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\Save_Create_Button.cs">
+    <Compile Include="Standard layouts\Other\Save_Create_Button.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
+    <Compile Include="Standard layouts\Other\Save_Create_Button.Designer.cs">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard layouts\Other\TextBox_Touch.cs">
@@ -441,6 +453,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\DoneButton.resx">
+      <DependentUpon>DoneButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\CreateReceiptGreyButtons.resx">
+      <DependentUpon>CreateReceiptGreyButtons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
@@ -504,7 +522,7 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Quit_Close_Button.resx">
       <DependentUpon>Quit_Close_Button.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\Save_Create_Button.resx">
+    <EmbeddedResource Include="Standard layouts\Other\Save_Create_Button.resx">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Other\TextBox_Touch.resx">

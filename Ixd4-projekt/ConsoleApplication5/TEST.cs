@@ -15,11 +15,19 @@ namespace ConsoleApplication5
         public TEST()
         {
             InitializeComponent();
+            initializeProductViewers();
+        }
+
+        private void initializeProductViewers()
+        {
+            ProductView_Drinks.initializeFlowOfProducts(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile);
+            ProductView_Foods.initializeFlowOfProducts(Properties.Resources.LocationOfProductLib + Properties.Resources.FoodLibFile);
         }
 
         private void superClassProduct1_Load(object sender, EventArgs e)
         {
 
         }
+        
     }
 }
