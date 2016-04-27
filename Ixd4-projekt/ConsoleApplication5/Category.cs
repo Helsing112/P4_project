@@ -8,6 +8,7 @@ namespace ConsoleApplication5
 {
     class Category
     {
+
         public string PathOfImage { get; }
         public string Name { get; set; }
         public List<Product> Product_list { get; set; }

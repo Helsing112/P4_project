@@ -63,10 +63,38 @@ namespace ConsoleApplication5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkin {
+            get {
+                object obj = ResourceManager.GetObject("checkin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coke_bottle {
             get {
                 object obj = ResourceManager.GetObject("coke_bottle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drink Library.
+        /// </summary>
+        internal static string DrinkLibFile {
+            get {
+                return ResourceManager.GetString("DrinkLibFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Food Library.
+        /// </summary>
+        internal static string FoodLibFile {
+            get {
+                return ResourceManager.GetString("FoodLibFile", resourceCulture);
             }
         }
         
@@ -97,6 +125,24 @@ namespace ConsoleApplication5.Properties {
             get {
                 object obj = ResourceManager.GetObject("knap3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\..\Library\Product library\.
+        /// </summary>
+        internal static string LocationOfProductLib {
+            get {
+                return ResourceManager.GetString("LocationOfProductLib", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Library.
+        /// </summary>
+        internal static string OtherLibFile {
+            get {
+                return ResourceManager.GetString("OtherLibFile", resourceCulture);
             }
         }
         

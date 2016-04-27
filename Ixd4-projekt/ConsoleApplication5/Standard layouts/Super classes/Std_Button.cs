@@ -31,7 +31,7 @@ namespace ConsoleApplication5
         {
 
             this.label1.Text = Textlabel;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular);
 
             if (Image_set != null)
             {
@@ -46,19 +46,18 @@ namespace ConsoleApplication5
 
             this.Width -= 6;
             this.Height -= 6;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 100) * 98), System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 100) * 98), System.Drawing.FontStyle.Regular);
             this.Location = new Point((this.Location.X + 3), (this.Location.Y + 3));
             this.Refresh();
-
         }
 
-        public EventHandler Button_Click;
+        public event EventHandler Button_Click;
         private void pictureBox1_MouseUp(object sender, EventArgs e)
         {
 
             this.Width += 6;
             this.Height += 6;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 98) * 100), System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 98) * 100), System.Drawing.FontStyle.Regular);
             this.Location = new Point((this.Location.X - 3), (this.Location.Y - 3));
             this.Refresh();
             OnButton_click(sender, e);

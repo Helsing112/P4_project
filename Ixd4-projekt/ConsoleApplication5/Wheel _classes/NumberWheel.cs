@@ -13,59 +13,58 @@ namespace ConsoleApplication5
 {
     public partial class NumberWheel : UserControl
     {
-        public NumberWheel(Rectangle input_rectangle)
+        public NumberWheel(Rectangle inputRectangle)
         {
-            InitializeComponent(input_rectangle);
+            InitializeComponent(inputRectangle);
         }
-        private void InitializeComponent(Rectangle input_rectangle)
+        private void InitializeComponent(Rectangle inputRectangle)
         {
-            int Part_to_devide_center = 3;
-            int amount_of_pies = 8;
+            const int partToDevideCenter = 3;
+            const int amountOfPies = 8;
             //Main control:
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Size = input_rectangle.Size;
+            this.Size = inputRectangle.Size;
             this.BackColor = Color.Transparent;
             this.Name = "NumberWheel";
             //
             //Middle of the wheel
             //
-            Point Center_of_control = new Point(this.Width / 2, this.Height / 2);
-            Rectangle Center_rectangle = new Rectangle(0,0,(this.Width / Part_to_devide_center), this.Height / Part_to_devide_center);
-            CenterOnNumberWheel Center_circle = new CenterOnNumberWheel(Center_rectangle);
-            Center_circle.Name = "1";
-            Center_circle.MouseUp += Middle_clicked;
-            Center_circle.Location = new Point(Center_of_control.X - (this.Width / Part_to_devide_center) / 2, Center_of_control.Y - (this.Height / Part_to_devide_center) / 2);
-            Center_circle.BackColor = Color.LightGoldenrodYellow;
-            Controls.Add(Center_circle);
+            Point centerOfControl = new Point(this.Width / 2, this.Height / 2);
+            Rectangle centerRectangle = new Rectangle(0,0,(this.Width / partToDevideCenter), this.Height / partToDevideCenter);
+            CenterOnNumberWheel centerCircle = new CenterOnNumberWheel(centerRectangle) {Name = "1"};
+            centerCircle.MouseUp += Middle_clicked;
+            centerCircle.Location = new Point(centerOfControl.X - (this.Width / partToDevideCenter) / 2, centerOfControl.Y - (this.Height / partToDevideCenter) / 2);
+            centerCircle.BackColor = Color.LightGoldenrodYellow;
+            Controls.Add(centerCircle);
             //iterate over the amount of pies added and instantiating them
             this.SuspendLayout();
-            List<PieOnNumberWheel> Pies = new List<PieOnNumberWheel>();
+            List<PieOnNumberWheel> pies = new List<PieOnNumberWheel>();
 
             // calculations regarding location of numbers
-            float label_x = (input_rectangle.Left + input_rectangle.Right) / 2f;
-            float label_y = (input_rectangle.Top + input_rectangle.Bottom) / 2f;
-            float label_radius = ((input_rectangle.Width + input_rectangle.Height) / 2f) * 0.33f;
+            float labelX = (inputRectangle.Left + inputRectangle.Right) / 2f;
+            float labelY = (inputRectangle.Top + inputRectangle.Bottom) / 2f;
+            float labelRadius = ((inputRectangle.Width + inputRectangle.Height) / 2f) * 0.33f;
 
             // Adds the pies of the wheel
-            for (int i=0; i < amount_of_pies; i++)
+            for (int i=0; i < amountOfPies; i++)
             {
                 // calculates location for numbers on wheel
-                float sweep_angle_label = (350f / amount_of_pies);
-                float start_angle_label = 0 + i * (360 / amount_of_pies) + 22;
-                double label_angle = Math.PI * (start_angle_label + sweep_angle_label / 2f) / 180f;
-                float single_label_x = label_x + (float)(label_radius * Math.Cos(label_angle));
-                float single_label_y = label_y + (float)(label_radius * Math.Sin(label_angle));
-                start_angle_label += sweep_angle_label;
+                const float sweepAngleLabel = (350f / amountOfPies);
+                float startAngleLabel = 0 + i * (360 / amountOfPies) + 22;
+                double labelAngle = Math.PI * (startAngleLabel + sweepAngleLabel / 2f) / 180f;
+                float singleLabelX = labelX + (float)(labelRadius * Math.Cos(labelAngle));
+                float singleLabelY = labelY + (float)(labelRadius * Math.Sin(labelAngle));
+                startAngleLabel += sweepAngleLabel;
                 // end of calculation
 
-                Pies.Add(new PieOnNumberWheel(input_rectangle, 0 + i * (360 / amount_of_pies)+22, (350 / amount_of_pies), single_label_x, single_label_y, i));
+                pies.Add(new PieOnNumberWheel(inputRectangle, 0 + i * (360 / amountOfPies) + 22, (350 / amountOfPies), singleLabelX, singleLabelY, i));
             }
 
             int x = 2;
-            foreach (PieOnNumberWheel item in Pies)
+            foreach (PieOnNumberWheel item in pies)
             {
                 item.MouseUp += Pie_click;
-                item.Text_To_Label = x.ToString();
+                item.TextToLabel = x.ToString();
                 item.Name = x.ToString();
                 item.BackColor = Color.Azure;                
                 Controls.Add(item);
@@ -77,24 +76,21 @@ namespace ConsoleApplication5
 
         private void Middle_clicked(object sender, MouseEventArgs e)
         {
-            CenterOnNumberWheel temp_sender = (CenterOnNumberWheel)sender;
-            On_Pie_click(int.Parse(temp_sender.Name));
+            CenterOnNumberWheel tempSender = (CenterOnNumberWheel)sender;
+            On_Pie_click(int.Parse(tempSender.Name));
         }
 
-        public delegate void Pie_clicked(int number);
-        public event Pie_clicked On_Pie_Clicked;
+        public delegate void PieClicked(int number);
+        public event PieClicked OnPieClicked;
         private void Pie_click(object sender, EventArgs e)
         {
-            PieOnNumberWheel temp_sender = (PieOnNumberWheel)sender;
-            On_Pie_click(int.Parse(temp_sender.Name));
+            PieOnNumberWheel tempSender = (PieOnNumberWheel)sender;
+            On_Pie_click(int.Parse(tempSender.Name));
         }
 
         protected virtual void On_Pie_click(int number)
         {
-            if(On_Pie_Clicked != null)
-            {
-                On_Pie_Clicked(number);
-            }
+            OnPieClicked?.Invoke(number);
         }
     }
 }

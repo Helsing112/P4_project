@@ -47,7 +47,6 @@ namespace ConsoleApplication5
             {
                 save_Create_Button1.Enabled = false;
             }
-
             // Create category
             if (!string.IsNullOrWhiteSpace(CategoryTextBox.Text))
             {
@@ -74,7 +73,7 @@ namespace ConsoleApplication5
             XmlCreateLibrary creator = new XmlCreateLibrary();
             Product _product = new Product();
             _product.Name = Text_input.Text;
-            _product.PicturePath = productPicturePath;
+            _product.PathOfImage = productPicturePath;
             _product.Price = decimal.Parse(PriceInputTextBox.Text);
             creator.Create_File<Product>(_path, _product);
             Text_input.Clear();
@@ -136,7 +135,6 @@ namespace ConsoleApplication5
             {
                 sourceFilePath = (openFileDialog1.FileName);
                 File.Copy(sourceFilePath, productPicturePath, true);
-                Console.WriteLine(pictureLibraryPath + "\\" + Text_input.Text + " picture" + ".png");
                 pictureBox1.Image = Image.FromFile(sourceFilePath);
             }
         }

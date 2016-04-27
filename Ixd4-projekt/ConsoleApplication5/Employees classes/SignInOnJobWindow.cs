@@ -20,16 +20,24 @@ namespace ConsoleApplication5
 
         private void Initializejobpeople(string path)
         {
-            
-            EmployeesReader EmployeeControl = new EmployeesReader(500, 200, path);
-            EmployeeControl.Location = new Point(0, 0);
-            EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
-            Controls.Add(EmployeeControl);
-        }
+            this.Size = Screen.PrimaryScreen.Bounds.Size;
+            this.Padding = new Padding(0);
 
-        private void CloseWindow(object sender, EventArgs e)
-        {
-            this.Hide();
+            int x = this.Width - 50;
+            int y = this.Height - 400;
+            Point locationOfEmployeeButtons = new Point(25, 200);
+            
+
+            EmployeesReader employeeControl = new EmployeesReader(x, y ,path) {Location = locationOfEmployeeButtons} ;
+            EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
+            Controls.Add(employeeControl);
+
+            // Quit button is made for the page, placed in right corner
+            Quit_Close_Button quitButton = new Quit_Close_Button {Size = new Size(200, 80)};
+            quitButton.Location = new Point(this.Width - (quitButton.Width), this.Height - (quitButton.Height));
+            quitButton.Padding = new Padding(20);
+            quitButton.Button_Click += new System.EventHandler(QuitButtonClick);
+            Controls.Add(quitButton);
         }
 
         private void Close_window(object sender, EmployeeEventArgs e)
@@ -37,14 +45,9 @@ namespace ConsoleApplication5
             this.Hide();
         }
 
-        private void OnJobWindow_Load(object sender, EventArgs e)
+        private void QuitButtonClick(object sender, EventArgs e)
         {
-
-        }
-
-        private void SignInOnJobWindow_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
     }
 }

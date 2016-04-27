@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CategoryNew xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HasImage>false</HasImage>
+  <IsLogo>false</IsLogo>
+  <Name>Drinks</Name>
+  <Product_list />
+  <Category_list>
+    <CategoryNew>
+      <_pathOfImage />
+      <HasImage>false</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage />
+      <Name>Cola</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>Cola</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>true</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>Cola</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</PathOfImage>
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>true</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</PathOfImage>
+      <Name>Cola</Name>
+      <Product_list />
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage />
+      <HasImage>false</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage />
+      <Name>Cola</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>true</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>soda</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</PathOfImage>
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>soda</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</PathOfImage>
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>20.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>20.00</Price>
+          <Name>soda</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage />
+      <HasImage>false</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage />
+      <Name>Cola</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>12</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>12</Price>
+          <Name>soda</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>12</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>12</Price>
+          <Name>soda</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Cola picture.png</PathOfImage>
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+  </Category_list>
+</CategoryNew>

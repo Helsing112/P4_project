@@ -16,12 +16,17 @@ namespace ConsoleApplication5
         [STAThread]
         static void Main(string[] args)
         {
+
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
+            //CategoryNew Other = new CategoryNew() { Name = "Other"};
+            //CategoryNew Drinks = new CategoryNew() { Name = "Drinks" };
+            //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.OtherLibFile, Other);
+            //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile, Drinks);
 
-            Application.Run(new Main_page(@"..\..\..\..\Library"));
+            Application.Run(new MainPage(@"..\..\..\..\Library"));
 
-            Console.ReadKey();
+
         }
     }
 }

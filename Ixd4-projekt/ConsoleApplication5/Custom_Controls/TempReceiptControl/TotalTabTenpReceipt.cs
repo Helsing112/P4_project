@@ -12,9 +12,15 @@ namespace ConsoleApplication5
 {
     public partial class TotalTabTenpReceipt : UserControl 
     {
+        public TotalTabTenpReceipt()
+        {
+            InitializeComponent();
+
+
+        }
         public TotalTabTenpReceipt(int size_x, int size_y)
         {
-            InitializeComponent(size_x, size_y);
+            InitializeComponent();
 
 
            
@@ -26,7 +32,7 @@ namespace ConsoleApplication5
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(int size_x, int size_y)
+        private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_Total = new System.Windows.Forms.Label();
@@ -82,8 +88,8 @@ namespace ConsoleApplication5
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Width = size_x;
-            this.Height = size_y;
+            this.Width = 20;
+            this.Height = 30;
             this.Name = "TotalTabTenpReceipt";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -26,6 +26,7 @@ namespace ConsoleApplication5
             Starting_lib_path = path;
             InitializeComponent();
             start();
+
         }
         private void start()
         {
@@ -181,17 +182,14 @@ namespace ConsoleApplication5
         private void Edit_button_click(object sender, EventArgs e)
         {
 
-            if (Application.OpenForms.OfType<XmlFileAdder>().Count() == 1)
+            if (Application.OpenForms.OfType<ProductAdderForm>().Count() == 1)
             {
-                Application.OpenForms.OfType<XmlFileAdder>().First().BringToFront();
+                Application.OpenForms.OfType<ProductAdderForm>().First().BringToFront();
             }
-
-
-            else {
-
-            XmlFileAdder Editor = new XmlFileAdder(path);
+            else
+            {
+            ProductAdderForm Editor = new ProductAdderForm();
             Editor.ShowDialog();
-                Editor.TopMost = true;
             }
         }
 

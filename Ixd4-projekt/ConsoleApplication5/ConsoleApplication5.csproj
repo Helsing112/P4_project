@@ -79,19 +79,13 @@
     <Compile Include="Standard layouts\Buttons\Pay Buttons\Discount_buttons.Designer.cs">
       <DependentUpon>Discount_buttons.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPageForm\MainPage_StartPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MainPageForm\MainPage_StartPage.cs" />
     <Compile Include="Pay\PayEventArgs.cs" />
     <Compile Include="Pay\Mortens Shit\PayWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPageForm\MainPage_TablesPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainPageForm\MainPage_CreateReceipt.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MainPageForm\MainPage_TablesPage.cs" />
+    <Compile Include="MainPageForm\MainPage_CreateReceipt.cs" />
     <Compile Include="Pay\Mortens Shit\PayWindow.Designer.cs">
       <DependentUpon>PayWindow.cs</DependentUpon>
     </Compile>
@@ -150,9 +144,7 @@
     <Compile Include="Standard layouts\Buttons\Quit_Close_Button.Designer.cs">
       <DependentUpon>Quit_Close_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\Save_Create_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Standard layouts\Buttons\Save_Create_Button.cs" />
     <Compile Include="Standard layouts\Buttons\Save_Create_Button.Designer.cs">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </Compile>
@@ -357,9 +349,7 @@
       <DependentUpon>ProductButtonCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom_Controls\ProductEventArgs.cs" />
-    <Compile Include="MainPageForm\Main_page.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MainPageForm\Main_page.cs" />
     <Compile Include="MainPageForm\Main_page.Designer.cs">
       <DependentUpon>Main_page.cs</DependentUpon>
     </Compile>

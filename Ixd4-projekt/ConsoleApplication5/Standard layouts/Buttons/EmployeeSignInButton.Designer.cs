@@ -32,14 +32,19 @@
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
             // 
             // EmployeeSignInButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.Name = "EmployeeSignInButton";
+            this.Load += new System.EventHandler(this.EmployeeSignInButton_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

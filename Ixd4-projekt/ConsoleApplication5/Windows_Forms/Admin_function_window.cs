@@ -118,7 +118,8 @@ namespace ConsoleApplication5
              
               
             }
-            else {
+            else
+            {
               Messages.WrongPassword();
             }
         }

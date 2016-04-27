@@ -39,15 +39,11 @@ namespace ConsoleApplication5
         private void CreateProducts(Category input_category, string path)
         {
             DirectoryInfo directories = new DirectoryInfo(path);
-            Console.WriteLine("CreateProduck");
-            foreach (FileInfo item in directories.GetFiles())
+           foreach (FileInfo item in directories.GetFiles())
             {
                 Product temp_product = Read_product<Product>(item.FullName);
                 input_category.Product_list.Add(temp_product);
-                Console.WriteLine(temp_product.Name + "hejsa");
             }
         }
-
-
     }
 }

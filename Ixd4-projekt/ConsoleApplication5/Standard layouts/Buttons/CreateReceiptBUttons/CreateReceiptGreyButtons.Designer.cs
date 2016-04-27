@@ -1,13 +1,13 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class Main_page
+    partial class CreateReceiptGreyButtons
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,26 +20,29 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Main_page
+            // pictureBox1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            // 
+            // CreateReceiptGreyButtons
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 574);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Main_page";
-            this.Text = "Admin Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "CreateReceiptGreyButtons";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
