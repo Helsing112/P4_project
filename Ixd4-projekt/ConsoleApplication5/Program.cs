@@ -24,7 +24,7 @@ namespace ConsoleApplication5
             //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.OtherLibFile, Other);
             //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile, Drinks);
 
-            Application.Run(new Main_page(@"..\..\..\..\Library"));
+            Application.Run(new MainPage(@"..\..\..\..\Library"));
 
 
         }

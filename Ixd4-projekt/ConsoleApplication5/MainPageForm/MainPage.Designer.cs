@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication5
 {
-    partial class Main_page
+    partial class MainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(PrimScreen.Width,PrimScreen.Height);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Main_page";
+            this.Name = "MainPage";
             this.Text = "Admin Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

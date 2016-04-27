@@ -42,6 +42,7 @@ namespace ConsoleApplication5
             this.Label_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label_Text.Click += new EventHandler(EmployeeButtonClick);
             this.Label_Text.BorderStyle = BorderStyle.Fixed3D;
+
             // 
             // EmployeeButton
             // 

@@ -39,6 +39,7 @@
             this.standard_Label3 = new ConsoleApplication5.Standard_Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.standard_Label1 = new ConsoleApplication5.Standard_Label();
+            this.quit_Close_Button1 = new ConsoleApplication5.Quit_Close_Button();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -98,7 +99,7 @@
             this.standard_Label5.ForeColor = System.Drawing.Color.White;
             this.standard_Label5.Location = new System.Drawing.Point(3, 170);
             this.standard_Label5.Name = "standard_Label5";
-            this.standard_Label5.Size = new System.Drawing.Size(262, 86);
+            this.standard_Label5.Size = new System.Drawing.Size(261, 86);
             this.standard_Label5.TabIndex = 13;
             this.standard_Label5.Text = "Password";
             this.standard_Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,7 +107,7 @@
             // Name_TextBox
             // 
             this.Name_TextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Name_TextBox.Location = new System.Drawing.Point(271, 106);
+            this.Name_TextBox.Location = new System.Drawing.Point(270, 106);
             this.Name_TextBox.Name = "Name_TextBox";
             this.Name_TextBox.Size = new System.Drawing.Size(331, 42);
             this.Name_TextBox.TabIndex = 11;
@@ -119,7 +120,7 @@
             this.standard_Label2.ForeColor = System.Drawing.Color.White;
             this.standard_Label2.Location = new System.Drawing.Point(3, 0);
             this.standard_Label2.Name = "standard_Label2";
-            this.standard_Label2.Size = new System.Drawing.Size(262, 85);
+            this.standard_Label2.Size = new System.Drawing.Size(261, 85);
             this.standard_Label2.TabIndex = 8;
             this.standard_Label2.Text = "ID";
             this.standard_Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,7 +128,7 @@
             // ID_TextBox
             // 
             this.ID_TextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ID_TextBox.Location = new System.Drawing.Point(271, 21);
+            this.ID_TextBox.Location = new System.Drawing.Point(270, 21);
             this.ID_TextBox.Name = "ID_TextBox";
             this.ID_TextBox.Size = new System.Drawing.Size(331, 42);
             this.ID_TextBox.TabIndex = 9;
@@ -135,7 +136,7 @@
             // Password_TextBox
             // 
             this.Password_TextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Password_TextBox.Location = new System.Drawing.Point(271, 192);
+            this.Password_TextBox.Location = new System.Drawing.Point(270, 192);
             this.Password_TextBox.Name = "Password_TextBox";
             this.Password_TextBox.Size = new System.Drawing.Size(331, 42);
             this.Password_TextBox.TabIndex = 12;
@@ -148,7 +149,7 @@
             this.standard_Label3.ForeColor = System.Drawing.Color.White;
             this.standard_Label3.Location = new System.Drawing.Point(3, 85);
             this.standard_Label3.Name = "standard_Label3";
-            this.standard_Label3.Size = new System.Drawing.Size(262, 85);
+            this.standard_Label3.Size = new System.Drawing.Size(261, 85);
             this.standard_Label3.TabIndex = 14;
             this.standard_Label3.Text = "Name";
             this.standard_Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -180,11 +181,22 @@
             this.standard_Label1.Text = "ADD A NEW EMPLOYEE";
             this.standard_Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // quit_Close_Button1
+            // 
+            this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
+            this.quit_Close_Button1.Image_set = null;
+            this.quit_Close_Button1.Location = new System.Drawing.Point(277, 711);
+            this.quit_Close_Button1.Name = "quit_Close_Button1";
+            this.quit_Close_Button1.Size = new System.Drawing.Size(288, 84);
+            this.quit_Close_Button1.TabIndex = 15;
+            this.quit_Close_Button1.Textlabel = "Quit";
+            // 
             // AddEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 868);
+            this.Controls.Add(this.quit_Close_Button1);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -214,5 +226,6 @@
         private Standard_Label standard_Label3;
         private Save_Create_Button Add_Employee_Button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Quit_Close_Button quit_Close_Button1;
     }
 }

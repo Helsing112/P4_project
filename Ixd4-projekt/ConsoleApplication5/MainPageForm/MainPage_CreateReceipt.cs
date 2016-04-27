@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace ConsoleApplication5
 {
-    partial class Main_page
+    partial class MainPage
     {
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;

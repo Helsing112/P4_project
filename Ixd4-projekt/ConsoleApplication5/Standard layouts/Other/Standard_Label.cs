@@ -15,7 +15,7 @@ namespace ConsoleApplication5
         public Standard_Label()
         {
             InitializeComponent();
-            Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            Font = new Font("Segoe UI", 15F, FontStyle.Regular);
             ForeColor = Color.White;
         }
     }
