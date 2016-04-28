@@ -66,15 +66,15 @@ namespace ConsoleApplication5
 
         private void ProductsAddButton_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<XmlFileAdder>().Count() == 1)
+            if (Application.OpenForms.OfType<ProductAdderForm>().Count() == 1)
             {
-                Application.OpenForms.OfType<XmlFileAdder>().First().BringToFront();
+                Application.OpenForms.OfType<ProductAdderForm>().First().BringToFront();
             }
 
 
             else {
 
-                XmlFileAdder Editor = new XmlFileAdder(path);
+                ProductAdderForm Editor = new ProductAdderForm();
                 Editor.ShowDialog();
                 Editor.TopMost = true;
             }

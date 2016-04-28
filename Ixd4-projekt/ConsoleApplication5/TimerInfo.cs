@@ -38,11 +38,11 @@ namespace ConsoleApplication5
 
             try
             {
-                TableInfo.Text = (table.Table_name);
+                Table_Info.Text = (table.Table_name);
             }
             catch (NullReferenceException)
             {
-                NameTextBox.Text = "";
+                Employee_Name.Text = "";
             }            
         }
         public void DeleteNameAndTablesFromTimer()

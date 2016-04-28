@@ -214,7 +214,6 @@ namespace ConsoleApplication5
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
             Controls.Add(Home_button);
-            Console.WriteLine("home added");
         }
         private void Home_button_click(object sender, EventArgs e)
         {
