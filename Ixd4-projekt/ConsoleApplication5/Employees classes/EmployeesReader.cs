@@ -95,7 +95,7 @@ namespace ConsoleApplication5
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(this.Width, 500);
+            tableLayoutPanel1.Size = new System.Drawing.Size(this.Width, this.Height);
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.Margin = new Padding(0);
