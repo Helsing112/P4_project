@@ -32,6 +32,10 @@
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Text = "CHECK OUT";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;

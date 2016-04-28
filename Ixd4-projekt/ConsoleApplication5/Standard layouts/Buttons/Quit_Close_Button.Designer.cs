@@ -32,15 +32,20 @@
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Text = "QUIT";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             // 
             // Quit_Close_Button
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Quit_Close_Button";
             this.Textlabel = "Quit";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

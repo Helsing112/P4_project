@@ -37,6 +37,7 @@ namespace ConsoleApplication5
             {
                 this.pictureBox1.Image = Image_set;
             }
+            this.Refresh();
 
         }
 

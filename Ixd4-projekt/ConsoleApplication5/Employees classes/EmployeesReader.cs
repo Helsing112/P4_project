@@ -39,6 +39,7 @@ namespace ConsoleApplication5
             // Create a Button object 
             //EmployeeButton dynamicButton = new EmployeeButton(100,100, EMP);
             EmployeeSignInButton dynamicButton = new EmployeeSignInButton(EMP) {Textlabel = EMP.EmployeeName};
+            dynamicButton.Refresh();
             // Set Button properties
             // Add a Button Click Event handler
             dynamicButton.Button_Click += EmployeeButtonClick;
@@ -95,7 +96,7 @@ namespace ConsoleApplication5
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(this.Width, 500);
+            tableLayoutPanel1.Size = new System.Drawing.Size(this.Width, this.Height);
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.Margin = new Padding(0);
@@ -144,7 +145,7 @@ namespace ConsoleApplication5
                     Anchor = AnchorStyles.None,
                     Width = ThirdBluePanel.Width - 100,
                     Font = new Font("Segoe UI", 50F, FontStyle.Regular),
-                    Location = new Point(50, 10),
+                    Location = new Point(50, 0),
                     PasswordChar = '*',
                     TextAlign = HorizontalAlignment.Center
                 }
