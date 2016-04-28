@@ -13,17 +13,40 @@ namespace ConsoleApplication5
 {
     public partial class ProductAdderForm : Standard_Window_Layout
     {
+        private int _NoimageOrImageOrLogo;
         public string CurrentPathOfLib { get; private set; }
-        public int NoimageOrImageOrLogo { get; private set; } //-1 for No Image, 0 for image, 1 for Logo
+        public int NoimageOrImageOrLogo { get { return _NoimageOrImageOrLogo; } private set
+            {
+                if(value == -1)
+                {
+                    Button_ChooseNoImage.label1.ForeColor = Color.Black;
+                    Button_ChooseLogo.label1.ForeColor = Color.White;
+                    Button_ChooseWithImage.label1.ForeColor = Color.White;
+                }
+                else if (value == 0)
+                {
+                    Button_ChooseNoImage.label1.ForeColor = Color.White;
+                    Button_ChooseLogo.label1.ForeColor = Color.White;
+                    Button_ChooseWithImage.label1.ForeColor = Color.Black;
+                }
+                else if (value == 1)
+                {
+                    Button_ChooseNoImage.label1.ForeColor = Color.White;
+                    Button_ChooseLogo.label1.ForeColor = Color.Black;
+                    Button_ChooseWithImage.label1.ForeColor = Color.White;
+                }
+                _NoimageOrImageOrLogo = value;
+            } } //-1 for No Image, 0 for image, 1 for Logo
         public string pictureLibraryPath { get; private set; }
         public string sourceFilePath { get; private set; }
         public string productPicturePath { get; private set; }
 
         public ProductAdderForm()
         {
-            NoimageOrImageOrLogo = -1;
             InitializeComponent();
             Initialize_events();
+            NoimageOrImageOrLogo = -1;
+
         }
 
         private void Initialize_events()
@@ -168,18 +191,30 @@ namespace ConsoleApplication5
         {
             CurrentPathOfLib = Properties.Resources.LocationOfProductLib + Properties.Resources.OtherLibFile;
             superClassProductViewer1.initializeFlowOfProducts(CurrentPathOfLib);
+
+            Button_other.label1.ForeColor = Color.Black;
+            Button_food.label1.ForeColor = Color.White;
+            Button_Drinks.label1.ForeColor = Color.White;
         }
 
         private void Button_food_Button_Click(object sender, EventArgs e)
         {
             CurrentPathOfLib = Properties.Resources.LocationOfProductLib + Properties.Resources.FoodLibFile;
             superClassProductViewer1.initializeFlowOfProducts(CurrentPathOfLib);
+
+            Button_other.label1.ForeColor = Color.White;
+            Button_food.label1.ForeColor = Color.Black;
+            Button_Drinks.label1.ForeColor = Color.White;
         }
 
         private void Button_Drinks_Button_Click(object sender, EventArgs e)
         {
             CurrentPathOfLib = Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile;
             superClassProductViewer1.initializeFlowOfProducts(CurrentPathOfLib);
+
+            Button_other.label1.ForeColor = Color.White;
+            Button_food.label1.ForeColor = Color.White;
+            Button_Drinks.label1.ForeColor = Color.Black;
         }
     }
 }

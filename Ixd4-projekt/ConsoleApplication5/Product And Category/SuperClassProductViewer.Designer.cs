@@ -67,6 +67,7 @@
             // 
             // SuperClassProductViewer
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.PanelBackButton);
             this.Controls.Add(this.Flow_ProductsFlow);

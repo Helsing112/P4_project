@@ -373,10 +373,10 @@
       <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees classes\EmployeeEventArgs.cs" />
-    <Compile Include="Employees classes\EmployeeButton.cs">
+    <Compile Include="Standard layouts\Buttons\EmployeeButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employees classes\EmployeeButton.Designer.cs">
+    <Compile Include="Standard layouts\Buttons\EmployeeButton.Designer.cs">
       <DependentUpon>EmployeeButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees classes\AddEmployees.cs">
@@ -621,7 +621,7 @@
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductButtonInFlowTempReciept.resx">
       <DependentUpon>ProductButtonInFlowTempReciept.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employees classes\EmployeeButton.resx">
+    <EmbeddedResource Include="Standard layouts\Buttons\EmployeeButton.resx">
       <DependentUpon>EmployeeButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees classes\AddEmployees.resx">
