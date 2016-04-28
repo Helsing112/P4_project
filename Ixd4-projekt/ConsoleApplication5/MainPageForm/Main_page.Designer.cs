@@ -32,11 +32,11 @@
             // 
             // Main_page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(PrimScreen.Width,PrimScreen.Height);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Main_page";
             this.Text = "Admin Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

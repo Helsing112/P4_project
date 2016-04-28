@@ -72,12 +72,11 @@ namespace ConsoleApplication5
 
             Controls.Clear();
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
-
+            CreateReceipt.Size = this.Size;
             Controls.Add(CreateReceipt);
             
         }
         TEST CreateReceipt;
-        //Fields controls
         SuperClassProductViewer treeFood;
         SuperClassProductViewer treeDrinks;
         Timer Timer_for_wheel;

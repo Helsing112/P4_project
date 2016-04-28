@@ -32,8 +32,8 @@ namespace ConsoleApplication5
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Button_BackToTable = new ConsoleApplication5.Back_Button();
             this.Label_TableName = new ConsoleApplication5.Standard_Label();
+            this.Button_BackToTable = new ConsoleApplication5.Back_Button();
             this.Button_Done = new ConsoleApplication5.DoneButton();
             this.Button_Comment = new ConsoleApplication5.CreateReceiptGreyButtons();
             this.Button_PrintBill = new ConsoleApplication5.CreateReceiptGreyButtons();
@@ -56,17 +56,6 @@ namespace ConsoleApplication5
             this.panel1.Size = new System.Drawing.Size(531, 61);
             this.panel1.TabIndex = 12;
             // 
-            // Button_BackToTable
-            // 
-            this.Button_BackToTable.BackColor = System.Drawing.Color.Transparent;
-            this.Button_BackToTable.Image_set = null;
-            this.Button_BackToTable.Location = new System.Drawing.Point(1710, 963);
-            this.Button_BackToTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Button_BackToTable.Name = "Button_BackToTable";
-            this.Button_BackToTable.Size = new System.Drawing.Size(187, 79);
-            this.Button_BackToTable.TabIndex = 13;
-            this.Button_BackToTable.Textlabel = "BACK";
-            // 
             // Label_TableName
             // 
             this.Label_TableName.Dock = System.Windows.Forms.DockStyle.Left;
@@ -78,6 +67,17 @@ namespace ConsoleApplication5
             this.Label_TableName.TabIndex = 0;
             this.Label_TableName.Text = "TABLE";
             this.Label_TableName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Button_BackToTable
+            // 
+            this.Button_BackToTable.BackColor = System.Drawing.Color.Transparent;
+            this.Button_BackToTable.Image_set = null;
+            this.Button_BackToTable.Location = new System.Drawing.Point(1806, 1001);
+            this.Button_BackToTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Button_BackToTable.Name = "Button_BackToTable";
+            this.Button_BackToTable.Size = new System.Drawing.Size(187, 79);
+            this.Button_BackToTable.TabIndex = 13;
+            this.Button_BackToTable.Textlabel = "BACK";
             // 
             // Button_Done
             // 
@@ -185,7 +185,8 @@ namespace ConsoleApplication5
             // TEST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.Button_BackToTable);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Button_Done);
@@ -198,6 +199,8 @@ namespace ConsoleApplication5
             this.Controls.Add(this.ProductView_Foods);
             this.Controls.Add(this.ProductView_Drinks);
             this.Controls.Add(this.timerInfo1);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "TEST";
             this.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.ResumeLayout(false);

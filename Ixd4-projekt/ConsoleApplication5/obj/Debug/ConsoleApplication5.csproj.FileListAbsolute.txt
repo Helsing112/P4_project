@@ -168,3 +168,4 @@ C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TEST.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CreateReceiptGreyButtons.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.DoneButton.resources
+C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
