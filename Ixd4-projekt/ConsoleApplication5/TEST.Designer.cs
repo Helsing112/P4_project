@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ConsoleApplication5
@@ -178,14 +179,13 @@ namespace ConsoleApplication5
             this.timerInfo1.Location = new System.Drawing.Point(0, 0);
             this.timerInfo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timerInfo1.Name = "timerInfo1";
-            this.timerInfo1.Size = new System.Drawing.Size(1920, 55);
             this.timerInfo1.TabIndex = 1;
             this.timerInfo1.tablename = null;
             // 
             // TEST
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.Button_BackToTable);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Button_Done);
@@ -199,7 +199,8 @@ namespace ConsoleApplication5
             this.Controls.Add(this.ProductView_Drinks);
             this.Controls.Add(this.timerInfo1);
             this.Name = "TEST";
-            this.Size = new System.Drawing.Size(1920, 1080);
+            this.Width = Screen.PrimaryScreen.Bounds.Width;
+            this.Height = Screen.PrimaryScreen.Bounds.Height;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
