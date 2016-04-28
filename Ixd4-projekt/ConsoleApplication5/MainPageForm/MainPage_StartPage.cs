@@ -28,7 +28,7 @@ namespace ConsoleApplication5
         private void Initialize_Field_Controls_startPage()
         {
             //admin button
-            Admin_login_Button(new Point(50, 100), new Size(200, 100));
+            Admin_login_Button(new Point(50, 100), new Size(200, 100)); 
             //employee controls
             Employee_signedInPanel(new Point(450, 100), new Size(600, 200));
             Check_inButton(new Point(50, 250), new Size(200, 100));
