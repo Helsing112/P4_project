@@ -3,6 +3,29 @@
   <HasImage>false</HasImage>
   <IsLogo>false</IsLogo>
   <Name>Food</Name>
-  <Product_list />
-  <Category_list />
+  <Product_list>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>20.00</_price>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>20.00</Price>
+      <Name>Burger</Name>
+      <HasImage>true</HasImage>
+      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+    </Product>
+  </Product_list>
+  <Category_list>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+      <Name>Burger</Name>
+      <Product_list />
+      <Category_list />
+    </CategoryNew>
+  </Category_list>
 </CategoryNew>

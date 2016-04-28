@@ -83,7 +83,7 @@ namespace ConsoleApplication5
             this.Panel_numpad.Controls.Add(this.button_num_5);
             this.Panel_numpad.Controls.Add(this.button_num_8);
             this.Panel_numpad.Controls.Add(this.button_num_7);
-            this.Panel_numpad.Location = new System.Drawing.Point(409, 93);
+            this.Panel_numpad.Location = new System.Drawing.Point(401, 87);
             this.Panel_numpad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_numpad.Name = "Panel_numpad";
             this.Panel_numpad.Size = new System.Drawing.Size(341, 337);
@@ -314,7 +314,7 @@ namespace ConsoleApplication5
             // 
             this.Panel_quit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_quit.Controls.Add(this.quit_Close_Button1);
-            this.Panel_quit.Location = new System.Drawing.Point(577, 486);
+            this.Panel_quit.Location = new System.Drawing.Point(569, 480);
             this.Panel_quit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_quit.Name = "Panel_quit";
             this.Panel_quit.Size = new System.Drawing.Size(173, 81);
@@ -335,7 +335,7 @@ namespace ConsoleApplication5
             // 
             this.panel_Split.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_Split.Controls.Add(this.split_button1);
-            this.panel_Split.Location = new System.Drawing.Point(409, 486);
+            this.panel_Split.Location = new System.Drawing.Point(401, 480);
             this.panel_Split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Split.Name = "panel_Split";
             this.panel_Split.Size = new System.Drawing.Size(163, 81);
@@ -358,7 +358,7 @@ namespace ConsoleApplication5
             this.Label_totalText.AutoSize = true;
             this.Label_totalText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Label_totalText.ForeColor = System.Drawing.Color.White;
-            this.Label_totalText.Location = new System.Drawing.Point(196, 479);
+            this.Label_totalText.Location = new System.Drawing.Point(188, 473);
             this.Label_totalText.Name = "Label_totalText";
             this.Label_totalText.Size = new System.Drawing.Size(64, 28);
             this.Label_totalText.TabIndex = 5;
@@ -371,7 +371,7 @@ namespace ConsoleApplication5
             this.label_paidText.AutoSize = true;
             this.label_paidText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label_paidText.ForeColor = System.Drawing.Color.White;
-            this.label_paidText.Location = new System.Drawing.Point(201, 507);
+            this.label_paidText.Location = new System.Drawing.Point(193, 501);
             this.label_paidText.Name = "label_paidText";
             this.label_paidText.Size = new System.Drawing.Size(58, 28);
             this.label_paidText.TabIndex = 6;
@@ -382,7 +382,7 @@ namespace ConsoleApplication5
             this.label_remaingingText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label_remaingingText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label_remaingingText.ForeColor = System.Drawing.Color.White;
-            this.label_remaingingText.Location = new System.Drawing.Point(119, 534);
+            this.label_remaingingText.Location = new System.Drawing.Point(111, 528);
             this.label_remaingingText.Name = "label_remaingingText";
             this.label_remaingingText.Size = new System.Drawing.Size(149, 31);
             this.label_remaingingText.TabIndex = 7;
@@ -394,7 +394,7 @@ namespace ConsoleApplication5
             this.Label_total_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_total_Number.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Label_total_Number.ForeColor = System.Drawing.Color.White;
-            this.Label_total_Number.Location = new System.Drawing.Point(263, 479);
+            this.Label_total_Number.Location = new System.Drawing.Point(255, 473);
             this.Label_total_Number.Name = "Label_total_Number";
             this.Label_total_Number.Size = new System.Drawing.Size(123, 28);
             this.Label_total_Number.TabIndex = 8;
@@ -406,7 +406,7 @@ namespace ConsoleApplication5
             this.Label_Paid_number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_Paid_number.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Label_Paid_number.ForeColor = System.Drawing.Color.White;
-            this.Label_Paid_number.Location = new System.Drawing.Point(257, 507);
+            this.Label_Paid_number.Location = new System.Drawing.Point(249, 501);
             this.Label_Paid_number.Name = "Label_Paid_number";
             this.Label_Paid_number.Size = new System.Drawing.Size(128, 28);
             this.Label_Paid_number.TabIndex = 9;
@@ -418,7 +418,7 @@ namespace ConsoleApplication5
             this.Label_Remain_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_Remain_Number.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.Label_Remain_Number.ForeColor = System.Drawing.Color.White;
-            this.Label_Remain_Number.Location = new System.Drawing.Point(259, 534);
+            this.Label_Remain_Number.Location = new System.Drawing.Point(251, 528);
             this.Label_Remain_Number.Name = "Label_Remain_Number";
             this.Label_Remain_Number.Size = new System.Drawing.Size(127, 32);
             this.Label_Remain_Number.TabIndex = 10;
@@ -430,7 +430,7 @@ namespace ConsoleApplication5
             this.Panel_receipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_receipt.Controls.Add(this.Flow_receiptMain);
             this.Panel_receipt.Controls.Add(this.Label_tableInfo);
-            this.Panel_receipt.Location = new System.Drawing.Point(24, 18);
+            this.Panel_receipt.Location = new System.Drawing.Point(16, 12);
             this.Panel_receipt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_receipt.Name = "Panel_receipt";
             this.Panel_receipt.Size = new System.Drawing.Size(361, 458);
@@ -462,7 +462,7 @@ namespace ConsoleApplication5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 576);
+            this.ClientSize = new System.Drawing.Size(760, 570);
             this.Controls.Add(this.Panel_receipt);
             this.Controls.Add(this.Label_Remain_Number);
             this.Controls.Add(this.Label_Paid_number);
