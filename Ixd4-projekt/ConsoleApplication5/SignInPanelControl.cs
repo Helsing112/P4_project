@@ -15,7 +15,7 @@ namespace ConsoleApplication5
         public SignInPanelControl()
         {
             InitializeComponent();
-            Employeepanel = new EmployeeSignInPanel {Size = this.Size};
+            Employeepanel = new EmployeeSignInPanel() {Size = this.Size};
             Controls.Add(Employeepanel);
             BorderStyle = BorderStyle.None;
         }

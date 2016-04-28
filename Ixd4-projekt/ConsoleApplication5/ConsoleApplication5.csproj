@@ -121,6 +121,12 @@
     <Compile Include="SignInPanelControl.Designer.cs">
       <DependentUpon>SignInPanelControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees classes\SignOutOnJobWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees classes\SignOutOnJobWindow.Designer.cs">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -518,6 +524,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignInPanelControl.resx">
       <DependentUpon>SignInPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees classes\SignOutOnJobWindow.resx">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\CheckInButton.resx">
       <DependentUpon>CheckInButton.cs</DependentUpon>

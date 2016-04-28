@@ -15,7 +15,9 @@ namespace ConsoleApplication5
         public EmployeeSignInPanel()
         {
             InitializeComponent();
+           
         }
+     
         /// <summary> 
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
@@ -51,7 +53,7 @@ namespace ConsoleApplication5
         
         private void OnPasswordCorrect(object sender, EmployeeEventArgs e)
         {
-            EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
+            temp = new EmployeeButton(100, 100, e.employee);
             this._panelForEmployee.Controls.Add(temp);
             temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
 
@@ -59,12 +61,23 @@ namespace ConsoleApplication5
 
         public EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;
 
+        EmployeeButton temp;
+
+       
+
+
         public virtual void EmployeeSignedInCLickButton(object sender, EmployeeEventArgs e)     /*har lavet den public*/
         {
-            if (this.EmployeeSignedInClickEvent != null)
+          
+
+         
             {
-                EmployeeSignedInClickEvent(this, new EmployeeEventArgs() { employee = e.employee });
+                if (this.EmployeeSignedInClickEvent != null)
+                {
+                    EmployeeSignedInClickEvent(sender, new EmployeeEventArgs() { employee = e.employee });
+                }
             }
+           
         }
 
         private FlowLayoutPanel _panelForEmployee;
