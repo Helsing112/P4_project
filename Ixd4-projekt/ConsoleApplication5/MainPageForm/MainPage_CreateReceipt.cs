@@ -72,9 +72,12 @@ namespace ConsoleApplication5
 
             Controls.Clear();
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
-
             Controls.Add(CreateReceipt);
-            
+            CreateReceipt.Size = Screen.PrimaryScreen.Bounds.Size;
+            Console.WriteLine(CreateReceipt.Size);
+
+
+             
         }
         TEST CreateReceipt;
         //Fields controls

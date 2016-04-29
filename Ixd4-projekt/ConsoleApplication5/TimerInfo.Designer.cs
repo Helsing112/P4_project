@@ -33,9 +33,9 @@ namespace ConsoleApplication5
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Clock_Label = new ConsoleApplication5.Standard_Label();
-            this.Employee_Name = new ConsoleApplication5.Standard_Label();
             this.Table_Info = new ConsoleApplication5.Standard_Label();
+            this.Employee_Name = new ConsoleApplication5.Standard_Label();
+            this.Clock_Label = new ConsoleApplication5.Standard_Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,7 @@ namespace ConsoleApplication5
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -62,18 +63,16 @@ namespace ConsoleApplication5
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1809, 150);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
-            // Clock_Label
+            // Table_Info
             // 
-            this.Clock_Label.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Clock_Label.AutoSize = true;
-            this.Clock_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clock_Label.ForeColor = System.Drawing.Color.Black;
-            this.Clock_Label.Location = new System.Drawing.Point(3, 42);
-            this.Clock_Label.Name = "Clock_Label";
-            this.Clock_Label.Size = new System.Drawing.Size(370, 65);
-            this.Clock_Label.TabIndex = 6;
-            this.Clock_Label.Text = "standard_Label1";
-            this.Clock_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Table_Info.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Table_Info.AutoSize = true;
+            this.Table_Info.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.Table_Info.ForeColor = System.Drawing.Color.White;
+            this.Table_Info.Location = new System.Drawing.Point(904, 48);
+            this.Table_Info.Name = "Table_Info";
+            this.Table_Info.Size = new System.Drawing.Size(0, 54);
+            this.Table_Info.TabIndex = 8;
             // 
             // Employee_Name
             // 
@@ -87,16 +86,18 @@ namespace ConsoleApplication5
             this.Employee_Name.TabIndex = 7;
             this.Employee_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Table_Info
+            // Clock_Label
             // 
-            this.Table_Info.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Table_Info.AutoSize = true;
-            this.Table_Info.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.Table_Info.ForeColor = System.Drawing.Color.White;
-            this.Table_Info.Location = new System.Drawing.Point(904, 48);
-            this.Table_Info.Name = "Table_Info";
-            this.Table_Info.Size = new System.Drawing.Size(0, 54);
-            this.Table_Info.TabIndex = 8;
+            this.Clock_Label.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Clock_Label.AutoSize = true;
+            this.Clock_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock_Label.ForeColor = System.Drawing.Color.Black;
+            this.Clock_Label.Location = new System.Drawing.Point(3, 42);
+            this.Clock_Label.Name = "Clock_Label";
+            this.Clock_Label.Size = new System.Drawing.Size(370, 65);
+            this.Clock_Label.TabIndex = 6;
+            this.Clock_Label.Text = "standard_Label1";
+            this.Clock_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TimerInfo
             // 

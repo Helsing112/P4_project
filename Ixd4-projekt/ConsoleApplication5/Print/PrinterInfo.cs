@@ -34,9 +34,9 @@ namespace ConsoleApplication5
                 print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatDoesThePrinting);
                 print.Print();
             }
-            catch (Exception ex)
+            catch (InvalidPrinterException)
             {
-
+                Messages.PrinterError();
                
             }
         
