@@ -21,7 +21,7 @@ namespace ConsoleApplication5
             Application.EnableVisualStyles();
            
 
-            Application.Run(new MainPage(@"..\..\..\..\Library"));
+            Application.Run(new MainPage());
 
 
         }

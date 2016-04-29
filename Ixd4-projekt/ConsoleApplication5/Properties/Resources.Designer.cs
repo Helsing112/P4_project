@@ -147,6 +147,15 @@ namespace ConsoleApplication5.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\..\Library.
+        /// </summary>
+        internal static string PathOfLibrary {
+            get {
+                return ResourceManager.GetString("PathOfLibrary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap placeholder {

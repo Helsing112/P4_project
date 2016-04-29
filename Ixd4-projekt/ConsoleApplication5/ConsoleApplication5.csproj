@@ -52,6 +52,7 @@
     <Compile Include="MainPageForm\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Print\PrintToKitchen.cs" />
     <Compile Include="Print\PrinterInfo.cs" />
     <Compile Include="Product And Category\Buttons\Category\CategoryLogo.cs">
       <SubType>UserControl</SubType>

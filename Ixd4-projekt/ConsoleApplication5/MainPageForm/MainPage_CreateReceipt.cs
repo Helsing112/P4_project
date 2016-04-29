@@ -58,13 +58,21 @@ namespace ConsoleApplication5
             initialize_wheel(400);
 
             CreateReceipt.Pay_Button.Button_Click += PayButton_click;
+            CreateReceipt.Button_PrintBill.Button_Click += Button_PrintBill_Button_Click;
             CreateReceipt.Button_BackToTable.Button_Click += BackToTablesPage_click;
 
             PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
             Initialize_Pay_window();
             Product_trees(new Point(700, 100), new Size(400, 700));
             BackToTablesPage_button();
+
         }
+
+        private void Button_PrintBill_Button_Click(object sender, EventArgs e)
+        {
+            PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt);
+        }
+
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
         {
             ActiveEmployee = activeEmployee;
@@ -86,6 +94,7 @@ namespace ConsoleApplication5
         Pay_Button PayButton;
         Pay_windowForm Pay_window;
         Back_Button BackToTablesPage;
+        
 
 
         #region Intialize methods-------------------------------------------------------
@@ -100,6 +109,7 @@ namespace ConsoleApplication5
             BackToTablesPage.TabIndex = 0;
             BackToTablesPage.Textlabel = "Back";
             BackToTablesPage.Button_Click += new System.EventHandler(BackToTablesPage_click);
+
         }
 
         private void Initialize_Pay_window()
@@ -164,6 +174,12 @@ namespace ConsoleApplication5
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable); //first we save the receipt to the active table
             Pay_window.Show_Pay_window(ActiveEmployee, ActiveTable);// then we show the pay window with the receipt
         }
+      
+      
+        
+        
+        
+        
         #region EventHandlers for product click and wheel to add to CreateReceipt.tempReceipt1----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;
