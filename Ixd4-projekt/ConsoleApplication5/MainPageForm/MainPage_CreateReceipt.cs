@@ -12,7 +12,7 @@ namespace ConsoleApplication5
     {
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
-        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
+    
 
         public string TextFromComment { get; private set; }
 
