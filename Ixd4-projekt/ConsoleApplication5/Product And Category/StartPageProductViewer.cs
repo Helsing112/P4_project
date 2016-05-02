@@ -10,24 +10,12 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class SuperClassProductViewer : UserControl
+    public partial class StartPageProductViewer : FlowLayoutPanel
     {
-        public CategoryNew MainCategory { get; private set; }
-        public CategoryNew CurrentCategory { get;private set; }
-        public SuperClassProductViewer()
+        public CategoryNew MainCategory { get; set; }
+        public StartPageProductViewer()
         {
             InitializeComponent();
-            back_Button1.Button_Click += Back_Button1_Button_Click;
-        }
-
-        private void Back_Button1_Button_Click(object sender, EventArgs e)
-        {
-            ReinitializeFlowOfProducts(MainCategory);
-        }
-        public void InitializeFlowOfProductsFromCat(CategoryNew catInput)
-        {
-            MainCategory = catInput;
-            ReinitializeFlowOfProducts(catInput);
         }
         public virtual void initializeFlowOfProducts(string pathOfLibrary)
         {
@@ -38,9 +26,7 @@ namespace ConsoleApplication5
         }
         public void ReinitializeFlowOfProducts(CategoryNew Category)
         {
-            CurrentCategory = Category;
-
-            Flow_ProductsFlow.Controls.Clear();            
+            this.Controls.Clear();
             foreach (CategoryNew item in Category.Category_list)
             {
                 AddCategoryControl(item);
@@ -48,30 +34,6 @@ namespace ConsoleApplication5
             foreach (Product item in Category.Product_list)
             {
                 AddProductControl(item);
-            }
-        }
-
-        private void CategoryClick(object sender, EventArgs e)
-        {
-            SuperClassCategory temp = (SuperClassCategory)sender;
-            ReinitializeFlowOfProducts(temp.Category);
-        }
-
-        public event EventHandler<ProductEventArgs> MouseDowned;
-        public event EventHandler<ProductEventArgs> MouseUpped;
-        private void ProductButtonUp(object sender, ProductEventArgs e)
-        {
-            if(MouseUpped != null)
-            {
-                MouseUpped(sender, e);
-            }
-        }
-
-        private void ProductButtonDown(object sender, ProductEventArgs e)
-        {
-            if(MouseDowned != null)
-            {
-                MouseDowned(sender, e);
             }
         }
         private void AddProductControl(Product ProductToAdd)
@@ -95,7 +57,7 @@ namespace ConsoleApplication5
             Panel TempHolder = new Panel();
             TempHolder.Size = temp.Size;
             TempHolder.Controls.Add(temp);
-            Flow_ProductsFlow.Controls.Add(TempHolder);
+            Controls.Add(TempHolder);
         }
         private void AddCategoryControl(CategoryNew CategoryToAdd)
         {
@@ -103,7 +65,7 @@ namespace ConsoleApplication5
             if (CategoryToAdd.IsLogo)
             {
                 temp = new CategoryLogo(CategoryToAdd);
-                Flow_ProductsFlow.Controls.Add(new CategoryLogo(CategoryToAdd));
+                //Controls.Add(new CategoryLogo(CategoryToAdd));
             }
             else if (CategoryToAdd.HasImage)
             {
@@ -118,7 +80,33 @@ namespace ConsoleApplication5
             Panel TempHolder = new Panel();
             TempHolder.Size = temp.Size;
             TempHolder.Controls.Add(temp);
-            Flow_ProductsFlow.Controls.Add(TempHolder);
+            Controls.Add(TempHolder);
+        }
+
+        private void CategoryClick(object sender, EventArgs e)
+        {
+            if(CategoryClicked != null)
+            {
+                CategoryClicked(sender, e);
+            }
+        }
+        public event EventHandler CategoryClicked;
+        public event EventHandler<ProductEventArgs> MouseDowned;
+        public event EventHandler<ProductEventArgs> MouseUpped;
+        private void ProductButtonUp(object sender, ProductEventArgs e)
+        {
+            if (MouseUpped != null)
+            {
+                MouseUpped(sender, e);
+            }
+        }
+
+        private void ProductButtonDown(object sender, ProductEventArgs e)
+        {
+            if (MouseDowned != null)
+            {
+                MouseDowned(sender, e);
+            }
         }
     }
 }
