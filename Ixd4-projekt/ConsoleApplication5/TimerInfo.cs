@@ -22,16 +22,15 @@ namespace ConsoleApplication5
 
         public void UpdateEmployeename(Employee name)
         {
+            try
+            {
+                Employee_Name.Text = name.EmployeeName;
 
-            if (name.EmployeeName == null)
+            }
+            catch (NullReferenceException)
             {
                 Employee_Name.Text = "";
             }
-            else
-            {
-                Employee_Name.Text = name.EmployeeName;
-            }
-          
         }
         public void UpdateTableName(Table_Info table)
         {

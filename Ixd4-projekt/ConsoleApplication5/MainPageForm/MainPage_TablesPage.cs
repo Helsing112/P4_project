@@ -12,25 +12,45 @@ namespace ConsoleApplication5
     {
 
         private Employee _employee;
-        public Employee ActiveEmployee { get { return _employee; } private set { _employee = value; Timer_panel.UpdateEmployeename(ActiveEmployee); } }
+        public Employee ActiveEmployee { get { return _employee; } private set { _employee = value; TablePage.timerInfo1.UpdateEmployeename(ActiveEmployee); } }
         /// <summary>
         /// Clears controls and Draws the page with the table panel
         /// </summary>
         /// <param name="Active_employee">The employee that is active</param>
+        //private void Draw_tablesPage(Employee Active_employee)
+        //{
+        //    Controls.Clear();
+        //    ActiveEmployee = Active_employee;
+
+        //    Controls.Add(tables_panel);
+        //    Controls.Add(BackToFrontPageButton);
+        //}
+
+        //private void Initialize_Field_Controls_tablesPage()
+        //{
+        //    BackToFrontPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
+        //    Tables_panel(new Point(200, 20), Size_of_table_panel);
+        //}
+
+        //_________________________________________TEST________________________________________
         private void Draw_tablesPage(Employee Active_employee)
         {
             Controls.Clear();
             ActiveEmployee = Active_employee;
-            
-            Controls.Add(tables_panel);
-            Controls.Add(BackToFrontPageButton);
+
+            Controls.Add(TablePage);
         }
-        
         private void Initialize_Field_Controls_tablesPage()
         {
-            BackToFrontPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
-            Tables_panel(new Point(200, 20), Size_of_table_panel);
+            TablePage = new TablesPage();
+            TablePage.Size = this.Size;
+
+            TablePage.back_Button1.Button_Click += BackToFrontPage_click;
+            TablePage.table_Panel_for_MainPage1.TableClick += OnTableClick;
         }
+        TablesPage TablePage;
+        //_________________________________________TESTEND_____________________________________
+
         //field controls
         Table_Panel_for_MainPage tables_panel;
         Button BackToFrontPageButton;
@@ -38,7 +58,7 @@ namespace ConsoleApplication5
         #region Table page methods--------------------------
         private void Tables_panel(Point Location_input, Size size_input)
         {
-            tables_panel = new Table_Panel_for_MainPage(size_input);
+            tables_panel = new Table_Panel_for_MainPage();
             tables_panel.TableClick += OnTableClick;
             tables_panel.Location = Location_input;
         }

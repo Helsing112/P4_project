@@ -12,7 +12,7 @@ namespace ConsoleApplication5
     {
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
-        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
+        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; CreateReceipt.timerInfo1.UpdateTableName(ActiveTable); } }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
@@ -50,10 +50,13 @@ namespace ConsoleApplication5
         {
             CreateReceipt = new TEST();
             CreateReceipt.Location = new Point(0, 0);
-            CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
-            CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
-            CreateReceipt.ProductView_Drinks.MouseUpped += MouseUpReciever;
-            CreateReceipt.ProductView_Drinks.MouseDowned += MouseDownReciever;
+            //CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
+            //CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
+            //CreateReceipt.ProductView_Drinks.MouseUpped += MouseUpReciever;
+            //CreateReceipt.ProductView_Drinks.MouseDowned += MouseDownReciever;
+
+            CreateReceipt.ProductNavigator.MouseUpped += MouseUpReciever;
+            CreateReceipt.ProductNavigator.MouseDowned += MouseDownReciever;
 
             initialize_wheel(400);
 
@@ -72,7 +75,8 @@ namespace ConsoleApplication5
 
             Controls.Clear();
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
-
+            CreateReceipt.Label_TableName.Text = "TABLE: " + ActiveTable.Table_name;
+            //CreateReceipt.Size = this.Size;
             Controls.Add(CreateReceipt);
             
         }
@@ -155,6 +159,7 @@ namespace ConsoleApplication5
         private void BackToTablesPage_click(object sender, EventArgs e)
         {
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+            CreateReceipt.resetProductViewers();
             ActiveTable = null;
             Draw_tablesPage(ActiveEmployee);
         }
@@ -205,7 +210,7 @@ namespace ConsoleApplication5
         }
         private void Pay_window_ProductsPaid(object sender, PayEventArgs e)
         {
-            tables_panel.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
+            TablePage.table_Panel_for_MainPage1.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
         }
         #endregion

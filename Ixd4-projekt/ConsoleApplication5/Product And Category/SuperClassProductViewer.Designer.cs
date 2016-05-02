@@ -1,4 +1,5 @@
-﻿namespace ConsoleApplication5
+﻿using System.Windows.Forms;
+namespace ConsoleApplication5
 {
     partial class SuperClassProductViewer
     {
@@ -28,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Flow_ProductsFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.Flow_ProductsFlow = new FlowLayoutPanel();
             this.PanelBackButton = new System.Windows.Forms.Panel();
             this.back_Button1 = new ConsoleApplication5.Back_Button();
             this.PanelBackButton.SuspendLayout();
@@ -36,14 +37,12 @@
             // 
             // Flow_ProductsFlow
             // 
-            this.Flow_ProductsFlow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Flow_ProductsFlow.AutoScroll = true;
             this.Flow_ProductsFlow.Location = new System.Drawing.Point(0, 0);
             this.Flow_ProductsFlow.Name = "Flow_ProductsFlow";
             this.Flow_ProductsFlow.Size = new System.Drawing.Size(382, 324);
             this.Flow_ProductsFlow.TabIndex = 0;
+            //this.Flow_ProductsFlow.InitializeSize();
             // 
             // PanelBackButton
             // 
@@ -67,6 +66,7 @@
             // 
             // SuperClassProductViewer
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.PanelBackButton);
             this.Controls.Add(this.Flow_ProductsFlow);
@@ -80,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel Flow_ProductsFlow;
+        private FlowLayoutPanel Flow_ProductsFlow;
         private System.Windows.Forms.Panel PanelBackButton;
         private Back_Button back_Button1;
     }

@@ -16,9 +16,9 @@ namespace ConsoleApplication5
         /// Panel of all the tables. Reads from designated xml files
         /// </summary>
         /// <param name="size_of_panel">Size of the panel</param>
-        public Table_Panel_for_MainPage(Size size_of_panel)
+        public Table_Panel_for_MainPage()
         {
-            InitializeComponent(size_of_panel);
+            InitializeComponent();
             Initialize_AllTables();
         }
         private void Initialize_AllTables()
@@ -36,7 +36,7 @@ namespace ConsoleApplication5
         {
             this.Controls.OfType<Table_Control_MainPage>().First(x => x.TableInfo.Table_name == NameOfTable).removeProducts(ProductsToRemove);
         }
-        public EventHandler TableClick;
+        public event EventHandler TableClick;
         private void TableClicked(object sender, EventArgs e)
         {
             if (TableClick != null)
@@ -52,11 +52,11 @@ namespace ConsoleApplication5
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(Size size_of_panel)
+        private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.Size = size_of_panel;
             this.AutoScaleMode = AutoScaleMode.Font;
+            this.Size = new Size(1200, 800);
             try
             {
                 this.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
