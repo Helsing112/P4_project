@@ -57,6 +57,8 @@ namespace ConsoleApplication5
             startPage.adminStartButton1.Button_Click += Admin_login_click;
             startPage.employeeSignInPanel1.EmployeeSignedInClickEvent += EmployesignedInEventClickButton;
             
+            InitilizeSignOutOnJobWindow();
+            TimerPanel();
         }
         StartPage startPage;
         //__________________________________________ENDTEST_____________________________
@@ -70,13 +72,22 @@ namespace ConsoleApplication5
         TimerInfo Timer_panel;
         CheckOutButton checkOutButton;
         private SignInOnJobWindow SignIn;
+        private SignOutOnJobWindow SignOut;
 
 
         #region Draw_startpage methods------------------------------------------------
         private void InitilizeSignInOnJobWindow()
         {
             SignIn = new SignInOnJobWindow(Path_of_Employee_library);
+            
         }
+
+        private void InitilizeSignOutOnJobWindow()
+        {
+            SignOut = new SignOutOnJobWindow();
+        }
+
+        
         public void Employee_signedInPanel(Point location_input, Size size_input)
         {
             employee_sign_in_panel = new SignInPanelControl();
@@ -151,20 +162,40 @@ namespace ConsoleApplication5
         }
         private void CheckInButton_click(object sender, EventArgs e)
         {
+            
             SignIn.ShowDialog();
             //EmployeeLoginTest test = new EmployeeLoginTest(Path_of_Employee_library);
             //test.ShowDialog();
         }
 
-        private void CheckoutButtonClick(object sender, EventArgs e)
+
+
+
+        public void CheckoutButtonClick(object sender, EventArgs e)
         {
-            // lol
+
+            
+            SignOut.show_window(employee_sign_in_panel);
         }
 
         
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
+
+            Control temp = (Control)sender;
+            if(temp.Parent.Parent.Parent.Parent is MainPage)
+            {
             Draw_tablesPage(e.employee); //draws the next page
+        }
+            if(temp.Parent.Parent.Parent is SignOutOnJobWindow)
+            {
+               if (MessageBox.Show($"Are you sure you want to check {e.employee.EmployeeName} out?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
+                    temp.Dispose();
+
+                }
+            }
+
+
         }
         #endregion
 

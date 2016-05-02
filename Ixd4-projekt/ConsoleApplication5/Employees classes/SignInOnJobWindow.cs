@@ -18,8 +18,9 @@ namespace ConsoleApplication5
             InitializeComponent();
             Initializejobpeople(path);
             Path = path;
+        
         }
-
+        
         private string Path { get; set; }
 
         private void Initializejobpeople(string path)
@@ -33,7 +34,7 @@ namespace ConsoleApplication5
             Point locationOfEmployeeButtons = new Point(25, 200);
             
 
-            EmployeesReader employeeControl = new EmployeesReader(x, y ,path) {Location = locationOfEmployeeButtons} ;
+            EmployeesReader employeeControl = new EmployeesReader(x, y ,path ) {Location = locationOfEmployeeButtons} ;
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
             Controls.Add(employeeControl);
             

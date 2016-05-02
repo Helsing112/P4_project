@@ -172,7 +172,7 @@ namespace ConsoleApplication5
             if (employeeinput.EmployeePassword == EmployeeButtonClickTextbox.textBox1.Text)
             {
                 OnPasswordCorrect(sender, e);     
-                Messages.EmployeeConfirmedLogin();
+            
 
 
             }

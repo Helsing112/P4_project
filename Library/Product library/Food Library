@@ -6,15 +6,15 @@
   <Product_list>
     <Product>
       <_Is_set>true</_Is_set>
-      <_price>20.00</_price>
-      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+      <_price>12</_price>
+      <_pathOfImage />
       <Varianter />
       <IsLogo>false</IsLogo>
       <Is_set>true</Is_set>
-      <Price>20.00</Price>
-      <Name>Burger</Name>
-      <HasImage>true</HasImage>
-      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+      <Price>12</Price>
+      <Name>Something</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
     </Product>
     <Product>
       <_Is_set>true</_Is_set>
@@ -24,66 +24,10 @@
       <IsLogo>false</IsLogo>
       <Is_set>true</Is_set>
       <Price>20</Price>
-      <Name>Hejsa</Name>
+      <Name>Somthaaaaaang</Name>
       <HasImage>false</HasImage>
       <PathOfImage />
     </Product>
   </Product_list>
-  <Category_list>
-    <CategoryNew>
-      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
-      <HasImage>true</HasImage>
-      <IsLogo>false</IsLogo>
-      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
-      <Name>Burger</Name>
-      <Product_list />
-      <Category_list />
-    </CategoryNew>
-    <CategoryNew>
-      <_pathOfImage />
-      <HasImage>false</HasImage>
-      <IsLogo>false</IsLogo>
-      <PathOfImage />
-      <Name>Hejsa</Name>
-      <Product_list>
-        <Product>
-          <_Is_set>true</_Is_set>
-          <_price>22</_price>
-          <_pathOfImage />
-          <Varianter />
-          <IsLogo>false</IsLogo>
-          <Is_set>true</Is_set>
-          <Price>22</Price>
-          <Name>Hesja</Name>
-          <HasImage>false</HasImage>
-          <PathOfImage />
-        </Product>
-        <Product>
-          <_Is_set>true</_Is_set>
-          <_price>22</_price>
-          <_pathOfImage />
-          <Varianter />
-          <IsLogo>false</IsLogo>
-          <Is_set>true</Is_set>
-          <Price>22</Price>
-          <Name>Hesjaaa</Name>
-          <HasImage>false</HasImage>
-          <PathOfImage />
-        </Product>
-        <Product>
-          <_Is_set>true</_Is_set>
-          <_price>22</_price>
-          <_pathOfImage />
-          <Varianter />
-          <IsLogo>false</IsLogo>
-          <Is_set>true</Is_set>
-          <Price>22</Price>
-          <Name>Hesjaaaasd</Name>
-          <HasImage>false</HasImage>
-          <PathOfImage />
-        </Product>
-      </Product_list>
-      <Category_list />
-    </CategoryNew>
-  </Category_list>
+  <Category_list />
 </CategoryNew>

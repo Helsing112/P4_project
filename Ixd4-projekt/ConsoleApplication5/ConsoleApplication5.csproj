@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentToReceiptWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentToReceiptWindow.Designer.cs">
+      <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom_FlowLayOutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -70,6 +76,7 @@
     <Compile Include="Standard layouts\Buttons\TablesPageButtons\OneTimePaymentButton.Designer.cs">
       <DependentUpon>OneTimePaymentButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Print\PrintToKitchen.cs" />
     <Compile Include="Print\PrinterInfo.cs" />
     <Compile Include="Product And Category\Buttons\Category\CategoryLogo.cs">
       <SubType>UserControl</SubType>
@@ -139,6 +146,12 @@
     <Compile Include="Employees classes\SignInPanelControl.Designer.cs">
       <DependentUpon>SignInPanelControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees classes\SignOutOnJobWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees classes\SignOutOnJobWindow.Designer.cs">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,6 +205,12 @@
     </Compile>
     <Compile Include="TablesPage.Designer.cs">
       <DependentUpon>TablesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
+      <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
     <Compile Include="TEST.cs">
       <SubType>UserControl</SubType>
@@ -318,12 +337,6 @@
     </Compile>
     <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.Designer.cs">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
-      <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
     <Compile Include="Tables\TableType_Show_Control.cs">
       <SubType>UserControl</SubType>
@@ -531,6 +544,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CommentToReceiptWindow.resx">
+      <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPageForm\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>

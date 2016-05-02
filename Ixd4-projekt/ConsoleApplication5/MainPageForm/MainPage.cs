@@ -21,12 +21,12 @@ namespace ConsoleApplication5
         private string Path_of_Employee_library;
         public List<Product> Clicked_products;
         public Size Size_of_table_panel { get; }
-        public MainPage(string library_path)
+        public MainPage()
         {
             Size_of_table_panel = new Size(1200, 800); //The size of the table panel, used as parameter for both the manager and the mainpage_panel
-            Starting_lib_path = library_path;
-            Path_of_product_library = library_path + "\\Product library";
-            Path_of_Employee_library = library_path + "\\Product libraryEmployee Library\\";
+            Starting_lib_path = Properties.Resources.PathOfLibrary;
+            Path_of_product_library = Properties.Resources.PathOfLibrary + "\\Product library";
+            Path_of_Employee_library = Properties.Resources.PathOfLibrary + "\\Product libraryEmployee Library\\";
             InitializeComponent(); // draws the main_page form
 
             Initialize_Field_Controls();

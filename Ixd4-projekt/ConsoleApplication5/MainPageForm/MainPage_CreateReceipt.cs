@@ -12,6 +12,10 @@ namespace ConsoleApplication5
     {
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
+        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
+
+        public string TextFromComment { get; private set; }
+
         public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; CreateReceipt.timerInfo1.UpdateTableName(ActiveTable); } }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
@@ -61,13 +65,34 @@ namespace ConsoleApplication5
             initialize_wheel(400);
 
             CreateReceipt.Pay_Button.Button_Click += PayButton_click;
+            CreateReceipt.Button_PrintBill.Button_Click += Button_PrintBill_Button_Click;
             CreateReceipt.Button_BackToTable.Button_Click += BackToTablesPage_click;
+            CreateReceipt.Button_Comment.Button_Click += Button_Comment_CLick;
 
             PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
             Initialize_Pay_window();
             Product_trees(new Point(700, 100), new Size(400, 700));
             BackToTablesPage_button();
+
         }
+
+        private void Button_Comment_CLick(object sender, EventArgs e)
+        {
+            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(TextFromComment);
+           
+
+            CommentWindow.ShowDialog();
+
+            TextFromComment = CommentWindow.Text;
+
+        }
+
+        private void Button_PrintBill_Button_Click(object sender, EventArgs e)
+        {
+            CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+            PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/
+        }
+
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
         {
             ActiveEmployee = activeEmployee;
@@ -92,6 +117,8 @@ namespace ConsoleApplication5
         Back_Button BackToTablesPage;
 
 
+
+
         #region Intialize methods-------------------------------------------------------
         public void BackToTablesPage_button()
         {
@@ -104,6 +131,7 @@ namespace ConsoleApplication5
             BackToTablesPage.TabIndex = 0;
             BackToTablesPage.Textlabel = "Back";
             BackToTablesPage.Button_Click += new System.EventHandler(BackToTablesPage_click);
+
         }
 
         private void Initialize_Pay_window()
@@ -169,6 +197,12 @@ namespace ConsoleApplication5
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable); //first we save the receipt to the active table
             Pay_window.Show_Pay_window(ActiveEmployee, ActiveTable);// then we show the pay window with the receipt
         }
+      
+      
+        
+        
+        
+        
         #region EventHandlers for product click and wheel to add to CreateReceipt.tempReceipt1----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;
