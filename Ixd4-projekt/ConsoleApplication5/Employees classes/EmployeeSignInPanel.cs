@@ -22,21 +22,16 @@ namespace ConsoleApplication5
         /// </summary>
         private void InitializeComponent()
         {
-            this._panelForEmployee = new System.Windows.Forms.FlowLayoutPanel();
+            this._panelForEmployee = new Custom_FlowLayOutPanel();
             this.SuspendLayout();
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(OnPasswordCorrect);
 
             // 
             // Panel_for_employee
-            // 
-            this._panelForEmployee.AutoSize = true;
-            this._panelForEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-           
-            this._panelForEmployee.Name = "_panelForEmployee";
-           
+            //            
+            this._panelForEmployee.Name = "_panelForEmployee";           
             this._panelForEmployee.TabIndex = 0;
-            this._panelForEmployee.BorderStyle = BorderStyle.FixedSingle;
-            
+            this._panelForEmployee.Size = this.Size;      
             // 
             // EmployeeSignInPanel
             // 
@@ -45,8 +40,7 @@ namespace ConsoleApplication5
             this.Controls.Add(this._panelForEmployee);
             this.Name = "EmployeeSignInPanel";
             this.ResumeLayout(false);
-            this.PerformLayout();
-              
+            this.PerformLayout();              
         }
         
         private void OnPasswordCorrect(object sender, EmployeeEventArgs e)
@@ -57,7 +51,7 @@ namespace ConsoleApplication5
 
         }
 
-        public EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;
+        public event EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;
 
         public virtual void EmployeeSignedInCLickButton(object sender, EmployeeEventArgs e)     /*har lavet den public*/
         {
@@ -67,6 +61,6 @@ namespace ConsoleApplication5
             }
         }
 
-        private FlowLayoutPanel _panelForEmployee;
+        public Custom_FlowLayOutPanel _panelForEmployee;
     }
 }

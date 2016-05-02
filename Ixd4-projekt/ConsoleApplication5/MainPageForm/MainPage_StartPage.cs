@@ -13,31 +13,53 @@ namespace ConsoleApplication5
         /// <summary>
         /// Clears all controls and Draws the starting page of the main window 
         /// </summary>
+        //private void Draw_startPage()
+        //{
+        //    Controls.Clear(); // clears any existing controls
+
+        //    //Adds the start page controls
+        //    Controls.Add(employee_sign_in_panel);
+        //    Controls.Add(Admin_login_button);
+        //    Controls.Add(CheckIn_Button);
+        //    Controls.Add(Timer_panel);
+        //    Controls.Add(checkOutButton);
+
+        //}
+        //private void Initialize_Field_Controls_startPage()
+        //{
+        //    //admin button
+        //    Admin_login_Button(new Point(50, 100), new Size(200, 100)); 
+        //    //employee controls
+        //    Employee_signedInPanel(new Point(450, 100), new Size(600, 200));
+        //    Check_inButton(new Point(50, 250), new Size(200, 100));
+        //    CheckOutButtonAdd(new Point(50, 400), new Size(200, 100));
+
+        //    InitilizeSignInOnJobWindow();
+
+        //    TimerPanel();
+        //}
+        //___________________________________________TEST_______________________________
         private void Draw_startPage()
         {
-            Controls.Clear(); // clears any existing controls
-
-            //Adds the start page controls
-            Controls.Add(employee_sign_in_panel);
-            Controls.Add(Admin_login_button);
-            Controls.Add(CheckIn_Button);
-            Controls.Add(Timer_panel);
-            Controls.Add(checkOutButton);
-
+            Controls.Clear();
+            Controls.Add(startPage);
+            this.startPage.employeeSignInPanel1._panelForEmployee.BackColor = Color.Blue;
+            this.startPage.employeeSignInPanel1._panelForEmployee.InitializeSize();
         }
+
         private void Initialize_Field_Controls_startPage()
         {
-            //admin button
-            Admin_login_Button(new Point(50, 100), new Size(200, 100)); 
-            //employee controls
-            Employee_signedInPanel(new Point(450, 100), new Size(600, 200));
-            Check_inButton(new Point(50, 250), new Size(200, 100));
-            CheckOutButtonAdd(new Point(50, 400), new Size(200, 100));
-
+            startPage = new StartPage();
             InitilizeSignInOnJobWindow();
-
-            TimerPanel();
+            startPage.Size = this.Size;
+            startPage.checkInButton1.Button_Click += CheckInButton_click;
+            startPage.checkOutButton1.Button_Click += CheckoutButtonClick;
+            startPage.adminStartButton1.Button_Click += Admin_login_click;
+            startPage.employeeSignInPanel1.EmployeeSignedInClickEvent += EmployesignedInEventClickButton;
+            
         }
+        StartPage startPage;
+        //__________________________________________ENDTEST_____________________________
 
 
 
