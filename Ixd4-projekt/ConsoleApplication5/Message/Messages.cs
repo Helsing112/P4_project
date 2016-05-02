@@ -35,6 +35,9 @@ namespace ConsoleApplication5
 
         internal static void DenyProductPriceFormat() { Message_box.Message("Product Price is wrong format", -1); }
 
+        public static void CommentAdded() { Message_box.Message("Added a comment for the kitchen", 1); }
+
+        public static void EmployeeAlreadySignedIn() { Message_box.Message("A employee with that ID is already signed in", -1); }
     }
 
 }

@@ -13,6 +13,9 @@ namespace ConsoleApplication5
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
         public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
+
+        public string TextFromComment { get; private set; }
+
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
@@ -60,6 +63,7 @@ namespace ConsoleApplication5
             CreateReceipt.Pay_Button.Button_Click += PayButton_click;
             CreateReceipt.Button_PrintBill.Button_Click += Button_PrintBill_Button_Click;
             CreateReceipt.Button_BackToTable.Button_Click += BackToTablesPage_click;
+            CreateReceipt.Button_Comment.Button_Click += Button_Comment_CLick;
 
             PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
             Initialize_Pay_window();
@@ -68,9 +72,21 @@ namespace ConsoleApplication5
 
         }
 
+        private void Button_Comment_CLick(object sender, EventArgs e)
+        {
+            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(TextFromComment);
+           
+
+            CommentWindow.ShowDialog();
+
+            TextFromComment = CommentWindow.Text;
+
+        }
+
         private void Button_PrintBill_Button_Click(object sender, EventArgs e)
         {
-            PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt);
+            CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+            PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/
         }
 
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
@@ -94,7 +110,8 @@ namespace ConsoleApplication5
         Pay_Button PayButton;
         Pay_windowForm Pay_window;
         Back_Button BackToTablesPage;
-        
+       
+
 
 
         #region Intialize methods-------------------------------------------------------

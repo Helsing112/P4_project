@@ -53,15 +53,27 @@ namespace ConsoleApplication5
         
         private void OnPasswordCorrect(object sender, EmployeeEventArgs e)
         {
-            temp = new EmployeeButton(100, 100, e.employee);
-            this._panelForEmployee.Controls.Add(temp);
-            temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
+
+          
+                if (_panelForEmployee.Controls.OfType<EmployeeButton>().ToList().Exists(x => x.employee.EmployeeID == e.employee.EmployeeID))
+            {
+                Messages.EmployeeAlreadySignedIn();
+
+            }
+            else
+            {
+                EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
+                this._panelForEmployee.Controls.Add(temp);
+                temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
+
+
+                Messages.EmployeeConfirmedLogin();
+            }
 
         }
 
         public EventHandler<EmployeeEventArgs> EmployeeSignedInClickEvent;
 
-        EmployeeButton temp;
 
        
 

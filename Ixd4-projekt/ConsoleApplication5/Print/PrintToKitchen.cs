@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Printing;
 using System.Drawing;
+using System.IO;
+
 
 namespace ConsoleApplication5
 {
@@ -13,16 +15,22 @@ namespace ConsoleApplication5
         public string TableName { get; set; }
         public string EmployeeName { get; set; }
         public List<ReceiptProduct> ProductList { get; set; }
-        public PrintToKitchen(string Tablename, string employename, List<ReceiptProduct> Products)
+        public string TextFromComment { get; set; }
+        public string Printername { get; set; }
+
+        
+        public PrintToKitchen(string Tablename, string employename, List<ReceiptProduct> Products, string textfromcomment, string printername)
         {
-            this.TableName = TableName;
+            this.TableName = Tablename;
             this.ProductList = Products;
-            this.EmployeeName = EmployeeName;
+            this.EmployeeName = employename;
+            this.TextFromComment = textfromcomment;
+            this.Printername = printername;
         }
 
-        static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products)
+        static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, string Textfromcomment, string Printername)
         {
-            PrintToKitchen printinfo = new PrintToKitchen(TableName, EmployeeName, Products);
+            PrintToKitchen printinfo = new PrintToKitchen(TableName, EmployeeName, Products, Textfromcomment, Printername);
 
 
             try
@@ -30,7 +38,18 @@ namespace ConsoleApplication5
                 PrintDocument print = new PrintDocument();
                 print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
                 print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatPrintsToKitchen);
-                print.Print();
+                print.PrinterSettings.PrinterName = Printername;
+
+
+                if (print.PrinterSettings.IsValid)
+                {
+                    print.Print();
+                }
+                else {
+                    Messages.PrinterError();
+                }
+
+              
             }
             catch (Exception ex)
             {
@@ -54,19 +73,26 @@ namespace ConsoleApplication5
 
             graphics.DrawString(" Morten Linnets Fun&Go", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
 
-
-            const string format = "{0,-5} {1,-10} {2,10} {3,0}";
+            offset = offset + 20;
+            const string format = "{0,-5} {1,-10} {2,10}";
             string stringtoprint = "\n";
 
             foreach (var item in ProductList)
             {
-                stringtoprint += string.Format(format, item.Amount, item.Product.Name, (item.Product.Price * item.Amount), "kr\n");
+                stringtoprint += string.Format(format, item.Amount, item.Product.Name,"\n");
                 offset = offset + 20;
             }
             ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
-            offset = offset + 40;
 
-            string StringWithEmployeeAndTable = $"You were served by {EmployeeName} at table {TableName}";
+            offset = offset + 50;
+
+            string StringWithEmployeeAndTable = $"Waiter: {EmployeeName} Table: {TableName}";
+            string StringWithComment = $" Comment: \n {TextFromComment}";
+
+            ev.Graphics.DrawString(StringWithEmployeeAndTable.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
+
+            offset = offset+ 40;
+            ev.Graphics.DrawString(StringWithComment.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
 
 
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentToReceiptWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentToReceiptWindow.Designer.cs">
+      <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPageForm\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\DoneButton.Designer.cs">
       <DependentUpon>DoneButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
+      <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
     <Compile Include="TEST.cs">
       <SubType>UserControl</SubType>
@@ -283,12 +295,6 @@
     </Compile>
     <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.Designer.cs">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
-      <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
     <Compile Include="Tables\TableType_Show_Control.cs">
       <SubType>UserControl</SubType>
@@ -496,6 +502,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CommentToReceiptWindow.resx">
+      <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPageForm\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>

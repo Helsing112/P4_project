@@ -16,6 +16,18 @@
       <HasImage>false</HasImage>
       <PathOfImage />
     </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>20</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>20</Price>
+      <Name>Somthaaaaaang</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
   </Product_list>
   <Category_list />
 </CategoryNew>
