@@ -32,6 +32,7 @@ namespace ConsoleApplication5
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Button_OtherLibrary = new ConsoleApplication5.Std_Button();
             this.Flow_DrinksCats = new ConsoleApplication5.StartPageProductViewer();
             this.Flow_FoodCats = new ConsoleApplication5.StartPageProductViewer();
             this.Button_BackToTable = new ConsoleApplication5.Back_Button();
@@ -56,6 +57,19 @@ namespace ConsoleApplication5
             this.panel1.Size = new System.Drawing.Size(435, 61);
             this.panel1.TabIndex = 12;
             // 
+            // Button_OtherLibrary
+            // 
+            this.Button_OtherLibrary.BackColor = System.Drawing.Color.Transparent;
+            this.Button_OtherLibrary.BackgroundImage = global::ConsoleApplication5.Properties.Resources.Product;
+            this.Button_OtherLibrary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_OtherLibrary.Image_set = null;
+            this.Button_OtherLibrary.Location = new System.Drawing.Point(892, 767);
+            this.Button_OtherLibrary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Button_OtherLibrary.Name = "Button_OtherLibrary";
+            this.Button_OtherLibrary.Size = new System.Drawing.Size(181, 78);
+            this.Button_OtherLibrary.TabIndex = 17;
+            this.Button_OtherLibrary.Textlabel = "OTHER";
+            // 
             // Flow_DrinksCats
             // 
             this.Flow_DrinksCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -64,7 +78,7 @@ namespace ConsoleApplication5
             this.Flow_DrinksCats.Location = new System.Drawing.Point(988, 120);
             this.Flow_DrinksCats.MainCategory = null;
             this.Flow_DrinksCats.Name = "Flow_DrinksCats";
-            this.Flow_DrinksCats.Size = new System.Drawing.Size(504, 665);
+            this.Flow_DrinksCats.Size = new System.Drawing.Size(504, 643);
             this.Flow_DrinksCats.TabIndex = 16;
             // 
             // Flow_FoodCats
@@ -75,7 +89,7 @@ namespace ConsoleApplication5
             this.Flow_FoodCats.Location = new System.Drawing.Point(472, 120);
             this.Flow_FoodCats.MainCategory = null;
             this.Flow_FoodCats.Name = "Flow_FoodCats";
-            this.Flow_FoodCats.Size = new System.Drawing.Size(504, 665);
+            this.Flow_FoodCats.Size = new System.Drawing.Size(504, 643);
             this.Flow_FoodCats.TabIndex = 15;
             // 
             // Button_BackToTable
@@ -190,6 +204,7 @@ namespace ConsoleApplication5
             // TEST
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.Button_OtherLibrary);
             this.Controls.Add(this.Flow_DrinksCats);
             this.Controls.Add(this.Flow_FoodCats);
             this.Controls.Add(this.Button_BackToTable);
@@ -224,5 +239,6 @@ namespace ConsoleApplication5
         public Back_Button Button_BackToTable;
         public StartPageProductViewer Flow_FoodCats;
         public StartPageProductViewer Flow_DrinksCats;
+        private Std_Button Button_OtherLibrary;
     }
 }

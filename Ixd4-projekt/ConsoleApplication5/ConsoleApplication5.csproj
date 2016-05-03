@@ -547,6 +547,9 @@
     <EmbeddedResource Include="CommentToReceiptWindow.resx">
       <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees classes\SignOutOnJobWindow.resx">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPageForm\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>

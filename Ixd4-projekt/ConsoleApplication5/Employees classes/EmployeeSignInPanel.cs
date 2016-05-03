@@ -56,7 +56,7 @@ namespace ConsoleApplication5
             }
             else
             {
-                EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
+                EmployeeButton temp = new EmployeeButton(100, 250, e.employee);
                 this._panelForEmployee.Controls.Add(temp);
                 temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
 

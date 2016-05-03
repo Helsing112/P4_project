@@ -172,9 +172,7 @@ namespace ConsoleApplication5
 
         public void CheckoutButtonClick(object sender, EventArgs e)
         {
-
-            
-            SignOut.show_window(employee_sign_in_panel);
+            SignOut.show_window(startPage.employeeSignInPanel1);
         }
 
         

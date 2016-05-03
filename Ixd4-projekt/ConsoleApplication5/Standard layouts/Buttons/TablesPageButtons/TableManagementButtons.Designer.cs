@@ -38,7 +38,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.CombineTables;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Comment;
             // 
             // TableManagementButtons
             // 

@@ -56,7 +56,7 @@
             this.employeeSignInPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.employeeSignInPanel1.Location = new System.Drawing.Point(580, 170);
+            this.employeeSignInPanel1.Location = new System.Drawing.Point(544, 157);
             this.employeeSignInPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.employeeSignInPanel1.Name = "employeeSignInPanel1";
             this.employeeSignInPanel1.Size = new System.Drawing.Size(1081, 803);
@@ -82,7 +82,7 @@
             this.checkOutButton1.Location = new System.Drawing.Point(87, 533);
             this.checkOutButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkOutButton1.Name = "checkOutButton1";
-            this.checkOutButton1.Size = new System.Drawing.Size(271, 150);
+            this.checkOutButton1.Size = new System.Drawing.Size(332, 150);
             this.checkOutButton1.TabIndex = 2;
             this.checkOutButton1.Textlabel = "CHECK OUT";
             // 
@@ -93,7 +93,7 @@
             this.checkInButton1.Location = new System.Drawing.Point(87, 329);
             this.checkInButton1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkInButton1.Name = "checkInButton1";
-            this.checkInButton1.Size = new System.Drawing.Size(271, 150);
+            this.checkInButton1.Size = new System.Drawing.Size(332, 150);
             this.checkInButton1.TabIndex = 1;
             this.checkInButton1.Textlabel = "CHECK IN";
             // 

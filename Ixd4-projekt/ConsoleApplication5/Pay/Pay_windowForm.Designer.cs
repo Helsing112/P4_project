@@ -68,6 +68,7 @@ namespace ConsoleApplication5
             // Panel_numpad
             // 
             this.Panel_numpad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel_numpad.Controls.Add(this.Button_pay);
             this.Panel_numpad.Controls.Add(this.discount_buttons2);
             this.Panel_numpad.Controls.Add(this.Button_clear);
             this.Panel_numpad.Controls.Add(this.Label_EnteredAmount);
@@ -85,7 +86,7 @@ namespace ConsoleApplication5
             this.Panel_numpad.Location = new System.Drawing.Point(401, 44);
             this.Panel_numpad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_numpad.Name = "Panel_numpad";
-            this.Panel_numpad.Size = new System.Drawing.Size(341, 337);
+            this.Panel_numpad.Size = new System.Drawing.Size(341, 426);
             this.Panel_numpad.TabIndex = 0;
             // 
             // discount_buttons2
@@ -303,7 +304,7 @@ namespace ConsoleApplication5
             // 
             this.Button_pay.BackColor = System.Drawing.Color.Transparent;
             this.Button_pay.Image_set = null;
-            this.Button_pay.Location = new System.Drawing.Point(568, 394);
+            this.Button_pay.Location = new System.Drawing.Point(167, 348);
             this.Button_pay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_pay.Name = "Button_pay";
             this.Button_pay.Size = new System.Drawing.Size(169, 76);
@@ -345,7 +346,7 @@ namespace ConsoleApplication5
             // 
             this.split_button1.BackColor = System.Drawing.Color.Transparent;
             this.split_button1.Image_set = null;
-            this.split_button1.Location = new System.Drawing.Point(0, 0);
+            this.split_button1.Location = new System.Drawing.Point(0, -2);
             this.split_button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.split_button1.Name = "split_button1";
             this.split_button1.Size = new System.Drawing.Size(163, 81);
@@ -463,7 +464,6 @@ namespace ConsoleApplication5
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 570);
-            this.Controls.Add(this.Button_pay);
             this.Controls.Add(this.Panel_receipt);
             this.Controls.Add(this.Label_Remain_Number);
             this.Controls.Add(this.Label_Paid_number);
