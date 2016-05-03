@@ -43,8 +43,7 @@ namespace ConsoleApplication5
         {
             Controls.Clear();
             Controls.Add(startPage);
-            this.startPage.employeeSignInPanel1._panelForEmployee.BackColor = Color.Blue;
-            this.startPage.employeeSignInPanel1._panelForEmployee.InitializeSize();
+            //this.startPage.employeeSignInPanel1._panelForEmployee.InitializeSize();
         }
 
         private void Initialize_Field_Controls_startPage()

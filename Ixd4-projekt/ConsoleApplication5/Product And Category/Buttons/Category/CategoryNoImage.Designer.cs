@@ -34,19 +34,20 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(132, 131);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label1.Size = new System.Drawing.Size(152, 134);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
-            this.pictureBox1.Size = new System.Drawing.Size(132, 131);
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.OuterCategories;
+            this.pictureBox1.Size = new System.Drawing.Size(152, 134);
             // 
             // CategoryNoImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "CategoryNoImage";
-            this.Size = new System.Drawing.Size(132, 131);
+            this.Size = new System.Drawing.Size(152, 134);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

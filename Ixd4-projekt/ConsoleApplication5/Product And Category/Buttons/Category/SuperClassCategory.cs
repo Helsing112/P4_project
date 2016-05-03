@@ -15,7 +15,7 @@ namespace ConsoleApplication5
         public CategoryNew Category { get; set; }
         public SuperClassCategory()
         {
-            throw new WarningException("This Ctor may not be used");
+            //throw new WarningException("This Ctor may not be used");
         }
         public SuperClassCategory(CategoryNew Category)
         {

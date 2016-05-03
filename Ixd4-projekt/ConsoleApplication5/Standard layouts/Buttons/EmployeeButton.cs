@@ -45,21 +45,16 @@ namespace ConsoleApplication5
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(153, 128);
-            this.label1.Text = employee.EmployeeName;
-            this.Textlabel = employee.EmployeeName;
-
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
-            this.pictureBox1.Size = new System.Drawing.Size(153, 128);
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.CombineTables;
             // 
             // EmployeeButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.Name = "EmployeeButton";
-            this.Size = new System.Drawing.Size(153, 128);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

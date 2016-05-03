@@ -62,7 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.BackgroundImage = global::ConsoleApplication5.Properties.Resources.OuterCategories;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.CategoryPicture);
             this.DoubleBuffered = true;

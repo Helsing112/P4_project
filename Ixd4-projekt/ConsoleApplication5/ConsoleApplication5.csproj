@@ -559,6 +559,9 @@
     <EmbeddedResource Include="Product And Category\Buttons\Category\CategoryWithImage.resx">
       <DependentUpon>CategoryWithImage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Category\SuperClassCategory.resx">
+      <DependentUpon>SuperClassCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product And Category\Buttons\Product\ProductLogo.resx">
       <DependentUpon>ProductLogo.cs</DependentUpon>
     </EmbeddedResource>

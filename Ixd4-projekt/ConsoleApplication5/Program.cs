@@ -20,6 +20,7 @@ namespace ConsoleApplication5
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
 
+            
             Application.Run(new MainPage());
 
 
