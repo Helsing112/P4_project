@@ -32,14 +32,21 @@
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Comment;
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             // 
             // CheckOutButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "CheckOutButton";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);

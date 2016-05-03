@@ -16,5 +16,10 @@ namespace ConsoleApplication5
         {
             InitializeComponent();
         }
+
+        private void Add_Button_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,6 +34,7 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label1.Text = "Add";
             // 
             // pictureBox1
@@ -42,10 +43,11 @@
             // 
             // Add_Button
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "Add_Button";
             this.Textlabel = "Add";
+            this.Load += new System.EventHandler(this.Add_Button_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

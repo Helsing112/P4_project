@@ -37,6 +37,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label1.Size = new System.Drawing.Size(159, 147);
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -48,6 +49,9 @@
             // 
             // PictureOfProduct
             // 
+            this.PictureOfProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PictureOfProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureOfProduct.InitialImage = null;
             this.PictureOfProduct.Location = new System.Drawing.Point(18, 13);

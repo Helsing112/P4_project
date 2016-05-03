@@ -36,6 +36,7 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label1.Size = new System.Drawing.Size(152, 134);
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -46,11 +47,14 @@
             // 
             // CategoryPicture
             // 
+            this.CategoryPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoryPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CategoryPicture.Cursor = System.Windows.Forms.Cursors.No;
             this.CategoryPicture.Location = new System.Drawing.Point(18, 16);
             this.CategoryPicture.Name = "CategoryPicture";
-            this.CategoryPicture.Size = new System.Drawing.Size(114, 76);
+            this.CategoryPicture.Size = new System.Drawing.Size(108, 75);
             this.CategoryPicture.TabIndex = 2;
             this.CategoryPicture.TabStop = false;
             // 
