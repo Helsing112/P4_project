@@ -547,6 +547,9 @@
     <EmbeddedResource Include="CommentToReceiptWindow.resx">
       <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees classes\SignOutOnJobWindow.resx">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPageForm\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -558,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product And Category\Buttons\Category\CategoryWithImage.resx">
       <DependentUpon>CategoryWithImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Category\SuperClassCategory.resx">
+      <DependentUpon>SuperClassCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product And Category\Buttons\Product\ProductLogo.resx">
       <DependentUpon>ProductLogo.cs</DependentUpon>

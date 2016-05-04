@@ -24,7 +24,7 @@ namespace ConsoleApplication5
         /// </summary>
         private void InitializeComponent()
         {
-            this._panelForEmployee = new Custom_FlowLayOutPanel();
+            this._panelForEmployee = new FlowLayoutPanel();
             this.SuspendLayout();
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(OnPasswordCorrect);
 
@@ -56,7 +56,7 @@ namespace ConsoleApplication5
             }
             else
             {
-                EmployeeButton temp = new EmployeeButton(100, 100, e.employee);
+                EmployeeButton temp = new EmployeeButton(100, 250, e.employee);
                 this._panelForEmployee.Controls.Add(temp);
                 temp.ClickEvent += new EventHandler<EmployeeEventArgs>(EmployeeSignedInCLickButton);
 
@@ -86,6 +86,6 @@ namespace ConsoleApplication5
            
         }
 
-        public Custom_FlowLayOutPanel _panelForEmployee;
+        public FlowLayoutPanel _panelForEmployee;
     }
 }

@@ -28,8 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.OuterCategories;
+            // 
+            // SuperClassCategory
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "SuperClassCategory";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pictureBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

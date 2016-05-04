@@ -43,8 +43,7 @@ namespace ConsoleApplication5
         {
             Controls.Clear();
             Controls.Add(startPage);
-            this.startPage.employeeSignInPanel1._panelForEmployee.BackColor = Color.Blue;
-            this.startPage.employeeSignInPanel1._panelForEmployee.InitializeSize();
+            //this.startPage.employeeSignInPanel1._panelForEmployee.InitializeSize();
         }
 
         private void Initialize_Field_Controls_startPage()
@@ -173,9 +172,7 @@ namespace ConsoleApplication5
 
         public void CheckoutButtonClick(object sender, EventArgs e)
         {
-
-            
-            SignOut.show_window(employee_sign_in_panel);
+            SignOut.show_window(startPage.employeeSignInPanel1);
         }
 
         

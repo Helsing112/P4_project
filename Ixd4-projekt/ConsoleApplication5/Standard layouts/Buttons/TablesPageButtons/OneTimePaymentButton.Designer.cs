@@ -38,7 +38,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Done;
             // 
             // OneTimePaymentButton
             // 

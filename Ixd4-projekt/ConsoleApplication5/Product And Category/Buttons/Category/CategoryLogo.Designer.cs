@@ -35,7 +35,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label1.Size = new System.Drawing.Size(128, 116);
+            this.label1.Size = new System.Drawing.Size(152, 134);
             // 
             // pictureBox1
             // 
@@ -43,7 +43,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.None;
-            this.pictureBox1.Size = new System.Drawing.Size(128, 116);
+            this.pictureBox1.Size = new System.Drawing.Size(152, 134);
             // 
             // CategoryLogo
             // 
@@ -51,7 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "CategoryLogo";
-            this.Size = new System.Drawing.Size(128, 116);
+            this.Size = new System.Drawing.Size(152, 134);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

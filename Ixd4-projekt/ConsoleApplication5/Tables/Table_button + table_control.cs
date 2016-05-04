@@ -24,8 +24,8 @@ namespace ConsoleApplication5
     }
     public abstract class Table_Control : Button //the superclass of the buttons. Should ONLY contain the general aestethics
     {
-        public Color OccupiedColor = Color.Yellow;
-        public Color NOTOccupiedColor = Color.Tomato;
+        public Color OccupiedColor = Color.FromArgb(74, 74, 74);
+        public Color NOTOccupiedColor = Color.LightGray;
     }
     public class Table_Control_Manager : Table_Control //The table_control for the manager window.
     {
