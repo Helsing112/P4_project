@@ -34,11 +34,12 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label1.Text = "Placeholder";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Numpad;
             // 
             // Discount_buttons
             // 

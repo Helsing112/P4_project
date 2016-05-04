@@ -19,16 +19,16 @@ namespace ConsoleApplication5
 
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
-            CategoryNew Other = new CategoryNew() { Name = "Other" };
-            CategoryNew Drinks = new CategoryNew() { Name = "Drinks" };
-            CategoryNew Food = new CategoryNew() { Name = "Food" };
 
-            XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.OtherLibFile, Other);
-            XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile, Drinks);
-            XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.FoodLibFile, Food);
+            //CategoryNew Other = new CategoryNew() { Name = "Other" };
+            //CategoryNew Drinks = new CategoryNew() { Name = "Drinks" };
+            //CategoryNew Food = new CategoryNew() { Name = "Food" };
 
+            //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.OtherLibFile, Other);
+            //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.DrinkLibFile, Drinks);
+            //XmlCreateLibrary.Create_File_TEST(Properties.Resources.LocationOfProductLib + Properties.Resources.FoodLibFile, Food);
 
-            Application.Run(new MainPage(@"..\..\..\..\Library"));
+            Application.Run(new MainPage());
 
 
         }

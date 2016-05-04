@@ -34,15 +34,16 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label1.Text = "Back";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Quit_Back;
             // 
             // Back_Button
             // 
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "Back_Button";
             this.Textlabel = "Back";

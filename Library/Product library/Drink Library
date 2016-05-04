@@ -4,5 +4,40 @@
   <IsLogo>false</IsLogo>
   <Name>Drinks</Name>
   <Product_list />
-  <Category_list />
+  <Category_list>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+      <Name>Burger</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>22</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>22</Price>
+          <Name>Burger</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>22</_price>
+          <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>22</Price>
+          <Name>Burger11</Name>
+          <HasImage>true</HasImage>
+          <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+  </Category_list>
 </CategoryNew>

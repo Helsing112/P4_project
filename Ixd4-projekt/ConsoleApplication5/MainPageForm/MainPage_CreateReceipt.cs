@@ -12,7 +12,11 @@ namespace ConsoleApplication5
     {
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
-        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
+    
+
+        public string TextFromComment { get; private set; }
+
+        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; CreateReceipt.timerInfo1.UpdateTableName(ActiveTable); } }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
@@ -50,21 +54,45 @@ namespace ConsoleApplication5
         {
             CreateReceipt = new TEST();
             CreateReceipt.Location = new Point(0, 0);
-            CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
-            CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
-            CreateReceipt.ProductView_Drinks.MouseUpped += MouseUpReciever;
-            CreateReceipt.ProductView_Drinks.MouseDowned += MouseDownReciever;
+            //CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
+            //CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
+            //CreateReceipt.ProductView_Drinks.MouseUpped += MouseUpReciever;
+            //CreateReceipt.ProductView_Drinks.MouseDowned += MouseDownReciever;
+
+            CreateReceipt.ProductNavigator.MouseUpped += MouseUpReciever;
+            CreateReceipt.ProductNavigator.MouseDowned += MouseDownReciever;
 
             initialize_wheel(400);
 
             CreateReceipt.Pay_Button.Button_Click += PayButton_click;
+            CreateReceipt.Button_PrintBill.Button_Click += Button_PrintBill_Button_Click;
             CreateReceipt.Button_BackToTable.Button_Click += BackToTablesPage_click;
+            CreateReceipt.Button_Comment.Button_Click += Button_Comment_CLick;
 
             PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
             Initialize_Pay_window();
             Product_trees(new Point(700, 100), new Size(400, 700));
             BackToTablesPage_button();
+
         }
+
+        private void Button_Comment_CLick(object sender, EventArgs e)
+        {
+            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(TextFromComment);
+           
+
+            CommentWindow.ShowDialog();
+
+            TextFromComment = CommentWindow.Text;
+
+        }
+
+        private void Button_PrintBill_Button_Click(object sender, EventArgs e)
+        {
+            CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+            PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/
+        }
+
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
         {
             ActiveEmployee = activeEmployee;
@@ -72,7 +100,8 @@ namespace ConsoleApplication5
 
             Controls.Clear();
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
-
+            CreateReceipt.Label_TableName.Text = "TABLE: " + ActiveTable.Table_name;
+            //CreateReceipt.Size = this.Size;
             Controls.Add(CreateReceipt);
             
         }
@@ -88,6 +117,8 @@ namespace ConsoleApplication5
         Back_Button BackToTablesPage;
 
 
+
+
         #region Intialize methods-------------------------------------------------------
         public void BackToTablesPage_button()
         {
@@ -100,6 +131,7 @@ namespace ConsoleApplication5
             BackToTablesPage.TabIndex = 0;
             BackToTablesPage.Textlabel = "Back";
             BackToTablesPage.Button_Click += new System.EventHandler(BackToTablesPage_click);
+
         }
 
         private void Initialize_Pay_window()
@@ -155,6 +187,7 @@ namespace ConsoleApplication5
         private void BackToTablesPage_click(object sender, EventArgs e)
         {
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+            CreateReceipt.resetProductViewers();
             ActiveTable = null;
             Draw_tablesPage(ActiveEmployee);
         }
@@ -164,6 +197,12 @@ namespace ConsoleApplication5
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable); //first we save the receipt to the active table
             Pay_window.Show_Pay_window(ActiveEmployee, ActiveTable);// then we show the pay window with the receipt
         }
+      
+      
+        
+        
+        
+        
         #region EventHandlers for product click and wheel to add to CreateReceipt.tempReceipt1----------------------------------------------------
         private bool timer_has_ticked = false;
         private Product Product_to_add;
@@ -205,7 +244,7 @@ namespace ConsoleApplication5
         }
         private void Pay_window_ProductsPaid(object sender, PayEventArgs e)
         {
-            tables_panel.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
+            TablePage.table_Panel_for_MainPage1.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
         }
         #endregion

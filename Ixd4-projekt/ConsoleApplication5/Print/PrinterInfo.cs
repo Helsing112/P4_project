@@ -13,18 +13,21 @@ namespace ConsoleApplication5
         public string TableName { get; set; }
         public string EmployeeName { get; set; }
         public List<ReceiptProduct> ProductList { get; set; }
+        public string Printername { get; set; }
 
         public decimal totalamount { get; set; }
-        public PrinterInfo(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount)
+
+        public PrinterInfo(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string printername)
         {
             this.TableName = TableName;
             this.ProductList = Products;
             this.EmployeeName = EmployeeName;
             this.totalamount = totalamount;
+            this.Printername = printername;
         }
-         static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount)
+         static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
         {
-            PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount);
+            PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount, Printername);
             
         
             try
@@ -32,11 +35,21 @@ namespace ConsoleApplication5
                 PrintDocument print = new PrintDocument();
                 print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
                 print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatDoesThePrinting);
-                print.Print();
+                print.PrinterSettings.PrinterName = Printername;
+
+
+                if (print.PrinterSettings.IsValid)
+                {
+                    print.Print();
+                }
+                else {
+                    Messages.PrinterError();
+                }
+            
             }
             catch (Exception ex)
             {
-
+                
                
             }
         

@@ -34,20 +34,21 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(154, 123);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label1.Size = new System.Drawing.Size(152, 134);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::ConsoleApplication5.Properties.Resources.knap3;
+            this.pictureBox1.BackgroundImage = global::ConsoleApplication5.Properties.Resources.BeerSodaPRODUCT_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Size = new System.Drawing.Size(154, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(152, 134);
             // 
             // ProductNoImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ProductNoImage";
-            this.Size = new System.Drawing.Size(154, 123);
+            this.Size = new System.Drawing.Size(152, 134);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -24,7 +24,11 @@ namespace ConsoleApplication5
         {
             ReinitializeFlowOfProducts(MainCategory);
         }
-
+        public void InitializeFlowOfProductsFromCat(CategoryNew catInput)
+        {
+            MainCategory = catInput;
+            ReinitializeFlowOfProducts(catInput);
+        }
         public virtual void initializeFlowOfProducts(string pathOfLibrary)
         {
             //Get the categories
@@ -35,6 +39,9 @@ namespace ConsoleApplication5
         public void ReinitializeFlowOfProducts(CategoryNew Category)
         {
             CurrentCategory = Category;
+
+            Label_Headline.Text = Category.Name;
+
             Flow_ProductsFlow.Controls.Clear();            
             foreach (CategoryNew item in Category.Category_list)
             {

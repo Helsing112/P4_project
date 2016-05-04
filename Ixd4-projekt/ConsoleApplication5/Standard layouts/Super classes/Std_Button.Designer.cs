@@ -1,4 +1,4 @@
-﻿ namespace ConsoleApplication5
+﻿namespace ConsoleApplication5
 {
     partial class Std_Button
     {

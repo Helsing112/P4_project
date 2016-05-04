@@ -16,7 +16,7 @@ namespace ConsoleApplication5
         {
             InitializeComponent();
             Font = new Font("Segoe UI", 15F, FontStyle.Regular);
-            ForeColor = Color.White;
+            ForeColor = Color.Black;
         }
     }
 }

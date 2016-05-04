@@ -18,7 +18,7 @@ namespace ConsoleApplication5
         public int Size_y { get;}
         public ProductButtonInFlowTempReciept(int size_x,int  size_y, Product product, int amount_to_represent)
         {
-            Size_x = size_x;
+            Size_x = size_x-5;
             Size_y = size_y;
             Amount_to_represent = amount_to_represent;
             Product_input = product;

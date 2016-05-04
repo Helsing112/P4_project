@@ -32,9 +32,13 @@
             this.pictureBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Numpad;
             // 
             // Numpad_button
             // 

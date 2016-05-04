@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Table_Button_Type_Xml_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>To mands bord</Name>
-  <Size>
-    <Width>95</Width>
-    <Height>31</Height>
-  </Size>
-</Table_Button_Type_Xml_data>

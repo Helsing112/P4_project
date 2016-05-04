@@ -46,12 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentToReceiptWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentToReceiptWindow.Designer.cs">
+      <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_FlowLayOutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom_FlowLayOutPanel.Designer.cs">
+      <DependentUpon>Custom_FlowLayOutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\StartPageButtons\AdminStartButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\StartPageButtons\AdminStartButton.Designer.cs">
+      <DependentUpon>AdminStartButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPageForm\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainPageForm\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Standard layouts\Buttons\TablesPageButtons\OneTimePaymentButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\TablesPageButtons\OneTimePaymentButton.Designer.cs">
+      <DependentUpon>OneTimePaymentButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\PrintToKitchen.cs" />
     <Compile Include="Print\PrinterInfo.cs" />
     <Compile Include="Product And Category\Buttons\Category\CategoryLogo.cs">
       <SubType>UserControl</SubType>
@@ -115,28 +140,34 @@
     <Compile Include="Product And Category\SuperClassProductViewer.Designer.cs">
       <DependentUpon>SuperClassProductViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignInPanelControl.cs">
+    <Compile Include="Employees classes\SignInPanelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SignInPanelControl.Designer.cs">
+    <Compile Include="Employees classes\SignInPanelControl.Designer.cs">
       <DependentUpon>SignInPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees classes\SignOutOnJobWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees classes\SignOutOnJobWindow.Designer.cs">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckInButton.cs">
+    <Compile Include="Standard layouts\Buttons\StartPageButtons\CheckInButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Standard layouts\Buttons\AdminFunctionButtons.Designer.cs">
       <DependentUpon>AdminFunctionButtons.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckInButton.Designer.cs">
+    <Compile Include="Standard layouts\Buttons\StartPageButtons\CheckInButton.Designer.cs">
       <DependentUpon>CheckInButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckOutButton.cs">
+    <Compile Include="Standard layouts\Buttons\StartPageButtons\CheckOutButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Standard layouts\Buttons\CheckOutButton.Designer.cs">
+    <Compile Include="Standard layouts\Buttons\StartPageButtons\CheckOutButton.Designer.cs">
       <DependentUpon>CheckOutButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\CreateReceiptGreyButtons.cs">
@@ -150,6 +181,36 @@
     </Compile>
     <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\DoneButton.Designer.cs">
       <DependentUpon>DoneButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\TablesPageButtons\TableManagementButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\TablesPageButtons\TableManagementButtons.Designer.cs">
+      <DependentUpon>TableManagementButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product And Category\StartPageProductViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Product And Category\StartPageProductViewer.Designer.cs">
+      <DependentUpon>StartPageProductViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TablesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TablesPage.Designer.cs">
+      <DependentUpon>TablesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
+      <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
     <Compile Include="TEST.cs">
       <SubType>UserControl</SubType>
@@ -277,12 +338,6 @@
     <Compile Include="Standard layouts\Super classes\Standard_Window_Layout.Designer.cs">
       <DependentUpon>Standard_Window_Layout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Standard layouts\Super classes\Std_Button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
-      <DependentUpon>Std_Button.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tables\TableType_Show_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -373,10 +428,10 @@
       <DependentUpon>Admin_Edit_ctrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees classes\EmployeeEventArgs.cs" />
-    <Compile Include="Employees classes\EmployeeButton.cs">
+    <Compile Include="Standard layouts\Buttons\EmployeeButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employees classes\EmployeeButton.Designer.cs">
+    <Compile Include="Standard layouts\Buttons\EmployeeButton.Designer.cs">
       <DependentUpon>EmployeeButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees classes\AddEmployees.cs">
@@ -489,6 +544,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CommentToReceiptWindow.resx">
+      <DependentUpon>CommentToReceiptWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees classes\SignOutOnJobWindow.resx">
+      <DependentUpon>SignOutOnJobWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPageForm\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -500,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product And Category\Buttons\Category\CategoryWithImage.resx">
       <DependentUpon>CategoryWithImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product And Category\Buttons\Category\SuperClassCategory.resx">
+      <DependentUpon>SuperClassCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product And Category\Buttons\Product\ProductLogo.resx">
       <DependentUpon>ProductLogo.cs</DependentUpon>
@@ -516,13 +580,16 @@
     <EmbeddedResource Include="Product And Category\SuperClassProductViewer.resx">
       <DependentUpon>SuperClassProductViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignInPanelControl.resx">
+    <EmbeddedResource Include="Employees classes\SignInPanelControl.resx">
       <DependentUpon>SignInPanelControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\CheckInButton.resx">
+    <EmbeddedResource Include="Standard layouts\Buttons\StartPageButtons\AdminStartButton.resx">
+      <DependentUpon>AdminStartButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\StartPageButtons\CheckInButton.resx">
       <DependentUpon>CheckInButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\CheckOutButton.resx">
+    <EmbeddedResource Include="Standard layouts\Buttons\StartPageButtons\CheckOutButton.resx">
       <DependentUpon>CheckOutButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Message\Message_box.resx">
@@ -576,6 +643,12 @@
     <EmbeddedResource Include="Standard layouts\Buttons\Save_Create_Button.resx">
       <DependentUpon>Save_Create_Button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\TablesPageButtons\OneTimePaymentButton.resx">
+      <DependentUpon>OneTimePaymentButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\TablesPageButtons\TableManagementButtons.resx">
+      <DependentUpon>TableManagementButtons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Other\TextBox_Touch.resx">
       <DependentUpon>TextBox_Touch.cs</DependentUpon>
     </EmbeddedResource>
@@ -587,6 +660,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Super classes\Std_Button.resx">
       <DependentUpon>Std_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TablesPage.resx">
+      <DependentUpon>TablesPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\TableType_Show_Control.resx">
       <DependentUpon>TableType_Show_Control.cs</DependentUpon>
@@ -621,7 +700,7 @@
     <EmbeddedResource Include="Custom_Controls\TempReceiptControl\ProductButtonInFlowTempReciept.resx">
       <DependentUpon>ProductButtonInFlowTempReciept.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employees classes\EmployeeButton.resx">
+    <EmbeddedResource Include="Standard layouts\Buttons\EmployeeButton.resx">
       <DependentUpon>EmployeeButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees classes\AddEmployees.resx">
@@ -681,6 +760,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeerSodaCATEGORY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeerSodaPRODUCT%40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CombineTables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Numpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OuterCategories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quit+Back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -148,4 +148,37 @@
   <data name="checkin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkin.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PathOfLibrary" xml:space="preserve">
+    <value>..\..\..\..\Library</value>
+  </data>
+  <data name="BeerSodaCATEGORY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BeerSodaCATEGORY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BeerSodaPRODUCT_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BeerSodaPRODUCT@.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CombineTables" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CombineTables.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Comment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Comment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Done" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Done.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Numpad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numpad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OuterCategories" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OuterCategories.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Product" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quit_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Quit+Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
