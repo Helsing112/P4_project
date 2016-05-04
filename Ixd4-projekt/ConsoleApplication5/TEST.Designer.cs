@@ -69,12 +69,14 @@ namespace ConsoleApplication5
             this.Button_OtherLibrary.Size = new System.Drawing.Size(181, 78);
             this.Button_OtherLibrary.TabIndex = 17;
             this.Button_OtherLibrary.Textlabel = "OTHER";
+            this.Button_OtherLibrary.Button_Click += new System.EventHandler(this.Button_OtherLibrary_Button_Click);
             // 
             // Flow_DrinksCats
             // 
             this.Flow_DrinksCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Flow_DrinksCats.BackColor = System.Drawing.Color.Transparent;
             this.Flow_DrinksCats.Location = new System.Drawing.Point(988, 120);
             this.Flow_DrinksCats.MainCategory = null;
             this.Flow_DrinksCats.Name = "Flow_DrinksCats";
@@ -86,6 +88,7 @@ namespace ConsoleApplication5
             this.Flow_FoodCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Flow_FoodCats.BackColor = System.Drawing.Color.Transparent;
             this.Flow_FoodCats.Location = new System.Drawing.Point(472, 120);
             this.Flow_FoodCats.MainCategory = null;
             this.Flow_FoodCats.Name = "Flow_FoodCats";
