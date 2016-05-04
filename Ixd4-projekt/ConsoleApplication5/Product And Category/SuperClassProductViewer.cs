@@ -40,6 +40,8 @@ namespace ConsoleApplication5
         {
             CurrentCategory = Category;
 
+            Label_Headline.Text = Category.Name;
+
             Flow_ProductsFlow.Controls.Clear();            
             foreach (CategoryNew item in Category.Category_list)
             {
