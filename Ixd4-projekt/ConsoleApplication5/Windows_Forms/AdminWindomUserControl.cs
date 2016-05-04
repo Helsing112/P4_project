@@ -25,16 +25,21 @@ namespace ConsoleApplication5
             Starting_lib_path = path;
 
 
-
             InitializeComponent();
+
+            this.Size = new Size(Screen.PrimaryScreen.Bounds.Width / 3, Screen.PrimaryScreen.Bounds.Height - 150);
 
             this.TableManageButton.Button_Click += new System.EventHandler(this.TableManageButton_Click);
             this.EmployeeAddButton.Button_Click += new System.EventHandler(this.EmployeeAddButton_Click);
             this.ProductsAddButton.Button_Click += new System.EventHandler(this.ProductsAddButton_Click);
             this.quit_Close_Button1.Button_Click += new System.EventHandler(this.quit_Close_Button1_Click);
-           
+
+            
+
+
 
         }
+
 
 
         private void TableManageButton_Click(object sender, EventArgs e)

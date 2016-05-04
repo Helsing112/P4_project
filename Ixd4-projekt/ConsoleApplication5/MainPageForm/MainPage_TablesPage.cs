@@ -12,7 +12,7 @@ namespace ConsoleApplication5
     {
 
         private Employee _employee;
-        public Employee ActiveEmployee { get { return _employee; } private set { _employee = value; Timer_panel.UpdateEmployeename(ActiveEmployee); } }
+        public Employee ActiveEmployee { get { return _employee; } private set { _employee = value; Timer_panel.EmployeeName = value; } }
         /// <summary>
         /// Clears controls and Draws the page with the table panel
         /// </summary>
@@ -60,7 +60,7 @@ namespace ConsoleApplication5
         #region Eventhandlers-----------------------------
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
-            // Timer_panel.DeleteNameAndTablesFromTimer();
+            Timer_panel.DeleteNameAndTablesFromTimer();
             Draw_startPage(); //returns to the start page
 
         }

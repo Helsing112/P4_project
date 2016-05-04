@@ -19,6 +19,7 @@ namespace ConsoleApplication5
         public static void DenyProductOrCatNoName(string ProductOrCat) { Message_box.Message($"The {ProductOrCat} needs to have a name", -1); }
         public static void DenyProductNoPrice() { Message_box.Message("The product needs to have a price", -1); }
 
+        public static void EmployeeNameAlreadyExists() { Message_box.Message("Can't choose that name - the employee name already exists", -1);}
 
         public static void CategoryCreated() { Message_box.Message("Category Created", 1); }
 
@@ -31,7 +32,7 @@ namespace ConsoleApplication5
         public static void EmployeeConfirmedLogin() { Message_box.Message("Employee signed in", 1);}
         
 
-        public static void PrinterError() { Message_box.Message(("The printer was not found"));}
+        public static void PrinterError() { Message_box.Message("The printer was not found", -1);}
 
         internal static void DenyProductPriceFormat() { Message_box.Message("Product Price is wrong format", -1); }
 

@@ -86,6 +86,8 @@ namespace ConsoleApplication5
                 Size = new Size(250, 100),
                 Dock = DockStyle.Top,
             };
+            
+            
             Controls.Add(Timer_panel);
 
         }
@@ -143,6 +145,7 @@ namespace ConsoleApplication5
         private void EmployesignedInEventClickButton(object sender, EmployeeEventArgs e)
         {
             Draw_tablesPage(e.employee); //draws the next page
+            CreateReceipt.timerInfo1.Update2();
         }
         #endregion
 

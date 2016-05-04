@@ -12,7 +12,7 @@ namespace ConsoleApplication5
     {
         private Rectangle PrimScreen = Screen.PrimaryScreen.Bounds;
         private Table_Info _activeTable;
-        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; Timer_panel.UpdateTableName(ActiveTable); } }
+        public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; /*Timer_panel.TableNumber = value; Timer_panel.Update2();*/} }
         /// <summary>
         /// Clears all controls and adds the nessesary controls for this page
         /// </summary>
@@ -64,6 +64,7 @@ namespace ConsoleApplication5
             Initialize_Pay_window();
             Product_trees(new Point(700, 100), new Size(400, 700));
             BackToTablesPage_button();
+
         }
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
         {

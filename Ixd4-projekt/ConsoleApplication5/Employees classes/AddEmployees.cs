@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace ConsoleApplication5
 {
@@ -57,7 +58,7 @@ namespace ConsoleApplication5
 
         private void Enable_Add_Button()
         {
-            if ((!string.IsNullOrWhiteSpace(Name_TextBox.textBox1.Text)) && (!string.IsNullOrWhiteSpace(ID_TextBox.textBox1.Text)) && (!string.IsNullOrWhiteSpace(Password_TextBox.textBox1.Text))) 
+            if ((!string.IsNullOrWhiteSpace(Name_TextBox.textBox1.Text)) && (!string.IsNullOrWhiteSpace(ID_TextBox.textBox1.Text)) && (!string.IsNullOrWhiteSpace(Password_TextBox.textBox1.Text)) && CheckEmployeeName(Name_TextBox.textBox1.Text)) 
             {
                 Add_Employee_Button.Enabled = true;
             }
@@ -90,6 +91,22 @@ namespace ConsoleApplication5
         private void EmployeePasswordtextBox_TextChanged(object sender, EventArgs e)
         {
             Enable_Add_Button();
+        }
+
+        private bool CheckEmployeeName(string userName)
+        {
+            DirectoryInfo Employer = new DirectoryInfo(_path);
+
+            foreach (var item in Employer.GetFiles())
+            {
+                Employee Waiter = XmlEmployeeReader.Read_Employee<Employee>(item.FullName);
+                if (Waiter.EmployeeName == userName)
+                {
+                    Messages.EmployeeNameAlreadyExists();
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

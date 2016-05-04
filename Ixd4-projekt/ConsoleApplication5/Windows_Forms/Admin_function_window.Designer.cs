@@ -21,6 +21,9 @@
 
         private  Login_Button login_Button1;
         private  Quit_Close_Button quit_Close_Button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private TextBox_Touch textBox_Touch1;
     }
 }
 
