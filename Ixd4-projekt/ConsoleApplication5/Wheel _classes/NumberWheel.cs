@@ -34,7 +34,6 @@ namespace ConsoleApplication5
             CenterOnNumberWheel centerCircle = new CenterOnNumberWheel(centerRectangle) {Name = "1"};
             centerCircle.MouseUp += Middle_clicked;
             centerCircle.Location = new Point(centerOfControl.X - (this.Width / partToDevideCenter) / 2, centerOfControl.Y - (this.Height / partToDevideCenter) / 2);
-            centerCircle.BackColor = Color.LightGoldenrodYellow;
             Controls.Add(centerCircle);
             //iterate over the amount of pies added and instantiating them
             this.SuspendLayout();
@@ -66,9 +65,7 @@ namespace ConsoleApplication5
                 item.MouseUp += Pie_click;
                 item.TextToLabel = x.ToString();
                 item.Name = x.ToString();
-                item.BackColor = Color.Azure;                
                 Controls.Add(item);
-                item.BackColor = Color.LightGoldenrodYellow;                
                 x++;
             }
             this.ResumeLayout(false);

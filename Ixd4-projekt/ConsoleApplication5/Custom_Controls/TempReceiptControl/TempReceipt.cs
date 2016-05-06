@@ -85,6 +85,7 @@ namespace ConsoleApplication5
             this.flowOfProductsInTempReceipt1.Name = "flowOfProductsInTempReceipt1";
             this.flowOfProductsInTempReceipt1.Size = new System.Drawing.Size(721, 595);
             this.flowOfProductsInTempReceipt1.TabIndex = 0;
+            this.flowOfProductsInTempReceipt1.ProductRemoved += Product_removed;
             // 
             // totalTabTenpReceipt1
             // 

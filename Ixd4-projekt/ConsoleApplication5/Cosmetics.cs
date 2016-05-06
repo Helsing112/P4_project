@@ -12,9 +12,10 @@ namespace ConsoleApplication5
 {
     class Cosmetics
     {
-        static public Font Standard_font {
-            get { return new Font("Minion Pro", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); }
+        static public Font Standard_font_Tempreceipt {
+            get { return new Font("Minion Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); }
             }
+        
 
     }
 }

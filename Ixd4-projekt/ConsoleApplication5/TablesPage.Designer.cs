@@ -153,7 +153,7 @@
         public TableManagementButtons Button_MoveContent;
         public TableManagementButtons Button_MoveTable;
         public TableManagementButtons Button_CombineTables;
-        private OneTimePaymentButton Button_OneTimePayment;
+        public OneTimePaymentButton Button_OneTimePayment;
         private System.Windows.Forms.Panel panel1;
     }
 }

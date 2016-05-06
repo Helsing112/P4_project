@@ -120,4 +120,11 @@ namespace ConsoleApplication5
         }
     }
 
+    public class OneTimePaymentTable_info : Table_Info
+    {
+        public OneTimePaymentTable_info() : base("ONE TIME PAYMENT")
+        {
+        }
+    }
+
 }

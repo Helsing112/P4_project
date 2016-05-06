@@ -69,7 +69,7 @@ namespace ConsoleApplication5
             this.Width = Size_x;
             #region label_describtion
             // 
-            this.label_describtion.Font = Cosmetics.Standard_font;
+            this.label_describtion.Font = Cosmetics.Standard_font_Tempreceipt;
             this.label_describtion.AutoSize = false;
             this.label_describtion.Location = new System.Drawing.Point(0, 0);
             this.label_describtion.Height = Size_y;
@@ -83,7 +83,7 @@ namespace ConsoleApplication5
             #endregion
             #region Label_amount
             // 
-            this.Label_amount.Font = Cosmetics.Standard_font;
+            this.Label_amount.Font = Cosmetics.Standard_font_Tempreceipt;
             this.Label_amount.AutoSize = false;
             this.Label_amount.Location = new System.Drawing.Point((int)(Size_x * percent_LA), 0);//højden af FOnt skal ligges til for perfekt
             this.Label_amount.Height = Size_y - 3;
@@ -97,7 +97,7 @@ namespace ConsoleApplication5
             #endregion
             #region Label_price
             // 
-            this.Label_price.Font = Cosmetics.Standard_font;
+            this.Label_price.Font = Cosmetics.Standard_font_Tempreceipt;
             this.Label_price.AutoSize = false;
             this.Label_price.Location = new System.Drawing.Point((int)(Size_x * percent_LP), 0);
             this.Label_price.Height = Size_y - 3;

@@ -56,8 +56,19 @@ namespace ConsoleApplication5
             }
             if (!found_similar)
             {
-                ProductButtonInFlowTempReciept product_item = new ProductButtonInFlowTempReciept(this.Width, Height_of_element, product_to_add, amount);
+                ProductButtonInFlowTempReciept product_item = new ProductButtonInFlowTempReciept(this.Width-2, Height_of_element, product_to_add, amount);
                 flowLayoutPanel1.Controls.Add(product_item);
+                product_item.ProductRemove += ProductItemOnProductRemove;
+            }
+        }
+
+        public event EventHandler<ProductEventArgs> ProductRemoved; 
+
+        private void ProductItemOnProductRemove(object sender, ProductEventArgs productEventArgs)
+        {
+            if(ProductRemoved != null)
+            {
+                ProductRemoved(sender, productEventArgs);
             }
         }
 

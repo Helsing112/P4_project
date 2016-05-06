@@ -32,11 +32,11 @@ namespace ConsoleApplication5
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Label_TableName = new ConsoleApplication5.Standard_Label();
             this.Button_OtherLibrary = new ConsoleApplication5.Std_Button();
             this.Flow_DrinksCats = new ConsoleApplication5.StartPageProductViewer();
             this.Flow_FoodCats = new ConsoleApplication5.StartPageProductViewer();
             this.Button_BackToTable = new ConsoleApplication5.Back_Button();
-            this.Label_TableName = new ConsoleApplication5.Standard_Label();
             this.Button_Done = new ConsoleApplication5.DoneButton();
             this.Button_Comment = new ConsoleApplication5.CreateReceiptGreyButtons();
             this.Button_PrintBill = new ConsoleApplication5.CreateReceiptGreyButtons();
@@ -56,6 +56,18 @@ namespace ConsoleApplication5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(435, 61);
             this.panel1.TabIndex = 12;
+            // 
+            // Label_TableName
+            // 
+            this.Label_TableName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Label_TableName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.Label_TableName.ForeColor = System.Drawing.Color.Black;
+            this.Label_TableName.Location = new System.Drawing.Point(0, 0);
+            this.Label_TableName.Name = "Label_TableName";
+            this.Label_TableName.Size = new System.Drawing.Size(249, 59);
+            this.Label_TableName.TabIndex = 0;
+            this.Label_TableName.Text = "TABLE";
+            this.Label_TableName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Button_OtherLibrary
             // 
@@ -80,7 +92,7 @@ namespace ConsoleApplication5
             this.Flow_DrinksCats.Location = new System.Drawing.Point(988, 120);
             this.Flow_DrinksCats.MainCategory = null;
             this.Flow_DrinksCats.Name = "Flow_DrinksCats";
-            this.Flow_DrinksCats.Size = new System.Drawing.Size(504, 643);
+            this.Flow_DrinksCats.Size = new System.Drawing.Size(504, 617);
             this.Flow_DrinksCats.TabIndex = 16;
             // 
             // Flow_FoodCats
@@ -92,7 +104,7 @@ namespace ConsoleApplication5
             this.Flow_FoodCats.Location = new System.Drawing.Point(472, 120);
             this.Flow_FoodCats.MainCategory = null;
             this.Flow_FoodCats.Name = "Flow_FoodCats";
-            this.Flow_FoodCats.Size = new System.Drawing.Size(504, 643);
+            this.Flow_FoodCats.Size = new System.Drawing.Size(504, 617);
             this.Flow_FoodCats.TabIndex = 15;
             // 
             // Button_BackToTable
@@ -105,18 +117,6 @@ namespace ConsoleApplication5
             this.Button_BackToTable.Size = new System.Drawing.Size(147, 60);
             this.Button_BackToTable.TabIndex = 13;
             this.Button_BackToTable.Textlabel = "BACK";
-            // 
-            // Label_TableName
-            // 
-            this.Label_TableName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Label_TableName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.Label_TableName.ForeColor = System.Drawing.Color.Black;
-            this.Label_TableName.Location = new System.Drawing.Point(0, 0);
-            this.Label_TableName.Name = "Label_TableName";
-            this.Label_TableName.Size = new System.Drawing.Size(249, 59);
-            this.Label_TableName.TabIndex = 0;
-            this.Label_TableName.Text = "TABLE";
-            this.Label_TableName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Button_Done
             // 
