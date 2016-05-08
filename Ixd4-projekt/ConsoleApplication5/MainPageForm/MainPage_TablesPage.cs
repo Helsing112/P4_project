@@ -102,7 +102,7 @@ namespace ConsoleApplication5
         }
 
         private void CombineTableOntableClick(object sender, EventArgs eventArgs)
-        {
+        { 
             if (_aTableIsSelected && (_SelectedCombineTable != sender))
             {
                 Control Temp = (Control) sender;
