@@ -161,6 +161,16 @@ namespace ConsoleApplication5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GreenSharpEdges {
+            get {
+                object obj = ResourceManager.GetObject("GreenSharpEdges", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap knap2 {
             get {
                 object obj = ResourceManager.GetObject("knap2", resourceCulture);

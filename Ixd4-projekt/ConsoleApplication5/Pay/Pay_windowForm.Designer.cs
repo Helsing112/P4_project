@@ -38,6 +38,8 @@ namespace ConsoleApplication5
             this.button_num_decimalPt = new ConsoleApplication5.Numpad_button();
             this.button_num_3 = new ConsoleApplication5.Numpad_button();
             this.button_num_6 = new ConsoleApplication5.Numpad_button();
+            this.panel_Split = new System.Windows.Forms.Panel();
+            this.split_button1 = new ConsoleApplication5.Split_button();
             this.button_num_9 = new ConsoleApplication5.Numpad_button();
             this.button_num_2 = new ConsoleApplication5.Numpad_button();
             this.button_num_1 = new ConsoleApplication5.Numpad_button();
@@ -48,8 +50,6 @@ namespace ConsoleApplication5
             this.button_num_7 = new ConsoleApplication5.Numpad_button();
             this.Panel_quit = new System.Windows.Forms.Panel();
             this.quit_Close_Button1 = new ConsoleApplication5.Quit_Close_Button();
-            this.panel_Split = new System.Windows.Forms.Panel();
-            this.split_button1 = new ConsoleApplication5.Split_button();
             this.Label_totalText = new ConsoleApplication5.Standard_Label();
             this.label_paidText = new ConsoleApplication5.Standard_Label();
             this.label_remaingingText = new ConsoleApplication5.Standard_Label();
@@ -60,8 +60,8 @@ namespace ConsoleApplication5
             this.Flow_receiptMain = new System.Windows.Forms.FlowLayoutPanel();
             this.Label_tableInfo = new ConsoleApplication5.Standard_Label();
             this.Panel_numpad.SuspendLayout();
-            this.Panel_quit.SuspendLayout();
             this.panel_Split.SuspendLayout();
+            this.Panel_quit.SuspendLayout();
             this.Panel_receipt.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,7 @@ namespace ConsoleApplication5
             this.Panel_numpad.Controls.Add(this.button_num_decimalPt);
             this.Panel_numpad.Controls.Add(this.button_num_3);
             this.Panel_numpad.Controls.Add(this.button_num_6);
+            this.Panel_numpad.Controls.Add(this.panel_Split);
             this.Panel_numpad.Controls.Add(this.button_num_9);
             this.Panel_numpad.Controls.Add(this.button_num_2);
             this.Panel_numpad.Controls.Add(this.button_num_1);
@@ -83,7 +84,7 @@ namespace ConsoleApplication5
             this.Panel_numpad.Controls.Add(this.button_num_5);
             this.Panel_numpad.Controls.Add(this.button_num_8);
             this.Panel_numpad.Controls.Add(this.button_num_7);
-            this.Panel_numpad.Location = new System.Drawing.Point(457, 44);
+            this.Panel_numpad.Location = new System.Drawing.Point(457, 131);
             this.Panel_numpad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_numpad.Name = "Panel_numpad";
             this.Panel_numpad.Size = new System.Drawing.Size(341, 426);
@@ -182,6 +183,27 @@ namespace ConsoleApplication5
             this.button_num_6.Size = new System.Drawing.Size(77, 65);
             this.button_num_6.TabIndex = 8;
             this.button_num_6.Textlabel = "6";
+            // 
+            // panel_Split
+            // 
+            this.panel_Split.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_Split.Controls.Add(this.split_button1);
+            this.panel_Split.Location = new System.Drawing.Point(3, 348);
+            this.panel_Split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_Split.Name = "panel_Split";
+            this.panel_Split.Size = new System.Drawing.Size(163, 81);
+            this.panel_Split.TabIndex = 4;
+            // 
+            // split_button1
+            // 
+            this.split_button1.BackColor = System.Drawing.Color.Transparent;
+            this.split_button1.Image_set = null;
+            this.split_button1.Location = new System.Drawing.Point(0, -2);
+            this.split_button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.split_button1.Name = "split_button1";
+            this.split_button1.Size = new System.Drawing.Size(163, 81);
+            this.split_button1.TabIndex = 0;
+            this.split_button1.Textlabel = "SPLIT BILL";
             // 
             // button_num_9
             // 
@@ -315,7 +337,7 @@ namespace ConsoleApplication5
             // 
             this.Panel_quit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_quit.Controls.Add(this.quit_Close_Button1);
-            this.Panel_quit.Location = new System.Drawing.Point(670, 501);
+            this.Panel_quit.Location = new System.Drawing.Point(670, 700);
             this.Panel_quit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_quit.Name = "Panel_quit";
             this.Panel_quit.Size = new System.Drawing.Size(128, 60);
@@ -332,34 +354,13 @@ namespace ConsoleApplication5
             this.quit_Close_Button1.TabIndex = 0;
             this.quit_Close_Button1.Textlabel = "QUIT";
             // 
-            // panel_Split
-            // 
-            this.panel_Split.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_Split.Controls.Add(this.split_button1);
-            this.panel_Split.Location = new System.Drawing.Point(455, 389);
-            this.panel_Split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_Split.Name = "panel_Split";
-            this.panel_Split.Size = new System.Drawing.Size(163, 81);
-            this.panel_Split.TabIndex = 4;
-            // 
-            // split_button1
-            // 
-            this.split_button1.BackColor = System.Drawing.Color.Transparent;
-            this.split_button1.Image_set = null;
-            this.split_button1.Location = new System.Drawing.Point(0, -2);
-            this.split_button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.split_button1.Name = "split_button1";
-            this.split_button1.Size = new System.Drawing.Size(163, 81);
-            this.split_button1.TabIndex = 0;
-            this.split_button1.Textlabel = "SPLIT BILL";
-            // 
             // Label_totalText
             // 
             this.Label_totalText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_totalText.AutoSize = true;
             this.Label_totalText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Label_totalText.ForeColor = System.Drawing.Color.Black;
-            this.Label_totalText.Location = new System.Drawing.Point(244, 473);
+            this.Label_totalText.Location = new System.Drawing.Point(244, 672);
             this.Label_totalText.Name = "Label_totalText";
             this.Label_totalText.Size = new System.Drawing.Size(64, 28);
             this.Label_totalText.TabIndex = 5;
@@ -372,7 +373,7 @@ namespace ConsoleApplication5
             this.label_paidText.AutoSize = true;
             this.label_paidText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label_paidText.ForeColor = System.Drawing.Color.Black;
-            this.label_paidText.Location = new System.Drawing.Point(249, 501);
+            this.label_paidText.Location = new System.Drawing.Point(249, 700);
             this.label_paidText.Name = "label_paidText";
             this.label_paidText.Size = new System.Drawing.Size(58, 28);
             this.label_paidText.TabIndex = 6;
@@ -383,7 +384,7 @@ namespace ConsoleApplication5
             this.label_remaingingText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label_remaingingText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label_remaingingText.ForeColor = System.Drawing.Color.Black;
-            this.label_remaingingText.Location = new System.Drawing.Point(167, 528);
+            this.label_remaingingText.Location = new System.Drawing.Point(167, 727);
             this.label_remaingingText.Name = "label_remaingingText";
             this.label_remaingingText.Size = new System.Drawing.Size(149, 31);
             this.label_remaingingText.TabIndex = 7;
@@ -395,7 +396,7 @@ namespace ConsoleApplication5
             this.Label_total_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_total_Number.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Label_total_Number.ForeColor = System.Drawing.Color.Black;
-            this.Label_total_Number.Location = new System.Drawing.Point(311, 473);
+            this.Label_total_Number.Location = new System.Drawing.Point(311, 672);
             this.Label_total_Number.Name = "Label_total_Number";
             this.Label_total_Number.Size = new System.Drawing.Size(123, 28);
             this.Label_total_Number.TabIndex = 8;
@@ -407,7 +408,7 @@ namespace ConsoleApplication5
             this.Label_Paid_number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_Paid_number.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Label_Paid_number.ForeColor = System.Drawing.Color.Black;
-            this.Label_Paid_number.Location = new System.Drawing.Point(305, 501);
+            this.Label_Paid_number.Location = new System.Drawing.Point(305, 700);
             this.Label_Paid_number.Name = "Label_Paid_number";
             this.Label_Paid_number.Size = new System.Drawing.Size(128, 28);
             this.Label_Paid_number.TabIndex = 9;
@@ -419,7 +420,7 @@ namespace ConsoleApplication5
             this.Label_Remain_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_Remain_Number.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.Label_Remain_Number.ForeColor = System.Drawing.Color.Black;
-            this.Label_Remain_Number.Location = new System.Drawing.Point(307, 528);
+            this.Label_Remain_Number.Location = new System.Drawing.Point(307, 727);
             this.Label_Remain_Number.Name = "Label_Remain_Number";
             this.Label_Remain_Number.Size = new System.Drawing.Size(127, 32);
             this.Label_Remain_Number.TabIndex = 10;
@@ -431,10 +432,10 @@ namespace ConsoleApplication5
             this.Panel_receipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_receipt.Controls.Add(this.Flow_receiptMain);
             this.Panel_receipt.Controls.Add(this.Label_tableInfo);
-            this.Panel_receipt.Location = new System.Drawing.Point(17, 12);
+            this.Panel_receipt.Location = new System.Drawing.Point(18, 17);
             this.Panel_receipt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_receipt.Name = "Panel_receipt";
-            this.Panel_receipt.Size = new System.Drawing.Size(416, 458);
+            this.Panel_receipt.Size = new System.Drawing.Size(416, 653);
             this.Panel_receipt.TabIndex = 12;
             // 
             // Flow_receiptMain
@@ -444,7 +445,7 @@ namespace ConsoleApplication5
             this.Flow_receiptMain.Location = new System.Drawing.Point(0, 32);
             this.Flow_receiptMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Flow_receiptMain.Name = "Flow_receiptMain";
-            this.Flow_receiptMain.Size = new System.Drawing.Size(416, 426);
+            this.Flow_receiptMain.Size = new System.Drawing.Size(416, 621);
             this.Flow_receiptMain.TabIndex = 1;
             // 
             // Label_tableInfo
@@ -463,7 +464,7 @@ namespace ConsoleApplication5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 570);
+            this.ClientSize = new System.Drawing.Size(816, 769);
             this.Controls.Add(this.Panel_receipt);
             this.Controls.Add(this.Label_Remain_Number);
             this.Controls.Add(this.Label_Paid_number);
@@ -471,7 +472,6 @@ namespace ConsoleApplication5
             this.Controls.Add(this.label_remaingingText);
             this.Controls.Add(this.label_paidText);
             this.Controls.Add(this.Label_totalText);
-            this.Controls.Add(this.panel_Split);
             this.Controls.Add(this.Panel_quit);
             this.Controls.Add(this.Panel_numpad);
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -480,8 +480,8 @@ namespace ConsoleApplication5
             this.Text = "Pay_windowForm";
             this.Load += new System.EventHandler(this.Pay_windowForm_Load);
             this.Panel_numpad.ResumeLayout(false);
-            this.Panel_quit.ResumeLayout(false);
             this.panel_Split.ResumeLayout(false);
+            this.Panel_quit.ResumeLayout(false);
             this.Panel_receipt.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

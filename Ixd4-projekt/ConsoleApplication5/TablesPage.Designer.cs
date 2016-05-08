@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.Button_MoveContent);
             this.panel1.Controls.Add(this.Button_MoveTable);
             this.panel1.Controls.Add(this.Button_CombineTables);
-            this.panel1.Location = new System.Drawing.Point(13, 289);
+            this.panel1.Location = new System.Drawing.Point(13, 222);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 513);
             this.panel1.TabIndex = 8;
@@ -54,7 +54,7 @@
             // 
             this.Button_OneTimePayment.BackColor = System.Drawing.Color.Transparent;
             this.Button_OneTimePayment.Image_set = null;
-            this.Button_OneTimePayment.Location = new System.Drawing.Point(0, 2);
+            this.Button_OneTimePayment.Location = new System.Drawing.Point(0, 76);
             this.Button_OneTimePayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_OneTimePayment.Name = "Button_OneTimePayment";
             this.Button_OneTimePayment.Size = new System.Drawing.Size(167, 88);
@@ -99,7 +99,7 @@
             this.back_Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.back_Button1.BackColor = System.Drawing.Color.Transparent;
             this.back_Button1.Image_set = null;
-            this.back_Button1.Location = new System.Drawing.Point(1763, 979);
+            this.back_Button1.Location = new System.Drawing.Point(1365, 757);
             this.back_Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back_Button1.Name = "back_Button1";
             this.back_Button1.Size = new System.Drawing.Size(154, 61);
@@ -114,7 +114,7 @@
             this.table_Panel_for_MainPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.table_Panel_for_MainPage1.Location = new System.Drawing.Point(209, 57);
             this.table_Panel_for_MainPage1.Name = "table_Panel_for_MainPage1";
-            this.table_Panel_for_MainPage1.Size = new System.Drawing.Size(1523, 997);
+            this.table_Panel_for_MainPage1.Size = new System.Drawing.Size(1139, 781);
             this.table_Panel_for_MainPage1.TabIndex = 1;
             // 
             // timerInfo1
@@ -125,7 +125,7 @@
             this.timerInfo1.Location = new System.Drawing.Point(0, 0);
             this.timerInfo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timerInfo1.Name = "timerInfo1";
-            this.timerInfo1.Size = new System.Drawing.Size(1920, 50);
+            this.timerInfo1.Size = new System.Drawing.Size(1536, 50);
             this.timerInfo1.TabIndex = 0;
             this.timerInfo1.tablename = null;
             // 
@@ -139,7 +139,7 @@
             this.Controls.Add(this.table_Panel_for_MainPage1);
             this.Controls.Add(this.timerInfo1);
             this.Name = "TablesPage";
-            this.Size = new System.Drawing.Size(1920, 1080);
+            this.Size = new System.Drawing.Size(1536, 864);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

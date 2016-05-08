@@ -39,7 +39,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap3;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.Done;
             // 
             // Add_Button
             // 

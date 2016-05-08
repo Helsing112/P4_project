@@ -36,7 +36,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label1.Size = new System.Drawing.Size(152, 134);
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

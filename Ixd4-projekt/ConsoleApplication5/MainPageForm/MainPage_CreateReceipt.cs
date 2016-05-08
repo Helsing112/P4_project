@@ -83,7 +83,15 @@ namespace ConsoleApplication5
 
             CommentWindow.ShowDialog();
 
-            TextFromComment = CommentWindow.Text;
+
+            if (CommentWindow.Text == "")
+            {
+                TextFromComment = "";
+            }
+            else
+            {
+                TextFromComment = CommentWindow.Text;
+            }
 
         }
 

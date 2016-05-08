@@ -6,37 +6,1027 @@
   <Product_list />
   <Category_list>
     <CategoryNew>
-      <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Draft Beer picture.png</_pathOfImage>
       <HasImage>true</HasImage>
       <IsLogo>false</IsLogo>
-      <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
-      <Name>Burger</Name>
+      <PathOfImage>..\..\..\..\PictureLibrary\Draft Beer picture.png</PathOfImage>
+      <Name>Draft Beer</Name>
+      <Product_list />
+      <Category_list>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\25 cl Beer picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\25 cl Beer picture.png</PathOfImage>
+          <Name>25 cl Beer</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>30.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Small Carlsberg picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>30.00</Price>
+              <Name>25 cl Carlsberg</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\Small Carlsberg picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>30.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Small Tuborg Classic picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>30.00</Price>
+              <Name>25 cl Tuborg Classic</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\Small Tuborg Classic picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>30.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Small Staropramen picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>30.00</Price>
+              <Name>25 cl Staropramen</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\Small Staropramen picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>30.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\Small Guiness picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>30.00</Price>
+              <Name>25 cl Guiness</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\Small Guiness picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Beer picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\50 cl Beer picture.png</PathOfImage>
+          <Name>50 cl Beer</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>45.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Carlsberg picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>45.00</Price>
+              <Name>50 cl Carlsberg</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Carlsberg picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>45.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Tuborg Classic picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>45.00</Price>
+              <Name>50 cl Tuborg Classic</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Tuborg Classic picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>55.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Staropramen picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>55.00</Price>
+              <Name>50 cl Staropramen</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Staropramen picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>55.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Guiness picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>55.00</Price>
+              <Name>50 cl Guiness</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Guiness picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Beer picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\200 cl Beer picture.png</PathOfImage>
+          <Name>200 cl Beer</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>160.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Carlsberg  picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>160.00</Price>
+              <Name>200 cl Carlsberg </Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Carlsberg  picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>160.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Tuborg Classic  picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>160.00</Price>
+              <Name>200 cl Tuborg Classic </Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Tuborg Classic  picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+      </Category_list>
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Soft Drinks picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Soft Drinks picture.png</PathOfImage>
+      <Name>Soft Drinks</Name>
       <Product_list>
         <Product>
           <_Is_set>true</_Is_set>
-          <_price>22</_price>
-          <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+          <_price>29.00</_price>
+          <_pathOfImage />
           <Varianter />
           <IsLogo>false</IsLogo>
           <Is_set>true</Is_set>
-          <Price>22</Price>
-          <Name>Burger</Name>
-          <HasImage>true</HasImage>
-          <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+          <Price>29.00</Price>
+          <Name>Solita</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
         </Product>
         <Product>
           <_Is_set>true</_Is_set>
-          <_price>22</_price>
-          <_pathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</_pathOfImage>
+          <_price>29.00</_price>
+          <_pathOfImage />
           <Varianter />
           <IsLogo>false</IsLogo>
           <Is_set>true</Is_set>
-          <Price>22</Price>
-          <Name>Burger11</Name>
-          <HasImage>true</HasImage>
-          <PathOfImage>..\..\..\..\PictureLibrary\Burger picture.png</PathOfImage>
+          <Price>29.00</Price>
+          <Name>Æblemost</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Tonic Water</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Hyldeblomst</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Cocio</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Ginger Ale</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Kinley Hindbær</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Kildevand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Red Bull</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Cult</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Mælk</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Kande vand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>1 glas vand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
         </Product>
       </Product_list>
+      <Category_list>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\25 cl Soda picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\25 cl Soda picture.png</PathOfImage>
+          <Name>25 cl Soda</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>29.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\25 cl Cola picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>29.00</Price>
+              <Name>25 cl Cola</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\25 cl Cola picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>29.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\25 cl Cola Zero picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>29.00</Price>
+              <Name>25 cl Cola Zero</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\25 cl Cola Zero picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>29.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\25 cl Fanta picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>29.00</Price>
+              <Name>25 cl Fanta</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\25 cl Fanta picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>29.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\25 cl Schweppes picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>29.00</Price>
+              <Name>25 cl Schweppes</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\25 cl Schweppes picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>29.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\25 cl  picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>29.00</Price>
+              <Name>25 cl Sprite </Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\25 cl  picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Soda picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\50 cl Soda picture.png</PathOfImage>
+          <Name>50 cl Soda</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>42.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Cola picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>42.00</Price>
+              <Name>50 cl Cola</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Cola picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>42.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Cola Zero picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>42.00</Price>
+              <Name>50 cl Cola Zero</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Cola Zero picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>42.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Fanta picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>42.00</Price>
+              <Name>50 cl Fanta</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Fanta picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>42.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Schweppes  picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>42.00</Price>
+              <Name>50 cl Schweppes </Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Schweppes  picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>42.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\50 cl Sprite picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>42.00</Price>
+              <Name>50 cl Sprite</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\50 cl Sprite picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Soda picture.png</_pathOfImage>
+          <HasImage>true</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage>..\..\..\..\PictureLibrary\200 cl Soda picture.png</PathOfImage>
+          <Name>200 cl Soda</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>140.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Cola picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>140.00</Price>
+              <Name>200 cl Cola</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Cola picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>140.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Cola Zero picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>140.00</Price>
+              <Name>200 cl Cola Zero</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Cola Zero picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>140.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Fanta picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>140.00</Price>
+              <Name>200 cl Fanta</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Fanta picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>140.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Schweppes picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>140.00</Price>
+              <Name>200 cl Schweppes</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Schweppes picture.png</PathOfImage>
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>140.00</_price>
+              <_pathOfImage>..\..\..\..\PictureLibrary\200 cl Sprite picture.png</_pathOfImage>
+              <Varianter />
+              <IsLogo>true</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>140.00</Price>
+              <Name>200 cl Sprite</Name>
+              <HasImage>true</HasImage>
+              <PathOfImage>..\..\..\..\PictureLibrary\200 cl Sprite picture.png</PathOfImage>
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+      </Category_list>
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Bottled Beer picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Bottled Beer picture.png</PathOfImage>
+      <Name>Bottled Beer</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>42.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>42.00</Price>
+          <Name>Tuborg</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>42.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>42.00</Price>
+          <Name>Heineken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>42.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>42.00</Price>
+          <Name>Corona</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>42.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>42.00</Price>
+          <Name>Somersby Apple</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>49.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>49.00</Price>
+          <Name>Mokai</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>49.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>49.00</Price>
+          <Name>Coors Light</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Pre Dinner picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Pre Dinner picture.png</PathOfImage>
+      <Name>Pre Dinner</Name>
+      <Product_list />
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\After Dinner picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\After Dinner picture.png</PathOfImage>
+      <Name>After Dinner</Name>
+      <Product_list />
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Wine picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Wine picture.png</PathOfImage>
+      <Name>Wine</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>39.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>39.00</Price>
+          <Name>1 gl. rødvin</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>39.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>39.00</Price>
+          <Name>1 gl. hvidvin</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Liquor picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Liquor picture.png</PathOfImage>
+      <Name>Liquor</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>35.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>35.00</Price>
+          <Name>Enkelt sjus</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>70.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>70.00</Price>
+          <Name>Dobbelt sjus</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>95.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>95.00</Price>
+          <Name>Triple sjus</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>49.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>49.00</Price>
+          <Name>Enkelts sjus m/vand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Dobbelt sjus m/vand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>129.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>129.00</Price>
+          <Name>Triple sjus m/vand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>55.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>55.00</Price>
+          <Name>Enkelt Whisky</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>110.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>110.00</Price>
+          <Name>Dobbelt Whisky</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>165.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>165.00</Price>
+          <Name>Triple Whisky</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>55.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>55.00</Price>
+          <Name>Enkelt Cognac</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>110.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>110.00</Price>
+          <Name>Dobbelt Cognac</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>165.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>165.00</Price>
+          <Name>Triple Cognac</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>400.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>400.00</Price>
+          <Name>Alm. Helflaske</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>500.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>500.00</Price>
+          <Name>Special Helflaske</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>500.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>500.00</Price>
+          <Name>M/Kande vand</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>25.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>25.00</Price>
+          <Name>Shots Alm.</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>25.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>25.00</Price>
+          <Name>Fisk</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>25.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>25.00</Price>
+          <Name>Små</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>100.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>100.00</Price>
+          <Name>10 Tequila</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Coffee picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Coffee picture.png</PathOfImage>
+      <Name>Coffee</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>30.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>30.00</Price>
+          <Name>Cafe Latte</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>25.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>25.00</Price>
+          <Name>Sort Kaffe</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>25.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>25.00</Price>
+          <Name>Espresso</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>30.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>30.00</Price>
+          <Name>Cappucino</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>0.02</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>0.02</Price>
+          <Name>P-Kaffe</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>35</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>35</Price>
+          <Name>DB Espresso</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>25</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>25</Price>
+          <Name>Kakao</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>2</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>2</Price>
+          <Name>The</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Offers  picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Offers  picture.png</PathOfImage>
+      <Name>Offers </Name>
+      <Product_list />
       <Category_list />
     </CategoryNew>
   </Category_list>
