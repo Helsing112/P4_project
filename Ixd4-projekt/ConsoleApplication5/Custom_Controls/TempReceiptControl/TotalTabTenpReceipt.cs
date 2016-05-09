@@ -68,6 +68,7 @@ namespace ConsoleApplication5
             this.label_Total.TabIndex = 0;
             this.label_Total.Text = "Total";
             this.label_Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Total.Font = Cosmetics.Standard_font_Tempreceipt;
             // 
             // label_price
             // 
@@ -79,10 +80,7 @@ namespace ConsoleApplication5
             this.label_price.TabIndex = 1;
             this.label_price.Text = "0.00,-";
             this.label_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
-          
-
-
+            this.label_price.Font = Cosmetics.Standard_font_Tempreceipt;
             // 
             // TotalTabTenpReceipt
             // 

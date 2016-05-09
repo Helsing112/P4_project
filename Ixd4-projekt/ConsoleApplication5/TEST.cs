@@ -92,5 +92,10 @@ namespace ConsoleApplication5
         {
             drawProductNavi(OtherCategory);
         }
+
+        private void Button_BackToTable_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

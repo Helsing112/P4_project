@@ -161,6 +161,16 @@ namespace ConsoleApplication5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GreenSharpEdges {
+            get {
+                object obj = ResourceManager.GetObject("GreenSharpEdges", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap knap2 {
             get {
                 object obj = ResourceManager.GetObject("knap2", resourceCulture);
@@ -184,6 +194,16 @@ namespace ConsoleApplication5.Properties {
         internal static string LocationOfProductLib {
             get {
                 return ResourceManager.GetString("LocationOfProductLib", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minusGrey {
+            get {
+                object obj = ResourceManager.GetObject("minusGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -238,9 +258,29 @@ namespace ConsoleApplication5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pil {
+            get {
+                object obj = ResourceManager.GetObject("pil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placeholder {
             get {
                 object obj = ResourceManager.GetObject("placeholder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plusGrey {
+            get {
+                object obj = ResourceManager.GetObject("plusGrey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

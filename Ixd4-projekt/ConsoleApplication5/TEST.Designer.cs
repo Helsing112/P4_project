@@ -32,11 +32,11 @@ namespace ConsoleApplication5
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Label_TableName = new ConsoleApplication5.Standard_Label();
             this.Button_OtherLibrary = new ConsoleApplication5.Std_Button();
             this.Flow_DrinksCats = new ConsoleApplication5.StartPageProductViewer();
             this.Flow_FoodCats = new ConsoleApplication5.StartPageProductViewer();
             this.Button_BackToTable = new ConsoleApplication5.Back_Button();
-            this.Label_TableName = new ConsoleApplication5.Standard_Label();
             this.Button_Done = new ConsoleApplication5.DoneButton();
             this.Button_Comment = new ConsoleApplication5.CreateReceiptGreyButtons();
             this.Button_PrintBill = new ConsoleApplication5.CreateReceiptGreyButtons();
@@ -57,55 +57,6 @@ namespace ConsoleApplication5
             this.panel1.Size = new System.Drawing.Size(435, 61);
             this.panel1.TabIndex = 12;
             // 
-            // Button_OtherLibrary
-            // 
-            this.Button_OtherLibrary.BackColor = System.Drawing.Color.Transparent;
-            this.Button_OtherLibrary.BackgroundImage = global::ConsoleApplication5.Properties.Resources.Product;
-            this.Button_OtherLibrary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button_OtherLibrary.Image_set = null;
-            this.Button_OtherLibrary.Location = new System.Drawing.Point(892, 767);
-            this.Button_OtherLibrary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Button_OtherLibrary.Name = "Button_OtherLibrary";
-            this.Button_OtherLibrary.Size = new System.Drawing.Size(181, 78);
-            this.Button_OtherLibrary.TabIndex = 17;
-            this.Button_OtherLibrary.Textlabel = "OTHER";
-            this.Button_OtherLibrary.Button_Click += new System.EventHandler(this.Button_OtherLibrary_Button_Click);
-            // 
-            // Flow_DrinksCats
-            // 
-            this.Flow_DrinksCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Flow_DrinksCats.BackColor = System.Drawing.Color.Transparent;
-            this.Flow_DrinksCats.Location = new System.Drawing.Point(988, 120);
-            this.Flow_DrinksCats.MainCategory = null;
-            this.Flow_DrinksCats.Name = "Flow_DrinksCats";
-            this.Flow_DrinksCats.Size = new System.Drawing.Size(504, 643);
-            this.Flow_DrinksCats.TabIndex = 16;
-            // 
-            // Flow_FoodCats
-            // 
-            this.Flow_FoodCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Flow_FoodCats.BackColor = System.Drawing.Color.Transparent;
-            this.Flow_FoodCats.Location = new System.Drawing.Point(472, 120);
-            this.Flow_FoodCats.MainCategory = null;
-            this.Flow_FoodCats.Name = "Flow_FoodCats";
-            this.Flow_FoodCats.Size = new System.Drawing.Size(504, 643);
-            this.Flow_FoodCats.TabIndex = 15;
-            // 
-            // Button_BackToTable
-            // 
-            this.Button_BackToTable.BackColor = System.Drawing.Color.Transparent;
-            this.Button_BackToTable.Image_set = null;
-            this.Button_BackToTable.Location = new System.Drawing.Point(1361, 790);
-            this.Button_BackToTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Button_BackToTable.Name = "Button_BackToTable";
-            this.Button_BackToTable.Size = new System.Drawing.Size(147, 60);
-            this.Button_BackToTable.TabIndex = 13;
-            this.Button_BackToTable.Textlabel = "BACK";
-            // 
             // Label_TableName
             // 
             this.Label_TableName.Dock = System.Windows.Forms.DockStyle.Left;
@@ -117,6 +68,58 @@ namespace ConsoleApplication5
             this.Label_TableName.TabIndex = 0;
             this.Label_TableName.Text = "TABLE";
             this.Label_TableName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Button_OtherLibrary
+            // 
+            this.Button_OtherLibrary.BackColor = System.Drawing.Color.Transparent;
+            this.Button_OtherLibrary.BackgroundImage = global::ConsoleApplication5.Properties.Resources.Product;
+            this.Button_OtherLibrary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_OtherLibrary.Image_set = null;
+            this.Button_OtherLibrary.Location = new System.Drawing.Point(902, 757);
+            this.Button_OtherLibrary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Button_OtherLibrary.Name = "Button_OtherLibrary";
+            this.Button_OtherLibrary.Size = new System.Drawing.Size(154, 61);
+            this.Button_OtherLibrary.TabIndex = 17;
+            this.Button_OtherLibrary.Textlabel = "OTHER";
+            this.Button_OtherLibrary.Button_Click += new System.EventHandler(this.Button_OtherLibrary_Button_Click);
+            // 
+            // Flow_DrinksCats
+            // 
+            this.Flow_DrinksCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Flow_DrinksCats.BackColor = System.Drawing.Color.Transparent;
+            this.Flow_DrinksCats.Location = new System.Drawing.Point(478, 120);
+            this.Flow_DrinksCats.MainCategory = null;
+            this.Flow_DrinksCats.Name = "Flow_DrinksCats";
+            this.Flow_DrinksCats.Size = new System.Drawing.Size(504, 617);
+            this.Flow_DrinksCats.TabIndex = 16;
+            // 
+            // Flow_FoodCats
+            // 
+            this.Flow_FoodCats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Flow_FoodCats.BackColor = System.Drawing.Color.Transparent;
+            this.Flow_FoodCats.Location = new System.Drawing.Point(1004, 120);
+            this.Flow_FoodCats.MainCategory = null;
+            this.Flow_FoodCats.Name = "Flow_FoodCats";
+            this.Flow_FoodCats.Size = new System.Drawing.Size(504, 617);
+            this.Flow_FoodCats.TabIndex = 15;
+            // 
+            // Button_BackToTable
+            // 
+            this.Button_BackToTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_BackToTable.BackColor = System.Drawing.Color.Transparent;
+            this.Button_BackToTable.Image_set = null;
+            this.Button_BackToTable.Location = new System.Drawing.Point(1220, 767);
+            this.Button_BackToTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Button_BackToTable.Name = "Button_BackToTable";
+            this.Button_BackToTable.Size = new System.Drawing.Size(122, 53);
+            this.Button_BackToTable.TabIndex = 13;
+            this.Button_BackToTable.Textlabel = "BACK";
+            this.Button_BackToTable.Visible = false;
+            this.Button_BackToTable.Load += new System.EventHandler(this.Button_BackToTable_Load);
             // 
             // Button_Done
             // 

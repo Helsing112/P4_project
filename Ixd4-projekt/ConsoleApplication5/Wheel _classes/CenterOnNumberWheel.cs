@@ -34,6 +34,8 @@ namespace ConsoleApplication5
             graphics.AddEllipse(input_rect);
             PointF center = new PointF(input_rect.Width / 2, input_rect.Height / 2);
 
+            this.BackColor = Color.FromArgb(100, 26, 117, 190);
+
             components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.MouseLeave += CenterOnNumberWheel_MouseLeave;
@@ -44,7 +46,8 @@ namespace ConsoleApplication5
         private void CenterOnNumberWheel_MouseEnter(object sender, EventArgs e)
         {
             prev_color = this.BackColor;
-            this.BackColor = Color.Yellow;
+            this.BackColor = Color.FromArgb(255, 26, 117, 190);
+
         }
 
         private void CenterOnNumberWheel_MouseLeave(object sender, EventArgs e)

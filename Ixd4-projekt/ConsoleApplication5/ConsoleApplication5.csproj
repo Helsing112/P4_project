@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Minus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Minus.Designer.cs">
+      <DependentUpon>Button_Minus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Plus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Plus.Designer.cs">
+      <DependentUpon>Button_Plus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_BackArrow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_BackArrow.Designer.cs">
+      <DependentUpon>Button_BackArrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommentToReceiptWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -583,6 +601,15 @@
     <EmbeddedResource Include="Employees classes\SignInPanelControl.resx">
       <DependentUpon>SignInPanelControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_BackArrow.resx">
+      <DependentUpon>Button_BackArrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Minus.resx">
+      <DependentUpon>Button_Minus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Plus.resx">
+      <DependentUpon>Button_Plus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\StartPageButtons\AdminStartButton.resx">
       <DependentUpon>AdminStartButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -790,6 +817,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Quit+Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plusGrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minusGrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenSharpEdges.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

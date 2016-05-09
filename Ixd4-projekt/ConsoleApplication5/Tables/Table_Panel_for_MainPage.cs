@@ -34,7 +34,12 @@ namespace ConsoleApplication5
 
         public void removeProductsFromTableReceipt(string NameOfTable, List<ReceiptProduct> ProductsToRemove)
         {
-            this.Controls.OfType<Table_Control_MainPage>().First(x => x.TableInfo.Table_name == NameOfTable).removeProducts(ProductsToRemove);
+            try
+            {
+                this.Controls.OfType<Table_Control_MainPage>().First(x => x.TableInfo.Table_name == NameOfTable).removeProducts(ProductsToRemove);
+
+            }
+            catch (InvalidOperationException) { }
         }
         public event EventHandler TableClick;
         private void TableClicked(object sender, EventArgs e)

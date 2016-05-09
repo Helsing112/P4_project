@@ -3,31 +3,1474 @@
   <HasImage>false</HasImage>
   <IsLogo>false</IsLogo>
   <Name>Food</Name>
-  <Product_list>
-    <Product>
-      <_Is_set>true</_Is_set>
-      <_price>12</_price>
-      <_pathOfImage />
-      <Varianter />
+  <Product_list />
+  <Category_list>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\ picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
       <IsLogo>false</IsLogo>
-      <Is_set>true</Is_set>
-      <Price>12</Price>
-      <Name>Something</Name>
-      <HasImage>false</HasImage>
-      <PathOfImage />
-    </Product>
-    <Product>
-      <_Is_set>true</_Is_set>
-      <_price>20</_price>
-      <_pathOfImage />
-      <Varianter />
+      <PathOfImage>..\..\..\..\PictureLibrary\ picture.png</PathOfImage>
+      <Name>Starters</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>59.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>59.00</Price>
+          <Name>Nachos Dip, dip, dip</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>89.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>89.00</Price>
+          <Name>O'Learys Super Snack</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Crispy Onion Rings</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>89.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>89.00</Price>
+          <Name>Play Off Nachos/    Chicken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>109.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>109.00</Price>
+          <Name>Play Off Nachos/    Beef</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Peanuts</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Popcorn</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>Campaign Wings</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Onion Rings</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Milan Lucic Port. Brusch</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>74.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>74.00</Price>
+          <Name>Mozzarella Sticks</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>74.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>74.00</Price>
+          <Name>Cheddar Zappers</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>89.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>89.00</Price>
+          <Name>Classic Quesadilla</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>89.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>89.00</Price>
+          <Name>Chicken Quesadilla</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>BBQ Pulled Pork Quesadilla</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Pre Game ½ Plate</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>Pre Game 1/1 Plate</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>NFL Late Night Menu</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list>
+        <CategoryNew>
+          <_pathOfImage />
+          <HasImage>false</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage />
+          <Name>5 Wings</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>69.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>69.00</Price>
+              <Name>Buffalo</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>69.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>69.00</Price>
+              <Name>Teriyaki</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>69.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>69.00</Price>
+              <Name>Asian Black Pepper</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>69.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>69.00</Price>
+              <Name>Parmesan Garlic</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage />
+          <HasImage>false</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage />
+          <Name>10 Wings</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>99.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>99.00</Price>
+              <Name>Buffalo</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>99.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>99.00</Price>
+              <Name>Teriyaki</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>99.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>99.00</Price>
+              <Name>Asian Black Pepper</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>99.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>99.00</Price>
+              <Name>Parmesan Garlic</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage />
+          <HasImage>false</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage />
+          <Name>15 Wings</Name>
+          <Product_list>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>119.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>119.00</Price>
+              <Name>Buffalo</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>119.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>119.00</Price>
+              <Name>Teriyaki</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>119.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>119.00</Price>
+              <Name>Asian Black Pepper</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+            <Product>
+              <_Is_set>true</_Is_set>
+              <_price>119.00</_price>
+              <_pathOfImage />
+              <Varianter />
+              <IsLogo>false</IsLogo>
+              <Is_set>true</Is_set>
+              <Price>119.00</Price>
+              <Name>Parmesan Garlic</Name>
+              <HasImage>false</HasImage>
+              <PathOfImage />
+            </Product>
+          </Product_list>
+          <Category_list />
+        </CategoryNew>
+      </Category_list>
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Burgers picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
       <IsLogo>false</IsLogo>
-      <Is_set>true</Is_set>
-      <Price>20</Price>
-      <Name>Somthaaaaaang</Name>
-      <HasImage>false</HasImage>
-      <PathOfImage />
-    </Product>
-  </Product_list>
-  <Category_list />
+      <PathOfImage>..\..\..\..\PictureLibrary\Burgers picture.png</PathOfImage>
+      <Name>Burgers</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>109.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>109.00</Price>
+          <Name>Boston Celtic BBQ Cheese </Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Bobby Orr´s Bacon Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Ray´s Chili Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Marvin Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Bacon and Blues</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>115.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>115.00</Price>
+          <Name>Harvard Club Sandwich</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>115.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>115.00</Price>
+          <Name>Larry Bird Club Sandwich</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>0.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>0.00</Price>
+          <Name>Gratis Stempel Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>109.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>109.00</Price>
+          <Name>Event Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>109.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>109.00</Price>
+          <Name>KickOff Menu</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Garlique Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Triple B Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Onion Rings</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>3 Jalapenos Poppers</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Manny Campaign Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>Freja Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>89'ers Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>Pigen Burger Tilbud</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>30.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>30.00</Price>
+          <Name>Double Up 360g</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>109.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>109.00</Price>
+          <Name>Boston Uden BBQ og Løg</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list>
+        <CategoryNew>
+          <_pathOfImage />
+          <HasImage>false</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage />
+          <Name>After Work</Name>
+          <Product_list />
+          <Category_list />
+        </CategoryNew>
+        <CategoryNew>
+          <_pathOfImage />
+          <HasImage>false</HasImage>
+          <IsLogo>false</IsLogo>
+          <PathOfImage />
+          <Name>Hangover Offers</Name>
+          <Product_list />
+          <Category_list />
+        </CategoryNew>
+      </Category_list>
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Salads picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Salads picture.png</PathOfImage>
+      <Name>Salads</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>89.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>89.00</Price>
+          <Name>Ceasar Salad</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>Ceasar Salad w.Chicken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>99.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>99.00</Price>
+          <Name>Ceasar Salad w.Shrimps</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Rocket Salad</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Rocket Salad / Beef</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Rocket Salad / Chicken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Pasta picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Pasta picture.png</PathOfImage>
+      <Name>Pasta</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Sweet Chili Pasta</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Sweet Chili Pasta w. Salmon</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>159.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>159.00</Price>
+          <Name>Sweet Chili Pasta w. Beef</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Sweet Chili Pasta w. Chicken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>119.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>119.00</Price>
+          <Name>Pasta Alfredo</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Pasta Alfredo w. Chicken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>159.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>159.00</Price>
+          <Name>Pasta Alfredo w. Beef</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Pasta Alfredo w. Salmon</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Garciaparra's Carbonara</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Favourites picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Favourites picture.png</PathOfImage>
+      <Name>Favourites</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Fish and Chips</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>189.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>189.00</Price>
+          <Name>Sizzling Fajita/Chicken</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>219.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>219.00</Price>
+          <Name>Sizzling Fajita/Beef</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>219.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>219.00</Price>
+          <Name>Sizzling Fajita/Mixed</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Chicken Burrito</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Classic BBQ Ribs</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Hot'n Smokey Ribs</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>139.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>139.00</Price>
+          <Name>Buffalo Ribs</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Combo Of 3 Ribs</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Grill picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Grill picture.png</PathOfImage>
+      <Name>Grill</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Beef Steak O'Brien</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Striploin Steak 220g</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Striploin Steak 350g</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Chicken Breast</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>149.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>149.00</Price>
+          <Name>Salmon Steak</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Side Orders picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Side Orders picture.png</PathOfImage>
+      <Name>Side Orders</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Baked Potato</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Basket Of Fries</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Garlic Bread</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Fried Portabello</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Fried Haricots Verts</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Side Ceasar Salad</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Tomato Salad</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>29.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>29.00</Price>
+          <Name>Mashed Potato</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Corn On The Cub</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>O'Learys BBQ Beans</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Carrot and Cellery</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>15.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>15.00</Price>
+          <Name>Coleslaw</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Kids Menu picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Kids Menu picture.png</PathOfImage>
+      <Name>Kids Menu</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Larry B's Chicken Nugget</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Kids Fish'n Chips</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>59.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>59.00</Price>
+          <Name>Kids Sundae</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>59.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>59.00</Price>
+          <Name>Red Sox's Sausage</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>59.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>59.00</Price>
+          <Name>Larry B's Buddy Burger</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Dessert picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Dessert picture.png</PathOfImage>
+      <Name>Dessert</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>49.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>49.00</Price>
+          <Name>Ice Cream and Sorbet</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Mexican Fried Ice Cream</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>59.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>59.00</Price>
+          <Name>Cheesecake</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>59.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>59.00</Price>
+          <Name>Pancakes</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Dessert and Coffee</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>69.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>69.00</Price>
+          <Name>Death By Chocolate</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Offers picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Offers picture.png</PathOfImage>
+      <Name>Offers</Name>
+      <Product_list />
+      <Category_list />
+    </CategoryNew>
+    <CategoryNew>
+      <_pathOfImage>..\..\..\..\PictureLibrary\Dip picture.png</_pathOfImage>
+      <HasImage>true</HasImage>
+      <IsLogo>false</IsLogo>
+      <PathOfImage>..\..\..\..\PictureLibrary\Dip picture.png</PathOfImage>
+      <Name>Dip</Name>
+      <Product_list>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10</Price>
+          <Name>Mayo</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Bearnaise</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Blue Cheese</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Aioli</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Hot Cheddar</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Pepper Sauce</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+        <Product>
+          <_Is_set>true</_Is_set>
+          <_price>10.00</_price>
+          <_pathOfImage />
+          <Varianter />
+          <IsLogo>false</IsLogo>
+          <Is_set>true</Is_set>
+          <Price>10.00</Price>
+          <Name>Chipotle</Name>
+          <HasImage>false</HasImage>
+          <PathOfImage />
+        </Product>
+      </Product_list>
+      <Category_list />
+    </CategoryNew>
+  </Category_list>
 </CategoryNew>

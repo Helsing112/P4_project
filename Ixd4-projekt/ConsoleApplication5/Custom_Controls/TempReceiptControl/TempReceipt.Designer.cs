@@ -30,7 +30,7 @@
 
         #endregion
 
-        private FlowOfProductsInTempReceipt flowOfProductsInTempReceipt1;
-        private TotalTabTenpReceipt Total_tab;
+        public FlowOfProductsInTempReceipt flowOfProductsInTempReceipt1;
+        public TotalTabTenpReceipt Total_tab;
     }
 }

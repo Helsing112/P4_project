@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
+    
     public partial class MainPage
     {
 
@@ -47,42 +48,95 @@ namespace ConsoleApplication5
 
             TablePage.back_Button1.Button_Click += BackToFrontPage_click;
             TablePage.table_Panel_for_MainPage1.TableClick += OnTableClick;
+            TablePage.Button_CombineTables.Button_Click += Button_CombineTables_Button_Click;
+
+            TablePage.Button_OneTimePayment.Button_Click += Button_OneTimePayment_Button_Click;
         }
+
+
+
         TablesPage TablePage;
         //_________________________________________TESTEND_____________________________________
 
-        //field controls
-        Table_Panel_for_MainPage tables_panel;
-        Button BackToFrontPageButton;
 
-        #region Table page methods--------------------------
-        private void Tables_panel(Point Location_input, Size size_input)
-        {
-            tables_panel = new Table_Panel_for_MainPage();
-            tables_panel.TableClick += OnTableClick;
-            tables_panel.Location = Location_input;
-        }
-        public void BackToFrontPage_button(Point Location_input, Size size_input)
-        {
-            BackToFrontPageButton = new Button
-            {
-                Location = Location_input,
-                Name = "CheckInButton",
-                Size = size_input,
-                TabIndex = 0,
-                Text = "Back",
-                UseVisualStyleBackColor = true
-            };
-            BackToFrontPageButton.Click += new System.EventHandler(BackToFrontPage_click);
-        }
-        #endregion
 
         #region Eventhandlers-----------------------------
+
+        #region Eventhandler for combine table click.
+
+        private bool _IsCombineTableActive;
+        private Control _SelectedCombineTable;
+        private bool _aTableIsSelected;
+        private Color PrevColorOfText;
+        private void Button_CombineTables_Button_Click(object sender, EventArgs e)
+        {
+            if (_IsCombineTableActive)
+            {
+                DeactivateCombineTables();
+            }
+            else
+            {
+                ActivateCombineTables();
+            }
+        }
+
+        private void DeactivateCombineTables()
+        {
+            TablePage.table_Panel_for_MainPage1.TableClick += OnTableClick;
+            TablePage.table_Panel_for_MainPage1.TableClick -= CombineTableOntableClick;
+
+            TablePage.Button_CombineTables.label1.ForeColor = PrevColorOfText;
+
+            _IsCombineTableActive = false;
+        }
+
+        private void ActivateCombineTables()
+        {
+            TablePage.table_Panel_for_MainPage1.TableClick -= OnTableClick;
+            TablePage.table_Panel_for_MainPage1.TableClick += CombineTableOntableClick;
+
+            PrevColorOfText = TablePage.Button_CombineTables.label1.ForeColor;
+            TablePage.Button_CombineTables.label1.ForeColor = Color.Black;
+
+            _IsCombineTableActive = true;
+        }
+
+        private void CombineTableOntableClick(object sender, EventArgs eventArgs)
+        { 
+            if (_aTableIsSelected && (_SelectedCombineTable != sender))
+            {
+                Control Temp = (Control) sender;
+                //Handle what way the control should enlarge
+                if (Math.Abs(_SelectedCombineTable.Location.X - Temp.Location.X) >
+                    Math.Abs(_SelectedCombineTable.Location.Y - Temp.Location.Y))
+                {
+                    _SelectedCombineTable.Width += Temp.Width;
+                }
+                else
+                {
+                    _SelectedCombineTable.Height += Temp.Height;
+                }
+                Temp.Parent = null;
+                _aTableIsSelected = false;
+            }
+            else
+            {
+                _SelectedCombineTable = (Control) sender;
+                _aTableIsSelected = true;
+            }
+        }
+
+        #endregion
+
+
+        private void Button_OneTimePayment_Button_Click(object sender, EventArgs e)
+        {
+            Draw_CreateReceipt(ActiveEmployee, new OneTimePaymentTable_info());
+        }
+
         public void BackToFrontPage_click(object sender, EventArgs e)
         {
-            // Timer_panel.DeleteNameAndTablesFromTimer();
             Draw_startPage(); //returns to the start page
-
         }
         private void OnTableClick(object sender, EventArgs e)
         {
@@ -92,4 +146,5 @@ namespace ConsoleApplication5
         }
         #endregion
     }
+    
 }

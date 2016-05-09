@@ -183,7 +183,7 @@ namespace ConsoleApplication5
             if(temp.Parent.Parent.Parent.Parent is MainPage)
             {
             Draw_tablesPage(e.employee); //draws the next page
-        }
+            }
             if(temp.Parent.Parent.Parent is SignOutOnJobWindow)
             {
                if (MessageBox.Show($"Are you sure you want to check {e.employee.EmployeeName} out?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){

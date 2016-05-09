@@ -3,6 +3,91 @@
   <HasImage>false</HasImage>
   <IsLogo>false</IsLogo>
   <Name>Other</Name>
-  <Product_list />
+  <Product_list>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>100.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>100.00</Price>
+      <Name>Gavekort 100</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>300.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>300.00</Price>
+      <Name>Gavekort 300</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>500.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>500.00</Price>
+      <Name>Gavekort 500</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>1000.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>1000.00</Price>
+      <Name>Gavekort 1000</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>199.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>199.00</Price>
+      <Name>Champions League Finale</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>50.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>50.00</Price>
+      <Name>Cigaretter</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+    <Product>
+      <_Is_set>true</_Is_set>
+      <_price>45.00</_price>
+      <_pathOfImage />
+      <Varianter />
+      <IsLogo>false</IsLogo>
+      <Is_set>true</Is_set>
+      <Price>45.00</Price>
+      <Name>LM Cigaretter</Name>
+      <HasImage>false</HasImage>
+      <PathOfImage />
+    </Product>
+  </Product_list>
   <Category_list />
 </CategoryNew>

@@ -55,7 +55,7 @@ namespace ConsoleApplication5
             Redraw_labels_text();
         }
 
-        public static EventHandler<ProductEventArgs> ProductRemove;//static publisher for deletion or addition
+        public event EventHandler<ProductEventArgs> ProductRemove;//static publisher for deletion or addition
         protected virtual void OnProductAmountAltered(int Representing_amount, Product product)
         {
             if (ProductRemove != null)
@@ -66,15 +66,15 @@ namespace ConsoleApplication5
         #region InitializeComponent
         private void InitializeComponent()
         {
-            float percent_LA = 0.55F;
-            float percent_ButMin = 0.45F;
+            float percent_LA = 0.50F;
+            float percent_ButMin = 0.40F;
             float percent_ButMore = 0.60F;
             float percent_LP = 0.70F;
 
             this.label_describtion = new System.Windows.Forms.Label();
             this.Label_amount = new System.Windows.Forms.Label();
-            this.Button_minus = new System.Windows.Forms.Button();
-            this.Button_plus = new System.Windows.Forms.Button();
+            this.Button_minus = new Button_Minus();
+            this.Button_plus = new Button_Plus();
             this.Label_price = new System.Windows.Forms.Label();
             this.Height = Size_y;
             this.Width = Size_x;
@@ -83,7 +83,7 @@ namespace ConsoleApplication5
             // 
             #region label_describtion
             // 
-            this.label_describtion.Font = Cosmetics.Standard_font;
+            this.label_describtion.Font = Cosmetics.Standard_font_Tempreceipt;
             this.label_describtion.AutoSize = false;
             this.label_describtion.Location = new System.Drawing.Point(0, 0);
             this.label_describtion.Height = Size_y;
@@ -97,7 +97,7 @@ namespace ConsoleApplication5
             #endregion
             #region Label_amount
             // 
-            this.Label_amount.Font = Cosmetics.Standard_font;
+            this.Label_amount.Font = Cosmetics.Standard_font_Tempreceipt;
             this.Label_amount.AutoSize = false;
             this.Label_amount.Location = new System.Drawing.Point((int)(Size_x * percent_LA), 0);//højden af FOnt skal ligges til for perfekt
             this.Label_amount.Height = Size_y-3;
@@ -117,9 +117,8 @@ namespace ConsoleApplication5
             this.Button_minus.Width = (int)(Size_x * (percent_LA - percent_ButMin));
             this.Button_minus.Name = "Button_minus";
             this.Button_minus.TabIndex = 2;
-            this.Button_minus.Text = "-";
-            this.Button_minus.UseVisualStyleBackColor = true;
-            this.Button_minus.Click += new System.EventHandler(this.Button_minus_Click);
+            this.Button_minus.Button_Click += new System.EventHandler(this.Button_minus_Click);
+            this.Button_minus.Padding = new Padding(10);
             #endregion
             #region Button_plus
             // 
@@ -129,13 +128,12 @@ namespace ConsoleApplication5
             this.Button_plus.Height = Size_y-3;
             this.Button_plus.Width = (int)(Size_x * (percent_LP - percent_ButMore));
             this.Button_plus.TabIndex = 3;
-            this.Button_plus.Text = "+";
-            this.Button_plus.UseVisualStyleBackColor = true;
-            this.Button_plus.Click += new System.EventHandler(this.Button_plus_Click);
+            this.Button_plus.Button_Click += new System.EventHandler(this.Button_plus_Click);
+            this.Button_plus.Padding = new Padding(10);
             #endregion
             #region Label_price
             // 
-            this.Label_price.Font = Cosmetics.Standard_font;
+            this.Label_price.Font = Cosmetics.Standard_font_Tempreceipt;
             this.Label_price.AutoSize = false;
             this.Label_price.Location = new System.Drawing.Point((int)(Size_x*percent_LP),0);
             this.Label_price.Height = Size_y-3;
@@ -182,8 +180,8 @@ namespace ConsoleApplication5
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label label_describtion;
         private System.Windows.Forms.Label Label_amount;
-        private System.Windows.Forms.Button Button_minus;
-        private System.Windows.Forms.Button Button_plus;
+        private Button_Minus Button_minus;
+        private Button_Plus Button_plus;
         private System.Windows.Forms.Label Label_price;
 
         public void Redraw_labels_text()

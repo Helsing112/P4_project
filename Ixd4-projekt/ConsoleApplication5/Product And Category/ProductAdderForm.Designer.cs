@@ -88,7 +88,7 @@
             // 
             this.Label_ChooseStyle.AutoSize = true;
             this.Label_ChooseStyle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.Label_ChooseStyle.ForeColor = System.Drawing.Color.White;
+            this.Label_ChooseStyle.ForeColor = System.Drawing.Color.Black;
             this.Label_ChooseStyle.Location = new System.Drawing.Point(118, 158);
             this.Label_ChooseStyle.Name = "Label_ChooseStyle";
             this.Label_ChooseStyle.Size = new System.Drawing.Size(165, 35);
@@ -132,7 +132,7 @@
             // 
             this.Label_Headline.AutoSize = true;
             this.Label_Headline.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.Label_Headline.ForeColor = System.Drawing.Color.White;
+            this.Label_Headline.ForeColor = System.Drawing.Color.Black;
             this.Label_Headline.Location = new System.Drawing.Point(42, 25);
             this.Label_Headline.Name = "Label_Headline";
             this.Label_Headline.Size = new System.Drawing.Size(325, 35);
@@ -213,12 +213,12 @@
             // TextBox_PriceInput
             // 
             this.TextBox_PriceInput.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBox_PriceInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_PriceInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBox_PriceInput.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.TextBox_PriceInput.Location = new System.Drawing.Point(162, 442);
+            this.TextBox_PriceInput.Location = new System.Drawing.Point(162, 438);
             this.TextBox_PriceInput.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_PriceInput.Name = "TextBox_PriceInput";
-            this.TextBox_PriceInput.Size = new System.Drawing.Size(177, 34);
+            this.TextBox_PriceInput.Size = new System.Drawing.Size(177, 41);
             this.TextBox_PriceInput.TabIndex = 30;
             // 
             // label_choosePrice
@@ -226,7 +226,7 @@
             this.label_choosePrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label_choosePrice.AutoSize = true;
             this.label_choosePrice.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label_choosePrice.ForeColor = System.Drawing.Color.White;
+            this.label_choosePrice.ForeColor = System.Drawing.Color.Black;
             this.label_choosePrice.Location = new System.Drawing.Point(55, 433);
             this.label_choosePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_choosePrice.Name = "label_choosePrice";
@@ -238,12 +238,12 @@
             // TextBox_nameInput
             // 
             this.TextBox_nameInput.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBox_nameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_nameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBox_nameInput.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.TextBox_nameInput.Location = new System.Drawing.Point(124, 374);
+            this.TextBox_nameInput.Location = new System.Drawing.Point(124, 370);
             this.TextBox_nameInput.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TextBox_nameInput.Name = "TextBox_nameInput";
-            this.TextBox_nameInput.Size = new System.Drawing.Size(279, 34);
+            this.TextBox_nameInput.Size = new System.Drawing.Size(279, 41);
             this.TextBox_nameInput.TabIndex = 28;
             // 
             // Label_ChooseName
@@ -251,7 +251,7 @@
             this.Label_ChooseName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label_ChooseName.AutoSize = true;
             this.Label_ChooseName.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.Label_ChooseName.ForeColor = System.Drawing.Color.White;
+            this.Label_ChooseName.ForeColor = System.Drawing.Color.Black;
             this.Label_ChooseName.Location = new System.Drawing.Point(8, 365);
             this.Label_ChooseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_ChooseName.Name = "Label_ChooseName";

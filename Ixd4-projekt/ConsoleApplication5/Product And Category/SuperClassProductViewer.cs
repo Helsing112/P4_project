@@ -122,5 +122,15 @@ namespace ConsoleApplication5
             TempHolder.Controls.Add(temp);
             Flow_ProductsFlow.Controls.Add(TempHolder);
         }
+
+        private void back_Button1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

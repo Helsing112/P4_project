@@ -40,6 +40,8 @@ namespace ConsoleApplication5
 
             // sets the properties of the numbers on the wheel
             string stringText = _number.ToString();
+            this.BackColor = Color.FromArgb(100, 26, 117, 190);
+
             FontFamily family = new FontFamily("Segoe UI");
             const int fontStyle = (int)FontStyle.Bold;
             const int emSize = 35;
@@ -67,7 +69,7 @@ namespace ConsoleApplication5
         private void PieOnNumberWheel_MouseEnter(object sender, EventArgs e)
         {
             PrevColor = this.BackColor;
-            this.BackColor = Color.Yellow;
+            this.BackColor = Color.FromArgb(255, 26, 117, 190);
         }
     }
 }

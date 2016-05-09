@@ -22,7 +22,7 @@ namespace ConsoleApplication5
             OnLabelClicked();
         }
 
-        public EventHandler LabelClicked;
+        public event EventHandler LabelClicked;
 
         protected virtual void OnLabelClicked()
         {
@@ -44,6 +44,7 @@ namespace ConsoleApplication5
             this.label_delete.TabIndex = 0;
             this.label_delete.Text = "Del";
             this.label_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_delete.Font = Cosmetics.Standard_font_Tempreceipt;
             this.label_delete.Click += new System.EventHandler(this.label_delete_Click);
             
             // 

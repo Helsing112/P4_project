@@ -19,7 +19,7 @@ namespace ConsoleApplication5
         public CommentToReceiptWindow(string comment)
         {
             InitializeComponent();
-            this.Comment= comment;
+            this.Comment = comment;
 
             if (Comment == null)
             {

@@ -83,7 +83,15 @@ namespace ConsoleApplication5
 
             CommentWindow.ShowDialog();
 
-            TextFromComment = CommentWindow.Text;
+
+            if (CommentWindow.Text == "")
+            {
+                TextFromComment = "";
+            }
+            else
+            {
+                TextFromComment = CommentWindow.Text;
+            }
 
         }
 
@@ -186,10 +194,39 @@ namespace ConsoleApplication5
         #region Eventhandlers---------------------------------
         private void BackToTablesPage_click(object sender, EventArgs e)
         {
+            if (ActiveTable.Table_name == "ONE TIME PAYMENT" && ActiveTable is OneTimePaymentTable_info)
+            {
+                HandleOneTimePaymentBackClick();
+            }
+            else
+            {
+                CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+                CreateReceipt.resetProductViewers();
+                ActiveTable = null;
+                Draw_tablesPage(ActiveEmployee);
+            }
+
+        }
+
+        private void HandleOneTimePaymentBackClick()
+        {
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
-            CreateReceipt.resetProductViewers();
-            ActiveTable = null;
-            Draw_tablesPage(ActiveEmployee);
+            if (ActiveTable.TableReceipt.Count > 0)
+            {
+                if (MessageBox.Show("Are you sure you want to exit this one time payment. The receipt will reset.", "",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CreateReceipt.resetProductViewers();
+                    ActiveTable = null;
+                    Draw_tablesPage(ActiveEmployee);
+                }
+            }
+            else
+            {
+                CreateReceipt.resetProductViewers();
+                ActiveTable = null;
+                Draw_tablesPage(ActiveEmployee);
+            }
         }
 
         private void PayButton_click(object sender, EventArgs e)
@@ -244,7 +281,7 @@ namespace ConsoleApplication5
         }
         private void Pay_window_ProductsPaid(object sender, PayEventArgs e)
         {
-            TablePage.table_Panel_for_MainPage1.removeProductsFromTableReceipt(e.ActiveTable.Table_name, e.BoughtProducts);
+            ActiveTable.RemoveProducts(e.BoughtProducts);
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
         }
         #endregion

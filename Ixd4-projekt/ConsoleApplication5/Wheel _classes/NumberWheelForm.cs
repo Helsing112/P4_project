@@ -50,7 +50,7 @@ namespace ConsoleApplication5
             // 
             this.MouseLeave += NumberWheelForm_MouseLeave;
             this.ShowInTaskbar = false;
-            this.BackColor = Color.DarkCyan;
+            this.BackColor = Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
