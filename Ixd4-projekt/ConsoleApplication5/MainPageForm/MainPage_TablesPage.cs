@@ -225,11 +225,11 @@ namespace ConsoleApplication5
         {
             Table_Control_MainPage Temp_Table = (Table_Control_MainPage)sender;
             if (_IsTableSelected)
-            {
+        { 
                 if (Temp_Table.TableInfo.TableReceipt.Count == 0)
-                {
+            {
                     foreach (ReceiptProduct item in _MoveContentTable_InfoHolder.TableReceipt)
-                    {
+                {
                         Temp_Table.TableInfo.AddReceiptProducts(item);
                     }
                     _MoveContentTable_InfoHolder.ClearAllProductsFromReciept();
@@ -242,15 +242,15 @@ namespace ConsoleApplication5
                     Messages.MoveToTableIsAlreadyOccupedError();
                 }
 
-            }
+                }
             else
             {
                 if (Temp_Table.TableInfo.TableReceipt.Count == 0)
                 {
                     Messages.TableHasNoReceiptError();
-                }
-                else
-                {
+            }
+            else
+            {
                     _MoveContentTable_InfoHolder = Temp_Table.TableInfo;
                     _IsTableSelected = true;
                 }
