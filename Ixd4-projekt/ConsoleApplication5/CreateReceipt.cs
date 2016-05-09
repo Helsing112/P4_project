@@ -46,7 +46,7 @@ namespace ConsoleApplication5
             ProductNavigator.Location = Label_HeadLineFood.Location;
             ProductNavigator.BackColor = Flow_FoodCats.BackColor;
 
-            ProductNavigator.back_Button1.Button_Click += BackButton1OnButtonClick;
+            ProductNavigator .Button_Click += BackButton1OnButtonClick;
         }
 
         private void BackButton1OnButtonClick(object sender, EventArgs eventArgs)

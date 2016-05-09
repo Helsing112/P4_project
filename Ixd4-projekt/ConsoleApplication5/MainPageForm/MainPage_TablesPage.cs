@@ -147,6 +147,32 @@ namespace ConsoleApplication5
 
         }
 
+        private void CombineTableOntableClick(object sender, EventArgs eventArgs)
+        {
+            if (_aTableIsSelected && (_SelectedCombineTable != sender))
+            {
+                Control Temp = (Control)sender;
+                //Handle what way the control should enlarge
+                if (Math.Abs(_SelectedCombineTable.Location.X - Temp.Location.X) >
+                    Math.Abs(_SelectedCombineTable.Location.Y - Temp.Location.Y))
+                {
+                    _SelectedCombineTable.Width += Temp.Width;
+                }
+                else
+                {
+                    _SelectedCombineTable.Height += Temp.Height;
+                }
+                Temp.Parent = null;
+                _aTableIsSelected = false;
+            }
+            else
+            {
+                _SelectedCombineTable = (Control)sender;
+                _aTableIsSelected = true;
+            }
+        }
+
+        #endregion
         #region Event handlers for drag & drop and click of table
 
         private Control _activeControl;
@@ -279,6 +305,7 @@ namespace ConsoleApplication5
             Draw_CreateReceipt(ActiveEmployee, temp_control.TableInfo);
            
         }
+        #endregion
         #endregion
     }
     
