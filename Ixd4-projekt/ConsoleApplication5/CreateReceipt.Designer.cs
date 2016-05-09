@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    partial class TEST
+    partial class CreateReceipt
     {
         /// <summary> 
         /// Required designer variable.

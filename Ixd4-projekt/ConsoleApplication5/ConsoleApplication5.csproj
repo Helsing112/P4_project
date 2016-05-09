@@ -230,11 +230,11 @@
     <Compile Include="Standard layouts\Super classes\Std_Button.Designer.cs">
       <DependentUpon>Std_Button.cs</DependentUpon>
     </Compile>
-    <Compile Include="TEST.cs">
+    <Compile Include="CreateReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TEST.Designer.cs">
-      <DependentUpon>TEST.cs</DependentUpon>
+    <Compile Include="CreateReceipt.Designer.cs">
+      <DependentUpon>CreateReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\AdminWindomUserControl.cs">
       <SubType>UserControl</SubType>
@@ -266,22 +266,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pay\PayEventArgs.cs" />
-    <Compile Include="Pay\Mortens Shit\PayWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MainPageForm\MainPage_TablesPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainPageForm\MainPage_CreateReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pay\Mortens Shit\PayWindow.Designer.cs">
-      <DependentUpon>PayWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pay\Mortens Shit\ProductButtonInPayReceipt.cs">
+    <Compile Include="Pay\ProductButtonInPayReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pay\Mortens Shit\ProductButtonInPayReceipt.Designer.cs">
+    <Compile Include="Pay\ProductButtonInPayReceipt.Designer.cs">
       <DependentUpon>ProductButtonInPayReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Pay\Pay_windowForm.cs">
@@ -394,12 +388,6 @@
     </Compile>
     <Compile Include="Standard layouts\Other\TextBox_NonTouch.Designer.cs">
       <DependentUpon>TextBox_NonTouch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="testsune.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="testsune.Designer.cs">
-      <DependentUpon>testsune.cs</DependentUpon>
     </Compile>
     <Compile Include="TimerInfo.cs">
       <SubType>UserControl</SubType>
@@ -622,9 +610,6 @@
     <EmbeddedResource Include="Message\Message_box.resx">
       <DependentUpon>Message_box.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pay\Mortens Shit\PayWindow.resx">
-      <DependentUpon>PayWindow.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pay\Pay_windowForm.resx">
       <DependentUpon>Pay_windowForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -706,11 +691,8 @@
     <EmbeddedResource Include="Tables\Table_management\Table_management_settings_form.resx">
       <DependentUpon>Table_management_settings_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>TEST.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="testsune.resx">
-      <DependentUpon>testsune.cs</DependentUpon>
+    <EmbeddedResource Include="CreateReceipt.resx">
+      <DependentUpon>CreateReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimerInfo.resx">
       <DependentUpon>TimerInfo.cs</DependentUpon>
