@@ -105,7 +105,7 @@ namespace ConsoleApplication5
         { 
             if (_aTableIsSelected && (_SelectedCombineTable != sender))
             {
-                Control Temp = (Control) sender;
+                Control Temp = (Control) sender; 
                 //Handle what way the control should enlarge
                 if (Math.Abs(_SelectedCombineTable.Location.X - Temp.Location.X) >
                     Math.Abs(_SelectedCombineTable.Location.Y - Temp.Location.Y))
