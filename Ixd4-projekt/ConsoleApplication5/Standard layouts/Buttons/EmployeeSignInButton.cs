@@ -21,8 +21,11 @@ namespace ConsoleApplication5
 
         private void EmployeeSignInButton_Load(object sender, EventArgs e)
         {
-            this.Size = new Size((Parent.Width-50)/4, (Parent.Height-50)/4);
+            Panel temp_panel = new Panel();
+            
+            this.Size = new Size((Parent.Width-50)/4, (Parent.Height-50)/3);
             this.Margin = new Padding(5);
+            this.Anchor = AnchorStyles.None;
         }
     }
 }

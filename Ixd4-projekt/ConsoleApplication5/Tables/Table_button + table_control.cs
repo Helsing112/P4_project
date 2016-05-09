@@ -89,6 +89,12 @@ namespace ConsoleApplication5
                 TableReceiptIsNOTEmpty(this, new EventArgs());
             }
         }
+
+        public void ClearAllProductsFromReciept()
+        {
+            TableReceipt.Clear();
+            CheckIfEmpty();
+        }
         public void CheckIfEmpty()
         {
             if (TableReceipt.Count == 0 && TableReceiptIsEmpty != null)

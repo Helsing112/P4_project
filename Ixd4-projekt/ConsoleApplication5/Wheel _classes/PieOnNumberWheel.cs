@@ -43,7 +43,7 @@ namespace ConsoleApplication5
             this.BackColor = Color.FromArgb(100, 26, 117, 190);
 
             FontFamily family = new FontFamily("Segoe UI");
-            const int fontStyle = (int)FontStyle.Bold;
+            const int fontStyle = (int)FontStyle.Regular;
             const int emSize = 35;
             PointF origin = new PointF(_posx, _posy);
             StringFormat format = StringFormat.GenericDefault;

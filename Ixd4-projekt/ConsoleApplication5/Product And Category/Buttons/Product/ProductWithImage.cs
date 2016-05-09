@@ -33,5 +33,15 @@ namespace ConsoleApplication5
         private void PictureOfProduct_Click(object sender, EventArgs e)
         {
         }
+
+        private void PictureOfProduct_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1_MouseUp(sender, e);
+        }
+
+        private void PictureOfProduct_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox1_MouseDown(sender, e);
+        }
     }
 }

@@ -27,5 +27,15 @@ namespace ConsoleApplication5
             this.CategoryPicture.BackgroundImage = Image.FromFile(Category.PathOfImage);
             this.Textlabel = Category.Name;
         }
+
+        private void CategoryPicture_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox1_MouseDown(sender, e);
+        }
+
+        private void CategoryPicture_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1_MouseUp(sender, e);
+        }
     }
 }

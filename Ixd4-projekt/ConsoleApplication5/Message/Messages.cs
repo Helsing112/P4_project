@@ -19,7 +19,7 @@ namespace ConsoleApplication5
         public static void DenyProductOrCatNoName(string ProductOrCat) { Message_box.Message($"The {ProductOrCat} needs to have a name", -1); }
         public static void DenyProductNoPrice() { Message_box.Message("The product needs to have a price", -1); }
 
-
+        public static void IdAlreadyExists() { Message_box.Message("The ID is already assigned to another employee", -1);}
         public static void CategoryCreated() { Message_box.Message("Category Created", 1); }
 
         public static void CategoryCreated(Product inputProduct) { Message_box.Message(inputProduct.Name + " Added" + "\n" + "Price: " + inputProduct.Price, 1); }
@@ -38,6 +38,15 @@ namespace ConsoleApplication5
         public static void CommentAdded() { Message_box.Message("Added a comment for the kitchen", 1); }
 
         public static void EmployeeAlreadySignedIn() { Message_box.Message("A employee with that ID is already signed in", -1); }
+
+        public  static  void TableHasNoReceiptError() { Message_box.Message("The table you have chosen is not occupied", -1);}
+
+        public static void MoveToTableIsAlreadyOccupedError() { Message_box.Message("The Table that you want to move to is already occupied", -1);}
+
+        public static void ConfirmMovedTable(Table_Info tableInfo)
+        {
+            Message_box.Message($"Your table has been moved to table: {tableInfo.Table_name}", 1);
+        }
     }
 
 }

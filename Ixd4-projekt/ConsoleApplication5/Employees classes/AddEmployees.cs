@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace ConsoleApplication5
 {
@@ -17,6 +18,9 @@ namespace ConsoleApplication5
     public partial class AddEmployees : Standard_Window_Layout
     {
         public string _path { get; }
+
+        private readonly List<Employee> _empList = new List<Employee>();
+
         public AddEmployees(string path_of_employees)
         {
             InitializeComponent();
@@ -27,6 +31,13 @@ namespace ConsoleApplication5
             this.Name_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeeNametextBox_TextChanged);
             this.ID_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeeIDtextBox_TextChanged);
             this.Password_TextBox.textBox1.TextChanged += new System.EventHandler(this.EmployeePasswordtextBox_TextChanged);
+
+            DirectoryInfo Employer = new DirectoryInfo(_path);
+            foreach (var item in Employer.GetFiles())
+            {
+                Employee Waiter = XmlEmployeeReader.Read_Employee<Employee>(item.FullName);
+                _empList.Add(Waiter);
+            }
 
             Add_Employee_Button.Enabled = false;
         }
@@ -57,20 +68,32 @@ namespace ConsoleApplication5
 
         private void Enable_Add_Button()
         {
-            if ((!string.IsNullOrWhiteSpace(Name_TextBox.textBox1.Text)) && (!string.IsNullOrWhiteSpace(ID_TextBox.textBox1.Text)) && (!string.IsNullOrWhiteSpace(Password_TextBox.textBox1.Text))) 
+            try
             {
-                Add_Employee_Button.Enabled = true;
+                if (DoesIdAlreadyExist(Convert.ToInt16(ID_TextBox.textBox1.Text)) &&
+                    !string.IsNullOrWhiteSpace(Name_TextBox.textBox1.Text) &&
+                    !string.IsNullOrWhiteSpace(ID_TextBox.textBox1.Text) &&
+                    !string.IsNullOrWhiteSpace(Password_TextBox.textBox1.Text))
+                {
+                    Add_Employee_Button.Enabled = true;
+                }
+                else
+                {
+                    Add_Employee_Button.Enabled = false;
+                }
             }
-            else
+            catch (FormatException)
             {
-                Add_Employee_Button.Enabled = false;
+                
             }
         }
 
         // name changed event
         private void EmployeeNametextBox_TextChanged(object sender, EventArgs e)
         {
+
             Enable_Add_Button();
+
         }
 
         // Can only write numbers in ID field
@@ -84,6 +107,11 @@ namespace ConsoleApplication5
             {
                 Enable_Add_Button();
             }
+        }
+
+        private bool DoesIdAlreadyExist(int ID)
+        {
+            return _empList.All(item => ID != item.EmployeeID);
         }
 
         // password changed event

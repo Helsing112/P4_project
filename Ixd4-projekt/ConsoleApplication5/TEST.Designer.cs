@@ -201,7 +201,7 @@ namespace ConsoleApplication5
             this.timerInfo1.Dock = System.Windows.Forms.DockStyle.Top;
             this.timerInfo1.employeename = null;
             this.timerInfo1.Location = new System.Drawing.Point(0, 0);
-            this.timerInfo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timerInfo1.Margin = new System.Windows.Forms.Padding(4);
             this.timerInfo1.Name = "timerInfo1";
             this.timerInfo1.Size = new System.Drawing.Size(1536, 50);
             this.timerInfo1.TabIndex = 1;

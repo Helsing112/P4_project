@@ -25,35 +25,34 @@ namespace ConsoleApplication5
             this.totalamount = totalamount;
             this.Printername = printername;
         }
-         static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
+         public static void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
         {
             PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount, Printername);
             
-        
+            // selects the standard printer and prints to it
             try
             {
                 PrintDocument print = new PrintDocument();
                 print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
                 print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatDoesThePrinting);
-                print.PrinterSettings.PrinterName = Printername;
 
-
-                if (print.PrinterSettings.IsValid)
+                foreach (var printers in PrinterSettings.InstalledPrinters)
                 {
-                    print.Print();
+                    print.PrinterSettings.PrinterName = printers.ToString();
+                    if (print.PrinterSettings.IsDefaultPrinter)
+                    {
+                        break;
+                    }
                 }
-                else {
-                    Messages.PrinterError();
-                }
-            
+                print.Print();
+
             }
-            catch (Exception ex)
+            catch (InvalidPrinterException)
             {
-                
-               
+                Messages.PrinterError();
             }
-        
-    }
+
+        }
         public void MethodThatDoesThePrinting(object sender, PrintPageEventArgs ev)
         {
 
