@@ -41,7 +41,7 @@ namespace ConsoleApplication5
             // sets the properties of the numbers on the wheel
             string stringText = _number.ToString();
             FontFamily family = new FontFamily("Segoe UI");
-            const int fontStyle = (int)FontStyle.Bold;
+            const int fontStyle = (int)FontStyle.Regular;
             const int emSize = 35;
             PointF origin = new PointF(_posx, _posy);
             StringFormat format = StringFormat.GenericDefault;

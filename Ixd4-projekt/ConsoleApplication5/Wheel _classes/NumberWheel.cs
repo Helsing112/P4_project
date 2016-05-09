@@ -20,7 +20,7 @@ namespace ConsoleApplication5
         private void InitializeComponent(Rectangle inputRectangle)
         {
             const int partToDevideCenter = 3;
-            const int amountOfPies = 8;
+            const int amountOfPies = 6;
             //Main control:
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Size = inputRectangle.Size;
@@ -50,14 +50,14 @@ namespace ConsoleApplication5
             {
                 // calculates location for numbers on wheel
                 const float sweepAngleLabel = (350f / amountOfPies);
-                float startAngleLabel = 0 + i * (360 / amountOfPies) + 22;
+                float startAngleLabel = 0 + i * (360 / amountOfPies) - 90;
                 double labelAngle = Math.PI * (startAngleLabel + sweepAngleLabel / 2f) / 180f;
                 float singleLabelX = labelX + (float)(labelRadius * Math.Cos(labelAngle));
                 float singleLabelY = labelY + (float)(labelRadius * Math.Sin(labelAngle));
                 startAngleLabel += sweepAngleLabel;
                 // end of calculation
 
-                pies.Add(new PieOnNumberWheel(inputRectangle, 0 + i * (360 / amountOfPies) + 22, (350 / amountOfPies), singleLabelX, singleLabelY, i));
+                pies.Add(new PieOnNumberWheel(inputRectangle, 0 + i * (360 / amountOfPies) - 90, (350 / amountOfPies), singleLabelX, singleLabelY, i));
             }
 
             int x = 2;
@@ -72,7 +72,14 @@ namespace ConsoleApplication5
                 x++;
             }
             this.ResumeLayout(false);
+
         }
+
+        // not used at the moment
+        //private void NumberWheelForm_MouseLeave(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //}
 
         private void Middle_clicked(object sender, MouseEventArgs e)
         {

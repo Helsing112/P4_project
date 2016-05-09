@@ -44,8 +44,10 @@ namespace ConsoleApplication5
             // Add a Button Click Event handler
             dynamicButton.Button_Click += EmployeeButtonClick;
             dynamicButton.Anchor = AnchorStyles.None;
+
             // Add Button to the Form. Placement of the Button
             // will be based on the Location and Size of button
+
             EmployeeHolder.Controls.Add(dynamicButton);
         }
 

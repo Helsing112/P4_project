@@ -48,7 +48,6 @@ namespace ConsoleApplication5
             // 
             // NumberWheelForm
             // 
-            this.MouseLeave += NumberWheelForm_MouseLeave;
             this.ShowInTaskbar = false;
             this.BackColor = Color.DarkCyan;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -57,10 +56,6 @@ namespace ConsoleApplication5
             this.ResumeLayout(false);
         }
 
-        private void NumberWheelForm_MouseLeave(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
 
         /// <summary>
         /// Shows the wheel with a set of properties on the location input 
@@ -76,8 +71,7 @@ namespace ConsoleApplication5
             this.Show();
             this.TopMost = true;
             this.Focus();
-            mouse_event(MOUSEEVENTF_LEFTUP, MousePosition.X, MousePosition.Y, 0, 0);
-
+            mouse_event(MOUSEEVENTF_LEFTUP, MousePosition.X, MousePosition.Y, 0, 0);            
         }
 
         public delegate void Pie_clicked(int number);
