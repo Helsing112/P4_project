@@ -31,14 +31,15 @@ namespace ConsoleApplication5
         {
             this.Flow_ProductsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.back_Button1 = new ConsoleApplication5.Button_BackArrow();
             this.Label_Headline = new ConsoleApplication5.Standard_Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Flow_ProductsFlow
             // 
-            this.Flow_ProductsFlow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Flow_ProductsFlow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Flow_ProductsFlow.AutoScroll = true;
             this.Flow_ProductsFlow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -49,6 +50,7 @@ namespace ConsoleApplication5
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.back_Button1);
             this.panel1.Controls.Add(this.Label_Headline);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -57,10 +59,22 @@ namespace ConsoleApplication5
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // back_Button1
+            // 
+            this.back_Button1.BackColor = System.Drawing.Color.Transparent;
+            this.back_Button1.Image_set = null;
+            this.back_Button1.Location = new System.Drawing.Point(30, 20);
+            this.back_Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.back_Button1.Name = "back_Button1";
+            this.back_Button1.Size = new System.Drawing.Size(85, 47);
+            this.back_Button1.TabIndex = 0;
+            this.back_Button1.Textlabel = "";
+            this.back_Button1.Load += new System.EventHandler(this.back_Button1_Load);
+            // 
             // Label_Headline
             // 
-            this.Label_Headline.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Label_Headline.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_Headline.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.Label_Headline.ForeColor = System.Drawing.Color.Black;
@@ -87,6 +101,7 @@ namespace ConsoleApplication5
         #endregion
 
         private FlowLayoutPanel Flow_ProductsFlow;
+        public Button_BackArrow back_Button1;
         private Standard_Label Label_Headline;
         private Panel panel1;
     }
