@@ -52,7 +52,7 @@ namespace ConsoleApplication5
         //}
         private void Initialize_Field_Controls_CreateReceipt()
         {
-            CreateReceipt = new TEST();
+            CreateReceipt = new CreateReceipt();
             CreateReceipt.Location = new Point(0, 0);
             //CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
             //CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
@@ -113,7 +113,7 @@ namespace ConsoleApplication5
             Controls.Add(CreateReceipt);
             
         }
-        TEST CreateReceipt;
+        CreateReceipt CreateReceipt;
         //Fields controls
         SuperClassProductViewer treeFood;
         SuperClassProductViewer treeDrinks;

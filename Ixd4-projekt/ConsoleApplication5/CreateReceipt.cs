@@ -11,10 +11,10 @@ using System.Windows.Forms.VisualStyles;
 
 namespace ConsoleApplication5
 {
-    public partial class TEST : UserControl
+    public partial class CreateReceipt : UserControl
     {
         public CategoryNew OtherCategory { get; set; }
-        public TEST()
+        public CreateReceipt()
         {
             InitializeComponent();
             initializeProductViewers();
