@@ -223,3 +223,11 @@ C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Button_Minus.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Button_Plus.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CreateReceipt.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CommentToReceiptWindow.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.SignOutOnJobWindow.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.SuperClassCategory.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AdminStartButton.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.OneTimePaymentButton.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TableManagementButtons.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.StartPage.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TablesPage.resources

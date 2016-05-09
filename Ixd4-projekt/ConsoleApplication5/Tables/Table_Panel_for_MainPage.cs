@@ -29,7 +29,29 @@ namespace ConsoleApplication5
                 this.Controls.Add(item);
                 
                 item.Click += TableClicked;
+                item.MouseDown += Table_MouseDown;
+                item.MouseUp += Table_MouseUp;
+                item.MouseMove += Table_MouseMove;
             }
+        }
+
+        public event EventHandler<MouseEventArgs> OnTableMouseUp;
+        public event EventHandler<MouseEventArgs> OnTableMouseDown;
+        public event EventHandler<MouseEventArgs> OnTableMouseMove;
+
+        private void Table_MouseMove(object sender, MouseEventArgs e)
+        {
+            OnTableMouseMove?.Invoke(sender, e);
+        }
+
+        private void Table_MouseUp(object sender, MouseEventArgs e)
+        {
+            OnTableMouseUp?.Invoke(sender, e);
+        }
+
+        private void Table_MouseDown(object sender, MouseEventArgs e)
+        {
+            OnTableMouseDown?.Invoke(sender, e);
         }
 
         public void removeProductsFromTableReceipt(string NameOfTable, List<ReceiptProduct> ProductsToRemove)

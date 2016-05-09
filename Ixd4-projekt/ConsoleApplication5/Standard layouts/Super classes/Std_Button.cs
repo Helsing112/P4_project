@@ -42,24 +42,29 @@ namespace ConsoleApplication5
         }
 
         // Mouse down and up function that adds animation to pressed buttons. Also consists of the click function.
-        private void pictureBox1_MouseDown(object sender, EventArgs e)
+        internal void pictureBox1_MouseDown(object sender, EventArgs e)
         {
+            int paddingSizeWidth = Convert.ToInt16(Convert.ToDouble(this.Width) / 100) * 5;
+            int paddingSizeHeight = Convert.ToInt16(Convert.ToDouble(this.Height) / 100) * 5;
 
-            this.Width -= 6;
-            this.Height -= 6;
+            this.Padding = new Padding(paddingSizeWidth / 2, paddingSizeHeight / 2, paddingSizeWidth / 2, paddingSizeHeight / 2);
+
+            //this.Width -= 6;
+            //this.Height -= 6;
+
             this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 100) * 98), System.Drawing.FontStyle.Regular);
-            this.Location = new Point((this.Location.X + 3), (this.Location.Y + 3));
+            //this.Location = new Point((this.Location.X + 3), (this.Location.Y + 3));
             this.Refresh();
         }
 
         public event EventHandler Button_Click;
-        private void pictureBox1_MouseUp(object sender, EventArgs e)
+        internal void pictureBox1_MouseUp(object sender, EventArgs e)
         {
-
-            this.Width += 6;
-            this.Height += 6;
+            this.Padding = new Padding(0);
+            //this.Width += 6;
+            //this.Height += 6;
             this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 98) * 100), System.Drawing.FontStyle.Regular);
-            this.Location = new Point((this.Location.X - 3), (this.Location.Y - 3));
+            //this.Location = new Point((this.Location.X - 3), (this.Location.Y - 3));
             this.Refresh();
             OnButton_click(sender, e);
 

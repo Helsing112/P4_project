@@ -34,19 +34,22 @@ namespace ConsoleApplication5
             Point locationOfEmployeeButtons = new Point(25, 200);
             
 
-            EmployeesReader employeeControl = new EmployeesReader(x, y ,path ) {Location = locationOfEmployeeButtons} ;
+            employeeControl = new EmployeesReader(x, y ,path ) {Location = locationOfEmployeeButtons} ;
             EmployeesReader.PasswordCorrect += new EventHandler<EmployeeEventArgs>(Close_window);
             Controls.Add(employeeControl);
             
 
             // Quit button is made for the page, placed in right corner
-            Quit_Close_Button quitButton = new Quit_Close_Button {Size = new Size(200, 80)};
+            quitButton = new Quit_Close_Button {Size = new Size(200, 80)};
             quitButton.Location = new Point(this.Width - (quitButton.Width), this.Height - (quitButton.Height));
             quitButton.Padding = new Padding(20);
             quitButton.Button_Click += new EventHandler(QuitButtonClick);
             Controls.Add(quitButton);
+
         }
 
+        private EmployeesReader employeeControl;
+        private Quit_Close_Button quitButton;
         private void Close_window(object sender, EmployeeEventArgs e)
         {
             Hide();
