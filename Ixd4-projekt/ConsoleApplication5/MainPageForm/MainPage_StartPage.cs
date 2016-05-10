@@ -127,8 +127,22 @@ namespace ConsoleApplication5
         private void Admin_login_click(object sender, EventArgs e)
         {
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library, Size_of_table_panel);
+            admin_window.AdminControl.quit_Close_Button2.Button_Click += Quit_Program_Button_Click;
             admin_window.ShowDialog();
+         
         }
+
+        private void Quit_Program_Button_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show($"Are you sure you want to close the program? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+                this.Close();
+
+            }
+        }
+
         private void CheckInButton_click(object sender, EventArgs e)
         {
             
