@@ -38,8 +38,8 @@ namespace ConsoleApplication5
             // 
             // Flow_ProductsFlow
             // 
-            this.Flow_ProductsFlow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Flow_ProductsFlow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Flow_ProductsFlow.AutoScroll = true;
             this.Flow_ProductsFlow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -73,8 +73,8 @@ namespace ConsoleApplication5
             // 
             // Label_Headline
             // 
-            this.Label_Headline.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Label_Headline.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_Headline.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.Label_Headline.ForeColor = System.Drawing.Color.Black;
@@ -101,7 +101,7 @@ namespace ConsoleApplication5
         #endregion
 
         private FlowLayoutPanel Flow_ProductsFlow;
-        public  Button_BackArrow back_Button1;
+        public Button_BackArrow back_Button1;
         private Standard_Label Label_Headline;
         private Panel panel1;
     }

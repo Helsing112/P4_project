@@ -66,7 +66,7 @@ namespace ConsoleApplication5
 
             CreateReceipt.Pay_Button.Button_Click += PayButton_click;
             CreateReceipt.Button_PrintBill.Button_Click += Button_PrintBill_Button_Click;
-            CreateReceipt.Button_BackToTable.Button_Click += BackToTablesPage_click;
+            CreateReceipt.back_Button1.Button_Click += BackToTablesPage_click;
             CreateReceipt.Button_Comment.Button_Click += Button_Comment_CLick;
 
             PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));

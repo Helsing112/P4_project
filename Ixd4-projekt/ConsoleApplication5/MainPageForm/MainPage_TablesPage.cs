@@ -149,6 +149,32 @@ namespace ConsoleApplication5
 
         }
 
+        private void CombineTableOntableClick(object sender, EventArgs eventArgs)
+        {
+            if (_aTableIsSelected && (_SelectedCombineTable != sender))
+            {
+                Control Temp = (Control)sender;
+                //Handle what way the control should enlarge
+                if (Math.Abs(_SelectedCombineTable.Location.X - Temp.Location.X) >
+                    Math.Abs(_SelectedCombineTable.Location.Y - Temp.Location.Y))
+                {
+                    _SelectedCombineTable.Width += Temp.Width;
+                }
+                else
+                {
+                    _SelectedCombineTable.Height += Temp.Height;
+                }
+                Temp.Parent = null;
+                _aTableIsSelected = false;
+            }
+            else
+            {
+                _SelectedCombineTable = (Control)sender;
+                _aTableIsSelected = true;
+            }
+        }
+
+        #endregion
         #region Event handlers for drag & drop and click of table
 
         private Control _activeControl;
@@ -227,11 +253,11 @@ namespace ConsoleApplication5
         {
             Table_Control_MainPage Temp_Table = (Table_Control_MainPage)sender;
             if (_IsTableSelected)
-            {
+        { 
                 if (Temp_Table.TableInfo.TableReceipt.Count == 0)
-                {
+            {
                     foreach (ReceiptProduct item in _MoveContentTable_InfoHolder.TableReceipt)
-                    {
+                {
                         Temp_Table.TableInfo.AddReceiptProducts(item);
                     }
                     _MoveContentTable_InfoHolder.ClearAllProductsFromReciept();
@@ -244,15 +270,15 @@ namespace ConsoleApplication5
                     Messages.MoveToTableIsAlreadyOccupedError();
                 }
 
-            }
+                }
             else
             {
                 if (Temp_Table.TableInfo.TableReceipt.Count == 0)
                 {
                     Messages.TableHasNoReceiptError();
-                }
-                else
-                {
+            }
+            else
+            {
                     _MoveContentTable_InfoHolder = Temp_Table.TableInfo;
                     _IsTableSelected = true;
                 }
@@ -281,6 +307,7 @@ namespace ConsoleApplication5
             Draw_CreateReceipt(ActiveEmployee, temp_control.TableInfo);
            
         }
+        #endregion
         #endregion
     }
     

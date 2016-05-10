@@ -88,7 +88,7 @@ namespace ConsoleApplication5
             {
                 this.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
             }
-            catch (Exception)
+            catch (System.IO.FileNotFoundException)
             { //We dont want to crash the system, just because our picture is not there
             }
             this.BackgroundImageLayout = ImageLayout.Stretch;

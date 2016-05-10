@@ -36,7 +36,6 @@ namespace ConsoleApplication5
             this.Button_OtherLibrary = new ConsoleApplication5.Std_Button();
             this.Flow_DrinksCats = new ConsoleApplication5.StartPageProductViewer();
             this.Flow_FoodCats = new ConsoleApplication5.StartPageProductViewer();
-            this.Button_BackToTable = new ConsoleApplication5.Back_Button();
             this.Button_Done = new ConsoleApplication5.DoneButton();
             this.Button_Comment = new ConsoleApplication5.CreateReceiptGreyButtons();
             this.Button_PrintBill = new ConsoleApplication5.CreateReceiptGreyButtons();
@@ -45,6 +44,7 @@ namespace ConsoleApplication5
             this.Pay_Button = new ConsoleApplication5.Pay_Button();
             this.tempReceipt1 = new ConsoleApplication5.TempReceipt();
             this.timerInfo1 = new ConsoleApplication5.TimerInfo();
+            this.back_Button1 = new ConsoleApplication5.Back_Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,20 +106,6 @@ namespace ConsoleApplication5
             this.Flow_FoodCats.Name = "Flow_FoodCats";
             this.Flow_FoodCats.Size = new System.Drawing.Size(504, 617);
             this.Flow_FoodCats.TabIndex = 15;
-            // 
-            // Button_BackToTable
-            // 
-            this.Button_BackToTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button_BackToTable.BackColor = System.Drawing.Color.Transparent;
-            this.Button_BackToTable.Image_set = null;
-            this.Button_BackToTable.Location = new System.Drawing.Point(1220, 767);
-            this.Button_BackToTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Button_BackToTable.Name = "Button_BackToTable";
-            this.Button_BackToTable.Size = new System.Drawing.Size(122, 53);
-            this.Button_BackToTable.TabIndex = 13;
-            this.Button_BackToTable.Textlabel = "BACK";
-            this.Button_BackToTable.Visible = false;
-            this.Button_BackToTable.Load += new System.EventHandler(this.Button_BackToTable_Load);
             // 
             // Button_Done
             // 
@@ -201,19 +187,31 @@ namespace ConsoleApplication5
             this.timerInfo1.Dock = System.Windows.Forms.DockStyle.Top;
             this.timerInfo1.employeename = null;
             this.timerInfo1.Location = new System.Drawing.Point(0, 0);
-            this.timerInfo1.Margin = new System.Windows.Forms.Padding(4);
+            this.timerInfo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timerInfo1.Name = "timerInfo1";
             this.timerInfo1.Size = new System.Drawing.Size(1536, 50);
             this.timerInfo1.TabIndex = 1;
             this.timerInfo1.tablename = null;
             // 
-            // TEST
+            // back_Button1
+            // 
+            this.back_Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.back_Button1.BackColor = System.Drawing.Color.Transparent;
+            this.back_Button1.Image_set = null;
+            this.back_Button1.Location = new System.Drawing.Point(1375, 775);
+            this.back_Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.back_Button1.Name = "back_Button1";
+            this.back_Button1.Size = new System.Drawing.Size(154, 61);
+            this.back_Button1.TabIndex = 18;
+            this.back_Button1.Textlabel = "Back";
+            // 
+            // CreateReceipt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.back_Button1);
             this.Controls.Add(this.Button_OtherLibrary);
             this.Controls.Add(this.Flow_DrinksCats);
             this.Controls.Add(this.Flow_FoodCats);
-            this.Controls.Add(this.Button_BackToTable);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Button_Done);
             this.Controls.Add(this.Button_Comment);
@@ -223,7 +221,7 @@ namespace ConsoleApplication5
             this.Controls.Add(this.Pay_Button);
             this.Controls.Add(this.tempReceipt1);
             this.Controls.Add(this.timerInfo1);
-            this.Name = "TEST";
+            this.Name = "CreateReceipt";
             this.Size = new System.Drawing.Size(1536, 864);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -242,9 +240,9 @@ namespace ConsoleApplication5
         public DoneButton Button_Done;
         public Panel panel1;
         public Standard_Label Label_TableName;
-        public Back_Button Button_BackToTable;
         public StartPageProductViewer Flow_FoodCats;
         public StartPageProductViewer Flow_DrinksCats;
         private Std_Button Button_OtherLibrary;
+        public Back_Button back_Button1;
     }
 }
