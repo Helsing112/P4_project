@@ -128,7 +128,6 @@ C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Deb
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Discount_buttons.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Split_button.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Message_box.resources
-C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Paywindow.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Numpad_button.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TableType_Show_Control.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Table_management_AddTableForm.resources
@@ -170,7 +169,6 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CheckInButton.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AdminFunctionButtons.resources
 C:\Users\Morten\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AdminWindomUserControl.resources
-C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.testsune.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CategoryLogo.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CategoryNoImage.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CategoryWithImage.resources
@@ -182,7 +180,6 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AdminFunctionButtons.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CreateReceiptGreyButtons.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.DoneButton.resources
-C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TEST.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.AdminWindomUserControl.resources
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.MainPage.resources
@@ -230,3 +227,7 @@ C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TableManagementButtons.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.StartPage.resources
 C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.TablesPage.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Button_BackArrow.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Button_Minus.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.Button_Plus.resources
+C:\Users\kranzekage\Source\Repos\P4_project\Ixd4-projekt\ConsoleApplication5\obj\Debug\ConsoleApplication5.CreateReceipt.resources

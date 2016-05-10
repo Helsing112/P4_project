@@ -82,11 +82,11 @@ namespace ConsoleApplication5
            
 
             CommentWindow.ShowDialog();
+            
 
-
-            if (CommentWindow.Text == "")
+            if (CommentWindow.Text == null)
             {
-                TextFromComment = "";
+                TextFromComment = null;
             }
             else
             {

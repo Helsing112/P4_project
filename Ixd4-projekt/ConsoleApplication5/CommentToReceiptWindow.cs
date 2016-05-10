@@ -21,11 +21,11 @@ namespace ConsoleApplication5
             InitializeComponent();
             this.Comment = comment;
 
-            if (Comment == null)
+            if (Comment == "")
             {
                 CommentTextBox.Text = "";
             }
-            else if (Comment != null)
+            else if (Comment != "")
             {
                 CommentTextBox.Text = (Comment + "\n");
                 //CommentTextBox.SelectionLength = 0;
@@ -35,6 +35,7 @@ namespace ConsoleApplication5
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            Text = CommentTextBox.Text;
             this.Close();
         }
 
