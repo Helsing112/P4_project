@@ -25,7 +25,7 @@ namespace ConsoleApplication5
 
         private void InitializeData()
         {
-            this.BackgroundImage = Image.FromFile(Category.PathOfImage);
+            this.pictureBox2.BackgroundImage = Image.FromFile(Category.PathOfImage);
         }
     }
 }

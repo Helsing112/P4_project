@@ -47,6 +47,7 @@ namespace ConsoleApplication5
         {
             Message_box.Message($"Your table has been moved to table: {tableInfo.Table_name}", 1);
         }
+        public static void AllProductsHasBeenPaid() { Message_box.Message("The receipt has been paid");}
     }
 
 }
