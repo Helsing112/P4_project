@@ -14,26 +14,8 @@ namespace ConsoleApplication5
 
         private Employee _employee;
         public Employee ActiveEmployee { get { return _employee; } private set { _employee = value; TablePage.timerInfo1.UpdateEmployeename(ActiveEmployee); } }
-        /// <summary>
-        /// Clears controls and Draws the page with the table panel
-        /// </summary>
-        /// <param name="Active_employee">The employee that is active</param>
-        //private void Draw_tablesPage(Employee Active_employee)
-        //{
-        //    Controls.Clear();
-        //    ActiveEmployee = Active_employee;
 
-        //    Controls.Add(tables_panel);
-        //    Controls.Add(BackToFrontPageButton);
-        //}
 
-        //private void Initialize_Field_Controls_tablesPage()
-        //{
-        //    BackToFrontPage_button(new System.Drawing.Point(12, 245), new System.Drawing.Size(139, 79));
-        //    Tables_panel(new Point(200, 20), Size_of_table_panel);
-        //}
-
-        //_________________________________________TEST________________________________________
         private void Draw_tablesPage(Employee Active_employee)
         {
             Controls.Clear();
@@ -58,13 +40,14 @@ namespace ConsoleApplication5
 
 
         TablesPage TablePage;
-        //_________________________________________TESTEND_____________________________________
 
 
 
-        #region Eventhandlers-----------------------------
+        
+            
+            //#region Eventhandlers-----------------------------
 
-        #region Eventhandler for combine table click.
+        //#region Eventhandler for combine table click.
 
         private bool _IsCombineTableActive;
         private Control _SelectedCombineTable;
@@ -85,7 +68,7 @@ namespace ConsoleApplication5
         private void DeactivateCombineTables()
         {
             TablePage.table_Panel_for_MainPage1.TableClick += OnTableClick;
-            TablePage.table_Panel_for_MainPage1.TableClick -= CombineTableOntableClick;
+            //TablePage.table_Panel_for_MainPage1.TableClick -= CombineTableOntableClick;
 
             TablePage.Button_CombineTables.label1.ForeColor = PrevColorOfText;
 
@@ -95,7 +78,7 @@ namespace ConsoleApplication5
         private void ActivateCombineTables()
         {
             TablePage.table_Panel_for_MainPage1.TableClick -= OnTableClick;
-            TablePage.table_Panel_for_MainPage1.TableClick += CombineTableOntableClick;
+            //TablePage.table_Panel_for_MainPage1.TableClick += CombineTableOntableClick;
 
             PrevColorOfText = TablePage.Button_CombineTables.label1.ForeColor;
             TablePage.Button_CombineTables.label1.ForeColor = Color.Black;
