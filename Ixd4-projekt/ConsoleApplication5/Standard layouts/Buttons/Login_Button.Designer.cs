@@ -34,18 +34,21 @@
             // 
             // label1
             // 
-            this.label1.Text = "";
+          
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.knap2;
+            this.pictureBox1.Image = global::ConsoleApplication5.Properties.Resources.GreenSharpEdges;
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             // 
             // Login_Button
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Login_Button";
-            this.Textlabel = "Login";
+            this.Textlabel = "LOGIN";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pictureBox1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -41,8 +41,8 @@ namespace ConsoleApplication5
 
             // Quit button is made for the page, placed in right corner
             quitButton = new Quit_Close_Button {Size = new Size(200, 80)};
-            quitButton.Location = new Point(this.Width - (quitButton.Width), this.Height - (quitButton.Height));
-            quitButton.Padding = new Padding(20);
+            quitButton.Location = new Point(this.Width - (quitButton.Width+30), this.Height - (quitButton.Height+30));
+            quitButton.Padding = new Padding(0);
             quitButton.Button_Click += new EventHandler(QuitButtonClick);
             Controls.Add(quitButton);
 
