@@ -37,10 +37,10 @@ namespace ConsoleApplication5
             // 
             this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button1.Image_set = null;
-            this.quit_Close_Button1.Location = new System.Drawing.Point(178, 731);
+            this.quit_Close_Button1.Location = new System.Drawing.Point(133, 536);
             this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(1);
             this.quit_Close_Button1.Name = "quit_Close_Button1";
-            this.quit_Close_Button1.Size = new System.Drawing.Size(356, 80);
+            this.quit_Close_Button1.Size = new System.Drawing.Size(267, 65);
             this.quit_Close_Button1.TabIndex = 4;
             this.quit_Close_Button1.Textlabel = "Quit";
             this.quit_Close_Button1.Button_Click += new System.EventHandler(this.button2_Click);
@@ -48,44 +48,46 @@ namespace ConsoleApplication5
             // login_Button1
             // 
             this.login_Button1.BackColor = System.Drawing.Color.Transparent;
+            this.login_Button1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_Button1.Image_set = null;
-            this.login_Button1.Location = new System.Drawing.Point(178, 229);
-            this.login_Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.login_Button1.Location = new System.Drawing.Point(133, 186);
+            this.login_Button1.Margin = new System.Windows.Forms.Padding(1);
             this.login_Button1.Name = "login_Button1";
-            this.login_Button1.Size = new System.Drawing.Size(356, 80);
+            this.login_Button1.Size = new System.Drawing.Size(267, 65);
             this.login_Button1.TabIndex = 3;
-            this.login_Button1.Textlabel = "Login";
+            this.login_Button1.Textlabel = "LOGIN";
             this.login_Button1.Button_Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.txtPassword.Location = new System.Drawing.Point(178, 142);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPassword.Location = new System.Drawing.Point(133, 115);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(356, 52);
+            this.txtPassword.Size = new System.Drawing.Size(268, 43);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // Admin_function_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 874);
+            this.ClientSize = new System.Drawing.Size(532, 506);
             this.Controls.Add(this.quit_Close_Button1);
             this.Controls.Add(this.login_Button1);
             this.Controls.Add(this.txtPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Admin_function_window";
-            this.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         private System.Windows.Forms.TextBox txtPassword;
-        private AdminWindomUserControl AdminControl;
+        public AdminWindomUserControl AdminControl;
         private void start()
         {
             Controls.Clear();
