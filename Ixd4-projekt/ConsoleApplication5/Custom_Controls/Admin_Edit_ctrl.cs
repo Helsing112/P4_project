@@ -31,7 +31,6 @@ namespace ConsoleApplication5
         private void start()
         {
 
-            int i = 0;
             Controls.Clear();
             Create_static_controls();
             DirectoryInfo mapper = new DirectoryInfo(path);

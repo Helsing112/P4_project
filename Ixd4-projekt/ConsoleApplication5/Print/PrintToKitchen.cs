@@ -51,7 +51,7 @@ namespace ConsoleApplication5
 
               
             }
-            catch (Exception ex)
+            catch (InvalidPrinterException )
             {
 
 

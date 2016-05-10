@@ -73,7 +73,7 @@ namespace ConsoleApplication5
             this.label_describtion.AutoSize = false;
             this.label_describtion.Location = new System.Drawing.Point(0, 0);
             this.label_describtion.Height = Size_y;
-            this.label_describtion.Width = (int)(Size_x * percent_ButMin) -10;
+            this.label_describtion.Width = (int)(Size_x * percent_ButMin) -20;
             this.label_describtion.Name = "label_describtion";
             this.label_describtion.Padding = new System.Windows.Forms.Padding(1, 1, 1, 5);
             this.label_describtion.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace ConsoleApplication5
             this.Label_amount.AutoSize = false;
             this.Label_amount.Location = new System.Drawing.Point((int)(Size_x * percent_LA), 0);//højden af FOnt skal ligges til for perfekt
             this.Label_amount.Height = Size_y - 3;
-            this.Label_amount.Width = (int)(Size_x * (percent_ButMore - percent_LA)+10); /*gør det muligt at skrive x ved siden af istedet for oven og under*/
+            this.Label_amount.Width = (int)(Size_x * (percent_ButMore - percent_LA)+20); /*gør det muligt at skrive x ved siden af istedet for oven og under*/
             this.Label_amount.Name = "Label_amount";
             this.Label_amount.Padding = new System.Windows.Forms.Padding(1);
             this.Label_amount.TabIndex = 1;
