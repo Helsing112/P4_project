@@ -95,10 +95,10 @@ namespace ConsoleApplication5
             // 
             this.Button_pay.BackColor = System.Drawing.Color.Transparent;
             this.Button_pay.Image_set = null;
-            this.Button_pay.Location = new System.Drawing.Point(167, 348);
+            this.Button_pay.Location = new System.Drawing.Point(178, 343);
             this.Button_pay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_pay.Name = "Button_pay";
-            this.Button_pay.Size = new System.Drawing.Size(169, 76);
+            this.Button_pay.Size = new System.Drawing.Size(163, 81);
             this.Button_pay.TabIndex = 12;
             this.Button_pay.Textlabel = "PAY";
             // 
@@ -199,7 +199,7 @@ namespace ConsoleApplication5
             // 
             this.split_button1.BackColor = System.Drawing.Color.Transparent;
             this.split_button1.Image_set = null;
-            this.split_button1.Location = new System.Drawing.Point(0, -2);
+            this.split_button1.Location = new System.Drawing.Point(-5, -5);
             this.split_button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.split_button1.Name = "split_button1";
             this.split_button1.Size = new System.Drawing.Size(163, 81);
