@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
-    public partial class Button_Minus : Std_Button
+    public partial class Button_Minus : UserControl
     {
         public Button_Minus()
         {

@@ -17,47 +17,11 @@ namespace ConsoleApplication5
         public string TextFromComment { get; private set; }
 
         public Table_Info ActiveTable { get { return _activeTable; } private set { _activeTable = value; CreateReceipt.timerInfo1.UpdateTableName(ActiveTable); } }
-        /// <summary>
-        /// Clears all controls and adds the nessesary controls for this page
-        /// </summary>
-        //private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)
-        //{
-        //    this.Padding = new Padding();
-        //    Controls.Clear();
-        //    //Creates the receipt from table data
-        //    ActiveTable = activeTable;
-        //    CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
-        //    //active employee assignment (Property is in another file)
-        //    ActiveEmployee = activeEmployee;
-
-        //    //Controls.Add(treeFood);
-        //    //Controls.Add(treeDrinks);
-
-        //    Controls.Add(Temp_Receipt);
-        //    Controls.Add(PayButton);
-        //    Controls.Add(BackToTablesPage); //adds a back button from the tablesPage
-
-        //    Controls.Add(Timer_panel);            
-        //}        
-
-        ////Initialize all fields
-        //private void Initialize_Field_Controls_CreateReceipt()
-        //{
-        //    initialize_wheel(400);
-        //    PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
-        //    Initialize_Pay_window();
-        //    Product_trees(new Point(700, 100), new Size(400,700));
-        //    Receipt(new Point(50, 100), new Size(600, 500));
-        //    BackToTablesPage_button();
-        //}
+ 
         private void Initialize_Field_Controls_CreateReceipt()
         {
             CreateReceipt = new CreateReceipt();
             CreateReceipt.Location = new Point(0, 0);
-            //CreateReceipt.ProductView_Foods.MouseUpped += MouseUpReciever;
-            //CreateReceipt.ProductView_Foods.MouseDowned += MouseDownReciever;
-            //CreateReceipt.ProductView_Drinks.MouseUpped += MouseUpReciever;
-            //CreateReceipt.ProductView_Drinks.MouseDowned += MouseDownReciever;
 
             CreateReceipt.ProductNavigator.MouseUpped += MouseUpReciever;
             CreateReceipt.ProductNavigator.MouseDowned += MouseDownReciever;
@@ -109,7 +73,8 @@ namespace ConsoleApplication5
             Controls.Clear();
             CreateReceipt.tempReceipt1.Table_receiptReciever(ActiveTable.TableReceipt);
             CreateReceipt.Label_TableName.Text = "TABLE: " + ActiveTable.Table_name;
-            //CreateReceipt.Size = this.Size;
+            CreateReceipt.timerInfo1.UpdateTableName(activeTable);
+            CreateReceipt.timerInfo1.UpdateEmployeename(activeEmployee);
             Controls.Add(CreateReceipt);
             
         }

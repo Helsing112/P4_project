@@ -46,7 +46,7 @@
             this.panel1.Controls.Add(this.Button_MoveTable);
             this.panel1.Controls.Add(this.Button_CombineTables);
             this.panel1.Location = new System.Drawing.Point(9, 142);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 513);
             this.panel1.TabIndex = 8;
@@ -116,7 +116,7 @@
             this.table_Panel_for_MainPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.table_Panel_for_MainPage1.Location = new System.Drawing.Point(209, 57);
             this.table_Panel_for_MainPage1.Name = "table_Panel_for_MainPage1";
-            this.table_Panel_for_MainPage1.Size = new System.Drawing.Size(1152, 779);
+            this.table_Panel_for_MainPage1.Size = new System.Drawing.Size(1126, 779);
             this.table_Panel_for_MainPage1.TabIndex = 1;
             // 
             // timerInfo1
