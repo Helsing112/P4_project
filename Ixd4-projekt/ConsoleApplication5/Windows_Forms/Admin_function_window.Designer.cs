@@ -21,6 +21,7 @@
 
         private  Login_Button login_Button1;
         private  Quit_Close_Button quit_Close_Button1;
+        private TextBox_Touch textBox_Touch1;
     }
 }
 
