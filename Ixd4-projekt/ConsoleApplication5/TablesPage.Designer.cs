@@ -105,7 +105,7 @@
             this.back_Button1.Location = new System.Drawing.Point(1363, 784);
             this.back_Button1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.back_Button1.Name = "back_Button1";
-            this.back_Button1.Size = new System.Drawing.Size(155, 62);
+            this.back_Button1.Size = new System.Drawing.Size(200, 80);
             this.back_Button1.TabIndex = 2;
             this.back_Button1.Textlabel = "Back";
             // 

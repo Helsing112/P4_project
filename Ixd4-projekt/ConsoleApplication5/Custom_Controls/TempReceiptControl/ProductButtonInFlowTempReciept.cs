@@ -22,6 +22,7 @@ namespace ConsoleApplication5
             Size_y = size_y;
             Amount_to_represent = amount_to_represent;
             Product_input = product;
+            this.BackColor = Color.FromArgb(255, 245, 245, 245);
             InitializeComponent();
         }
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Standard layouts\Buttons\EndProgramButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Standard layouts\Buttons\EndProgramButton.Designer.cs">
+      <DependentUpon>EndProgramButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Minus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -598,6 +604,9 @@
     <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Plus.resx">
       <DependentUpon>Button_Plus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Standard layouts\Buttons\EndProgramButton.resx">
+      <DependentUpon>EndProgramButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\StartPageButtons\AdminStartButton.resx">
       <DependentUpon>AdminStartButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -811,6 +820,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GreenSharpEdges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EndProgram.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
