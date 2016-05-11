@@ -68,7 +68,7 @@ namespace ConsoleApplication5
         private void DeactivateCombineTables()
         {
             TablePage.table_Panel_for_MainPage1.TableClick += OnTableClick;
-            //TablePage.table_Panel_for_MainPage1.TableClick -= CombineTableOntableClick;
+            TablePage.table_Panel_for_MainPage1.TableClick -= CombineTableOntableClick;
 
             TablePage.Button_CombineTables.label1.ForeColor = PrevColorOfText;
 
@@ -78,7 +78,7 @@ namespace ConsoleApplication5
         private void ActivateCombineTables()
         {
             TablePage.table_Panel_for_MainPage1.TableClick -= OnTableClick;
-            //TablePage.table_Panel_for_MainPage1.TableClick += CombineTableOntableClick;
+            TablePage.table_Panel_for_MainPage1.TableClick += CombineTableOntableClick;
 
             PrevColorOfText = TablePage.Button_CombineTables.label1.ForeColor;
             TablePage.Button_CombineTables.label1.ForeColor = Color.Black;
