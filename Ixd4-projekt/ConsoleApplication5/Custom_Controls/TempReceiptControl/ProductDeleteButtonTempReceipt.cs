@@ -54,7 +54,7 @@ namespace ConsoleApplication5
             this.Width = size_x;
             this.Height = size_y;
             this.Controls.Add(this.label_delete);
-            this.BackColor = Color.Red;
+            this.BackColor = Color.FromArgb(255, 101, 89);
             this.Name = "ProductDeleteButtonTempReceipt";
             this.ResumeLayout(false);
         }

@@ -182,7 +182,11 @@ namespace ConsoleApplication5
 
         private void Pay_button_click(object sender, EventArgs e)
         {
-            if (Label_EnteredAmount.Text != "")
+            if (Label_EnteredAmount.Text == "")
+            {
+                PaidAmount = TotalAmount;
+            }
+            else
             {
                 PaidAmount += Decimal.Parse(Label_EnteredAmount.Text);
                 ActiveTable.PaidAmount = PaidAmount;
@@ -250,6 +254,7 @@ namespace ConsoleApplication5
             if (PaidAmount >= TotalAmount)
             {
                 ProductsHasBeenBought();
+                Messages.AllProductsHasBeenPaid();
             }
         }
 

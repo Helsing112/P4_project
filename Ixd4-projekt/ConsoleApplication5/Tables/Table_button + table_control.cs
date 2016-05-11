@@ -90,6 +90,14 @@ namespace ConsoleApplication5
             }
         }
 
+        public void AddReceiptProducts(List<ReceiptProduct> ProductsToAdd)
+        {
+            foreach (var item in ProductsToAdd)
+            {
+                AddReceiptProducts(item);
+            }
+        }
+
         public void ClearAllProductsFromReciept()
         {
             TableReceipt.Clear();

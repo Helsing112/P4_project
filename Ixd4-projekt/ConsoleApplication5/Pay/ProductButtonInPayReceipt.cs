@@ -47,7 +47,7 @@ namespace ConsoleApplication5
         private void RedrawLabelText()
         {
             TotalPrice = (Product_input.Product.Price * Amount_to_represent);
-            this.Label_amount.Text = "x" + Amount_to_represent.ToString();   /*her*/
+            this.Label_amount.Text = "x" + Amount_to_represent.ToString();   
             this.Label_price.Text = TotalPrice.ToString() + ",-";
         }
 
@@ -85,7 +85,7 @@ namespace ConsoleApplication5
             // 
             this.Label_amount.Font = Cosmetics.Standard_font_Tempreceipt;
             this.Label_amount.AutoSize = false;
-            this.Label_amount.Location = new System.Drawing.Point((int)(Size_x * percent_LA), 0);//højden af FOnt skal ligges til for perfekt
+            this.Label_amount.Location = new System.Drawing.Point((int)(Size_x * percent_LA), 0);
             this.Label_amount.Height = Size_y - 3;
             this.Label_amount.Width = (int)(Size_x * (percent_ButMore - percent_LA)+25); /*gør det muligt at skrive x ved siden af istedet for oven og under*/
             this.Label_amount.Name = "Label_amount";
@@ -107,6 +107,7 @@ namespace ConsoleApplication5
             this.Label_price.Text = (Product_input.Product.Price * Product_input.Amount).ToString() + ",-";
             this.Label_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label_price.Click += new System.EventHandler(this.label_Click);
+            this.Click += label_Click;
             #endregion
 
             Controls.Add(Label_amount);

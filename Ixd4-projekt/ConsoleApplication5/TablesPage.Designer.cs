@@ -72,7 +72,7 @@
             this.Button_MoveContent.Name = "Button_MoveContent";
             this.Button_MoveContent.Size = new System.Drawing.Size(167, 89);
             this.Button_MoveContent.TabIndex = 4;
-            this.Button_MoveContent.Textlabel = "MOVE CONTENT";
+            this.Button_MoveContent.Textlabel = "MOVE GUESTS";
             this.Button_MoveContent.Button_Click += new System.EventHandler(this.Button_MoveContent_Button_Click_1);
             // 
             // Button_MoveTable

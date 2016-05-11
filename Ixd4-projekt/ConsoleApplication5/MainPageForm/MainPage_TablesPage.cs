@@ -50,7 +50,7 @@ namespace ConsoleApplication5
         //#region Eventhandler for combine table click.
 
         private bool _IsCombineTableActive;
-        private Control _SelectedCombineTable;
+        private Table_Control_MainPage _SelectedCombineTable;
         private bool _aTableIsSelected;
         private Color PrevColorOfText;
         private void Button_CombineTables_Button_Click(object sender, EventArgs e)
@@ -77,9 +77,17 @@ namespace ConsoleApplication5
 
         private void ActivateCombineTables()
         {
+            if (_IsMoveTableActive)
+            {
+                DeactivateMoveTable();
+            }
+            if (_MoveContentIsActive)
+            {
+                DeactivateMoveContent();
+            }
             TablePage.table_Panel_for_MainPage1.TableClick -= OnTableClick;
             TablePage.table_Panel_for_MainPage1.TableClick += CombineTableOntableClick;
-
+            
             PrevColorOfText = TablePage.Button_CombineTables.label1.ForeColor;
             TablePage.Button_CombineTables.label1.ForeColor = Color.Black;
 
@@ -108,6 +116,14 @@ namespace ConsoleApplication5
 
         private void ActiveMoveTAble()
         {
+            if (_MoveContentIsActive)
+            {
+                DeactivateMoveContent();
+            }
+            if (_IsCombineTableActive)
+            {
+                DeactivateCombineTables();
+            }
             _IsMoveTableActive = true;
             _buttonMoveTalbePrevColor = TablePage.Button_MoveTable.label1.ForeColor;
             TablePage.Button_MoveTable.label1.ForeColor = Color.Black;
@@ -134,7 +150,7 @@ namespace ConsoleApplication5
         {
             if (_aTableIsSelected && (_SelectedCombineTable != sender))
             {
-                Control Temp = (Control)sender;
+                Table_Control_MainPage Temp = (Table_Control_MainPage)sender;
                 //Handle what way the control should enlarge
                 if (Math.Abs(_SelectedCombineTable.Location.X - Temp.Location.X) >
                     Math.Abs(_SelectedCombineTable.Location.Y - Temp.Location.Y))
@@ -145,12 +161,18 @@ namespace ConsoleApplication5
                 {
                     _SelectedCombineTable.Height += Temp.Height;
                 }
+                if (Temp.TableInfo.TableReceipt.Count != 0)
+                {
+                    _SelectedCombineTable.TableInfo.AddReceiptProducts(Temp.TableInfo.TableReceipt);
+                }
                 Temp.Parent = null;
                 _aTableIsSelected = false;
+                DeactivateCombineTables();
+
             }
             else
             {
-                _SelectedCombineTable = (Control)sender;
+                _SelectedCombineTable = (Table_Control_MainPage)sender;
                 _aTableIsSelected = true;
             }
         }
@@ -220,6 +242,12 @@ namespace ConsoleApplication5
 
         private void ActivateContent()
         {
+
+            if (_IsCombineTableActive)
+            {
+                DeactivateCombineTables();
+            }
+            if (_IsMoveTableActive) { DeactivateMoveTable();}
             _MoveContentIsActive = true;
             _moveContentPrevForeColor = TablePage.Button_MoveContent.label1.ForeColor;
             TablePage.Button_MoveContent.label1.ForeColor = Color.Black;

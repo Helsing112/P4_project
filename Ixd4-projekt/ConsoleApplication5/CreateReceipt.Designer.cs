@@ -176,6 +176,7 @@ namespace ConsoleApplication5
             // 
             // tempReceipt1
             // 
+            this.tempReceipt1.BackColor = System.Drawing.Color.White;
             this.tempReceipt1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tempReceipt1.Location = new System.Drawing.Point(28, 120);
             this.tempReceipt1.Name = "tempReceipt1";
@@ -204,7 +205,7 @@ namespace ConsoleApplication5
             this.back_Button1.Name = "back_Button1";
             this.back_Button1.Size = new System.Drawing.Size(154, 61);
             this.back_Button1.TabIndex = 18;
-            this.back_Button1.Textlabel = "Back";
+            this.back_Button1.Textlabel = "Tables";
             // 
             // CreateReceipt
             // 
@@ -222,8 +223,6 @@ namespace ConsoleApplication5
             this.Controls.Add(this.Pay_Button);
             this.Controls.Add(this.tempReceipt1);
             this.Controls.Add(this.timerInfo1);
-            this.tempReceipt1.BackColor = Color.White;
-            //this.BackColor = Color.FromArgb(255, 227, 181);
             this.Name = "CreateReceipt";
             this.Size = new System.Drawing.Size(1536, 864);
             this.panel1.ResumeLayout(false);

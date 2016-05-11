@@ -70,7 +70,7 @@ namespace ConsoleApplication5
         {
             try
             {
-                if (DoesIdAlreadyExist(Convert.ToInt16(ID_TextBox.textBox1.Text)) &&
+               if (DoesIdAlreadyExist(Convert.ToInt16(ID_TextBox.textBox1.Text)) &&
                     !string.IsNullOrWhiteSpace(Name_TextBox.textBox1.Text) &&
                     !string.IsNullOrWhiteSpace(ID_TextBox.textBox1.Text) &&
                     !string.IsNullOrWhiteSpace(Password_TextBox.textBox1.Text))

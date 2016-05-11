@@ -1,4 +1,6 @@
-﻿namespace ConsoleApplication5
+﻿using System.Drawing;
+
+namespace ConsoleApplication5
 {
     partial class StartPage
     {
@@ -99,7 +101,7 @@
             // 
             // timerInfo1
             // 
-            this.timerInfo1.BackColor = System.Drawing.Color.White;
+            this.timerInfo1.BackColor = Color.Transparent;
             this.timerInfo1.Dock = System.Windows.Forms.DockStyle.Top;
             this.timerInfo1.employeename = null;
             this.timerInfo1.Location = new System.Drawing.Point(0, 0);

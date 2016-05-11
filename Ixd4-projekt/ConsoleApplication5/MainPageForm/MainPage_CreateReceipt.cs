@@ -32,12 +32,25 @@ namespace ConsoleApplication5
             CreateReceipt.Button_PrintBill.Button_Click += Button_PrintBill_Button_Click;
             CreateReceipt.back_Button1.Button_Click += BackToTablesPage_click;
             CreateReceipt.Button_Comment.Button_Click += Button_Comment_CLick;
+            CreateReceipt.Button_Done.Button_Click += Button_Done_Button_Click;
 
             PayButtoninitialize(new System.Drawing.Point(12, 700), new System.Drawing.Size(139, 79));
             Initialize_Pay_window();
             Product_trees(new Point(700, 100), new Size(400, 700));
             BackToTablesPage_button();
 
+        }
+
+        private void Button_Done_Button_Click(object sender, EventArgs e)
+        {
+            CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
+            //PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/        }
+            if (ActiveTable.TableReceipt.Count != 0)
+            {
+                Messages.ConfirmSendToKitchen();
+            }
+
+            Draw_tablesPage(ActiveEmployee);
         }
 
         private void Button_Comment_CLick(object sender, EventArgs e)

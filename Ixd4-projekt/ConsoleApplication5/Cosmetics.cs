@@ -13,7 +13,7 @@ namespace ConsoleApplication5
     class Cosmetics
     {
         static public Font Standard_font_Tempreceipt {
-            get { return new Font("Minion Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); }
+            get { return new Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); }
             }
         
 

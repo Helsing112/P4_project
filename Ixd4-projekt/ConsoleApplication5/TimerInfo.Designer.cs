@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace ConsoleApplication5
 {
@@ -80,7 +81,7 @@ namespace ConsoleApplication5
             this.Employee_Name.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Employee_Name.AutoSize = true;
             this.Employee_Name.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.Employee_Name.ForeColor = System.Drawing.Color.White;
+            this.Employee_Name.ForeColor = System.Drawing.Color.Transparent;
             this.Employee_Name.Location = new System.Drawing.Point(1209, 48);
             this.Employee_Name.Name = "Employee_Name";
             this.Employee_Name.Size = new System.Drawing.Size(0, 54);
@@ -92,7 +93,7 @@ namespace ConsoleApplication5
             this.Table_Info.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Table_Info.AutoSize = true;
             this.Table_Info.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.Table_Info.ForeColor = System.Drawing.Color.White;
+            this.Table_Info.ForeColor = System.Drawing.Color.Transparent;
             this.Table_Info.Location = new System.Drawing.Point(904, 48);
             this.Table_Info.Name = "Table_Info";
             this.Table_Info.Size = new System.Drawing.Size(0, 54);
@@ -102,6 +103,7 @@ namespace ConsoleApplication5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TimerInfo";
