@@ -72,6 +72,8 @@ namespace ConsoleApplication5
     {
         public decimal PaidAmount { get; set; }
         public string Table_name { get; }
+
+        public string TableComment { get; set; }
         public List<ReceiptProduct> TableReceipt { get; set; }
         public Table_Info(string table_name)
         {

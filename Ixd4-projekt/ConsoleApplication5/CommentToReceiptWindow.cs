@@ -13,21 +13,23 @@ namespace ConsoleApplication5
     public partial class CommentToReceiptWindow : Standard_Window_Layout
     {
        
-        public string Text { get; set; }
+        public string Text { get { return Current_text; } private set { Current_text = value + Environment.NewLine; } }
         public string Comment { get; private set; }
+
+        private string Current_text;
 
         public CommentToReceiptWindow(string comment)
         {
             InitializeComponent();
-            this.Comment = comment;
+            this.Current_text = comment;
 
-            if (Comment == "")
+            if (Current_text == "")
             {
                 CommentTextBox.Text = "";
             }
-            else if (Comment != "")
+            else if (Current_text != "")
             {
-                CommentTextBox.Text = (Comment + "\n");
+                CommentTextBox.Text = Current_text;
                 //CommentTextBox.SelectionLength = 0;
                 SendKeys.Send("{DOWN}");
             }
@@ -35,7 +37,6 @@ namespace ConsoleApplication5
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            Text = CommentTextBox.Text;
             this.Close();
         }
 
