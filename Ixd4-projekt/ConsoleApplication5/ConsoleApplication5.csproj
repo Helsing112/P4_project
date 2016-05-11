@@ -604,9 +604,6 @@
     <EmbeddedResource Include="Standard layouts\Buttons\CreateReceiptBUttons\Button_Plus.resx">
       <DependentUpon>Button_Plus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Standard layouts\Buttons\EndProgramButton.resx">
-      <DependentUpon>EndProgramButton.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Standard layouts\Buttons\StartPageButtons\AdminStartButton.resx">
       <DependentUpon>AdminStartButton.cs</DependentUpon>
     </EmbeddedResource>

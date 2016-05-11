@@ -45,7 +45,7 @@ namespace ConsoleApplication5
 
         public static void ConfirmMovedTable(Table_Info tableInfo)
         {
-            Message_box.Message($"Your table has been moved to table: {tableInfo.Table_name}", 1);
+            Message_box.Message($"The guests has been moved to table {tableInfo.Table_name}", 1);
         }
         public static void AllProductsHasBeenPaid() { Message_box.Message("The bill has been paid", 1);}
 

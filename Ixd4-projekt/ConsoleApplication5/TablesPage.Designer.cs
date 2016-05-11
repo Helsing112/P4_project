@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.Button_MoveContent);
             this.panel1.Controls.Add(this.Button_MoveTable);
             this.panel1.Controls.Add(this.Button_CombineTables);
-            this.panel1.Location = new System.Drawing.Point(12, 175);
+            this.panel1.Location = new System.Drawing.Point(22, 279);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(171, 513);
@@ -102,10 +102,10 @@
             this.back_Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.back_Button1.BackColor = System.Drawing.Color.Transparent;
             this.back_Button1.Image_set = null;
-            this.back_Button1.Location = new System.Drawing.Point(1363, 784);
+            this.back_Button1.Location = new System.Drawing.Point(1340, 752);
             this.back_Button1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.back_Button1.Name = "back_Button1";
-            this.back_Button1.Size = new System.Drawing.Size(200, 80);
+            this.back_Button1.Size = new System.Drawing.Size(193, 71);
             this.back_Button1.TabIndex = 2;
             this.back_Button1.Textlabel = "Back";
             // 
