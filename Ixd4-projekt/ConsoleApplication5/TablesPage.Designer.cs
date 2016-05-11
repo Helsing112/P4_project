@@ -102,10 +102,10 @@
             this.back_Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.back_Button1.BackColor = System.Drawing.Color.Transparent;
             this.back_Button1.Image_set = null;
-            this.back_Button1.Location = new System.Drawing.Point(1031, 630);
+            this.back_Button1.Location = new System.Drawing.Point(968, 611);
             this.back_Button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.back_Button1.Name = "back_Button1";
-            this.back_Button1.Size = new System.Drawing.Size(116, 50);
+            this.back_Button1.Size = new System.Drawing.Size(200, 80);
             this.back_Button1.TabIndex = 2;
             this.back_Button1.Textlabel = "Back";
             // 
@@ -115,8 +115,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.table_Panel_for_MainPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.table_Panel_for_MainPage1.Location = new System.Drawing.Point(157, 46);
-            this.table_Panel_for_MainPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table_Panel_for_MainPage1.Location = new System.Drawing.Point(157, 47);
+            this.table_Panel_for_MainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.table_Panel_for_MainPage1.Name = "table_Panel_for_MainPage1";
             this.table_Panel_for_MainPage1.Size = new System.Drawing.Size(1126, 779);
             this.table_Panel_for_MainPage1.TabIndex = 1;
@@ -128,7 +128,7 @@
             this.timerInfo1.employeename = null;
             this.timerInfo1.Location = new System.Drawing.Point(0, 0);
             this.timerInfo1.Name = "timerInfo1";
-            this.timerInfo1.Size = new System.Drawing.Size(1160, 41);
+            this.timerInfo1.Size = new System.Drawing.Size(1160, 50);
             this.timerInfo1.TabIndex = 0;
             this.timerInfo1.tablename = null;
             // 
@@ -141,7 +141,7 @@
             this.Controls.Add(this.back_Button1);
             this.Controls.Add(this.table_Panel_for_MainPage1);
             this.Controls.Add(this.timerInfo1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TablesPage";
             this.Size = new System.Drawing.Size(1160, 702);
             this.panel1.ResumeLayout(false);
