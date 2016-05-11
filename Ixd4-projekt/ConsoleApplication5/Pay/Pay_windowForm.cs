@@ -265,7 +265,7 @@ namespace ConsoleApplication5
             if (ProductsPaid != null)
             {
                 ProductsPaid(this, new PayEventArgs() { BoughtProducts = this.BoughtProducts, ActiveTable = this.ActiveTable });
-                PrinterInfo.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, BoughtProducts, TotalAmount, "Microsoft Print to PDF");  /*Change the name of printer where receipt is printed*/
+                //PrinterInfo.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, BoughtProducts, TotalAmount, "Microsoft Print to PDF");  /*Change the name of printer where receipt is printed*/
                 BoughtProducts = new List<ReceiptProduct>();
                 PaidAmount = 0;
                 label_remaingingText.Text = "Pay Back:";

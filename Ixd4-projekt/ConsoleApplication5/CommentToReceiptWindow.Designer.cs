@@ -78,7 +78,6 @@
             this.Controls.Add(this.quit_Close_Button1);
             this.Controls.Add(this.CommentTextBox);
             this.Name = "CommentToReceiptWindow";
-            this.Text = "CommentToReceiptWindow";
             this.ResumeLayout(false);
             this.PerformLayout();
 

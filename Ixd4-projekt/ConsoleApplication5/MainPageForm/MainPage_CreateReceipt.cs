@@ -42,7 +42,7 @@ namespace ConsoleApplication5
 
         private void Button_Comment_CLick(object sender, EventArgs e)
         {
-            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(TextFromComment);
+            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(_activeTable.TableComment);
            
 
             CommentWindow.ShowDialog();
@@ -57,12 +57,14 @@ namespace ConsoleApplication5
                 TextFromComment = CommentWindow.Text;
             }
 
+            _activeTable.TableComment = CommentWindow.Text;
+
         }
 
         private void Button_PrintBill_Button_Click(object sender, EventArgs e)
         {
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
-            PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/
+            //PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/
         }
 
         private void Draw_CreateReceipt(Employee activeEmployee, Table_Info activeTable)

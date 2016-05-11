@@ -24,7 +24,7 @@ namespace ConsoleApplication5
     }
     public abstract class Table_Control : Button //the superclass of the buttons. Should ONLY contain the general aestethics
     {
-        public Color OccupiedColor = Color.FromArgb(74, 74, 74);
+        public Color OccupiedColor = Color.FromArgb(96, 96, 96);
         public Color NOTOccupiedColor = Color.LightGray;
     }
     public class Table_Control_Manager : Table_Control //The table_control for the manager window.
@@ -40,8 +40,6 @@ namespace ConsoleApplication5
             temp_control.Text = this.Text;
             return temp_control;
         }
-
-
     }
     public class Table_Control_MainPage : Table_Control //The table_control for the Main window.
     {
@@ -74,6 +72,8 @@ namespace ConsoleApplication5
     {
         public decimal PaidAmount { get; set; }
         public string Table_name { get; }
+
+        public string TableComment { get; set; }
         public List<ReceiptProduct> TableReceipt { get; set; }
         public Table_Info(string table_name)
         {
@@ -132,5 +132,4 @@ namespace ConsoleApplication5
         {
         }
     }
-
 }
