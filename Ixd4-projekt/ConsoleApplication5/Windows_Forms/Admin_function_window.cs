@@ -28,61 +28,66 @@ namespace ConsoleApplication5
 
         private void InitializeComponent()
         {
-
+            this.quit_Close_Button1 = new ConsoleApplication5.Quit_Close_Button();
+            this.login_Button1 = new ConsoleApplication5.Login_Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.login_Button1 = new  Login_Button();
-            this.quit_Close_Button1 = new  Quit_Close_Button();
             this.SuspendLayout();
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.txtPassword.Location = new System.Drawing.Point(200, 177);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(400, 61);
-            this.txtPassword.TabIndex = 0;
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            // 
-            // login_Button1
-            // 
-            this.login_Button1.BackColor = System.Drawing.Color.Transparent;
-            this.login_Button1.Image_set = null;
-            this.login_Button1.Location = new System.Drawing.Point(200, 286);
-            this.login_Button1.Name = "login_Button1";
-            this.login_Button1.Size = new System.Drawing.Size(400, 100);
-            this.login_Button1.TabIndex = 3;
-            this.login_Button1.Textlabel = "Login";
-            this.login_Button1.Button_Click += new System.EventHandler(this.button1_Click);
-            // 
-            // quit_Close_Button1    
+            // quit_Close_Button1
             // 
             this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button1.Image_set = null;
-            this.quit_Close_Button1.Location = new System.Drawing.Point(200, 824);
+            this.quit_Close_Button1.Location = new System.Drawing.Point(177, 660);
+            this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(1);
             this.quit_Close_Button1.Name = "quit_Close_Button1";
-            this.quit_Close_Button1.Size = new System.Drawing.Size(400, 100);
+            this.quit_Close_Button1.Size = new System.Drawing.Size(356, 80);
             this.quit_Close_Button1.TabIndex = 4;
             this.quit_Close_Button1.Textlabel = "Quit";
             this.quit_Close_Button1.Button_Click += new System.EventHandler(this.button2_Click);
             // 
+            // login_Button1
+            // 
+            this.login_Button1.BackColor = System.Drawing.Color.Transparent;
+            this.login_Button1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_Button1.Image_set = null;
+            this.login_Button1.Location = new System.Drawing.Point(177, 229);
+            this.login_Button1.Margin = new System.Windows.Forms.Padding(1);
+            this.login_Button1.Name = "login_Button1";
+            this.login_Button1.Size = new System.Drawing.Size(356, 80);
+            this.login_Button1.TabIndex = 3;
+            this.login_Button1.Textlabel = "LOGIN";
+            this.login_Button1.Button_Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.txtPassword.Location = new System.Drawing.Point(177, 142);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(356, 52);
+            this.txtPassword.TabIndex = 0;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
             // Admin_function_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 1198);
+            this.ClientSize = new System.Drawing.Size(709, 783);
             this.Controls.Add(this.quit_Close_Button1);
             this.Controls.Add(this.login_Button1);
             this.Controls.Add(this.txtPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Admin_function_window";
+            this.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.TextBox txtPassword;
-        private AdminWindomUserControl AdminControl;
+        public AdminWindomUserControl AdminControl;
         private void start()
         {
             Controls.Clear();

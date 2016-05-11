@@ -21,6 +21,7 @@ namespace ConsoleApplication5
             this.Margin = new Padding(0);
             InitializeComponent(size_x, size_y);
             FillEmployeeHodler(path);
+         
         }
         
         private void FillEmployeeHodler(string path)
@@ -138,10 +139,12 @@ namespace ConsoleApplication5
             //TEXTBOX DER INDEHOLDER PASSWORD FOR EMPLOYEE
             EmployeeButtonClickTextbox = new TextBox_Touch
             {
-                Name = "EmployeeIDtextBox",
+                
+            Name = "EmployeeIDtextBox",
                 Size = new System.Drawing.Size(ThirdBluePanel.Width, ThirdBluePanel.Height),
                 Font = new Font("Segoe UI", 30F, FontStyle.Regular),
-                TabIndex = 2,
+                TabIndex = 0,
+                
                 textBox1 =
                 {
                     Anchor = AnchorStyles.None,
@@ -149,9 +152,13 @@ namespace ConsoleApplication5
                     Font = new Font("Segoe UI", 50F, FontStyle.Regular),
                     Location = new Point(50, 0),
                     PasswordChar = '*',
-                    TextAlign = HorizontalAlignment.Center
+                    TextAlign = HorizontalAlignment.Center,
+                                      
                 }
-            };
+
+
+
+        };
 
             EmployeeButtonClickTextbox.textBox1.TextChanged += new EventHandler(Log_In_Click);
 

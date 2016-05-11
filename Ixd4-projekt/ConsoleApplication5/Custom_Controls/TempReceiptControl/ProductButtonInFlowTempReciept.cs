@@ -115,10 +115,11 @@ namespace ConsoleApplication5
             this.Button_minus.Location = new System.Drawing.Point((int)(Size_x*(percent_ButMin)), 3);
             this.Button_minus.Height = Size_y-3;
             this.Button_minus.Width = (int)(Size_x * (percent_LA - percent_ButMin));
+            this.Button_minus.Padding = new Padding(10);
             this.Button_minus.Name = "Button_minus";
             this.Button_minus.TabIndex = 2;
-            this.Button_minus.Button_Click += new System.EventHandler(this.Button_minus_Click);
-            this.Button_minus.Padding = new Padding(10);
+            this.Button_minus.Click += new System.EventHandler(this.Button_minus_Click);
+            this.Button_minus.pictureBox1.Click += Button_minus_Click;
             #endregion
             #region Button_plus
             // 
@@ -128,7 +129,8 @@ namespace ConsoleApplication5
             this.Button_plus.Height = Size_y-3;
             this.Button_plus.Width = (int)(Size_x * (percent_LP - percent_ButMore));
             this.Button_plus.TabIndex = 3;
-            this.Button_plus.Button_Click += new System.EventHandler(this.Button_plus_Click);
+            this.Button_plus.Click += new System.EventHandler(this.Button_plus_Click);
+            this.Button_plus.pictureBox1.Click += Button_plus_Click;
             this.Button_plus.Padding = new Padding(10);
             #endregion
             #region Label_price

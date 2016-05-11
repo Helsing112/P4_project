@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ConsoleApplication5
@@ -221,6 +222,8 @@ namespace ConsoleApplication5
             this.Controls.Add(this.Pay_Button);
             this.Controls.Add(this.tempReceipt1);
             this.Controls.Add(this.timerInfo1);
+            this.tempReceipt1.BackColor = Color.White;
+            //this.BackColor = Color.FromArgb(255, 227, 181);
             this.Name = "CreateReceipt";
             this.Size = new System.Drawing.Size(1536, 864);
             this.panel1.ResumeLayout(false);

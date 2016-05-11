@@ -10,40 +10,11 @@ namespace ConsoleApplication5
 {
     partial class MainPage
     {
-        /// <summary>
-        /// Clears all controls and Draws the starting page of the main window 
-        /// </summary>
-        //private void Draw_startPage()
-        //{
-        //    Controls.Clear(); // clears any existing controls
 
-        //    //Adds the start page controls
-        //    Controls.Add(employee_sign_in_panel);
-        //    Controls.Add(Admin_login_button);
-        //    Controls.Add(CheckIn_Button);
-        //    Controls.Add(Timer_panel);
-        //    Controls.Add(checkOutButton);
-
-        //}
-        //private void Initialize_Field_Controls_startPage()
-        //{
-        //    //admin button
-        //    Admin_login_Button(new Point(50, 100), new Size(200, 100)); 
-        //    //employee controls
-        //    Employee_signedInPanel(new Point(450, 100), new Size(600, 200));
-        //    Check_inButton(new Point(50, 250), new Size(200, 100));
-        //    CheckOutButtonAdd(new Point(50, 400), new Size(200, 100));
-
-        //    InitilizeSignInOnJobWindow();
-
-        //    TimerPanel();
-        //}
-        //___________________________________________TEST_______________________________
         private void Draw_startPage()
         {
             Controls.Clear();
             Controls.Add(startPage);
-            //this.startPage.employeeSignInPanel1._panelForEmployee.InitializeSize();
         }
 
         private void Initialize_Field_Controls_startPage()
@@ -60,7 +31,6 @@ namespace ConsoleApplication5
             TimerPanel();
         }
         StartPage startPage;
-        //__________________________________________ENDTEST_____________________________
 
 
 
@@ -157,8 +127,22 @@ namespace ConsoleApplication5
         private void Admin_login_click(object sender, EventArgs e)
         {
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library, Size_of_table_panel);
+            admin_window.AdminControl.quit_Close_Button2.Button_Click += Quit_Program_Button_Click;
             admin_window.ShowDialog();
+         
         }
+
+        private void Quit_Program_Button_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show($"Are you sure you want to close the program? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+                this.Close();
+
+            }
+        }
+
         private void CheckInButton_click(object sender, EventArgs e)
         {
             

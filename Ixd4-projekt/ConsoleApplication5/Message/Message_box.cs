@@ -29,25 +29,33 @@ namespace ConsoleApplication5
             int label_size = 0;
             int picture_size = 50;
             int Total_height = 50;
+            this.Padding = new Padding(5);
 
             this.label1 = new System.Windows.Forms.Label(); //need to be instantiated before it can be used in textrendere
-
+            this.label1.BackColor = Color.Transparent;
+            this.label1.ForeColor = Color.White;
+            this.label1.Font = Cosmetics.Standard_font_Tempreceipt;
             label_size = TextRenderer.MeasureText(input_string, label1.Font).Width;
            
 
 
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1.BackColor = Color.Transparent;
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Padding = new Padding(10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(picture_size, Total_height);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabStop = false;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
             // 
             // label1
             // 
@@ -65,7 +73,8 @@ namespace ConsoleApplication5
             {
                 image_location += "tick_green.png"; //if tick is green
                 pictureBox1.Image = Image.FromFile(image_location);
-                this.BackColor = Color.LightGreen;
+                //this.BackgroundImage = Properties.Resources.GreenSharpEdges;
+                this.BackColor = Color.FromArgb(50, 161, 116);
                 this.Controls.Add(pictureBox1);
             }
             else
@@ -74,12 +83,13 @@ namespace ConsoleApplication5
                 {
                     image_location += "tick_red.png"; //if tick is green
                     pictureBox1.Image = Image.FromFile(image_location);
-                    this.BackColor = Color.PaleVioletRed;
+                    //this.BackgroundImage = Properties.Resources.Quit_Back;
+                    this.BackColor = Color.FromArgb(255, 101, 89);
                     this.Controls.Add(pictureBox1);
                 }
                 else
                 {
-                    this.BackColor = Color.CornflowerBlue;
+                    this.BackColor = Color.FromArgb(150, 149, 150);
                 }
             }
             // 
