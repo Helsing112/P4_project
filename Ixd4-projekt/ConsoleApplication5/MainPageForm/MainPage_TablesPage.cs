@@ -307,8 +307,6 @@ namespace ConsoleApplication5
             Draw_CreateReceipt(ActiveEmployee, temp_control.TableInfo);
            
         }
-        #endregion
-        #endregion
     }
     
 }

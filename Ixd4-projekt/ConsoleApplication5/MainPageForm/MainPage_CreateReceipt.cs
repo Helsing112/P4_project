@@ -78,7 +78,7 @@ namespace ConsoleApplication5
 
         private void Button_Comment_CLick(object sender, EventArgs e)
         {
-            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(TextFromComment);
+            CommentToReceiptWindow CommentWindow = new CommentToReceiptWindow(_activeTable.TableComment);
            
 
             CommentWindow.ShowDialog();
@@ -92,6 +92,8 @@ namespace ConsoleApplication5
             {
                 TextFromComment = CommentWindow.Text;
             }
+
+            _activeTable.TableComment = CommentWindow.Text;
 
         }
 
