@@ -37,8 +37,11 @@ namespace ConsoleApplication5
                 Label_Remain_Number.Text = (TotalAmount - PaidAmount).ToString();
                 label_remaingingText.Text = "Remaining:";
                 Label_total_Number.Text = TotalAmount.ToString();
+               
             }
         }
+
+        public decimal TotalToPrint;
         List<ReceiptProduct> BoughtProducts;
         public Employee ActiveEmployee { get; private set; }
         public Table_Info ActiveTable { get; private set; }
@@ -262,6 +265,7 @@ namespace ConsoleApplication5
         {
             decimal saveRemaingingAmount = TotalAmount - PaidAmount;
             List<ProductButtonInPayReceipt> BoughtControls = Flow_receiptMain.Controls.OfType<ProductButtonInPayReceipt>().ToList();
+    
             foreach (ProductButtonInPayReceipt item in BoughtControls)
             {
                 BoughtProducts.Add(new ReceiptProduct(item.Product_input.Product, item.Amount_to_represent));

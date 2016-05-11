@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <EmployeeName>lol1</EmployeeName>
-  <EmployeeID>1</EmployeeID>
-  <EmployeePassword>lol1</EmployeePassword>
-</Employee>

@@ -25,10 +25,10 @@ namespace ConsoleApplication5
         public ProductButtonInPayReceipt(int size_x, int size_y, ReceiptProduct product)
         {
             Product_input = product;
-            Size_x = size_x;
+            Size_x = size_x+30;                                                  /*+30 gør at productbutton fylder hele controllen*/
             Size_y = size_y;
             TotalPrice = (Product_input.Product.Price * product.Amount);
-
+            this.BackColor = Color.FromArgb(255, 245,245,245);
             InitializeComponent();
             Amount_to_represent = product.Amount;
         }
