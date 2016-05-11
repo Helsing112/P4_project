@@ -63,6 +63,7 @@ namespace ConsoleApplication5
         private void TableIsNotOcupied(object sender, EventArgs e)
         {
             this.BackColor = NOTOccupiedColor;
+            TableInfo.TableComment = string.Empty;
         }
 
         internal void removeProducts(List<ReceiptProduct> productsToRemove)
@@ -102,6 +103,7 @@ namespace ConsoleApplication5
             if (TableReceipt.Count == 0 && TableReceiptIsEmpty != null)
             {
                 TableReceiptIsEmpty(this, new EventArgs());
+                
             }
             if (TableReceipt.Count != 0 && TableReceiptIsNOTEmpty != null)
             {

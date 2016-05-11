@@ -21,15 +21,17 @@ namespace ConsoleApplication5
         public CommentToReceiptWindow(string comment)
         {
             InitializeComponent();
+            textBox_Touch1.textBox1.Size = textBox_Touch1.Size;
+            textBox_Touch1.textBox1.Multiline = true;
             this.Current_text = comment;
 
             if (Current_text == "")
             {
-                CommentTextBox.Text = "";
+                textBox_Touch1.textBox1.Text = "";
             }
             else if (Current_text != "")
             {
-                CommentTextBox.Text = Current_text;
+                textBox_Touch1.textBox1.Text = Current_text;
                 //CommentTextBox.SelectionLength = 0;
                 SendKeys.Send("{DOWN}");
             }
@@ -42,7 +44,7 @@ namespace ConsoleApplication5
 
         private void CommentButton_Click(object sender, EventArgs e)
         {
-            Text = CommentTextBox.Text;
+            Text = textBox_Touch1.textBox1.Text;
             Messages.CommentAdded();
             this.Close();
 

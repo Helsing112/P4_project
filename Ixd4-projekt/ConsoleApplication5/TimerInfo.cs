@@ -17,7 +17,9 @@ namespace ConsoleApplication5
         public TimerInfo()
         {
             InitializeComponent();
-
+            BackColor = ColorTranslator.FromHtml("#e8eae8");
+            this.tableLayoutPanel1.BackColor = ColorTranslator.FromHtml("#e8eae8");
+            this.Employee_Name.TextAlign = ContentAlignment.MiddleRight;
         }
 
         public void UpdateEmployeename(Employee name)
