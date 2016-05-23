@@ -44,9 +44,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.EmployeeAddButton);
-            this.panel1.Location = new System.Drawing.Point(0, 61);
+            this.panel1.Location = new System.Drawing.Point(0, 75);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 80);
+            this.panel1.Size = new System.Drawing.Size(720, 98);
             this.panel1.TabIndex = 4;
             // 
             // EmployeeAddButton
@@ -54,19 +55,20 @@
             this.EmployeeAddButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmployeeAddButton.BackColor = System.Drawing.Color.Transparent;
             this.EmployeeAddButton.Image_set = null;
-            this.EmployeeAddButton.Location = new System.Drawing.Point(163, 9);
-            this.EmployeeAddButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EmployeeAddButton.Location = new System.Drawing.Point(217, 11);
+            this.EmployeeAddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmployeeAddButton.Name = "EmployeeAddButton";
-            this.EmployeeAddButton.Size = new System.Drawing.Size(200, 69);
+            this.EmployeeAddButton.Size = new System.Drawing.Size(267, 85);
             this.EmployeeAddButton.TabIndex = 1;
             this.EmployeeAddButton.Textlabel = "Add Employee";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.ProductsAddButton);
-            this.panel3.Location = new System.Drawing.Point(0, 221);
+            this.panel3.Location = new System.Drawing.Point(0, 272);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(540, 80);
+            this.panel3.Size = new System.Drawing.Size(720, 98);
             this.panel3.TabIndex = 0;
             // 
             // ProductsAddButton
@@ -74,19 +76,20 @@
             this.ProductsAddButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ProductsAddButton.BackColor = System.Drawing.Color.Transparent;
             this.ProductsAddButton.Image_set = null;
-            this.ProductsAddButton.Location = new System.Drawing.Point(163, 11);
-            this.ProductsAddButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductsAddButton.Location = new System.Drawing.Point(217, 14);
+            this.ProductsAddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProductsAddButton.Name = "ProductsAddButton";
-            this.ProductsAddButton.Size = new System.Drawing.Size(200, 67);
+            this.ProductsAddButton.Size = new System.Drawing.Size(267, 82);
             this.ProductsAddButton.TabIndex = 2;
             this.ProductsAddButton.Textlabel = "Add Product";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.TableManageButton);
-            this.panel2.Location = new System.Drawing.Point(0, 141);
+            this.panel2.Location = new System.Drawing.Point(0, 174);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 80);
+            this.panel2.Size = new System.Drawing.Size(720, 98);
             this.panel2.TabIndex = 3;
             // 
             // TableManageButton
@@ -94,10 +97,10 @@
             this.TableManageButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TableManageButton.BackColor = System.Drawing.Color.Transparent;
             this.TableManageButton.Image_set = null;
-            this.TableManageButton.Location = new System.Drawing.Point(163, 11);
-            this.TableManageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TableManageButton.Location = new System.Drawing.Point(217, 14);
+            this.TableManageButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TableManageButton.Name = "TableManageButton";
-            this.TableManageButton.Size = new System.Drawing.Size(200, 69);
+            this.TableManageButton.Size = new System.Drawing.Size(267, 85);
             this.TableManageButton.TabIndex = 0;
             this.TableManageButton.Textlabel = "Table Manage";
             // 
@@ -105,10 +108,10 @@
             // 
             this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button1.Image_set = null;
-            this.quit_Close_Button1.Location = new System.Drawing.Point(332, 391);
-            this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.quit_Close_Button1.Location = new System.Drawing.Point(453, 626);
+            this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quit_Close_Button1.Name = "quit_Close_Button1";
-            this.quit_Close_Button1.Size = new System.Drawing.Size(200, 80);
+            this.quit_Close_Button1.Size = new System.Drawing.Size(267, 98);
             this.quit_Close_Button1.TabIndex = 3;
             this.quit_Close_Button1.Textlabel = "Quit";
             // 
@@ -116,24 +119,25 @@
             // 
             this.quit_Close_Button2.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button2.Image_set = null;
-            this.quit_Close_Button2.Location = new System.Drawing.Point(19, 391);
-            this.quit_Close_Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quit_Close_Button2.Location = new System.Drawing.Point(35, 626);
+            this.quit_Close_Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quit_Close_Button2.Name = "quit_Close_Button2";
-            this.quit_Close_Button2.Size = new System.Drawing.Size(145, 80);
+            this.quit_Close_Button2.Size = new System.Drawing.Size(193, 98);
             this.quit_Close_Button2.TabIndex = 6;
             this.quit_Close_Button2.Textlabel = "Exit Program";
             // 
             // AdminWindomUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.quit_Close_Button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.quit_Close_Button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminWindomUserControl";
-            this.Size = new System.Drawing.Size(798, 1198);
+            this.Size = new System.Drawing.Size(1064, 1474);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

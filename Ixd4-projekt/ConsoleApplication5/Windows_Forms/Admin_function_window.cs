@@ -40,10 +40,10 @@ namespace ConsoleApplication5
             // 
             this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button1.Image_set = null;
-            this.quit_Close_Button1.Location = new System.Drawing.Point(266, 1031);
-            this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.quit_Close_Button1.Location = new System.Drawing.Point(177, 660);
+            this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.quit_Close_Button1.Name = "quit_Close_Button1";
-            this.quit_Close_Button1.Size = new System.Drawing.Size(534, 125);
+            this.quit_Close_Button1.Size = new System.Drawing.Size(356, 80);
             this.quit_Close_Button1.TabIndex = 4;
             this.quit_Close_Button1.Textlabel = "Quit";
             this.quit_Close_Button1.Button_Click += new System.EventHandler(this.button2_Click);
@@ -53,34 +53,33 @@ namespace ConsoleApplication5
             this.login_Button1.BackColor = System.Drawing.Color.Transparent;
             this.login_Button1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_Button1.Image_set = null;
-            this.login_Button1.Location = new System.Drawing.Point(266, 358);
-            this.login_Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.login_Button1.Location = new System.Drawing.Point(177, 229);
+            this.login_Button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.login_Button1.Name = "login_Button1";
-            this.login_Button1.Size = new System.Drawing.Size(534, 125);
+            this.login_Button1.Size = new System.Drawing.Size(356, 80);
             this.login_Button1.TabIndex = 3;
             this.login_Button1.Textlabel = "LOGIN";
             this.login_Button1.Button_Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox_Touch1
             // 
-            this.textBox_Touch1.Location = new System.Drawing.Point(266, 210);
-            this.textBox_Touch1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Touch1.Location = new System.Drawing.Point(177, 134);
             this.textBox_Touch1.Name = "textBox_Touch1";
-            this.textBox_Touch1.Size = new System.Drawing.Size(532, 78);
+            this.textBox_Touch1.Size = new System.Drawing.Size(355, 50);
             this.textBox_Touch1.TabIndex = 5;
             // 
             // Admin_function_window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 1223);
+            this.ClientSize = new System.Drawing.Size(709, 816);
             this.Controls.Add(this.textBox_Touch1);
             this.Controls.Add(this.quit_Close_Button1);
             this.Controls.Add(this.login_Button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Admin_function_window";
-            this.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResumeLayout(false);
 
         }

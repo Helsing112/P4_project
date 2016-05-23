@@ -248,7 +248,6 @@
     <Compile Include="Windows_Forms\AdminWindomUserControl.Designer.cs">
       <DependentUpon>AdminWindomUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pay\ReceipCompletetInfo.cs" />
     <Compile Include="Pay\ReceiptProduct.cs" />
     <Compile Include="Standard layouts\Buttons\EmployeeSignInButton.cs">
       <SubType>UserControl</SubType>
@@ -767,6 +766,7 @@
     <Folder Include="Library\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -85,10 +85,7 @@ namespace ConsoleApplication5
         public void AddReceiptProducts(ReceiptProduct ProductToAdd)
         {
             TableReceipt.Add(ProductToAdd);
-            if(TableReceipt.Count != 0 && TableReceiptIsNOTEmpty != null)
-            {
-                TableReceiptIsNOTEmpty(this, new EventArgs());
-            }
+CheckReceiptContent();
         }
 
         public void AddReceiptProducts(List<ReceiptProduct> ProductsToAdd)
@@ -102,9 +99,9 @@ namespace ConsoleApplication5
         public void ClearAllProductsFromReciept()
         {
             TableReceipt.Clear();
-            CheckIfEmpty();
+            CheckReceiptContent();
         }
-        public void CheckIfEmpty()
+        public void CheckReceiptContent()
         {
             if (TableReceipt.Count == 0 && TableReceiptIsEmpty != null)
             {
@@ -129,10 +126,7 @@ namespace ConsoleApplication5
                     TableReceipt.RemoveAll(x => x.Product.Name == item.Product.Name);
                 }
             }
-            if (TableReceipt.Count == 0 && TableReceiptIsEmpty != null)
-            {
-                TableReceiptIsEmpty(this, new EventArgs());
-            }
+CheckReceiptContent();
         }
     }
 

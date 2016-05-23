@@ -80,7 +80,7 @@ namespace ConsoleApplication5
                 ReceiptProduct temp_product = new ReceiptProduct(item.Product_input, item.Amount_to_represent);
                 TableInfoToOverride.AddReceiptProducts(temp_product);
             }
-            TableInfoToOverride.CheckIfEmpty();
+            TableInfoToOverride.CheckReceiptContent();
         }
     }
 }

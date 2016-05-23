@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleApplication5.Save_Create_Button" Collapsed="true">
+    <Position X="47" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Save_Create_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Button_BackArrow" Collapsed="true">
+    <Position X="42.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\CreateReceiptBUttons\Button_BackArrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Button_Minus" Collapsed="true">
+    <Position X="83.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\CreateReceiptBUttons\Button_Minus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Button_Plus" Collapsed="true">
+    <Position X="85.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\CreateReceiptBUttons\Button_Plus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.CreateReceiptGreyButtons" Collapsed="true">
+    <Position X="57.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\CreateReceiptBUttons\CreateReceiptGreyButtons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.DoneButton" Collapsed="true">
+    <Position X="53" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\CreateReceiptBUttons\DoneButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Discount_buttons" Collapsed="true">
+    <Position X="44.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Pay Buttons\Discount_buttons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Split_button" Collapsed="true">
+    <Position X="47" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Pay Buttons\Split_button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.AdminStartButton" Collapsed="true">
+    <Position X="49.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\StartPageButtons\AdminStartButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.CheckInButton" Collapsed="true">
+    <Position X="47" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\StartPageButtons\CheckInButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.CheckOutButton" Collapsed="true">
+    <Position X="55.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\StartPageButtons\CheckOutButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.OneTimePaymentButton" Collapsed="true">
+    <Position X="55.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\TablesPageButtons\OneTimePaymentButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.TableManagementButtons" Collapsed="true">
+    <Position X="42.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\TablesPageButtons\TableManagementButtons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Accept_Button" Collapsed="true">
+    <Position X="49.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Accept_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Add_Button" Collapsed="true">
+    <Position X="44.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Add_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.AdminFunctionButtons" Collapsed="true">
+    <Position X="53" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\AdminFunctionButtons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Back_Button" Collapsed="true">
+    <Position X="57.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Back_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.EmployeeButton" Collapsed="true">
+    <Position X="57.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAAgAAAACIAAgCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\EmployeeButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.EmployeeSignInButton" Collapsed="true">
+    <Position X="44.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAACIAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\EmployeeSignInButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.EndProgramButton" Collapsed="true">
+    <Position X="53" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\EndProgramButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Login_Button" Collapsed="true">
+    <Position X="42.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Login_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Numpad_button" Collapsed="true">
+    <Position X="55.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Numpad_button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Pay_Button" Collapsed="true">
+    <Position X="59.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Pay_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Quit_Close_Button" Collapsed="true">
+    <Position X="59.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Standard layouts\Buttons\Quit_Close_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.Std_Button" Collapsed="true">
+    <Position X="51" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAQBAAAACAAAECAAAEAAAAgBAAAABAAAA=</HashCode>
+      <FileName>Standard layouts\Super classes\Std_Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.CategoryWithImage" Collapsed="true">
+    <Position X="45" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAICAAAAAAAACAAAACAAAAAAAAEAgAAAAAAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Category\CategoryWithImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.SuperClassCategory" Collapsed="true">
+    <Position X="47.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Product And Category\Buttons\Category\SuperClassCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.CategoryNoImage" Collapsed="true">
+    <Position X="47.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Category\CategoryNoImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.CategoryLogo" Collapsed="true">
+    <Position X="49.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Category\CategoryLogo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.ProductLogo" Collapsed="true">
+    <Position X="56.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Product\ProductLogo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.ProductNoImage" Collapsed="true">
+    <Position X="52.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Product\ProductNoImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.ProductWithImage" Collapsed="true">
+    <Position X="54.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAgAAACAAAAAAAACEAAACAAAACAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Product\ProductWithImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication5.SuperClassProduct" Collapsed="true">
+    <Position X="54.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAIAAAAAASAAAACAAAAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Product And Category\Buttons\Product\SuperClassProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
