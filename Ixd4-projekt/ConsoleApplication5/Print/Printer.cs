@@ -29,7 +29,7 @@ namespace ConsoleApplication5
             {
                 PrintDocument print = new PrintDocument();
                 print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
-                print.PrintPage += new PrintPageEventHandler(printinfo.PrintEventhandler_Receipt_Formatting);
+                print.PrintPage += new PrintPageEventHandler(printinfo.PrintEventhandler_Receipt);
 
                 foreach (var printers in PrinterSettings.InstalledPrinters)
                 {
@@ -48,16 +48,16 @@ namespace ConsoleApplication5
 
         }
 
-        static public void Print_ToKitchen(Table_Info TableInfo, Employee EmployeeInfo, string totalAmount, string Printername)
+        static public void Print_ToKitchen(Table_Info TableInfo, Employee EmployeeInfo, string Printername)
         {
-            Printer printinfo = new Printer(TableInfo, EmployeeInfo, totalAmount);
+            Printer printinfo = new Printer(TableInfo, EmployeeInfo, "0");
 
 
             try
             {
                 PrintDocument print = new PrintDocument();
                 print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
-                print.PrintPage += new PrintPageEventHandler(printinfo.Printeventahnder_PrintToKitchen_Formatter);
+                print.PrintPage += new PrintPageEventHandler(printinfo.Printeventahnder_PrintToKitchen);
                 print.PrinterSettings.PrinterName = Printername;
 
 
@@ -78,7 +78,7 @@ namespace ConsoleApplication5
             }
 
         }
-        private void Printeventahnder_PrintToKitchen_Formatter(object sender, PrintPageEventArgs ev)
+        private void Printeventahnder_PrintToKitchen(object sender, PrintPageEventArgs ev)
         {
             Graphics graphics = ev.Graphics;
 
@@ -116,7 +116,7 @@ namespace ConsoleApplication5
 
 
         }
-        public void PrintEventhandler_Receipt_Formatting(object sender, PrintPageEventArgs ev)
+        public void PrintEventhandler_Receipt(object sender, PrintPageEventArgs ev)
         {
 
             Graphics graphics = ev.Graphics;
