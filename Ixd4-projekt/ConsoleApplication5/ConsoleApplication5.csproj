@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Printer.cs" />
+    <Compile Include="Print\Printer.cs" />
     <Compile Include="Standard layouts\Buttons\EndProgramButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
