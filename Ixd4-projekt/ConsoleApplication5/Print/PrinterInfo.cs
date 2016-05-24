@@ -25,7 +25,7 @@ namespace ConsoleApplication5
             this.totalamount = totalamount;
             this.Printername = printername;
         }
-         public static void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
+         public static void Print(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
         {
             PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount, Printername);
             
@@ -34,7 +34,7 @@ namespace ConsoleApplication5
             {
                 PrintDocument print = new PrintDocument();
                 print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
-                print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatDoesThePrinting);
+                print.PrintPage += new PrintPageEventHandler(printinfo.PrintEventhandler_Formatting);
 
                 foreach (var printers in PrinterSettings.InstalledPrinters)
                 {
@@ -45,7 +45,6 @@ namespace ConsoleApplication5
                     }
                 }
                 print.Print();
-
             }
             catch (InvalidPrinterException)
             {
@@ -53,7 +52,7 @@ namespace ConsoleApplication5
             }
 
         }
-        public void MethodThatDoesThePrinting(object sender, PrintPageEventArgs ev)
+        private void PrintEventhandler_Formatting(object sender, PrintPageEventArgs ev)
         {
 
             Graphics graphics = ev.Graphics;
@@ -98,22 +97,6 @@ namespace ConsoleApplication5
             graphics.DrawString("       Thank-you for givin' us moneyz,", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
             graphics.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
-
-
-
-
-
-
-            //string stringtoprint = $"************************************************************************* \n You were served by {EmployeeName} at table {TableName}\n You bought:\n";
-
-  
-
-            //foreach (var item in ProductList)
-            //{
-            //    stringtoprint += $"  {item.Amount} {item.Product.Name} {(item.Product.Price*item.Amount)}kr \n ";
-            //}
-            //stringtoprint += $"\n \n Total: {totalamount}kr \n *************************************************************************";
-            //ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
-        }
         }
     }
+}
