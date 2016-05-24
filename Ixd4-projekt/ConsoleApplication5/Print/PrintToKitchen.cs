@@ -28,74 +28,8 @@ namespace ConsoleApplication5
             this.Printername = printername;
         }
 
-        static public void Print_ToKitchen(string TableName, string EmployeeName, List<ReceiptProduct> Products, string Textfromcomment, string Printername)
-        {
-            PrintToKitchen printinfo = new PrintToKitchen(TableName, EmployeeName, Products, Textfromcomment, Printername);
-
-
-            try
-            {
-                PrintDocument print = new PrintDocument();
-                print.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
-                print.PrintPage += new PrintPageEventHandler(printinfo.MethodThatPrintsToKitchen);
-                print.PrinterSettings.PrinterName = Printername;
-
-
-                if (print.PrinterSettings.IsValid)
-                {
-                    print.Print();
-                }
-                else {
-                    Messages.PrinterError();
-                }
-
-              
-            }
-            catch (InvalidPrinterException )
-            {
-
-
-            }
-
-        }
-
-        private void MethodThatPrintsToKitchen(object sender, PrintPageEventArgs ev)
-        {
-            Graphics graphics = ev.Graphics;
-
-            Font font = new Font("Courier New", 12);
-
-            float fontHeight = font.GetHeight();
-
-            int startX = 10;
-            int startY = 10;
-            int offset = 40;
-
-            graphics.DrawString(" Orders", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
-
-            offset = offset + 20;
-            const string format = "{0,-5} {1,-10} {2,10}";
-            string stringtoprint = "\n";
-
-            foreach (var item in ProductList)
-            {
-                stringtoprint += string.Format(format, item.Amount, item.Product.Name,"\n");
-                offset = offset + 20;
-            }
-            ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
-
-            offset = offset + 50;
-
-            string StringWithEmployeeAndTable = $"Waiter: {EmployeeName} Table: {TableName}";
-            string StringWithComment = $" Comment: \n {TextFromComment}";
-
-            ev.Graphics.DrawString(StringWithEmployeeAndTable.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
-
-            offset = offset+ 40;
-            ev.Graphics.DrawString(StringWithComment.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
 
 
 
-        }
     }
 }
