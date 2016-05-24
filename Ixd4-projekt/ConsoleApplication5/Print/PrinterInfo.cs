@@ -25,7 +25,7 @@ namespace ConsoleApplication5
             this.totalamount = totalamount;
             this.Printername = printername;
         }
-         public static void Print(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
+         public static void Print_ToReceipt(string TableName, string EmployeeName, List<ReceiptProduct> Products, decimal totalamount, string Printername)
         {
             PrinterInfo printinfo = new PrinterInfo(TableName, EmployeeName, Products, totalamount, Printername);
             
@@ -65,7 +65,7 @@ namespace ConsoleApplication5
             int startY = 10;
             int offset = 40;
 
-            graphics.DrawString(" Morten Linnets Fun&Go", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+            graphics.DrawString(" O'leary's Bar and Resturant", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
 
             string top = "Item Name".PadRight(30) + "Price";
 
@@ -94,9 +94,10 @@ namespace ConsoleApplication5
             ev.Graphics.DrawString(StringWithEmployeeAndTable.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
 
             offset = offset + 30; 
-            graphics.DrawString("       Thank-you for givin' us moneyz,", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphics.DrawString("       Thank-you for letting us serve for you,", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
             graphics.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
         }
+
     }
 }

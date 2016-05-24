@@ -28,7 +28,7 @@ namespace ConsoleApplication5
             this.Printername = printername;
         }
 
-        static public void MethodThatPrints(string TableName, string EmployeeName, List<ReceiptProduct> Products, string Textfromcomment, string Printername)
+        static public void Print_ToKitchen(string TableName, string EmployeeName, List<ReceiptProduct> Products, string Textfromcomment, string Printername)
         {
             PrintToKitchen printinfo = new PrintToKitchen(TableName, EmployeeName, Products, Textfromcomment, Printername);
 
@@ -71,7 +71,7 @@ namespace ConsoleApplication5
             int startY = 10;
             int offset = 40;
 
-            graphics.DrawString(" Morten Linnets Fun&Go", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+            graphics.DrawString(" Orders", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
 
             offset = offset + 20;
             const string format = "{0,-5} {1,-10} {2,10}";
