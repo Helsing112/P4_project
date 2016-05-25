@@ -20,7 +20,7 @@ namespace ConsoleApplication5
         {
             this.Amount = Amount;
             this.Product = Product;
-            this.IsPaid = IsPaid;
+            this.IsPaid =  IsPaid;
         }
 
         public override string ToString()
