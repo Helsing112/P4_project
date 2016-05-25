@@ -23,13 +23,12 @@ namespace ConsoleApplication5
 
         public Std_Button()
         {
-           InitializeComponent();
+            InitializeComponent();
         }
 
         // loads the text on the button and the font used. Change here to edit the font of all buttons.
         private void Std_Layout_Load(object sender, System.EventArgs e)
         {
-
             this.label1.Text = Textlabel;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular);
 
@@ -37,8 +36,8 @@ namespace ConsoleApplication5
             {
                 this.pictureBox1.Image = Image_set;
             }
-            this.Refresh();
 
+            this.Refresh();
         }
 
         // Mouse down and up function that adds animation to pressed buttons. Also consists of the click function.
@@ -49,11 +48,7 @@ namespace ConsoleApplication5
 
             this.Padding = new Padding(paddingSizeWidth / 2, paddingSizeHeight / 2, paddingSizeWidth / 2, paddingSizeHeight / 2);
 
-            //this.Width -= 6;
-            //this.Height -= 6;
-
             this.label1.Font = new System.Drawing.Font("Segoe UI", ((this.label1.Font.SizeInPoints / 100) * 98), System.Drawing.FontStyle.Regular);
-            //this.Location = new Point((this.Location.X + 3), (this.Location.Y + 3));
             this.Refresh();
         }
 

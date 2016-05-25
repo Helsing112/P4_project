@@ -26,9 +26,16 @@ namespace ConsoleApplication5
     {
         public Color OccupiedColor = Color.FromArgb(96, 96, 96);
         public Color NOTOccupiedColor = Color.LightGray;
+
+ 
     }
     public class Table_Control_Manager : Table_Control //The table_control for the manager window.
     {
+        public Table_Control_Manager()
+        {
+            this.FlatStyle = FlatStyle.Flat;
+            this.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+        }
         public void delete_control()
         {
             this.Parent = null;            
@@ -46,11 +53,14 @@ namespace ConsoleApplication5
         public Table_Info TableInfo { get; set; }
         public Table_Control_MainPage(string Table_name)
         {
+            this.FlatStyle = FlatStyle.Flat;
+            this.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             TableInfo = new Table_Info(Table_name);
             this.Text = Table_name;
             TableInfo.TableReceiptIsEmpty += TableIsNotOcupied;
             TableInfo.TableReceiptIsNOTEmpty += TableIsOccupied;
             this.BackColor = NOTOccupiedColor;
+            
         }
 
         private void TableIsOccupied(object sender, EventArgs e)
@@ -85,7 +95,7 @@ namespace ConsoleApplication5
         public void AddReceiptProducts(ReceiptProduct ProductToAdd)
         {
             TableReceipt.Add(ProductToAdd);
-CheckReceiptContent();
+            CheckReceiptContent();
         }
 
         public void AddReceiptProducts(List<ReceiptProduct> ProductsToAdd)
@@ -126,7 +136,7 @@ CheckReceiptContent();
                     TableReceipt.RemoveAll(x => x.Product.Name == item.Product.Name);
                 }
             }
-CheckReceiptContent();
+            CheckReceiptContent();
         }
     }
 
