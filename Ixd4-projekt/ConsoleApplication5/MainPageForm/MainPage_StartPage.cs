@@ -57,27 +57,7 @@ namespace ConsoleApplication5
         }
 
         
-        public void Employee_signedInPanel(Point location_input, Size size_input)
-        {
-            employee_sign_in_panel = new SignInPanelControl();
-            employee_sign_in_panel.Employeepanel.EmployeeSignedInClickEvent += new EventHandler<EmployeeEventArgs>(EmployesignedInEventClickButton);
-            employee_sign_in_panel.Location = location_input;
-            employee_sign_in_panel.Size = size_input;
 
-            Controls.Add(employee_sign_in_panel);
-
-        }
-
-        public void CheckOutButtonAdd(Point location, Size size)
-        {
-            checkOutButton = new CheckOutButton
-            {
-                Location = location,
-                Size = size
-            };
-            checkOutButton.Button_Click += new System.EventHandler(CheckoutButtonClick);
-
-        }
     
         public void TimerPanel()
         {
@@ -92,35 +72,7 @@ namespace ConsoleApplication5
 
         }
 
-        private void Admin_login_Button(Point location_input, Size size_input)
-        {
-            Admin_login_button = new Button
-            {
-                Location = location_input,
-                Name = "Admin_login_button",
-                Size = size_input,
-                TabIndex = 0,
-                Text = "Admin",
-                UseVisualStyleBackColor = true
-            };
-            Admin_login_button.Click += new System.EventHandler(Admin_login_click);
 
-            Controls.Add(Admin_login_button);
-        }
-        public void Check_inButton(Point location_input, Size size_input)
-        {
-
-            CheckIn_Button = new CheckInButton
-            {
-                Location = location_input,
-                Name = "CheckInButton",
-                Size = size_input,
-                TabIndex = 0,
-            };
-            CheckIn_Button.Button_Click += new System.EventHandler(CheckInButton_click);
-
-            Controls.Add(CheckIn_Button);
-        }
         #endregion
 
         #region Eventhandlers-----------------------------------------------------
@@ -128,8 +80,15 @@ namespace ConsoleApplication5
         {
             Admin_function_window admin_window = new Admin_function_window(Path_of_product_library, Size_of_table_panel);
             admin_window.AdminControl.quit_Close_Button2.Button_Click += Quit_Program_Button_Click;
+            admin_window.AdminControl.UpdateButton.Button_Click += UpdateButton_Button_Click; 
             admin_window.ShowDialog();
          
+        }
+
+        private void UpdateButton_Button_Click(object sender, EventArgs e)
+        {
+            Initialize_Field_Controls_CreateReceipt();
+            Initialize_Field_Controls_tablesPage();
         }
 
         private void Quit_Program_Button_Click(object sender, EventArgs e)

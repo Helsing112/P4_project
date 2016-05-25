@@ -36,6 +36,7 @@
             this.ProductsAddButton = new ConsoleApplication5.AdminFunctionButtons();
             this.EmployeeAddButton = new ConsoleApplication5.AdminFunctionButtons();
             this.quit_Close_Button1 = new ConsoleApplication5.Quit_Close_Button();
+            this.UpdateButton = new ConsoleApplication5.Pay_Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,7 +73,7 @@
             // 
             this.quit_Close_Button2.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button2.Image_set = null;
-            this.quit_Close_Button2.Location = new System.Drawing.Point(13, 481);
+            this.quit_Close_Button2.Location = new System.Drawing.Point(1, 532);
             this.quit_Close_Button2.Margin = new System.Windows.Forms.Padding(1);
             this.quit_Close_Button2.Name = "quit_Close_Button2";
             this.quit_Close_Button2.Size = new System.Drawing.Size(194, 87);
@@ -119,16 +120,28 @@
             // 
             this.quit_Close_Button1.BackColor = System.Drawing.Color.Transparent;
             this.quit_Close_Button1.Image_set = null;
-            this.quit_Close_Button1.Location = new System.Drawing.Point(318, 481);
+            this.quit_Close_Button1.Location = new System.Drawing.Point(318, 532);
             this.quit_Close_Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quit_Close_Button1.Name = "quit_Close_Button1";
             this.quit_Close_Button1.Size = new System.Drawing.Size(194, 87);
             this.quit_Close_Button1.TabIndex = 3;
             this.quit_Close_Button1.Textlabel = "Quit";
             // 
+            // UpdateButton
+            // 
+            this.UpdateButton.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateButton.Image_set = null;
+            this.UpdateButton.Location = new System.Drawing.Point(318, 437);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(194, 91);
+            this.UpdateButton.TabIndex = 7;
+            this.UpdateButton.Textlabel = "Update";
+            // 
             // AdminWindomUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.quit_Close_Button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -136,7 +149,7 @@
             this.Controls.Add(this.quit_Close_Button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminWindomUserControl";
-            this.Size = new System.Drawing.Size(528, 584);
+            this.Size = new System.Drawing.Size(528, 631);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -154,5 +167,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         public EndProgramButton quit_Close_Button2;
+        public Pay_Button UpdateButton;
     }
 }

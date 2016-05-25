@@ -33,6 +33,8 @@ namespace ConsoleApplication5
 
 
             Draw_startPage();
+
+            
             Clicked_products = new List<Product>();
         }
       
