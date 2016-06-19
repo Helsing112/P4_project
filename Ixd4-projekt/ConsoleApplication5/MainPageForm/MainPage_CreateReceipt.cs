@@ -44,7 +44,7 @@ namespace ConsoleApplication5
         private void Button_Done_Button_Click(object sender, EventArgs e)
         {
             CreateReceipt.tempReceipt1.SaveReceiptToTable(ActiveTable);
-            //PrintToKitchen.MethodThatPrints(ActiveTable.Table_name, ActiveEmployee.EmployeeName, ActiveTable.TableReceipt, TextFromComment, "Microsoft XPS Document Writer");  /*Give name to the printer that prints kitchen info*/        }
+            Printer.Print_ToKitchen(ActiveTable, ActiveEmployee, "HP Universal Printing PS");  /*Give name to the printer that prints kitchen info*/        
             if (ActiveTable.TableReceipt.Count != 0)
             {
                 Messages.ConfirmSendToKitchen();

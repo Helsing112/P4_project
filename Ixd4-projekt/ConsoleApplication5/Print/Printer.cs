@@ -13,6 +13,7 @@ namespace ConsoleApplication5
         public Table_Info TableInfo { get; set; }
         public Employee EmployeeInfo { get; set; }
         public string Totalamount { get; set; }
+        public List<ReceiptProduct> BoughtProds { get; set; }
         public Printer(Table_Info TableInfo, Employee EmployeeInfo, string totalAmount)
         {
             this.TableInfo = TableInfo;
@@ -20,10 +21,10 @@ namespace ConsoleApplication5
             this.Totalamount = totalAmount;
         }
 
-        public static void Print_ToReceipt(Table_Info TableInfo, Employee EmployeeInfo, string TotalAmount)
+        public static void Print_ToReceipt(Table_Info TableInfo, Employee EmployeeInfo, string TotalAmount, List<ReceiptProduct> BoughtProducts)
         {
             Printer printinfo = new Printer(TableInfo, EmployeeInfo, TotalAmount);
-
+            printinfo.BoughtProds = BoughtProducts;
             // selects the standard printer and prints to it
             try
             {
@@ -129,7 +130,7 @@ namespace ConsoleApplication5
             int startY = 10;
             int offset = 40;
 
-            graphics.DrawString(" O'leary's Bar and Resturant", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+            graphics.DrawString(" O'learys Bar and Resturant", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
 
             string top = "Item Name".PadRight(30) + "Price";
 
@@ -141,10 +142,10 @@ namespace ConsoleApplication5
 
             offset = offset + (int)fontHeight + 5;
 
-            const string format = "{0,-5} {1,-10} {2,10} {3,0}";
+            const string format = "{0,-3} {1,-20} {2,10} {3,0}";
             string stringtoprint = "\n";
 
-            foreach (var item in TableInfo.TableReceipt)
+            foreach (var item in BoughtProds)
             {
                 stringtoprint += string.Format(format, item.Amount, item.Product.Name, (item.Product.Price * item.Amount), "kr\n");
                 offset = offset + 20;
@@ -152,15 +153,15 @@ namespace ConsoleApplication5
             ev.Graphics.DrawString(stringtoprint.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, 20, 100);
             offset = offset + 40;
 
-            graphics.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", Totalamount), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            graphics.DrawString("Total".PadRight(30) + String.Format("{0:c}", Totalamount), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
             string StringWithEmployeeAndTable = $"You were served by {EmployeeInfo.EmployeeName} at table {TableInfo.Table_name}";
             offset = offset + 30;
             ev.Graphics.DrawString(StringWithEmployeeAndTable.ToString(), new Font("Courier New", 12, FontStyle.Regular), Brushes.Black, startX, startY + offset);
 
             offset = offset + 30;
-            graphics.DrawString("       Thank-you for letting us serve for you,", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphics.DrawString("Thank you for visiting O'learys", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
-            graphics.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphics.DrawString("please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
         }
     }
 }

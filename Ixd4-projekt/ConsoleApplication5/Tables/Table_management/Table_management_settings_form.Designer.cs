@@ -380,9 +380,9 @@ namespace ConsoleApplication5
         private System.Windows.Forms.Button Button_save;
         private System.Windows.Forms.Button Button_exit;
         private System.Windows.Forms.Button Button_addNewPlan;
-        private System.Windows.Forms.PictureBox pictureBox_Plan;
+        public System.Windows.Forms.PictureBox pictureBox_Plan;
         private System.Windows.Forms.Label Label_headlineResturantPlan;
-        private System.Windows.Forms.Button Button_savePlan;
+        public System.Windows.Forms.Button Button_savePlan;
         private Table_Control_Manager Button_TablePreview;
     }
 }

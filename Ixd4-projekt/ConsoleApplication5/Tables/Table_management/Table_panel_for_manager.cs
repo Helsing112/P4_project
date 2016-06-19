@@ -68,6 +68,7 @@ namespace ConsoleApplication5
         }
         public void Delete_selected_control()
         {
+            if(selectedControl != null)
             selectedControl.delete_control();
         }
         #endregion

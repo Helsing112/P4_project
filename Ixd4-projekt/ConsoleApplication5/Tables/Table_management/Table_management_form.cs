@@ -47,11 +47,24 @@ namespace ConsoleApplication5
         {
             table_panel_for_manager.Delete_selected_control();
         }
+        private Table_management_settings_form settings_form;
         private void Settings_button_Click(object sender, EventArgs e)
         {
-            Table_management_settings_form settings_form = new Table_management_settings_form();
+            settings_form = new Table_management_settings_form();
             settings_form.ShowDialog();
+            settings_form.Button_savePlan.Click += Button_savePlan_Click;
             settings_form.TopMost = true;
+        }
+
+        private void Button_savePlan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                table_panel_for_manager.BackgroundImage = settings_form.pictureBox_Plan.Image;
+            }
+            catch (NullReferenceException)
+            {
+            }
         }
         #endregion
         #region Windows Form Designer generated code
@@ -133,7 +146,7 @@ namespace ConsoleApplication5
             {
                 this.table_panel_for_manager.BackgroundImage = Image.FromFile(Properties.Settings.Default.Path_of_resturant_plan);
             }
-            catch (Exception)
+            catch (ArgumentException)
             { //We dont want to crash the system, just because our picture is not there
             }
             this.table_panel_for_manager.BackgroundImageLayout = ImageLayout.Stretch;            
